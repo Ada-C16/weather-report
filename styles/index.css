@@ -19,20 +19,51 @@ section {
     padding: 0 1em;
 }
 
+/**************/
+/*** BANNER ***/
+/**************/
+
+#banner {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    color: white;
+}
+
+#banner-city-of {
+    display: inline;
+    font-size: .5em;
+}
+
+/*************************/
+/*** TEMPERATURE BLOCK ***/
+/*************************/
+
 #temperature-block {
     grid-column: 1;
     grid-row: 2;
 }
+
+/*****************/
+/*** SKY BLOCK ***/
+/*****************/
 
 #sky-block {
     grid-column: 1;
     grid-row: 3;
 }
 
+/******************/
+/*** CITY BLOCK ***/
+/******************/
+
 #city-name-block {
     grid-column: 1;
     grid-row: 4;
 }
+
+/****************************/
+/*** WEATHER GARDEN BLOCK ***/
+/****************************/
 
 #weather-garden-block {
     grid-column: 2;
