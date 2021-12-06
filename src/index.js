@@ -18,15 +18,22 @@ let garden = document.getElementById("garden");
 const checkTemp = (changedTemp) => {
     tempInt = parseInt(changedTemp);
     if (tempInt >= 80) {
-        temp.style.color = "red"
+        temp.style.color = "red";
+        garden.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
     } else if (tempInt >= 70) {
-        temp.style.color = "orange"
+        temp.style.color = "orange";
+        garden.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
     } else if (tempInt >= 60) {
         temp.style.color = "yellow"
+        garden.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
     } else if (tempInt >= 50) {
-        temp.style.color = "green"
+        temp.style.color = "green";
     } else if (tempInt <= 49) {
-        temp.style.color = "teal"
+        temp.style.color = "teal";
+    }
+
+    if (tempInt <= 59) {
+        garden.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
     }
 }
 
