@@ -14,7 +14,7 @@
         <h2> in <span id="cityName">Seattle</span></h2>
         
         <form action="">
-            <label for="changeCity">Change city:</label>
+            <label for="changeCity">Change the city:</label>
             <input type="text" id="changeCity" name="changeCity" placeholder="Seattle" value="">
             <button type="reset" name="resetButton" id="resetButton">Reset</button>
         </form>
@@ -32,7 +32,17 @@
         </section>
         <section id="landscape">
             <h4>See the Weather</h4>
-            <div id="sky"></div>
+            <div>
+                <label for="selectSky">Change the sky:</label>
+                <select name="selectSky" id="selectSky">
+                    <option value="" selected>Select a sky option</option>
+                    <option value="sunny">Sunny</option>
+                    <option value="cloudy">Cloudy</option>
+                    <option value="rainy">Rainy</option>
+                    <option value="snowy">Snowy</option>
+                </select>
+                <div id="sky"></div>
+            </div>
             <div id="garden"></div>
         </section>
     </main>
