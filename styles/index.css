@@ -6,17 +6,17 @@ body {
 body > * {
     border: 1px solid red;
     margin: 0 auto;
-    padding: 0 300px;
+    padding: 0 40px;
 }
 
 #changeTemp {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 1fr 2fr;
     grid-template-areas: 
         "header header header"
         "tempControls temp temp"
         "tempControls temp temp";
-    gap: 1px;
+    gap: 20px;
 }
 
 #changeTemp h4 {
@@ -29,7 +29,7 @@ body > * {
 
 #tempControls button {
     display: block;
-    width: 33%;
+    /* width: 33%; */
     padding: 10px;
     margin: 5px 0;
 }
@@ -37,4 +37,9 @@ body > * {
 #temp {
     grid-area: temp;
     border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* aspect-ratio: 1; */
+    font-size: 2em;
 }
