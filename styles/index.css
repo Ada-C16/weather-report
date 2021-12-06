@@ -9,6 +9,19 @@ body > * {
     padding: 0 40px;
 }
 
+header {
+    padding-bottom: 50px;
+}
+
+h1 { margin-bottom: 0; }
+
+h2 { margin-top: 0; }
+
+#cityName {
+    color: green;
+    text-transform: uppercase;
+}
+
 #changeTemp {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
