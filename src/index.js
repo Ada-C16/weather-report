@@ -1,14 +1,24 @@
+// CHANGING CITY NAME
 let city = document.getElementById("cityName");
+let changeCity = document.getElementById("changeCity");
+changeCity.addEventListener("keyup", () => {
+    city.textContent = changeCity.value;
+});
+
 const resetButton = document.getElementById("resetButton");
+resetButton.addEventListener("click", () => {
+    city.textContent = "Seattle";
+});
+
+// CHANGING THE TEMPERATURE AND LANDSCAPE
+// -- TEMP VARIABLES -- //
 const increaseTemp = document.getElementById("increaseTemp");
 const decreaseTemp = document.getElementById("decreaseTemp");
 let temp = document.getElementById("num");
+// -- LANDSCAPE VARIABLES -- //
 let sky = document.getElementById("sky");
 let garden = document.getElementById("garden");
 let selectSky = document.getElementById("selectSky");
-
-// on click, change the textContent of temp by one degree
-// convert temp to an int
 
 // create a larger change temp function
 // check which item has been clicked
@@ -37,18 +47,15 @@ const checkTemp = (changedTemp) => {
     }
 };
 
-const addTemp = () => {
+increaseTemp.addEventListener("click", () => {
     temp.textContent = parseInt(temp.textContent) + 1;
     checkTemp(temp.textContent);
-};
+});
 
-const subtractTemp = () => {
+decreaseTemp.addEventListener("click", () => {
     temp.textContent = parseInt(temp.textContent) - 1;
     checkTemp(temp.textContent);
-};
-
-increaseTemp.addEventListener("click", addTemp);
-decreaseTemp.addEventListener("click", subtractTemp);
+});
 
 const changeSky = () => {
     if (selectSky.value === "sunny") {
