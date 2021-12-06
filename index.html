@@ -15,15 +15,15 @@
         
         <form action="">
             <label for="changeCity">Change city:</label>
-            <input type="text" id="changeCity" name="changeCity">
+            <input type="text" id="changeCity" name="changeCity" placeholder="Seattle" value="">
             <button type="reset" name="resetButton" id="resetButton">Reset</button>
         </form>
     </header>
     <main>
         <section id="changeTemp">
             <h4>Current Temperature</h4>
-            <button class="tempControl"><i class="fas fa-arrow-up"></i> Increase</button>
-            <button class="tempControl"><i class="fas fa-arrow-down"></i> Decrease</button>
+            <button id="increaseTemp" class="tempControl"><i class="fas fa-arrow-up"></i> Increase</button>
+            <button id="decreaseTemp" class="tempControl"><i class="fas fa-arrow-down"></i> Decrease</button>
             <div id="temp">
                 <p>74</p>
             </div>
@@ -34,5 +34,6 @@
             <div id="garden"></div>
         </section>
     </main>
+    <script src="src/index.js"></script>
 </body>
 </html>
