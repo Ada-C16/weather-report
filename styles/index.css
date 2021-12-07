@@ -91,35 +91,31 @@ nav {
     background-position: calc(100% - 10px) center;
     background-repeat: no-repeat;
     background-size: 22px 22px;
-    height: 40px;
-    margin: 0 0 1px 0;
-    padding-right: 40px;
-    border: 1px solid #d1c9c0;
-    font-size: 18px;
     z-index: 10;
     outline: none;
-    appearance: none;    
+    appearance: none;   
+     
 }
 
 #city {
     width: 100%;
     font-size: 1.5em;
     background-color: #ffffff;
-    background-position: calc(100% - 10px) center;
-    background-repeat: no-repeat;
-    background-size: 22px 22px;
-    height: 40px;
-    margin: 0 0 1px 0;
-    padding-right: 20px;
-    border: 1px solid #d1c9c0;
-    font-size: 18px;
-    z-index: 10;
-    outline: none;
-    appearance: none;    
+
+   
 }
 
+#temperature_small{
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    vertical-align: middle;
+}
 
-
+.nav-col{
+    text-align: center;
+    vertical-align: middle;
+}
 
 .tempSelector {
     width: 80%;
@@ -128,14 +124,6 @@ nav {
     background-position: calc(100% - 10px) center;
     background-repeat: no-repeat;
     background-size: 22px 22px;
-    height: 40px;
-    margin: 0 0 1px 0;
-    padding-right: 40px;
-    border: 1px solid #d1c9c0;
-    font-size: 18px;
-    z-index: 10;
-    outline: none;
-    appearance: none;    
 }
 
 p {
@@ -176,3 +164,41 @@ main {
     width:100%;
     color:red;   
 }
+
+.form-rounded-corners{
+    border-radius: .5rem;
+    height:3rem;
+    margin: 0 0 1px 0;
+    border: 1px solid #d1c9c0;
+
+}
+
+.form-rounded-button {
+    background: #1E62D0;
+    background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -moz-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -ms-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -o-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -webkit-gradient(to bottom, #1E62D0, #3D94F6);
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    border-radius: .5rem;
+    color: #FFFFFF;
+    font-family: Brush Script MT;
+    font-size: 18px;
+    font-weight: 100;
+    -webkit-box-shadow: 1px 1px 20px 0 #000000;
+    -moz-box-shadow: 1px 1px 20px 0 #000000;
+    box-shadow: 1px 1px 20px 0 #000000;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #337FED 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+ }
+ 
+ .form-rounded-button:hover {
+
+ }

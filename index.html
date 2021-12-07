@@ -10,27 +10,27 @@
     <body>
         <nav>
             <div class="row">
-                <div class="col-5">
-                    <select id="sky" onchange="changeSky()">
+                <div class="col-5 nav-col">
+                    <select class="form-rounded-corners" id="sky" onchange="changeSky()">
                         <option value="sunny">Sunny</option>
                         <option value="cloudy">Cloudy</option>
                         <option value="rainy">Rainy</option>
                         <option value="snowy">Snowy</option>
                     </select>
                 </div>
-                <div class="col-3">
-                    <input type="text" id="city" placeholder="City">
+                <div class="col-3 nav-col">
+                    <input class="form-rounded-corners" type="text" id="city" placeholder="City">
                 </div>
-                <div class="col-4">
+                <div class="col-4 nav-col">
                     <div class="row">
-                        <div class="col-4">
-                            <button class="tempSelector" id="reduceTemp">-</button>
+                        <div class="col-4 nav-col">
+                            <button class="tempSelector form-rounded-button" id="reduceTemp">-</button>
                         </div>
-                        <div class="col-4">
+                        <div class="col-4 nav-col">
                             <p class="temperature" id="temperature_small"></p>
                         </div>
-                        <div class="col-4">
-                            <button class="tempSelector" id="increaseTemp">+</button>
+                        <div class="col-4 nav-col">
+                            <button class="tempSelector form-rounded-button" id="increaseTemp">+</button>
                         </div>                                                
                     </div>
                 </div>                                
