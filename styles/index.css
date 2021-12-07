@@ -1,0 +1,53 @@
+/* control all text styles */
+html, body {
+    font-family: 'Epilogue', sans-serif;
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Epilogue', sans-serif;
+}
+
+header {
+    background-color: #666;
+    padding: 10px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+section {
+    display: flex;
+    height: 100%;
+    background-color: white
+}
+
+sidebar {
+    flex: 1;
+    background: #ccc;
+    padding: 20px;
+}
+
+information {
+    flex: 2;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* sections sit on top of each other on smaller screens */
+@media (max-width: 600px) {
+    section {
+    flex-direction: column;
+    }
+}
