@@ -6,6 +6,11 @@
 --dark-blue: hsla(222, 29%, 27%, 1);
 }
 
+*::selection {
+    color: var(--grey);
+    background-color: var(--light-blue);
+}
+
 body {
     margin: 0;
     text-align: center;
@@ -15,15 +20,15 @@ body {
 }
 
 body > * {
-    /* border: 1px solid red; */
-    border-bottom: 1px solid var(--dark-blue);
+    /* border-bottom: 1px solid var(--dark-blue); */
     margin: 0 auto;
     padding: 0 40px;
 }
 
 header {
+    background-image: linear-gradient(var(--light-blue), var(--grey) 80%);
     padding-top: 40px;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
 }
 
 main {
@@ -37,12 +42,12 @@ h2 { margin-top: 2px; }
 h4 {
     margin-top: 50px;
     font-size: 1.5em;
-    border: 1px solid black;
+    border: 1px solid var(--dark-blue);
     padding: 10px;
 }
 
 #cityName {
-    color: var(--dark-green);
+    color: var(--grey);
     text-transform: uppercase;
 }
 
@@ -75,7 +80,7 @@ h4 {
     padding: 10px;
     margin: 5px 0;
     background-color: var(--dark-green);
-    border: 1px solid var(--grey);
+    border: hidden;
     border-radius: 5px;
     color: var(--grey);
 }
@@ -84,15 +89,23 @@ h4 {
     background-color: var(--dark-blue);
 }
 
+.tempControl:hover {
+    background-color: hsla(222, 29%, 27%, 70%);
+    cursor: pointer;
+}
+
 #temp {
     grid-area: temp;
-    background-color: var(--light-green);
+    background-color: var(--dark-blue);
     border-radius: 10px;
-    border: 1px solid var(--dark-green);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2em;
+}
+
+#num {
+    color: rgb(227, 120, 5);
 }
 
 #changeWeather h4 {

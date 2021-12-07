@@ -28,18 +28,18 @@ let selectSky = document.getElementById("selectSky");
 const checkTemp = (changedTemp) => {
     tempInt = parseInt(changedTemp);
     if (tempInt >= 80) {
-        temp.style.color = "red";
+        temp.style.color = "rgb(191, 63, 9)";
         garden.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
     } else if (tempInt >= 70) {
-        temp.style.color = "orange";
+        temp.style.color = "rgb(227, 120, 5)";
         garden.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
     } else if (tempInt >= 60) {
-        temp.style.color = "rgb(233, 214, 3)"
+        temp.style.color = "rgb(223, 205, 9)"
         garden.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
     } else if (tempInt >= 50) {
-        temp.style.color = "green";
+        temp.style.color = "rgb(4, 191, 32)";
     } else if (tempInt <= 49) {
-        temp.style.color = "teal";
+        temp.style.color = "rgb(0, 199, 196)";
     }
 
     if (tempInt <= 59) {
