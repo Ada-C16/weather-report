@@ -12,8 +12,9 @@ header {
     background-color: #666;
     padding: 10px;
     text-align: center;
-    font-size: 35px;
+    font-size: 20px;
     color: white;
+    height: 100px;
 }
 
 section {
@@ -23,16 +24,51 @@ section {
 }
 
 sidebar {
-    flex: 1;
+    display: flex;
     background: #ccc;
-    padding: 20px;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-obj {
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    justify-self: center;
+    background-color: white;
+    border-radius: 10px;
+    text-align:center;
+    line-height: 50px;
+}
+
+
 information {
+    display: flex;
     flex: 2;
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
+    background: rgb(225, 40, 40);
+    align-items: center;
+    justify-content: center;
+}
+
+.information-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.information-obj {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    text-align:center;
+    line-height: 50px;
 }
 
 footer {
