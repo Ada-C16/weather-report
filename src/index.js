@@ -41,12 +41,12 @@ const checkTemp = (changedTemp) => {
 };
 
 increaseTemp.addEventListener("click", () => {
-    temp.textContent = (parseInt(temp.textContent) + 1).toString() + "°" + "F";
+    temp.textContent = (parseInt(temp.textContent) + 1).toString() + "°F";
     checkTemp(temp.textContent);
 });
 
 decreaseTemp.addEventListener("click", () => {
-    temp.textContent = (parseInt(temp.textContent) - 1).toString() + "°" + "F";
+    temp.textContent = (parseInt(temp.textContent) - 1).toString() + "°F";
     checkTemp(temp.textContent);
 });
 
