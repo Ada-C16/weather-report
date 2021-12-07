@@ -1,0 +1,15 @@
+:root {
+    --morning: rgb(68, 126, 136);
+    --midday: rgb(9, 154, 238);
+    --sunset:linear-gradient(180deg, rgb(0, 27, 51) 0%, rgb(0, 94, 138) 50%, rgb(241, 135, 14) 80%, rgb(243, 116, 190) 100%) ;
+    --midnight:rgb(1,1,1);
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    height: 100vh;
+    background: var(--sunset);
+}
