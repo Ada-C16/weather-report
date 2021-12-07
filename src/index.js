@@ -34,7 +34,7 @@ const checkTemp = (changedTemp) => {
         temp.style.color = "orange";
         garden.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
     } else if (tempInt >= 60) {
-        temp.style.color = "yellow"
+        temp.style.color = "rgb(233, 214, 3)"
         garden.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
     } else if (tempInt >= 50) {
         temp.style.color = "green";
@@ -48,12 +48,12 @@ const checkTemp = (changedTemp) => {
 };
 
 increaseTemp.addEventListener("click", () => {
-    temp.textContent = parseInt(temp.textContent) + 1;
+    temp.textContent = (parseInt(temp.textContent) + 1).toString() + "°" + "F";
     checkTemp(temp.textContent);
 });
 
 decreaseTemp.addEventListener("click", () => {
-    temp.textContent = parseInt(temp.textContent) - 1;
+    temp.textContent = (parseInt(temp.textContent) - 1).toString() + "°" + "F";
     checkTemp(temp.textContent);
 });
 
