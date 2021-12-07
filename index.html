@@ -4,7 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/index.css">
+    <script defer src="src/index.js" type="text/javascript"></script>
     <title>Weather Report</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1><span id="city-name">Tacoma</span> Weather Report</h1>
+    </header>
+    <main>
+      <div class="controls-container">
+        <section class="controls">
+          <h2>Temperature</h2>
+          <p id="currrent-temp">68</p>
+          <div id="temp-btns">
+            <button id="increase-temp">+</button>
+            <button id="decrease-temp">-</button>
+          </div>
+        </section>
+        <section class="controls">
+          <h2>Sky</h2>
+          <label for="select-sky">Choose a sky:</label>
+          <select name="skies" id="select-sky">
+            <option value="sunny">Sunny</option>
+            <option value="cloudy">Cloudy</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowy">Snowy</option>
+          </select>
+        </section>
+        <section class="controls">
+          <h2>City Name</h2>
+          <label for="change-name">Type to Change the City's Name:</label>
+          <input type="text" name="change-name" id="change-name" value="Tacoma">
+          <button id="reset-name">Reset</button>
+        </section>
+      </div>
+      <section class="garden">
+        <h2>Weather Garden</h2>
+        <p id="sky">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</p>
+        <p id="landscape">🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃</p>
+      </section>
+    </main>
+  </body>
 </html>
