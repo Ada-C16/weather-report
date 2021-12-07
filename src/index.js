@@ -20,11 +20,6 @@ let sky = document.getElementById("sky");
 let garden = document.getElementById("garden");
 let selectSky = document.getElementById("selectSky");
 
-// create a larger change temp function
-// check which item has been clicked
-// if inc, then increase
-// else if dec, then decrease
-
 const checkTemp = (changedTemp) => {
     tempInt = parseInt(changedTemp);
     if (tempInt >= 80) {
@@ -38,13 +33,11 @@ const checkTemp = (changedTemp) => {
         garden.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
     } else if (tempInt >= 50) {
         temp.style.color = "rgb(4, 191, 32)";
+        garden.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
     } else if (tempInt <= 49) {
         temp.style.color = "rgb(0, 199, 196)";
-    }
-
-    if (tempInt <= 59) {
         garden.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
-    } 
+    }
 };
 
 increaseTemp.addEventListener("click", () => {
