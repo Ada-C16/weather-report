@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <h1>Change the Weather</h1>
+        <h1>Weather Report</h1>
         <h2> in <span id="cityName">Seattle</span></h2>
         
         <form action="">
@@ -24,7 +24,7 @@
     </header>
     <main>
         <section id="changeTemp">
-            <h4>Current Temperature</h4>
+            <h4>Control the Temperature</h4>
             <div id="tempControls">
                 <button id="increaseTemp" class="tempControl"><i class="fas fa-arrow-up"></i> Increase</button>
                 <button id="decreaseTemp" class="tempControl"><i class="fas fa-arrow-down"></i> Decrease</button>
@@ -33,20 +33,20 @@
                 <p id="num">74&#176;F</p>
             </div>
         </section>
-        <section id="landscape">
-            <h4>See the Weather</h4>
-            <div>
-                <label for="selectSky">Change the sky:</label>
-                <select name="selectSky" id="selectSky">
-                    <option value="" selected>Select a sky option</option>
-                    <option value="sunny">Sunny</option>
-                    <option value="cloudy">Cloudy</option>
-                    <option value="rainy">Rainy</option>
-                    <option value="snowy">Snowy</option>
-                </select>
-                <div id="sky"></div>
+        <section id="changeWeather">
+            <h4>Control the Weather</h4>
+            <label for="selectSky" id="skyLabel">Change the sky:</label>
+            <select name="selectSky" id="selectSky">
+                <option value="">Select a sky option</option>
+                <option value="sunny" selected>Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="rainy">Rainy</option>
+                <option value="snowy">Snowy</option>
+            </select>
+            <div id="landscape">
+                <div id="sky">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</div>
+                <div id="garden">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</div>
             </div>
-            <div id="garden"></div>
         </section>
     </main>
     <script src="src/index.js"></script>

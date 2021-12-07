@@ -1,26 +1,54 @@
+:root {
+--grey: hsla(186, 28%, 93%, 1);
+--light-green: hsla(119, 66%, 82%, 1);
+--dark-green: hsla(127, 16%, 55%, 1);
+--light-blue: hsla(210, 67%, 43%, 1);
+--dark-blue: hsla(222, 29%, 27%, 1);
+}
+
 body {
     margin: 0;
     text-align: center;
     font-family: 'Readex Pro', sans-serif;
+    color: var(--dark-blue);
+    background-color: var(--grey);
 }
 
 body > * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    border-bottom: 1px solid var(--dark-blue);
     margin: 0 auto;
     padding: 0 40px;
 }
 
 header {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+main {
     padding-bottom: 50px;
 }
 
 h1 { margin-bottom: 0; }
 
-h2 { margin-top: 0; }
+h2 { margin-top: 2px; }
+
+h4 {
+    margin-top: 50px;
+    font-size: 1.5em;
+    border: 1px solid black;
+    padding: 10px;
+}
 
 #cityName {
-    color: green;
+    color: var(--dark-green);
     text-transform: uppercase;
+}
+
+#changeCity, #resetButton {
+    display: block;
+    margin: 10px auto;
 }
 
 #changeTemp {
@@ -35,25 +63,50 @@ h2 { margin-top: 0; }
 
 #changeTemp h4 {
     grid-area: header;
+    margin-bottom: 0;
 }
 
 #tempControls {
     grid-area: tempControls;
 }
 
-#tempControls button {
+.tempControl {
     display: block;
-    /* width: 33%; */
     padding: 10px;
     margin: 5px 0;
+    background-color: var(--dark-green);
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    color: var(--grey);
+}
+
+.tempControl:active {
+    background-color: var(--dark-blue);
 }
 
 #temp {
     grid-area: temp;
-    border: 1px solid red;
+    background-color: var(--light-green);
+    border-radius: 10px;
+    border: 1px solid var(--dark-green);
     display: flex;
     justify-content: center;
     align-items: center;
-    /* aspect-ratio: 1; */
     font-size: 2em;
+}
+
+#changeWeather h4 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#landscape {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--light-blue);
+    padding: 30px 10px;
+    margin-top: 20px;
+    border-radius: 10px;
 }

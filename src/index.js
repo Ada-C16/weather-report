@@ -44,7 +44,7 @@ const checkTemp = (changedTemp) => {
 
     if (tempInt <= 59) {
         garden.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
-    }
+    } 
 };
 
 increaseTemp.addEventListener("click", () => {
