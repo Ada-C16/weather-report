@@ -1,7 +1,7 @@
 
 .container {
     width: 100vw;
-    margin-bottom: 50px;    
+    margin-bottom: 30px;    
 }
 
 .col-1 {
@@ -63,22 +63,116 @@
     grid-gap: 0px;
 }
 
-
 footer {
     position:fixed;
     bottom:0;
-    height: 30px;
+    height: 20px;
     background-color: #eee;
     width:100%;
-    margin: -20px -20px -10px -20px;
-    padding:10px;
+    margin: 0px;
+    padding: 5px;
+    font-size: 10px;
 }
+
 nav {
     display: flex;
-    background-color: black;
+    background-color: cornflowerblue;
     color: white;
     margin: 0px;
     padding: 20px;
 }
 
 
+#sky {
+    width: 100%;
+    font-size: 1.5em;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PHRpdGxlPmNhcmF0X2RlZmF1bHQ8L3RpdGxlPjxwb2x5Z29uIHBvaW50cz0iMi40NjUgNy4yNTkgNC41MjUgNS4xOTkgMTAuMDgxIDEwLjc1NCAxNS42MzcgNS4xOTcgMTcuNjk5IDcuMjU3IDEwLjA4MSAxNC44NzcgMi40NjUgNy4yNTkiIHN0eWxlPSJmaWxsOiM4NTczNjMiLz48L3N2Zz4=);
+    background-color: #ffffff;
+    background-position: calc(100% - 10px) center;
+    background-repeat: no-repeat;
+    background-size: 22px 22px;
+    height: 40px;
+    margin: 0 0 1px 0;
+    padding-right: 40px;
+    border: 1px solid #d1c9c0;
+    font-size: 18px;
+    z-index: 10;
+    outline: none;
+    appearance: none;    
+}
+
+#city {
+    width: 100%;
+    font-size: 1.5em;
+    background-color: #ffffff;
+    background-position: calc(100% - 10px) center;
+    background-repeat: no-repeat;
+    background-size: 22px 22px;
+    height: 40px;
+    margin: 0 0 1px 0;
+    padding-right: 20px;
+    border: 1px solid #d1c9c0;
+    font-size: 18px;
+    z-index: 10;
+    outline: none;
+    appearance: none;    
+}
+
+
+
+
+.tempSelector {
+    width: 80%;
+    font-size: 1.5em;
+    background-color: #ffffff;
+    background-position: calc(100% - 10px) center;
+    background-repeat: no-repeat;
+    background-size: 22px 22px;
+    height: 40px;
+    margin: 0 0 1px 0;
+    padding-right: 40px;
+    border: 1px solid #d1c9c0;
+    font-size: 18px;
+    z-index: 10;
+    outline: none;
+    appearance: none;    
+}
+
+p {
+    font-size: 1.5em;
+}
+
+h1{
+    margin: 0px;
+}
+
+h2{
+    margin: 0px;
+}
+
+#temperature_big {
+    font-size: 20em;
+    text-align: center;
+}
+
+#cityname{
+    text-align: center;
+}
+main {
+    background-image: url(../assets/skies/sun.jpeg);
+    background-position: center;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 190px);
+    z-index: -100;
+}
+
+.landscape{
+    height: 30vh; 
+    bottom:30px;
+    position:absolute; 
+    z-index: 100;
+    width:100%;
+    color:red;   
+}
