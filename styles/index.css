@@ -1,0 +1,180 @@
+
+/* 
+#F5AB99
+
+Tropical Pink
+
+#FEB47B
+
+Liquid Sunset
+
+#FF7E5F
+
+Heatwave
+
+#765285
+
+Paradise
+
+#351C4D
+
+Nightfall */
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: skyblue;
+} 
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+#title {
+    background-color: white;
+    border-radius: 25px;
+    grid-row: 1 / 3;
+    grid-column: 3 / 8;
+    display: flex;  
+    justify-content: center; 
+    align-items: center;
+    font-size: 90%;
+    padding: 10px;
+}
+
+#snacks {
+    background-color: white;
+    border-radius: 25px;
+    grid-row: 3 / 6;
+    grid-column: 1 / 10;
+    display: flex;  
+    justify-content: center; 
+    align-items: center;
+}
+
+.temperature-area {
+    background-color: white;
+    border-radius: 15px 50px;
+    grid-row: 6/10;
+    grid-column: 1 / 4;
+    display: flex;  
+    justify-content: center; 
+    align-items: center;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#temperature-heading {
+    background-color: white;
+    grid-row: 6/9;
+    display: flex;
+    align-items: center;
+    /* padding: 30px; */
+    font-size: 170%;
+    grid-column: 2/8;
+    justify-content: center;
+}
+
+#current-temp {
+    background-color: white;
+    grid-row: 2/7;
+    grid-column: 5/6;
+    font-size: 350%;
+}
+
+#increase-temp {
+    background-color: white;
+    grid-row: 3/5;
+    grid-column: 4/5;
+    font-size: 150%;
+}
+
+#decrease-temp {
+    background-color: white;
+    grid-row: 4/6;
+    grid-column: 4/5;
+    font-size: 150%;
+}
+
+.sky-area {
+    background-color: white;
+    border-radius: 15px 50px;
+    grid-row: 6/10;
+    grid-column: 4 / 7;
+    display: flex;  
+    justify-content: center; 
+    align-items: center;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#sky-heading {
+    background-color: white;
+    grid-row: 6/9;
+    grid-column: 3/5;
+    display: flex;
+    align-items: center;
+    /* padding: 30px; */
+    font-size: 170%;
+    grid-column: 2/7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#drop-down {
+    background-color: white;
+    grid-row: 2/5;
+    grid-column: 1/10;
+    display: flex;
+    align-items: center;
+    font-size: 170%;
+    grid-column: 2/7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.city-area {
+    background-color: white;
+    border-radius: 15px 50px;
+    grid-row: 6/10;
+    grid-column: 7 / 10;
+    display: flex;  
+    justify-content: center; 
+    align-items: center;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#city-heading {
+    background-color: white;
+    grid-row: 6/9;
+    grid-column: 2/8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 30px; */
+    font-size: 170%;
+}
+
+#city-search{
+    background-color: white;
+    grid-row: 2/5;
+    grid-column: 1/10;
+    display: flex;
+    align-items: center;
+    font-size: 170%;
+    grid-column: 2/7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
