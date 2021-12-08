@@ -18,9 +18,9 @@
 <div class="box">
     <div class="column">
     <h2>Temperature</h2>
-    <button id="temp" class="arrow up"></button>
-    <p id="increaseTemp"></p>
-    <button id="descreaseTemp" class="arrow down"></button>
+    <button id="increaseTemp" class="arrow up"></button>
+    <p class="temp">58</p>
+    <button id="decreaseTemp" class="arrow down"></button>
     </div>
     <div class="column custom-select">
     <h2>Sky</h2>
@@ -34,8 +34,8 @@
     <div id="cityName" class="column">
     <h2>City Name</h2>
     <form>
-        <input type="text" id="cityname" name="cityname">
-        <button type="reset" value="Reset" default="Seattle"></button>
+        <input type="text" name="cityname" placeholder="Seattle">
+        <button type="reset">Reset</button>
     </form>
 </div>
 </section>
@@ -43,6 +43,8 @@
 <section id="two" class="grid">
     <div id="weatherGarden" class="box">
         <h2>Weather Garden</h2>
+        <p class="sky">"🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧"</p>
+        <p class="landscape">"🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲"</p>
     </div>
 </section>
 <script src="/src/index.js"></script>

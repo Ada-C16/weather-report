@@ -1,6 +1,6 @@
 // let temperature = 71;
-
-
+const temp = document.querySelector('#temp');
+let temp = 58;
 
 // function updateColorByTemp(newColor) {
 //     let temp = document.getElementById('temp');
@@ -10,7 +10,7 @@
 // constr temp = document.getElementById('temp');
 
 
-const temp = document.querySelector('#temp');
+
 function increaseTemp() {
     temp = temp + 1
 }
