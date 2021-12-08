@@ -22,7 +22,6 @@ cityNameContainer.appendChild(city);
 
 cityForm.appendChild(cityNameContainer);
 
-// reset city name element
 const cityReset = document.createElement('div');
 const resetName = document.createElement('input');
 resetName.setAttribute("id", "reset-city-button");
@@ -38,8 +37,6 @@ mainSection.appendChild(cityForm);
 // SKY MODE
 
 const playground = document.querySelector('#playground');
-//playground.setAttribute('id','playground');
-
 
     const skyMode = ["Morning", "Midday", "Sunset", "Midnight"];
     const skyContainer = document.createElement('div');
