@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles/index.css" rel="stylesheet" type="text/css" />
-    <title>Gabe Weather Report</title>
+    <title>Weather Report</title>
   </head>
+
   <body>
     <header>
       <img src="assets/snowflake.png" alt="">
@@ -14,16 +15,20 @@
 
     <!-- CONTAINER -->
     <div class="container">
-      <h1>Weather Forecast for City, State</h1>
+      <h1>Weather Forecast for <span id="cityName">Denver</span> </h1>
 
       <!-- TEMP CONTAINER  -->
       <div id="card" class="temp-container">
         <section id="temp">
           <h2>Temp</h2>
-          <div class="temp">
-            <button id="temp-button">
-            <span id="city-button-title">Temp</span> <span>Last 30 days</span> </div>
-        </section>
+           
+            <button id="warmer-button">
+            <span id="city-button-title">Warmer</span> 
+            <button id="cooler-button">
+              <span id="city-button-title"> Colder </span>
+              </section>
+
+              <span id="temp-value">32</span>
       </div>
 
       <!-- LANDSCAPE CONTAINER -->
@@ -37,26 +42,30 @@
       <div id="card" class="city-container">
         <section id="city">
           <h2>Enter a City</h2>
-            <form action="index.php" method="get">
-              <input type="text" name="city" id="city" placeholder="City" />
-              <input type="Reset" value="Submit" />
-            </form>
+              <input type="text" id="cityName" placeholder="Enter another city" />
           <div class="city">
             <button id="city-button">
-            <span id="city-button-title">City</span> <span>Last 30 days</span> </div>
+            <span id="city-button-title">Reset</span> </div>
         </section>
       </div>
 
       <!-- SKY SELECTION CONTAINER -->
       <div id="card" class="sky-container">
-        <section id="city">
+        <section id="sky">
           <h2>Select a Sky</h2>
-          <div class="sky">
-            <button id="city-button">
-            <span id="city-button-title">City</span> <span>Drop down menu</span> </div>
-        </section>
+          <div class="dropdown-sky">
+            <select id="dropdown-sky">
+              <option value="sky1">Sunny</option>
+              <option value="sky2">Cloudy</option>
+              <option value="sky3">Rainy</option>
+              <option value="sky4">Snowy</option>
+          </select>
+          </div> 
       </div>
+     
+     
 
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
