@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Report</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Righteous&display=swap');
+    </style>
 </head>
-<body>
+    <body>
+    <header>
+    <link rel="stylesheet" href="styles/index.css" />
+        <h1>Weather</h1>
+        <h1>Report</h1>
+        <span class="city-header-welcome"><h3>Beautiful city of Squirrelnonia!</h3> </span>
+    </header>
+
+    <div id="sky-temperature-container">
+    <section class="temperature-control-section">
+        <h2>TEMPERATURE</h2>
+            <div class= "remote-control-box">
+            <div class="temperature-buttons">
+                <button  class="up-button">⬆️</button>
+                <button  class="down-button">⬇️</button>
+                </div>
+                <input class="temperature-digit"  id="temp-number" value="45" readonly></input></div>
+
+        </section>
     
-</body>
+    <section class="sky-selection-section">
+        <h2>SKY</h2>
+        <select class="selector">
+            <option value="sunny">Sunny</option>
+            <option value="cloudy">Cloudy</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowy">Snowy</option>
+        </select>
+    </section>
+    </div>
+
+    <section class="weather-garden">
+        <h2>WEATHER GARDEN</h2>
+        <div class="weather-landscape">
+        <div id="sky">🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧</div>
+        <br><br><br><br>
+        <div id="earth">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</div>
+        </div></section>
+
+    </body>
 </html>
