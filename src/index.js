@@ -82,10 +82,15 @@ const setSky = () => {
 )};
 
 const setCityName = () => {
+    const resetButton = document.getElementById('reset')
     const cityHeader = document.getElementById('display-city')
     const cityInput= document.getElementById('city-name')
     cityInput.addEventListener('input', () => {
         cityHeader.innerHTML = cityInput.value
+    })
+    resetButton.addEventListener('click', () => {
+        cityHeader.innerHTML = 'Seattle'
+        cityInput.value = 'Seattle'
     })
 }
 
