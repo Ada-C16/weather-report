@@ -1,0 +1,14 @@
+
+body{
+    background: linear-gradient(159deg, rgb(252, 115, 156) 0%, rgb(139, 102, 241) 100%);
+    
+}
+
+h1 {
+    background-color: antiquewhite;
+    text-shadow: 5px 5px 10px rgba(229, 16, 245, 0.4);
+    color: #e510f5;
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+
