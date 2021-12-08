@@ -5,8 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet"/>
 </head>
+
 <body>
-    
+    <header>
+    <h1>Stress Meter Weather Report</h1>
+    </header>
+        <main> 
+            <h2>For the awesomely amazing student named <span id=student-name>Michelle</span></h2>  
+            <section id=grid-container>
+                <h2>Temperature - Pending Ada Assignments</h2>
+                <div id="arrows">
+                    <p id="increase-temp">⬆️</p>
+                    <p id="decrease-temp">⬇️</p>
+                </div>
+                <div id="temp-convert-container">
+                    <span id="temp-integer"></span>
+                </div>
+            </section> 
+            <section id="sky-section">
+                <h2>Sky - Life @ home</h2>
+                <div>
+                    <select id="sky-dropdown">
+                        <option value="Sunny">Sunny</option>
+                        <option value="Cloudy">Cloudy</option>
+                        <option value="Rainy">Rainy</option>
+                        <option value="ThunderStorms">ThunderStorms</option>
+                        <option value="Hurricane">Hurricane</option>
+                    </select>
+                </div>
+            </section>
+            <section id="name-field">
+                <h2>Student Name</h2>
+                <div>
+                    <input type="text" id="city" value="Michelle">
+                    <button id="reset-button">Reset</button>
+                </div>
+            </section>
+            <section id="garden-field">
+                <h2>Garden of the Soul</h2>
+                <div id="weather-content">
+                    <div id="landscape"></div>
+                    <div id="sky"></div>
+                </div>
+            </section>
+        </main>
+    <script src="src/index.js" type="text/javascript"></script>
 </body>
 </html>
