@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/index.css" rel="stylesheet">
     <title>Weather Report</title>
 </head>
 <body>
@@ -23,15 +24,19 @@
         <div id="weatherSky">
             <select id="changeSky">
                 <option>Today the sky looks...</option>
+                <option id="clearSky">Clear as Can Be</option>
+                <option id="cloudySky">Skies of Gray</option>
+                <option id="rainySky">Drip. Drop. Drip.</option>
+                <option id="snowySky">Wanna Build a Snowman?</option>
             </select>
         </div>
         <div id=tempControl>
-            <div id="tempDisplay"></div>
-            <button id="tempIncrease"></button>
-            <button id="tempDecrease"></button>
+            <section id="tempDisplay" class="tempColor">70F</section>
+            <button id="tempIncrease">></button>
+            <button id="tempDecrease"><</button>
         </div>
         <div id="weatherLand"></div>
     </section>
-    
+    <script src="src/index.js"></script>
 </body>
 </html>
