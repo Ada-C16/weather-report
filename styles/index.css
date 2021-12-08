@@ -1,0 +1,237 @@
+:root {
+--grey: hsla(186, 28%, 93%, 1);
+--light-green: hsla(119, 66%, 82%, 1);
+--dark-green: hsla(127, 16%, 55%, 1);
+--light-blue: hsla(210, 67%, 43%, 1);
+--dark-blue: hsla(222, 29%, 27%, 1);
+}
+
+*::selection {
+    color: var(--grey);
+    background-color: var(--light-blue);
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Readex Pro', sans-serif;
+    color: var(--dark-blue);
+    background-color: var(--grey);
+}
+
+body > * {
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+header {
+    background-image: linear-gradient(var(--light-blue), var(--grey) 80%);
+    padding-top: 40px;
+}
+
+main {
+    padding-bottom: 50px;
+}
+
+h1 { margin-bottom: 0; }
+
+h2 { margin-top: 2px; }
+
+h4 {
+    margin-top: 50px;
+    font-size: 1.5em;
+    border: 1px solid var(--dark-blue);
+    padding: 10px;
+}
+
+#cityName {
+    color: hsla(222, 29%, 50%, 1);
+    text-transform: uppercase;
+}
+
+#changeCity, #resetButton {
+    display: block;
+    margin: 10px auto;
+}
+
+#changeTemp {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-areas: 
+        "header header header"
+        "tempControls temp temp"
+        "tempControls temp temp";
+    gap: 20px;
+}
+
+#changeTemp h4 {
+    grid-area: header;
+    margin-bottom: 0;
+}
+
+#tempControls {
+    grid-area: tempControls;
+}
+
+.tempControl {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: var(--dark-green);
+    border: hidden;
+    border-radius: 5px;
+    color: var(--grey);
+}
+
+.tempControl:active {
+    background-color: var(--dark-blue);
+}
+
+.tempControl:hover {
+    background-color: hsla(222, 29%, 27%, 70%);
+    cursor: pointer;
+}
+
+#temp {
+    grid-area: temp;
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+#num {
+    color: rgb(227, 120, 5);
+}
+
+#changeWeather h4 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#landscape {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--light-blue);
+    padding: 30px 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#sky, #garden {
+    font-size: 1.5em;
+}
+
+.fas {
+    font-size: 1.2em;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 473px) {
+    #changeTemp {
+        display: initial;
+    }
+
+    #tempControls {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    .tempControl {
+        display: inline;
+        height: 50px;
+        font-size: 1em;
+    }
+
+    #sky, #garden {
+        font-size: 1.5em;
+    }
+
+    .fas {
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (min-width: 547px) {
+    h1 {
+        font-size: 2.8em;
+    }
+
+    h4 {
+        font-size: 2em;
+        padding: 20px;
+    }
+
+    #cityControls > * {
+        font-size: 1.1em;
+    }
+
+    #changeCity {
+        display: inline;
+        margin-bottom: 0;
+    }
+
+    #resetButton {
+        width: 20%;
+        padding: 5px 10px;
+    }
+
+    #tempControls {
+        margin-top: 7px;
+    }
+
+    #temp {
+        height: 175px;
+        font-size: 3.2em;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr;
+        gap: 50px;
+    }
+
+    #resetButton {
+        display: inline;
+        width: initial;
+        padding-top: initial;
+        padding-bottom: initial;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 10px;
+    }
+
+    #temp {
+        height: 154px;
+        padding: 25px 10px;
+    }
+
+    #tempControls {
+        margin-top: 15px;
+    }
+
+    .tempControl {
+        height: 65px;
+    }
+
+    #landscape {
+        height: 173px;
+    }
+
+    #sky, #garden {
+        font-size: 2em;
+    }
+
+    select {
+        font-size: 1em;
+    }
+}
