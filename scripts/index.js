@@ -9,7 +9,7 @@ get_city_name.addEventListener('change', () => {
 const resetButton = document.querySelector('#reset');
 resetButton.addEventListener('click', () => {
   get_city_name.value = '';
-  city_name.innerHTML = get_city_name.value;
+  city_name.innerHTML = 'City Name';
 });
 
 //set temperature
@@ -60,17 +60,20 @@ sky_condition.addEventListener('change', (e) => {
 const set_weather = () => {
   if (temp >= 80) {
     temp_reading.style.color = 'red';
+    temp_bg.style.backgroundColor = 'lightgrey';
     garden.innerHTML = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
   } else if (temp >= 70 && temp < 80) {
     temp_reading.style.color = 'orange';
+    temp_bg.style.backgroundColor = 'lightgreen';
     garden.innerHTML = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
   } else if (temp >= 60 && temp < 70) {
     temp_reading.style.color = 'yellow';
-    temp_bg.style.backgroundColor = 'lightblue';
+    temp_bg.style.backgroundColor = 'orange';
     garden.innerHTML = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
   } else if (temp >= 50 && temp < 60) {
     temp_bg.style.backgroundColor = 'white';
     temp_reading.style.color = 'green';
+    temp_bg.style.backgroundColor = 'lightblue';
     garden.innerHTML = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
   } else {
     temp_reading.style.color = 'blue';
