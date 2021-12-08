@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/index.css" rel="stylesheet">
     <title>Weather Report</title>
 </head>
 <body>
-    
+    <div>
+        <h1>Weather Report <em>fir the lavely city of:"city name"</em></h1>
+    </div>
+    <div class="box-block">
+        <div class="features" id="temperatureContainer">
+            <p id="temperatureReading">Temperature:0</p>
+            <button id="addTemperatureButton">🔺</button>
+            <button id="reduceTemperatureButton">🔻</button>
+        </div>
+        <div class="features" id="skyContainer">
+            <p class="sky">Sky</p>
+            <select nam="sky" id="sky">
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="rainy">Rainy</option>
+                <option value="snowy">Snowy</option>
+            </select>
+        </div>
+        <div class="features" id="cityContainer">
+            <p class="city">City Name</p>
+            <select name="city" id="city">
+                <option valeu="seattle">Seattle</option>
+                <option value="tukwila">Tukwila</option>
+                <option value="Kirkland">Kirkland</option>
+                <option value="select city">select city</option>
+            </select>
+            <button id="addResetButton">Reset</button>
+
+        </div>
+        <div class="features" id="gardenContainer">
+            <p class="garden">Weather Garden</p>
+        </div>
+        
+        </div>
+    </div>
+    <footer>
+        <p>@2021 T. All Rights Reserved</p>
+    </footer>
+    <script src="src/index.js"></script>
+
 </body>
 </html>

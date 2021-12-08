@@ -1,0 +1,54 @@
+body {
+    background-color:cornflowerblue;
+}
+
+.box-block {
+    height:60vh;
+    padding-top: 100px;
+    width:50%; 
+    display:grid;
+    grid-template-columns:20% 70%;
+    grid-gap:100px;
+}
+
+.features{
+    height:100px;
+    width: 200px;
+    background-color: aliceblue;
+    text-align: center;
+    align-self: start;
+    
+}
+button{
+    display: block;
+
+}
+
+.display-garden {
+    height:200px;
+    width: 800px;
+    grid-row: span 1;
+}
+.burning{
+    color:crimson;
+}
+
+.freezing{
+    color:white;
+    background-color:black;
+}
+.worning{
+    color:yellow;
+}
+.sunny{
+    color:darkorange;
+}
+.cold{
+    color:burlywood;
+}
+
+
+
+
+
+
