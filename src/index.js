@@ -61,11 +61,6 @@ const registerEventHandlers = () => {
 
     const decTemp = document.querySelector("#decTemp");
     decTemp.addEventListener("click", lowerTemp);
-
-    /*
-    const skySelection = document.querySelector("#sky-color");
-    skySelection.addEventListener("click",changeSky);
-    */
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
