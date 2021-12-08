@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    background-color: rgba(0,0,0,.1);
+    height: 100vh;
+    justify-content:space-between;
+    flex-direction: column;
+}
+
+header {
+    background-color: green;
+    display: flex;
+    justify-content:space-between;
+}
+
+header .logo {
+    background-color: rgba(0,0,0,.1);
+}
+
+header .sub {
+    background-color: rgba(0,0,0,.1);
+}
+
+main {
+    background-color: rgba(162, 34, 162, 0.5);
+    display: grid;
+    justify-content: space-between; 
+    grid-template-columns: 50%;
+    grid-template-rows: 50%;
+    grid-template-areas:
+        "main section.left-section"
+        "main section.image-section"
+}
+main section.left-section {
+    background-color: rgba(0,0,0,.1);
+    /* grid-area: left; */
+}
+main section.weather-garden {
+    background-color: rgba(0,0,0,.1);
+}
+
+footer {
+    background-color: rgb(164, 164, 51);
+}
