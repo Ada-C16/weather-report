@@ -41,7 +41,7 @@ Hot number color: #EA0009 */
 }
 
 .nav {
-    grid-area: nav;
+    grid-area: nav;   
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -50,11 +50,10 @@ Hot number color: #EA0009 */
 .deets {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    background-position: center;
     border-radius: 10px;
     list-style-type: none;
     background-color: white;
+    margin: 1em;
 }
 
 .text {
