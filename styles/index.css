@@ -35,10 +35,6 @@ Hot number color: #EA0009 */
     align-items: center;
 }
 
-/* .inline{
-    display: inline;
-    margin-right: 100 px;
-} */
 .main {
     grid-area: main;
     display: flex;
@@ -49,11 +45,19 @@ Hot number color: #EA0009 */
 .deets {
     grid-area: deets;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-position: center;
-    border-radius: 25px;
+    border-radius: 10px;
     background-color: white;
+    list-style-type: none;
 }
 
 .text {
     color:black;
+    grid: flex;
+}
+
+.temp-text {
+    color:#F0940A;
 }
