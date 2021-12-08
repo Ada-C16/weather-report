@@ -1,0 +1,56 @@
+/* Background blue: #324DF7
+Sunny sky background: #D6FFFF
+Cloudy sky background: #C9C9C9
+Rainy sky background: #9FCFE0
+Snowy sky background: #A1B6D6
+Very cold number color: #256D6C
+Cold number color: #1F7001
+Cool number color: #F4D10A
+Warm number color: #F0940A
+Hot number color: #EA0009 */
+
+.grid {
+    background-color: #324DF7;
+    padding: 1em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    
+    display: grid;
+    grid-gap: 10px;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header header header header header"
+        "deets deets main main main"
+        "deets deets main main main"
+        "deets deets main main main"
+}
+
+.header {
+    grid-area: header;
+}
+.inline{
+    display: inline;
+    margin-right: 100 px;
+}
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    justify-content: center;
+}
+
+.deets {
+    grid-area: deets;
+    display: flex;
+    background-position: center;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.text {
+    color:black;
+}
