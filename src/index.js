@@ -75,6 +75,22 @@ const changeSky = () => {
     }
 };
 
+// ***** City Name Variables *****
+
+
+
+
+const cityChange = () =>{
+    const cityHeader = document.querySelector("#city-header");
+    const cityInputValue = document.querySelector("#city-input").value;
+    cityHeader.textContent = cityInputValue;
+    
+};
+
+
+
+// ***** Reset Variables *****
+
 // ***** Event Handlers *****
 const registerEventHandlers = () => {
     // const incTemp = document.querySelector("#increase-temp");
@@ -83,6 +99,8 @@ const registerEventHandlers = () => {
     decTemp.addEventListener("click", decreaseTemp);
     const skyDrop = document.querySelector("#sky-dropdown");
     skyDrop.addEventListener("change", changeSky);
+    const cityInput = document.querySelector("#city-input");
+    cityInput.addEventListener("input", cityChange);
     
 };
 

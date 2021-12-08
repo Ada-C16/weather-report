@@ -17,3 +17,12 @@
 .teal{
     color:teal;
 }
+
+/* .temp-container {
+    background-color: lightslategray;
+} */
+
+#temp-display{
+    font-size: 50px;
+    font-weight: bold;
+}
