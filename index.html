@@ -8,43 +8,48 @@
     <title>Weather Report</title>
 </head>
 
-<body class="container">
-    <header id="banner">
-        <h1>Weather Report
-            <span id="banner-city-of"><h3>the city of <span id="banner-city-name">Seattle</span></h3></span>
-        </h1>
-    </header>
+<body>
+    <main class="container">
+        <header id="banner">
+            <h1>Weather Report
+                <span id="banner-city-of"><h3>the city of <span id="banner-city-name">Seattle</span></h3></span>
+            </h1>
+        </header>
 
-    <section id="temperature-block">
-        <h2 class="headings">Temperature</h2>
-        <h2 id="temp">64</h2>
-        <h2 class="arrow" id="up-arrow"></h2> 
-        <h2 class="arrow" id="down-arrow"></h2>
-    </section>
+        <!--TEMPERATURE BLOCK-->
+        <section id="temperature-block">
+            <h2 class="headings">Temperature</h2>
+            <h2 id="temp">64</h2>
+            <button id="up-arrow-button"><h2 class="arrow" id="up-arrow"></h2></button>
+            <button id="down-arrow-button"><h2 class="arrow" id="down-arrow"></h2></button>
+        </section>
 
-    <section id="sky-block">
-        <h2 class="headings">Sky</h2>
-        <select name="sky">
-            <option value="sunny">Sunny</option>
-            <option value="cloudy">Cloudy</option>
-            <option value="rainy">Rainy</option>
-            <option value="snow">Snow</option>
-        </select>
-        <!--dropdown for : 'Sunny', 'Rainy', 'Cloudy', 'Lightning'-->
-    </section>
+        <!--SKY BLOCK-->
+        <section id="sky-block">
+            <h2 class="headings">Sky</h2>
+            <select name="sky">
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="rainy">Rainy</option>
+                <option value="snow">Snow</option>
+            </select>
+        </section>
 
-    <section id="city-name-block">
-        <h2 class="headings">City Name</h2>
-        <!--free text field-->
-        <input type="text">
-        <!--reset button-->
-    </section>
+        <!--CITY BLOCK-->
+        <section id="city-name-block">
+            <h2 class="headings">City Name</h2>
+            <input type="text">
+            <!--reset button-->
+        </section>
 
-    <section id="weather-garden-block">
-        <h2>Weather Garden</h2>
-        <h2 id="sky-landscape">🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧</h2>
-        <h2 id="ground-landscape">🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲</h2>
-    </section>
+        <!--WEATHER GARDEN BLOCK-->
+        <section id="weather-garden-block">
+            <h2>Weather Garden</h2>
+            <h2 id="sky-landscape">🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧</h2>
+            <h2 id="ground-landscape">🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲</h2>
+        </section>
 
+        <script src="src/index.js"></script>
+    </main>
 </body>
 </html>
