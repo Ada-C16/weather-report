@@ -1,0 +1,17 @@
+header, #weather_body, #change_temp, #change_sky, #change_city{
+    border: solid red;
+}
+
+#city_name_header {
+    display: flex;
+
+}
+
+#weather_body, #city_name_header{
+    margin: 50px 150px;
+}
+
+#change_widgets {
+    display: grid;
+    margin: 50px 150px;
+}
