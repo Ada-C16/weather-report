@@ -73,7 +73,6 @@ playground.setAttribute('id','playground');
 
         playground.appendChild(skyContainer);
 // add emoji weather
-// sky changes should effect the box
 
         const landscape = document.createElement('div');
         landscape.setAttribute("class", "round");

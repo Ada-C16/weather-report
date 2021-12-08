@@ -1,8 +1,17 @@
 :root {
-    --morning: rgb(68, 126, 136);
-    --midday: rgb(9, 154, 238);
-    --sunset:linear-gradient(180deg, rgb(0, 27, 51) 0%, rgb(0, 94, 138) 50%, rgb(241, 135, 14) 80%, rgb(243, 116, 190) 100%) ;
-    --midnight:rgb(1,1,1);
+    --twelve: rgb(9, 56, 145);
+    --four: rgb(57, 75, 87);
+    --six: rgb(163, 221, 216);
+    --eight: rgb(35, 200, 241);
+    --twelvep: rgb(19, 199, 253);
+    --fourp: rgb(37, 114, 177);
+    --sixp: rgb(247, 191, 88);
+    --eightp: rgb(243, 116, 190);
+
+    --morning: linear-gradient(0deg, var(--twelve) 0%, var(--four) 20%,var(--six) 100%);
+    --midday: linear-gradient(0deg, var(--eight) 0%, var(--twelvep) 20%, var(--fourp) 100%);
+    --sunset:linear-gradient(0deg, var(--fourp) 0%, var(--sixp) 20%, var(--eightp) 100%);
+    --midnight:linear-gradient(0deg, var(--sixp) 0%, var(--eightp) 20%, var(--twelve) 100%);
     --curved-rad: 16px;
     --curved-padding: 10px;
     --fill-in: rgb(10, 0, 0);
