@@ -96,6 +96,12 @@ const updateCity = (event) => {
   cityDisplay.textContent = event.target.value;
 };
 
+// Reset city button
+const resetCity = () => {
+  const cityInput = document.querySelector("#cityForm");
+  cityInput.reset();
+}
+
 // Registering event handlers
 const registerHandlers = () => {
   const decreaseButton = document.getElementById("decrease");
@@ -109,7 +115,9 @@ const registerHandlers = () => {
 
   const cityInput = document.querySelector("input");
   cityInput.addEventListener('input', updateCity);
-};
 
+  const resetCityButton = document.querySelector("#resetCity");
+  resetCityButton.addEventListener("click", resetCity)
+};
 
 document.addEventListener("DOMContentLoaded", registerHandlers);
