@@ -6,11 +6,15 @@ weatherHeading.textContent = "Weather Report";
 mainSection.appendChild(weatherHeading)
 
 // LOCATION
+const cityContainer = document.createElement('div');
 const city = document.createElement('input') ;
 city.setAttribute("type","text");
 city.setAttribute("placeholder","Mountain House");
-mainSection.appendChild(city);
+cityContainer.appendChild(city);
 // reset city name element
+
+mainSection.appendChild(cityContainer);
+
 
 // SKY MODE
 const skyMode = ["Morning", "Midday", "Sunset", "Midnight"];
