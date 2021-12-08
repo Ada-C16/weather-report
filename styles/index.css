@@ -93,10 +93,11 @@ LANDSCAPE
 #landscape {
     flex: 80;  
     display: flex;
+    justify-content: center;
 }
 
 #landscape-text {
-    justify-content: center;
+    
     font-size: 4vw;
     letter-spacing: 4px;
     align-self: flex-end;
