@@ -23,9 +23,7 @@ Hot number color: #EA0009 */
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
         "header header header header header"
-        "deets deets main main main"
-        "deets deets main main main"
-        "deets deets main main main"
+        "nav nav main main main"
 }
 
 .header {
@@ -42,15 +40,21 @@ Hot number color: #EA0009 */
     align-items: center;
 }
 
+.nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .deets {
-    grid-area: deets;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     background-position: center;
     border-radius: 10px;
-    background-color: white;
     list-style-type: none;
+    background-color: white;
 }
 
 .text {
