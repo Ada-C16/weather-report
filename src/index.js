@@ -10,7 +10,7 @@ const decreaseTemp = () => {
   state.tempCurrent -= 1
   currentTempEl.textContent = `${state.tempCurrent}°F`;
 
-  changeBackgroundTemp()
+  // changeBackgroundTemp()
   changeLandscape()
 };
 
@@ -19,7 +19,7 @@ const increaseTemp =  () => {
 
   state.tempCurrent += 1
   currentTempEl.textContent = `${state.tempCurrent}°F`;
-  changeBackgroundTemp()
+  // changeBackgroundTemp()
   changeLandscape()
 };
 
@@ -51,21 +51,35 @@ const changeBackgroundTemp = () => {
 // Adjusting Landscape According to Temperature
 const changeLandscape = () => {
   const landscapeEmoji = document.querySelector("#landscape")
+  const tempSectionEl = document.querySelector(".tempDefault");
 
   if(state.tempCurrent >=80) {
     landscapeEmoji.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+    tempSectionEl.id = "veryHotTemp";
   }
 
   else if (state.tempCurrent <=79 && state.tempCurrent >= 70) {
     landscapeEmoji.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
+    tempSectionEl.id = "hotTemp";
   }
 
   else if(state.tempCurrent <=69 && state.tempCurrent >=60) {
     landscapeEmoji.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
+    tempSectionEl.id = "middleTemp";
   }
-  else {
+
+  else if (state.tempCurrent <= 59 && state.tempCurrent >= 50) {
     landscapeEmoji.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
+    tempSectionEl.id = "coldTemp";
   }
+
+  else if (state.tempCurrent < 50) {
+    landscapeEmoji.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
+    tempSectionEl.id = "veryColdTemp";
+  }
+  // else {
+  //   landscapeEmoji.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
+  // }
 };
 
 // Adjusting Sky Levels According to Temperature
