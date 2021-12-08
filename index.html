@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet">
+    <title>Weather Check</title>
 </head>
-<body>
-    
+<body class="container">
+    <h1 id="title">Weather Check</h1>
+    <section class="label" id="temp-display-small">Temperature Selector:</section>
+    <section id="temp-changer">
+        <button id="up">⬆</button>
+        <button id="down">⬇</button>
+    </section>
+    <section class="label" id="sky-type-text"> Select Sky Type Here:
+        <select id="sky-type">
+            <option value='Sunny'>Sunny</option>
+            <option value='Cloudy'>Cloudy</option>
+            <option value='Rainy'>Rainy</option>
+            <option value='Stormy'>Stormy</option>
+            <option value='Snowy'>Snowy</option>
+            <option value='Gay'>Gay</option>
+            <option value='Meatball'>Meatball</option>
+        </select>
+    </section>
+    <section class="label" id="type-city-text"> Type City Name Here:
+    <input type="text" name="City Name" id="type-city-box">
+    <button id="reset-city">Reset</button>
+    </section>
+    <section id="sky-display">☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️</section>
+    <section id="landscape-display">🌵🌵🌵🌵🌵🌵🌵🌵🌵🌵</section>
+    <section id="city-display">Your City Here</section>
+    <section id="temp-display-big">76 F</section>
+    <script src="src/index.js"></script>
 </body>
 </html>
