@@ -26,21 +26,38 @@ const decreaseTemp = (event) => {
   }
 };
 
+// ========= CHANGE CITY =========
+
+// const changeCity = document.getElementById('#cityName');
+
+const changeCityName = (event) => {
+  const inputNewCity = document.querySelector('#cityNameInputField').value;
+  const cityDisplayed = document.querySelector('#header-City-Name');
+  cityDisplayed.textContent = inputNewCity;
+};
+
+// const clearCity = (event) => {
+//   const inputChangeCity = document.getElementById('#cityName');
+//   changeCity.value = '';
+// };
+
+// const resetCity = (event) => {
+//   const inputChangeCity = document.getElementById('#cityName');
+//   changeCity.value = 'Denver';
+// };
+
+// ========= REGISER EH =========
+
 const registerEventHandlers = (event) => {
   const warmerButton = document.querySelector('#warmer-button');
   warmerButton.addEventListener('click', increaseTemp);
 
   const coolerButton = document.querySelector('#cooler-button');
   coolerButton.addEventListener('click', decreaseTemp);
-};
 
-// ========= CHANGE CITY =========
-
-const changeCity = document.getElementById('#cityName');
-
-const clearCity = (event) => {
-  const changeCity = document.getElementById('#cityName');
-  changeCity.value = 'Denver';
+  changeCityName();
+  const userChangesCity = document.querySelector('#cityNameInputField');
+  userChangesCity.addEventListener('input', changeCityName);
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
