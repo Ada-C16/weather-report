@@ -11,7 +11,6 @@ Hot number color: #EA0009 */
 
 .grid {
     background-color: #324DF7;
-    padding: 1em;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
     
@@ -43,6 +42,9 @@ Hot number color: #EA0009 */
 
 .nav {
     grid-area: nav;   
+}
+
+.ul-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -50,23 +52,42 @@ Hot number color: #EA0009 */
 
 .deets {
     display: flex;
+    list-style-type: none;
     flex-direction: column;
     border-radius: 10px;
+    background-color: white;
+    margin: 1em;
+}
+
+.emoji-holder {
+    display: inline;
+}
+
+.temp-deets {
+    display: grid;
     list-style-type: none;
+    border-radius: 10px;
     background-color: white;
     margin: 1em;
 }
 
 .text {
-    color:black;
+    text-align: center;
+    color: black;
     grid: flex;
 }
 
 .temp-text {
+    display: inline;
     color:#F0940A;
+    font-size: 24pt;
 }
 
 .garden-display {
     background-color: lightskyblue;
     border-radius: 10px;
+}
+
+.temp-changes {
+    margin: 0;
 }
