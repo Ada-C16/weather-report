@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css" />
+
     <title>Weather Report</title>
 </head>
 <body>
 <header>
     <h1>Weather Report</h1>
+    <h3>My hometown</h3>
 </header>
 
 <section id="one" class="grid">
 <div class="box">
     <div class="column">
     <h2>Temperature</h2>
-    <p class="arrow up"></p>
-    <p></p>
-    <p class="arrow down"></p>
+    <button id="temp" class="arrow up"></button>
+    <p id="increaseTemp"></p>
+    <button id="descreaseTemp" class="arrow down"></button>
     </div>
     <div class="column custom-select">
     <h2>Sky</h2>
@@ -29,22 +31,20 @@
         <option value="4">Snowy</option>
     </select>
     </div>
-    <div class="column">
+    <div id="cityName" class="column">
     <h2>City Name</h2>
     <form>
         <input type="text" id="cityname" name="cityname">
-    <!-- <form action="/.."> -->
-        <input type="submit" value="Submit">
-      </form>
+        <button type="reset" value="Reset" default="Seattle"></button>
+    </form>
 </div>
 </section>
 
 <section id="two" class="grid">
-    <div class="box">
+    <div id="weatherGarden" class="box">
         <h2>Weather Garden</h2>
-    
     </div>
 </section>
-    
+<script src="/src/index.js"></script>
 </body>
 </html>

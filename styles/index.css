@@ -4,7 +4,7 @@ section {
     text-align: center;
 }
 
-h1 {
+h1, h3 {
     text-align: center;
     color: white;
 }
@@ -50,20 +50,19 @@ body {
 
 .row {
     display: flex;
-  }
-  
+}
+
 .column {
-    /* flex: 33%; */
     float: left;
     width: 30%;
     padding: 10px;
     height: 300px;
-  }
+}
 
-  input[type=text] {
+input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     border-radius: 4px;
-  }
+}
