@@ -8,13 +8,14 @@ mainSection.appendChild(weatherHeading)
 // LOCATION
 const cityForm = document.createElement('form');
 cityForm.setAttribute("id", "city-container");
+cityForm.setAttribute("class", "frosted");
+
 
 const cityNameContainer = document.createElement('div');
-cityNameContainer.setAttribute("class", "frosted");
 cityNameContainer.setAttribute("id", "city-name-container");
 
 const city = document.createElement('input');
-city.setAttribute("class", "frosted");
+//city.setAttribute("class", "frosted");
 city.setAttribute("id", "city-name");
 city.setAttribute("type","text");
 city.setAttribute("placeholder","Mountain House");
@@ -25,6 +26,7 @@ cityForm.appendChild(cityNameContainer);
 // reset city name element
 const cityReset = document.createElement('div');
 const resetName = document.createElement('input');
+resetName.setAttribute("id", "reset-city-button");
 resetName.setAttribute("type", "reset");
 resetName.setAttribute("value","↻");
 cityReset.appendChild(resetName);
