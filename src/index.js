@@ -32,27 +32,33 @@ skySelectorLabel.textContent = "Sky Mode:";
 const skySelector = document.createElement("select");
 skySelector.setAttribute("name", "skies");
 skySelector.setAttribute("id","select-sky");
+skySelector.setAttribute("onchange", "changeSkySelect(this)");
 
 skyMode.forEach(mode => {
     let skyTheme = document.createElement('div');
     skyTheme.setAttribute("class", `sky-color ${mode}`);
     skyTheme.setAttribute("id", `${mode}`)
-    skyTheme.setAttribute("onclick", "changeSky(this.id)");
+    skyTheme.setAttribute("onclick", "changeSkyPrev(this.id)");
     skyContainer.appendChild(skyTheme);
 
     let skyOption = document.createElement('option');
+    skyOption.setAttribute("value",`${mode}`)
     skyOption.textContent = `${mode}`;
     skySelector.appendChild(skyOption);
 });
 
 
 mainSection.append(skyContainer);
-mainSection.append(skySelector)
+mainSection.append(skySelector);
 
-const changeSky = (id) => {
-    document.body.setAttribute("class", `${id} `)
+const changeSkyPrev = (id) => {
+    document.body.setAttribute("class", `${id} `);
 }
 
+const changeSkySelect = (selection) => {
+    let val = selection.val;
+    document.body.setAttribute("class", `${val}`);   
+}
 
 // WEATHER STATION
 
