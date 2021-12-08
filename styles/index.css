@@ -1,0 +1,137 @@
+body{
+    background-color:#1d2d44;
+    margin: auto 0 auto;
+    color:#f0ebd8;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+header h1{
+    font-size:80px;
+    margin-left: 10%;
+    margin-bottom: 0%;
+}
+
+footer {
+    background: #0d1321;
+    font-size: 100%;
+    color:#748cab  ;
+    position:fixed; /* keep on the bottom */
+    bottom: 0;
+    padding-top:15px;
+    width: 100%; 
+    height: 3%;
+    text-align: center; 
+    font-family: Lato, Verdana, sans-serif;
+}
+
+.parent-side-container{
+    width: 30%;
+    align-items:center;
+    margin-top: 5%;
+    margin-bottom:5%;
+    margin-left: 10%;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 0.6fr 1fr 0.8fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px;
+}
+
+
+.temperature-side-container,
+.sky-side-container,
+.city-side-container{
+    background-color:#748cab ;
+    width: 80%;
+    height: 80%;
+    padding: 5%;
+    grid-column:1/1;
+    border-radius: 15px;
+    gap: 2%;
+}
+
+
+#temperature-value,
+#increment,
+#decrement{
+    display: inline-block;
+}
+
+#increment,
+#decrement{
+    font-size:200%;
+    font-size:200%;
+    background-color: #748cab;
+    border: none;
+} 
+
+#increment:hover,
+#decrement:hover{
+    
+    background-color:#3e5c76 ;
+}
+
+
+#temperature-value{
+    font-size:400%;
+    text-align: center;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 10%;
+}
+
+form input[type="reset"]{
+    background-color: #f0ebd8; 
+    font-size: 80%;
+    margin-top: 10%;
+    color: #1d2d44;
+    font-weight: bold;
+    border-color:#f0ebd8;
+    border-radius: 15px;
+    height: 30%;
+    width: 20%;
+}
+
+form input[type="text"]{
+    height: 15%;
+    width: 50%;
+    border-radius: 15px;
+}
+
+form label, span{
+    font-size: 250%;
+}
+
+#sky-type{
+    width: 50%;
+    height: 18%;
+    margin-top: 10%;
+    font-size: 120%;
+    color: #1d2d44;
+    border-radius: 15px;
+}
+
+
+.container-garden{
+    grid-column-start:2;
+    grid-column-end:3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin-left: 10%;
+    border-radius: 15px;;
+    height: 50%;
+    width: 120%
+}
+
+.container-garden h2{
+    text-align: center;
+}
+.container-garden div{
+    background-color:#f0ebd8;
+    border-radius: 15px;
+    height: 90%;
+
+}

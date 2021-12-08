@@ -5,8 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
+
+    <header>
+        <h1 id ="title" >Weather Report</h1>
+    </header>
     
+    
+    <main class="parent-side-container">
+        <form class="temperature-side-container" action="#"> 
+            <span>Temperature</span><br><br>
+            <button id ="increment">⬆️</button>    
+            <p id = "temperature-value"> - </p>
+            <button id="decrement">⬇️</button><br>
+        </form>
+
+        <form class ="sky-side-container" action="#">
+            <span>Sky</span><br><br>
+            <select id="sky-type" name="sky">
+                <option value="Rainy">Rainy</option>
+                <option value="Sunny">Sunny</option>
+                <option value="Snowy">Snowy</option>
+                <option value="Cloudy">Cloudy</option>
+            </select>
+        </form>
+        
+
+        <form  class = "city-side-container" action="#">
+            <label for="city">City Name</label><br><br>
+            <input type="text" id="city" name="city" placeholder="type here">
+            <input type="reset">
+        </form>
+
+
+        <section class= "container-garden">
+            <h2> Weather Garden</h2>
+            <div class="display-garden">
+                <p class = "display-sky"></p>
+                <p class ="display-plants"></p>
+            </div>
+        </section>     
+    </main>
+
+
+    
+    <footer> @Ana Gabriele</footer>
+    <script src="src/index.js"></script>
 </body>
 </html>
