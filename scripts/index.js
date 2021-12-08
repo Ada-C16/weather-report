@@ -1,6 +1,5 @@
 const state = {
   temp: 75,
-  sky: "Snowy",
 };
 
 // What to do when the view loads
@@ -27,26 +26,32 @@ const registerEventHandlers = () => {
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
 
-// Temperature box stuff
+// Temperature and landscape
 const adjustTempColor = (tempNumber) => {
   const temp = document.getElementById("temp");
+  const landscape = document.getElementById("landscape");
   temp.classList.remove("red", "yellow", "green", "orange", "teal");
   let color = null;
   switch (true) {
     case tempNumber <= 49:
       color = "teal";
+      landscape.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
       break;
     case tempNumber <= 59:
       color = "green";
+      landscape.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
       break;
     case tempNumber <= 69:
       color = "yellow";
+      landscape.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
       break;
     case tempNumber <= 79:
       color = "orange";
+      landscape.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
       break;
     default:
       color = "red";
+      landscape.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
       break;
   }
   temp.classList = `${temp.classList} ${color}`;
@@ -72,7 +77,7 @@ const decreaseTemp = () => {
 
 // Sky stuff
 const skyOptions = {
-  Sunny: "☁️ ☁️ ☁️ ☀️ ☁️ ☁️",
+  Sunny: "☀️☁️ ☀️☀️ ☁️ ☀️☀️☀️ ☁️ ☀️",
   Cloudy: "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️",
   Rainy: "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧",
   Snowy: "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨",
