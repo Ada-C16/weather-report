@@ -30,46 +30,65 @@ const state = {
       },
     },
   },
+  sky: {
+    night: '✨✨✨🌙✨✨',
+    sunny: '☁️ ☁️ ☁️ ☀️ ☁️ ☁️',
+    cloudy: '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️',
+    rainy: '🌧🌈⛈🌧💧⛈🌧🌦🌧💧🌧',
+    snowy: '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨',
+  },
 };
-
-// parts to this problem
-// 1. make each arrow into a button that increments or decrements the temperature
-// a. up arrow increments temperature
-// define the up arrow as a button
-// set an event handler to listen for a click
-// on click, update the state temperature and make sure the change is reflected in the HTML element
-// b. down arrow decrements temperature
-// 2. style the ground so that it corresponds to the temperature
-// 3. style the number so that it corresponds to the temperature
 
 const increaseTemp = () => {
   state.temperature.currentTemp++;
-  console.log(state.temperature.currentTemp);
   setTempDisplay();
 };
 
 const decreaseTemp = () => {
   state.temperature.currentTemp--;
-  console.log(state.temperature.currentTemp);
   setTempDisplay();
 };
 
+const resetTemp = () => {
+  state.temperature.currentTemp = state.temperature.defaultTemp;
+  setTempDisplay();
+};
+
+// set the class of the temperature so that it corresponds to the temperature
 const setTempDisplay = () => {
   const tempDisplay = document.getElementById('temp-display');
+  const landscapeDisplay = document.getElementById('ground');
   let currentTemp = state.temperature.currentTemp;
+
   tempDisplay.innerHTML = currentTemp;
+
   for (let climate in state.temperature.tempRanges) {
-    const { upperBound, lowerBound } = state.temperature.tempRanges[climate];
+    const { upperBound, lowerBound, landscape } =
+      state.temperature.tempRanges[climate];
     if (upperBound && lowerBound) {
       if (currentTemp >= lowerBound && currentTemp <= upperBound) {
         tempDisplay.className = climate;
+        landscapeDisplay.innerHTML = landscape;
       }
     } else if (!lowerBound && currentTemp <= upperBound) {
       tempDisplay.className = climate;
+      landscapeDisplay.innerHTML = landscape;
     } else if (!upperBound && currentTemp >= lowerBound) {
       tempDisplay.className = climate;
+      landscapeDisplay.innerHTML = landscape;
     }
   }
+};
+
+const selectSky = (event) => {
+  const weather = event.originalTarget.value;
+  const sky = document.getElementById('sky');
+  sky.innerHTML = state.sky[weather];
+};
+
+const resetSky = () => {
+  const sky = document.getElementById('sky');
+  sky.innerHTML = state.sky.night;
 };
 
 const registerEventHandlers = () => {
@@ -78,6 +97,20 @@ const registerEventHandlers = () => {
 
   const downArrow = document.getElementById('down-arrow');
   downArrow.addEventListener('click', decreaseTemp);
+
+  const resetTempButton = document.getElementById('reset-temp');
+  resetTempButton.addEventListener('click', resetTemp);
+
+  const selectSkyDropdown = document.getElementById('select-sky');
+  selectSkyDropdown.addEventListener('change', selectSky);
+
+  const resetSkyButton = document.getElementById('reset-sky');
+  resetSkyButton.addEventListener('click', resetSky);
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
+document.addEventListener('DOMContentLoaded', setTempDisplay);
+document.addEventListener('DOMContentLoaded', resetSky);
+
+// Wave 3: Selecting the sky
+// there must be a select element that lets users determine the sky to display
