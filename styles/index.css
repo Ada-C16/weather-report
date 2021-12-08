@@ -1,0 +1,41 @@
+body {
+    font-family: fantasy;
+    }
+
+#container {
+        background-color: #d9edc3;
+        display:grid;
+        grid-template-columns: 50% auto;
+        grid-template-rows: 30% 60vh 30%;
+        grid-template-areas: "hd hd" "temperature skycity" "footer footer";
+        /* justify-content: center;
+        align-content: center; */
+    }
+
+header {
+        background-color: #dc85bc;
+        font-size: 1.5em;
+        text-align: center;
+        grid-area: hd;
+      }
+      
+#sub-header {
+    font-style: italic;
+}
+
+#temp {
+    grid-area: temperature;
+
+}
+#sky {
+    grid-area: skycity;
+}
+#city {
+    grid-area: skycity;
+}
+footer {
+    background-color: #dc85bc;
+    grid-area: footer;
+    text-align: center;
+  }
+  
