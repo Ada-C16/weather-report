@@ -7,7 +7,6 @@ const landscape = document.querySelector("#landscape");
 
 let temp = 70;
 
-// PUT INTITIAL TEMP COLOR and sky and landscape settings into html
 
 // ***** Temperature Functions *****
 
@@ -75,21 +74,23 @@ const changeSky = () => {
     }
 };
 
-// ***** City Name Variables *****
-
-
-
+// ***** City Name Function *****
+const cityHeader = document.querySelector("#city-header");
 
 const cityChange = () =>{
-    const cityHeader = document.querySelector("#city-header");
+    
     const cityInputValue = document.querySelector("#city-input").value;
     cityHeader.textContent = cityInputValue;
     
 };
 
-
-
 // ***** Reset Variables *****
+const reset= () =>{
+    cityHeader.textContent = "Catalina Island";
+    document.querySelector("#city-input").value = "Catalina Island"
+
+};
+
 
 // ***** Event Handlers *****
 const registerEventHandlers = () => {
@@ -101,6 +102,8 @@ const registerEventHandlers = () => {
     skyDrop.addEventListener("change", changeSky);
     const cityInput = document.querySelector("#city-input");
     cityInput.addEventListener("input", cityChange);
+    const resetButton = document.querySelector("#city-reset")
+    resetButton.addEventListener("click", reset);
     
 };
 
