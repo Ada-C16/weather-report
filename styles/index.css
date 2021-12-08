@@ -1,0 +1,23 @@
+.tempDefault {
+    background-color: rgb(254, 254, 178);
+}
+
+#veryColdTemp {
+    background-color: rgb(189, 246, 246);
+}
+
+#coldTemp {
+    background-color: rgb(183, 251, 183);
+}
+
+#normalTemp {
+    background-color: rgb(254, 254, 178);
+}
+
+#veryHotTemp {
+    background-color: rgb(255, 132, 132);
+}
+
+#hotTemp {
+    background-color: rgb(255, 167, 95);
+}
