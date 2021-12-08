@@ -1,0 +1,36 @@
+header {
+    min-height: 15vh;
+}
+.col,
+.col-8 {
+    min-height: 70vh;
+}
+
+.control-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.control-item {
+    background-color: beige;
+    padding: 30px;
+}
+
+.temp-control {
+    display: flex;
+    align-items: center
+}
+.btn-container {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.btn {
+    margin: 10px
+}
+
+.view-section {
+    background-color: beige;
+}

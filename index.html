@@ -21,33 +21,42 @@
         <main class="container">
             <div class="row">
                 <section class="col control-section">
-                    <section class="temp-control">
+                    <section class="temp-control control-item">
                         <h3 id="temp">70</h3>
                         <div class="btn-container">
-                            <button class="btn">up</button>
-                            <button class="btn">down</button>
+                            <button class="btn btn-secondary">up</button>
+                            <button class="btn btn-secondary">down</button>
                         </div>
                     </section>
-                    <section class="sky-control">
-                        <select name="sky" id="sky">
-                            <h3>Sky</h3>
+                    <section class="sky-control control-item">
+                        <h3>Sky</h3>
+                        <select name="sky-condition" id="sky-condition">
                             <option value="sunny">Sunny</option>
                             <option value="cloudy">Cloudy</option>
                             <option value="rainy">Rainy</option>
                             <option value="snowy">Snowy</option>
                         </select>
                     </section>
-                    <section class="location-control">
+                    <section class="location-control control-item">
                         <h3>Location</h3>
                         <form action="">
                             <input type="text">
-                            <button type="submit"></button>
+                            <button type="submit">Change</button>
                         </form>
                     </section>
                 </section>
-                <section class="col view-section"></section>
+                <section class="col-8 view-section">
+                    <h3>Weather Activity</h3>
+                    <div class="view-container">
+                        <p class="sky-emoji"></p>
+                        <div class='img-container'>
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
     </div>
+    <script src="/src/index.js"></script>
 </body>
 </html>
