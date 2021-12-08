@@ -30,11 +30,15 @@ Hot number color: #EA0009 */
 
 .header {
     grid-area: header;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
-.inline{
+
+/* .inline{
     display: inline;
     margin-right: 100 px;
-}
+} */
 .main {
     grid-area: main;
     display: grid;
