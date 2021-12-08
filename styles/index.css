@@ -59,12 +59,14 @@ Hot number color: #EA0009 */
     margin: 1em;
 }
 
-.emoji-holder {
-    display: inline;
+#emoji-holder {
+    text-align: center;
 }
 
 .temp-deets {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     list-style-type: none;
     border-radius: 10px;
     background-color: white;
@@ -77,17 +79,14 @@ Hot number color: #EA0009 */
     grid: flex;
 }
 
-.temp-text {
-    display: inline;
+#temp-text {
     color:#F0940A;
     font-size: 24pt;
+    margin: 0;
+    text-align: center;
 }
 
 .garden-display {
     background-color: lightskyblue;
     border-radius: 10px;
-}
-
-.temp-changes {
-    margin: 0;
 }
