@@ -62,18 +62,26 @@ const changeSky = (event) => {
 const changeSeason = () => {
   const plantContainer = document.getElementById('plant-container');
   const produceContainer = document.getElementById('produce-container');
-  if (currentTempCounter.temp >= 99) {
+  const currentTempEl = document.getElementById('current-temp');
+
+  if (currentTempCounter.temp >= 80) {
     plantContainer.textContent = plantOptions.tooHot;
     produceContainer.textContent = produceOptions.tooHot;
-  } else if (currentTempCounter.temp >= 75) {
+    currentTempEl.style.color = 'red';
+  } else if (currentTempCounter.temp >= 70) {
     plantContainer.textContent = plantOptions.summer;
     produceContainer.textContent = produceOptions.summer;
-  } else if (currentTempCounter.temp > 55) {
+    currentTempEl.style.color = 'orange';
+  } else if (currentTempCounter.temp > 60) {
     plantContainer.textContent = plantOptions.spring;
     produceContainer.textContent = produceOptions.spring;
-  } else {
+    currentTempEl.style.color = 'yellow';
+  } else if (currentTempCounter.temp > 50) {
     plantContainer.textContent = plantOptions.winter;
     produceContainer.textContent = produceOptions.winter;
+    currentTempEl.style.color = 'green';
+  } else {
+    currentTempEl.style.color = 'teal';
   }
 };
 
