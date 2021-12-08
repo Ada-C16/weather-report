@@ -17,13 +17,27 @@ body {
     background: var(--sunset);
 }
 
-/*
-h2 {
-    add frosting
-    center text
-    change color
-}
+/* 
+CITY 
 */
+
+.frosted {
+    background: rgba(243, 234, 234, 0.308);;
+    backdrop-filter: blur(30px);
+}
+
+#city-container {
+    margin: 10px auto;
+    padding: 2px;
+    width: 30vw;
+}
+
+#city-name {
+    text-align: center;
+    background: transparent;
+    color: white;
+    border: hidden;
+}
 
 /* 
 SKY BOX

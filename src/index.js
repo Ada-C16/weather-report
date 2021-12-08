@@ -7,7 +7,11 @@ mainSection.appendChild(weatherHeading)
 
 // LOCATION
 const cityContainer = document.createElement('div');
-const city = document.createElement('input') ;
+cityContainer.setAttribute("class", "frosted");
+cityContainer.setAttribute("id", "city-container");
+const city = document.createElement('input');
+city.setAttribute("class", "frosted");
+city.setAttribute("id", "city-name");
 city.setAttribute("type","text");
 city.setAttribute("placeholder","Mountain House");
 cityContainer.appendChild(city);
