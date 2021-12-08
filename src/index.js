@@ -6,18 +6,24 @@ weatherHeading.textContent = "Weather Report";
 mainSection.appendChild(weatherHeading)
 
 // LOCATION
-const cityContainer = document.createElement('div');
-cityContainer.setAttribute("class", "frosted");
-cityContainer.setAttribute("id", "city-container");
+const cityForm = document.createElement('form');
+
+const cityNameContainer = document.createElement('div');
+cityNameContainer.setAttribute("class", "frosted");
+cityNameContainer.setAttribute("id", "city-container");
+
 const city = document.createElement('input');
 city.setAttribute("class", "frosted");
 city.setAttribute("id", "city-name");
 city.setAttribute("type","text");
 city.setAttribute("placeholder","Mountain House");
-cityContainer.appendChild(city);
-// reset city name element
+cityNameContainer.appendChild(city);
 
-mainSection.appendChild(cityContainer);
+// reset city name element
+const cityReset = document.createElement('div');
+
+
+mainSection.appendChild(cityNameContainer);
 
 
 // SKY MODE
@@ -56,7 +62,7 @@ const changeSkyPrev = (id) => {
 }
 
 const changeSkySelect = (selection) => {
-    let val = selection.val;
+    let val = selection.value;
     document.body.setAttribute("class", `${val}`);   
 }
 
