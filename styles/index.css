@@ -11,7 +11,7 @@
 }
 
 header {
-    background-color: green;
+    background-color: ivory;
     display: flex;
     justify-content:space-between;
 }
@@ -25,7 +25,7 @@ header .sub {
 }
 
 main {
-    background-color: rgba(162, 34, 162, 0.5);
+    background-color: rgba(180, 166, 241, 0.5);
     display: grid;
     justify-content: space-between; 
     grid-template-columns: 50%;
@@ -42,6 +42,11 @@ main section.weather-garden {
     background-color: rgba(0,0,0,.1);
 }
 
+main #temperature {
+    color: rgb(172, 12, 12);
+    font-weight: bold;
+}
+
 footer {
-    background-color: rgb(164, 164, 51);
+    background-color: rgb(240, 240, 147);
 }
