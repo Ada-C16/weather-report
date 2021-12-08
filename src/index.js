@@ -102,7 +102,7 @@ const updateTemp = () => {
         temperature.style.color = "green";
         landscapeEmoji.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
     } else if (60 <= state.temp && state.temp < 70) {
-        temperature.style.color = "yellow";
+        temperature.style.color = "pink";
         landscapeEmoji.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
     } else if (70 <= state.temp && state.temp < 80) {
         temperature.style.color = "orange";
