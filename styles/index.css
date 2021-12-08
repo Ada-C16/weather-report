@@ -1,4 +1,29 @@
-#temp-box {
+/* #temp-box {
     background-color: blueviolet;
     font-size: 80pt;
+} */
+
+div {
+    background-color: blueviolet;
+    font-size: 80pt;
+}
+
+.eighty-degrees {
+    background-color: red;
+}
+
+.seventy-degrees {
+    background-color: orange;
+}
+
+.sixty-degrees {
+    background-color: yellow;
+}
+
+.fifty-degrees {
+    background-color: green;
+}
+
+.forty-degrees {
+    background-color: teal;
 }
