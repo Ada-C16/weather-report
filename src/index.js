@@ -25,17 +25,29 @@ const skyMode = ["Morning", "Midday", "Sunset", "Midnight"];
 const skyContainer = document.createElement('div');
 skyContainer.setAttribute("id", "sky-container");
 
+const skySelectorLabel = document.createElement("label");
+skySelectorLabel.setAttribute("for", "select-sky");
+skySelectorLabel.textContent = "Sky Mode:";
+
+const skySelector = document.createElement("select");
+skySelector.setAttribute("name", "skies");
+skySelector.setAttribute("id","select-sky");
+
 skyMode.forEach(mode => {
     let skyTheme = document.createElement('div');
     skyTheme.setAttribute("class", `sky-color ${mode}`);
     skyTheme.setAttribute("id", `${mode}`)
     skyTheme.setAttribute("onclick", "changeSky(this.id)");
     skyContainer.appendChild(skyTheme);
+
+    let skyOption = document.createElement('option');
+    skyOption.textContent = `${mode}`;
+    skySelector.appendChild(skyOption);
 });
 
-// add to select element at bottom
 
 mainSection.append(skyContainer);
+mainSection.append(skySelector)
 
 const changeSky = (id) => {
     document.body.setAttribute("class", `${id} `)
