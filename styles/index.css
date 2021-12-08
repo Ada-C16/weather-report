@@ -56,6 +56,7 @@ Nightfall */
 
 .temperature-area {
     background-color: white;
+    height: 200px;
     border-radius: 15px 50px;
     grid-row: 6/10;
     grid-column: 1 / 4;
@@ -91,6 +92,7 @@ Nightfall */
     grid-row: 3/5;
     grid-column: 4/5;
     font-size: 150%;
+    cursor: pointer;
 }
 
 #decrease-temp {
@@ -98,10 +100,12 @@ Nightfall */
     grid-row: 4/6;
     grid-column: 4/5;
     font-size: 150%;
+    cursor: pointer;
 }
 
 .sky-area {
     background-color: white;
+    height: 200px;
     border-radius: 15px 50px;
     grid-row: 6/10;
     grid-column: 4 / 7;
@@ -143,6 +147,7 @@ Nightfall */
 
 .city-area {
     background-color: white;
+    height: 200px;
     border-radius: 15px 50px;
     grid-row: 6/10;
     grid-column: 7 / 10;
