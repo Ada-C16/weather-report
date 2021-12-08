@@ -24,6 +24,12 @@ body {
     background: var(--sunset);
 }
 
+.round {
+    border: hidden;
+    border-radius: var(--curved-rad);
+    padding: var(--curved-padding);   
+}
+
 /* 
 CITY 
 */
@@ -31,8 +37,6 @@ CITY
 .frosted {
     background: rgba(243, 234, 234, 0.308);;
     backdrop-filter: blur(30px);
-    border-radius: var(--curved-rad);
-    padding: var(--curved-padding);
 }
 
 #city-container {
@@ -104,6 +108,8 @@ WEATHER CONTROL
 #temp-container {
     display: flex;
     margin: 0 auto;
+    width: 30vw;
+    justify-content: space-evenly;
 }
 
 .temp-gauge {
@@ -111,10 +117,13 @@ WEATHER CONTROL
 }
 
 #incTemp, #decTemp {
-    background-color: violet;
+    background-color: white;
+    border:hidden;
+
 }
 
 #temperature {
-    background-color: aqua;
+    background-color: white;
     inline-size: 5vw;
+    text-align: center;
 }

@@ -8,7 +8,7 @@ mainSection.appendChild(weatherHeading)
 // LOCATION
 const cityForm = document.createElement('form');
 cityForm.setAttribute("id", "city-container");
-cityForm.setAttribute("class", "frosted");
+cityForm.setAttribute("class", "frosted round");
 
 
 const cityNameContainer = document.createElement('div');
