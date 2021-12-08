@@ -145,9 +145,10 @@ h2{
 
 #cityname{
     text-align: center;
+    font-size: 5em;
 }
 main {
-    background-image: url(../assets/skies/sun.jpeg);
+    background-image: url(../assets/skies/sun.jpg);
     background-position: center;
     background-clip: border-box;
     background-repeat: no-repeat;
@@ -201,4 +202,8 @@ main {
  
  .form-rounded-button:hover {
 
+ }
+
+ .theMainText {
+    text-shadow: 5px 5px 2px black;
  }

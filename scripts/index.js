@@ -19,7 +19,12 @@ window.onload = function () {
     };    
     document.getElementById("city").onkeyup = function() {
         setCity();
-    };       
+    };    
+    
+    document.getElementById("sky").onchange = function() {
+        console.log(this.event);
+        changeSky();
+    };        
 };
 
 function setTemperature(tempChange){
@@ -32,9 +37,27 @@ function setTemperature(tempChange){
     document.getElementById("temperature_small").innerHTML = myTempLabel;
 
     //do some conditional changes to the page based on the temp
-    // if (myTemp > 60)&&(myTemp < 100){
+    if (myTemp >= 80){
+        setMainTextColor('red');
+        document.getElementById('landscape-image').src = './assets/landscapes/summer.png';
+    }else if ((myTemp >= 70)&&(myTemp < 80)){
+        setMainTextColor('orange');
+        document.getElementById('landscape-image').src = './assets/landscapes/fall.png';
+    }else if ((myTemp >= 60)&&(myTemp < 70)){
+        setMainTextColor('yellow');
+        document.getElementById('landscape-image').src = './assets/landscapes/spring.png';
+    }else if ((myTemp >= 50)&&(myTemp < 60)){
+        setMainTextColor('green');
+        document.getElementById('landscape-image').src = './assets/landscapes/winter.png';
+    }else{
+        setMainTextColor('teal');
+    }
+}
 
-    // }
+function setMainTextColor(theColor){
+    for (let i=0, len=document.getElementsByClassName('theMainText').length; i<len; i++) {
+        document.getElementsByClassName('theMainText')[i].style.color = theColor;
+    }      
 }
 
 function setCity(){
@@ -43,11 +66,27 @@ function setCity(){
 }
 
 function changeSky(){
-    whichSky = document.getElementById("sky")
-    selectedSky = whichSky.options[whichSky.selectedIndex].value;
+    const selectedSky = document.getElementById("sky").options[document.getElementById("sky").selectedIndex].value;
+    let theMainDiv = document.getElementById("main");
+    let fontColor = "black";
+    let fontsToChange = document.getElementsByClassName("theMainText");
+
     console.log('changing sky to:' + selectedSky);
     //change the images
+    console.log(" changing backgroundImage to: url(./assets/skies/" + selectedSky + ".jpg)")
+    theMainDiv.style.backgroundImage = "url('./assets/skies/" + selectedSky + ".jpg')";
+    //now change the fonts so you can see them
 
-
+    fontsWhite = ['snow', 'rainy', 'cloudy'];
+    console.log('the selected sky is at index for fontsWhite at:' + fontsWhite.indexOf(selectedSky));
+    if (fontsWhite.indexOf(selectedSky) !== -1){       
+        fontColor = "white";
+    }else{
+        fontColor = "black";
+    }
+       //now loop through the elements and update their css
+    for (let i=0, len=fontsToChange.length; i<len; i++) {
+        fontsToChange[i].style.textShadow = '5px 5px 2px ' + fontColor;
+    }  
 
 }

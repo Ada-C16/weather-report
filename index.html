@@ -11,11 +11,11 @@
         <nav>
             <div class="row">
                 <div class="col-5 nav-col">
-                    <select class="form-rounded-corners" id="sky" onchange="changeSky()">
-                        <option value="sunny">Sunny</option>
+                    <select class="form-rounded-corners" id="sky">
+                        <option value="sun">Sunny</option>
                         <option value="cloudy">Cloudy</option>
                         <option value="rainy">Rainy</option>
-                        <option value="snowy">Snowy</option>
+                        <option value="snow">Snowy</option>
                     </select>
                 </div>
                 <div class="col-3 nav-col">
@@ -36,10 +36,10 @@
                 </div>                                
             </div>
         </nav>
-        <main>
-            <h2 id="cityname"></h2>
-            <h1 class="temperature" id="temperature_big"></h1>
-            <div id="landscape"><img class="landscape" src="./assets/landscapes/grass.png"></div>
+        <main id="main">
+            <h2 class="theMainText" id="cityname"></h2>
+            <h1 class="temperature theMainText" id="temperature_big"></h1>
+            <div id="landscape"><img class="landscape" id="landscape-image" src="./assets/landscapes/fall.png"></div>
         </main>   
         <footer>
             InaccuWeather 
