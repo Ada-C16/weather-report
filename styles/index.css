@@ -36,6 +36,7 @@ Hot number color: #EA0009 */
 .main {
     grid-area: main;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -63,4 +64,9 @@ Hot number color: #EA0009 */
 
 .temp-text {
     color:#F0940A;
+}
+
+.garden-display {
+    background-color: lightskyblue;
+    border-radius: 10px;
 }
