@@ -1,13 +1,33 @@
 const state = {
-  temp: 1,
+  temp: 75,
+  sky: "Snowy",
 };
 
+// What to do when the view loads
 window.addEventListener("load", () => {
+  //Set temp
   const temp = document.getElementById("temp");
   temp.textContent = String(state.temp);
   adjustTempColor(state.temp);
+
+  //Set Sky
+  changeSky();
 });
 
+const registerEventHandlers = () => {
+  const upButton = document.getElementById("upArrow");
+  upButton.addEventListener("click", increaseTemp);
+
+  const downButton = document.getElementById("downArrow");
+  downButton.addEventListener("click", decreaseTemp);
+
+  const skyDropdown = document.querySelector("select");
+  skyDropdown.addEventListener("change", changeSky);
+};
+
+document.addEventListener("DOMContentLoaded", registerEventHandlers);
+
+// Temperature box stuff
 const adjustTempColor = (tempNumber) => {
   const temp = document.getElementById("temp");
   temp.classList.remove("red", "yellow", "green", "orange", "teal");
@@ -30,7 +50,6 @@ const adjustTempColor = (tempNumber) => {
       break;
   }
   temp.classList = `${temp.classList} ${color}`;
-  console.log(temp.classList);
 };
 
 const increaseTemp = () => {
@@ -51,12 +70,16 @@ const decreaseTemp = () => {
   adjustTempColor(tempInt);
 };
 
-const registerEventHandlers = () => {
-  const upButton = document.getElementById("upArrow");
-  upButton.addEventListener("click", increaseTemp);
-
-  const downButton = document.getElementById("downArrow");
-  downButton.addEventListener("click", decreaseTemp);
+// Sky stuff
+const skyOptions = {
+  Sunny: "☁️ ☁️ ☁️ ☀️ ☁️ ☁️",
+  Cloudy: "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️",
+  Rainy: "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧",
+  Snowy: "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨",
 };
 
-document.addEventListener("DOMContentLoaded", registerEventHandlers);
+const changeSky = () => {
+  const sky = document.getElementById("sky");
+  const dropdown = document.querySelector("select");
+  sky.textContent = skyOptions[dropdown.value];
+};
