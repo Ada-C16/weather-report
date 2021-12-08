@@ -24,3 +24,37 @@ h2 {
     change color
 }
 */
+
+
+.sky-color {
+    height: 90%;
+    margin: 10px;
+     /* // hover behavior
+   */
+}
+
+#Midnight {
+    background: var(--midnight);
+}
+
+#Midday {
+    background: var(--midday);
+}
+
+#Sunset {
+    background: var(--sunset);
+}
+
+#Morning {
+    background: var(--morning);
+}
+
+
+#sky-container {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 10vw;
+} 
+
