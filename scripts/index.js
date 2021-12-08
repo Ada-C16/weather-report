@@ -1,8 +1,10 @@
 let myTemp = 75;
 let myCity = 'Seattle, WA';
 
+
 /*Things that happen when the page loads*/
-window.onload = function () {
+window.addEventListener('load', function (){
+
     //let's set up the initial values for the page
 
     //display the labels
@@ -10,7 +12,8 @@ window.onload = function () {
     document.getElementById("city").value = myCity;
     setCity(myCity);
 
-    //make the buttons do something
+    //make the buttons and other form elementsw do something
+    //by binding an action to the function
     document.getElementById("reduceTemp").onclick = function() {
         setTemperature(-1);
     };
@@ -25,9 +28,9 @@ window.onload = function () {
         console.log(this.event);
         changeSky();
     };        
-};
+});
 
-function setTemperature(tempChange){
+const setTemperature = (tempChange) => {
     //reset the myTemp global variable
     myTemp = (myTemp + tempChange);
     //make a pretty label
@@ -54,18 +57,18 @@ function setTemperature(tempChange){
     }
 }
 
-function setMainTextColor(theColor){
+const setMainTextColor = (theColor) => {
     for (let i=0, len=document.getElementsByClassName('theMainText').length; i<len; i++) {
         document.getElementsByClassName('theMainText')[i].style.color = theColor;
     }      
 }
 
-function setCity(){
+const setCity = () => {
     myCity = document.getElementById("city").value;
     document.getElementById("cityname").innerHTML = myCity
 }
 
-function changeSky(){
+const changeSky = () => {
     const selectedSky = document.getElementById("sky").options[document.getElementById("sky").selectedIndex].value;
     let theMainDiv = document.getElementById("main");
     let fontColor = "black";
