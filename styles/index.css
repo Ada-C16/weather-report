@@ -27,9 +27,14 @@ CITY
 }
 
 #city-container {
+    display: flex;
     margin: 10px auto;
-    padding: 2px;
+    /*padding: 2px;*/
     width: 30vw;
+}
+
+#city-name-container {
+    margin: auto;   
 }
 
 #city-name {
