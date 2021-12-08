@@ -136,3 +136,23 @@ p {
 #landscape {
     align-self: flex-end;
 }
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.orange {
+    color: orange;
+}
+
+.green {
+    color: green;
+}
+
+.teal {
+    color: teal;
+}
