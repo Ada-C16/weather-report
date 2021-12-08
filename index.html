@@ -12,17 +12,20 @@
     <header>
         <h1><span>Seattle </span>Weather Report</h1>
     </header>
-    <main id="main-container">
-        <section id="temp-container">
+        <main id="main-container">
+        <section id="temp-container" class="background">
             <h2>Temperature</h2>
+            <img src="assets/images/temp_clipart.jpeg" alt="thermometer clipart" width="150px" height="150px">
+            <div id="temp-arrow">
                 <span>◀</span>
                 <span>▶</span>
-
-            <div>65</div>
+            </div>
+            <div id="temp-number">49</div>
             <p><span id='date-time'></span></p>
         </section>
-        <section id="sky-container">
+        <section id="sky-container" class="background">
             <h2>Sky</h2>
+            <img src="assets/images/sky_clipart3.png" alt="cloudy clipart" width="170px" height="170px">
             <select>
                 <option value="sunny">Sunny</option>
                 <option value="cloudy">Cloudy</option>
@@ -30,15 +33,17 @@
                 <option value="snowy">Snowy</option>
             </select>
         </section>
-        <section id="city-container">
+        <section id="city-container" class="background">
             <h2>City</h2>
-            <input type="text" value="Seattle">
-            <button>reset</button>
+            <img src="assets/images/city_clipart.jpeg" alt="cloudy clipart" width="170px" height="170px">
+            <input class="input-margin"type="text" value="Seattle">
+            <button class="input-margin">reset</button>
+        </section>
+        <section id="layout-container" class="background">
+            <h2>Layout</h2>
+            <div id="layout-image"><img src="assets/images/layout_sunny1.jpeg" height="170px" width="170px" alt="sunset"></div>
         </section>
     </main>
-    <section id="layout-container">
-        <div><img src="assets/images/sunset.jpeg" height="300px" width="300px" alt="sunset"></div>
-    </section>
     <script src="src/index.js"></script>
 </body>
 </html>
