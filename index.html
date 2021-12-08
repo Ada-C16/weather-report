@@ -11,15 +11,17 @@
 
     <header>
         <h1 id ="title" >Weather Report</h1>
+        <h2>  for the lovely city</h2>
     </header>
     
     
     <main class="parent-side-container">
         <form class="temperature-side-container" action="#"> 
             <span>Temperature</span><br><br>
-            <button id ="increment">⬆️</button>    
-            <p id = "temperature-value"> - </p>
-            <button id="decrement">⬇️</button><br>
+            <button id="decrement">⬇️</button>
+            <p id = "temperature-value"> 0 </p>
+            <button id ="increment">⬆️</button>
+    
         </form>
 
         <form class ="sky-side-container" action="#">
@@ -36,7 +38,8 @@
         <form  class = "city-side-container" action="#">
             <label for="city">City Name</label><br><br>
             <input type="text" id="city" name="city" placeholder="type here">
-            <input type="reset">
+            <!-- <input type="reset"> -->
+            <button id="reset-button" type="button">Reset</button>
         </form>
 
 
