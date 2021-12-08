@@ -15,7 +15,6 @@ const cityNameContainer = document.createElement('div');
 cityNameContainer.setAttribute("id", "city-name-container");
 
 const city = document.createElement('input');
-//city.setAttribute("class", "frosted");
 city.setAttribute("id", "city-name");
 city.setAttribute("type","text");
 city.setAttribute("placeholder","Mountain House");
@@ -37,44 +36,63 @@ mainSection.appendChild(cityForm);
 
 
 // SKY MODE
-const skyMode = ["Morning", "Midday", "Sunset", "Midnight"];
-const skyContainer = document.createElement('div');
-skyContainer.setAttribute("id", "sky-container");
 
-const skySelectorLabel = document.createElement("label");
-skySelectorLabel.setAttribute("for", "select-sky");
-skySelectorLabel.textContent = "Sky Mode:";
-
-const skySelector = document.createElement("select");
-skySelector.setAttribute("name", "skies");
-skySelector.setAttribute("id","select-sky");
-skySelector.setAttribute("onchange", "changeSkySelect(this)");
-
-skyMode.forEach(mode => {
-    let skyTheme = document.createElement('div');
-    skyTheme.setAttribute("class", `sky-color ${mode}`);
-    skyTheme.setAttribute("id", `${mode}`)
-    skyTheme.setAttribute("onclick", "changeSkyPrev(this.id)");
-    skyContainer.appendChild(skyTheme);
-
-    let skyOption = document.createElement('option');
-    skyOption.setAttribute("value",`${mode}`)
-    skyOption.textContent = `${mode}`;
-    skySelector.appendChild(skyOption);
-});
+const playground = document.createElement('section');
+playground.setAttribute('id','playground');
 
 
-mainSection.append(skyContainer);
-mainSection.append(skySelector);
+    const skyMode = ["Morning", "Midday", "Sunset", "Midnight"];
+    const skyContainer = document.createElement('div');
+    skyContainer.setAttribute("id", "sky-container");
+    skyContainer.setAttribute("class", "round frosted");
 
-const changeSkyPrev = (id) => {
-    document.body.setAttribute("class", `${id} `);
-}
+        const skySelectorLabel = document.createElement("label");
+        skySelectorLabel.setAttribute("for", "select-sky");
+        skySelectorLabel.textContent = "Sky Mode:";
 
-const changeSkySelect = (selection) => {
-    let val = selection.value;
-    document.body.setAttribute("class", `${val}`);   
-}
+        const skySelector = document.createElement("select");
+        skySelector.setAttribute("name", "skies");
+        skySelector.setAttribute("id","select-sky");
+        skySelector.setAttribute("class", "round");
+        skySelector.setAttribute("onchange", "changeSkySelect(this)");
+
+        skyMode.forEach(mode => {
+            let skyTheme = document.createElement('div');
+            skyTheme.setAttribute("class", `sky-color ${mode} round`);
+            skyTheme.setAttribute("id", `${mode}`);
+            skyTheme.setAttribute("onclick", "changeSkyPrev(this.id)");
+            skyContainer.appendChild(skyTheme);
+
+            let skyOption = document.createElement('option');
+            skyOption.setAttribute("value",`${mode}`);
+            skyOption.textContent = `${mode}`;
+            skySelector.appendChild(skyOption);
+        });
+        
+        skyContainer.append(skySelector);
+
+        const changeSkyPrev = (id) => {
+            document.body.setAttribute("class", `${id} `);
+        }
+
+        const changeSkySelect = (selection) => {
+            let val = selection.value;
+            document.body.setAttribute("class", `${val}`);   
+        }
+
+    
+    playground.appendChild(skyContainer);
+// add emoji weather
+// make a box for landscape
+// sky changes should effect the box
+
+    const landscape = document.createElement('div');
+    landscape.setAttribute("class", "round");
+    landscape.setAttribute("id", "landscape");
+
+    playground.appendChild(landscape)
+
+mainSection.append(playground)
 
 // WEATHER STATION
 
@@ -98,6 +116,9 @@ const lowerTemp = () => {
 }
 
 
+// diff temp changes landscape
+
+
 // Register Events
 
 const registerEventHandlers = () => {
@@ -110,6 +131,3 @@ const registerEventHandlers = () => {
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
 
-// add emoji weather
-// make a box for landscape
-// sky changes should effect the box

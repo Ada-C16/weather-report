@@ -69,16 +69,16 @@ SKY BOX
 */
 
 #sky-container {
-    background: white;
     display: flex;
     flex-direction: column;
-    height: 50vh;
-    width: 10vw;
+    justify-content: space-evenly;
+    margin-right: 10px;
 } 
 
 .sky-color {
-    height: 90%;
-    margin: 10px;
+    flex: 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
      /* // hover behavior
    */
 }
@@ -124,4 +124,24 @@ WEATHER CONTROL
     background-color: white;
     inline-size: 5vw;
     text-align: center;
+}
+
+
+/*
+LANDSCAPE
+*/
+
+#playground {
+    display: flex;
+    padding: 10px;
+    height: 50vh;
+}
+
+#sky-container {
+    flex: 20;
+}
+
+#landscape {
+    background: var(--morning);
+    flex: 80;
 }
