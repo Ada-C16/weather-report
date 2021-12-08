@@ -7,9 +7,20 @@
 
 h1 {
     text-align: center;
+    /*
+    change font
+    */
 }
 
 body {
     height: 100vh;
     background: var(--sunset);
 }
+
+/*
+h2 {
+    add frosting
+    center text
+    change color
+}
+*/

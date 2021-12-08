@@ -11,3 +11,8 @@ city.setAttribute("contenteditable","true");
 city.textContent = "Mountain House";
 mainSection.appendChild(city);
 
+// make sky changer zone
+
+// add temp gauge
+
+// add emoji weather
