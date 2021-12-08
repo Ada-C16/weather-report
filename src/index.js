@@ -6,10 +6,9 @@ weatherHeading.textContent = "Weather Report";
 mainSection.appendChild(weatherHeading)
 
 // LOCATION
-// change to <input type="text">
-const city = document.createElement('h2') ;
-city.setAttribute("contenteditable","true");
-city.textContent = "Mountain House";
+const city = document.createElement('input') ;
+city.setAttribute("type","text");
+city.setAttribute("placeholder","Mountain House");
 mainSection.appendChild(city);
 // reset city name element
 
