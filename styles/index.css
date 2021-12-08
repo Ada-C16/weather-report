@@ -29,30 +29,6 @@ h2 {
 SKY BOX
 */
 
-.sky-color {
-    height: 90%;
-    margin: 10px;
-     /* // hover behavior
-   */
-}
-
-#Midnight {
-    background: var(--midnight);
-}
-
-#Midday {
-    background: var(--midday);
-}
-
-#Sunset {
-    background: var(--sunset);
-}
-
-#Morning {
-    background: var(--morning);
-}
-
-
 #sky-container {
     background: white;
     display: flex;
@@ -60,6 +36,29 @@ SKY BOX
     height: 50vh;
     width: 10vw;
 } 
+
+.sky-color {
+    height: 90%;
+    margin: 10px;
+     /* // hover behavior
+   */
+}
+
+.Midnight {
+    background: var(--midnight);
+}
+
+.Midday {
+    background: var(--midday);
+}
+
+.Sunset {
+    background: var(--sunset);
+}
+
+.Morning {
+    background: var(--morning);
+}
 
 
 /* 
@@ -71,6 +70,10 @@ WEATHER CONTROL
 
 .temp-gauge {
     background: transparent;
+}
+
+#incTemp, #decTemp {
+    background-color: violet;
 }
 
 #temperature {
