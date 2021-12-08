@@ -22,6 +22,9 @@ const registerEventHandlers = () => {
 
   const skyDropdown = document.querySelector("select");
   skyDropdown.addEventListener("change", changeSky);
+
+  const cityInput = document.querySelector("input");
+  cityInput.addEventListener("input", updateCityName);
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
@@ -87,4 +90,11 @@ const changeSky = () => {
   const sky = document.getElementById("sky");
   const dropdown = document.querySelector("select");
   sky.textContent = skyOptions[dropdown.value];
+};
+
+// City name stuff
+const updateCityName = () => {
+  const cityInput = document.querySelector("input");
+  const cityHeader = document.querySelector("h2");
+  cityHeader.textContent = `for ✨${cityInput.value}✨`;
 };
