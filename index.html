@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Report</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles/index.css" rel="stylesheet" type="text/css" />
+    <title>Gabe Weather Report</title>
+  </head>
+  <body>
+    <header>
+      <img src="assets/snowflake.png" alt="">
+    </header>
+
+    <!-- CONTAINER -->
+    <div class="container">
+      <h1>Weather Forecast for City, State</h1>
+
+      <!-- TEMP CONTAINER  -->
+      <div id="card" class="temp-container">
+        <section id="temp">
+          <h2>Temp</h2>
+          <div class="temp">
+            <button id="temp-button">
+            <span id="city-button-title">Temp</span> <span>Last 30 days</span> </div>
+        </section>
+      </div>
+
+      <!-- LANDSCAPE CONTAINER -->
+      <div id="card" class="landscape-container">
+        <section id="landscape">
+          <h2>The Weather Landscape</h2> 
+        </section>
+      </div>
+
+      <!-- CITY CONTAINER -->
+      <div id="card" class="city-container">
+        <section id="city">
+          <h2>Enter a City</h2>
+            <form action="index.php" method="get">
+              <input type="text" name="city" id="city" placeholder="City" />
+              <input type="Reset" value="Submit" />
+            </form>
+          <div class="city">
+            <button id="city-button">
+            <span id="city-button-title">City</span> <span>Last 30 days</span> </div>
+        </section>
+      </div>
+
+      <!-- SKY SELECTION CONTAINER -->
+      <div id="card" class="sky-container">
+        <section id="city">
+          <h2>Select a Sky</h2>
+          <div class="sky">
+            <button id="city-button">
+            <span id="city-button-title">City</span> <span>Drop down menu</span> </div>
+        </section>
+      </div>
+
+    </div>
+  </body>
 </html>
