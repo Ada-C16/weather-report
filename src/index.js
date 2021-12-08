@@ -29,23 +29,26 @@ const alterTemp = (event) => {
     switch (true) {
         case temp >= 80:
             tempColor = 'red';
-            groundLandscaping = '🥖🥖🐍🥖🌵🥖🐍🥖🥖';
+            groundLandscaping = '🌵🥖🐍';
             break;
         case temp >= 70:
             tempColor = 'orange';
-            groundLandscaping = '🔵🐟🔹〰️🏊‍♀️〰️🔹🐟🔵';
+            groundLandscaping = '🐟🏊‍♀️🐟';
             break;
         case temp >= 60:
             tempColor = 'yellow';
-            groundLandscaping = '🌻🌷🌳🌱🌲🌱🌳🌷🌻';
+            groundLandscaping = '🌷🌳🌱';
             break;
         case temp >= 50:
             tempColor = 'green';
-            groundLandscaping = '🌱🌳🌳🌱🌲🌱🌳🌳🌱';
+            groundLandscaping = '🌲🌱🌳';
+            break;
+        case temp == 0:
+            //INSERT 'NO'?
             break;
         default:
             tempColor = 'teal';
-            groundLandscaping = '❄️❄️🌲🌲❄️⛄️❄️🌲🌲❄️❄️';
+            groundLandscaping = '❄️⛄️🌲';
     }
     // Ground Landscaping
     groundLandscape.textContent = groundLandscaping;
@@ -74,8 +77,10 @@ document.addEventListener("DOMContentLoaded", registerEventHandlers);
 const skySelectElement = document.querySelector('#sky');
 
 skySelectElement.addEventListener('change', (event) => {
+    // Sky for display
     const sky = document.querySelector('#sky-landscape');
 
+    // Retrieves info from skySelectElement event
     let newSky;
     switch (event.target.value) {
         case 'sunny':
@@ -83,14 +88,15 @@ skySelectElement.addEventListener('change', (event) => {
             break;
         case 'cloudy':
             console.log('cloudy')
-            newSky = '☁️☁️☁️☁️⛅️☁️☁️☁️☁️';
+            newSky = '☁️⛅️☁️';
             break;
         case 'snow':
-            newSky = '❄️🌨❄️❄️🌨❄️❄️🌨❄️';
+            newSky = '❄️🌨❄️';
             break;
         default:
-            newSky = '🌧⛈🌧🌧⛈🌧🌧🌧🌧'
+            newSky = '🌧⛈🌧'
     }
+    // Outputs new string to display in weather garden
     sky.textContent = newSky;
   });
 
