@@ -93,3 +93,19 @@ skySelectElement.addEventListener('change', (event) => {
     }
     sky.textContent = newSky;
   });
+
+// ###############
+// CITY NAME LOGIC
+// ###############
+
+// Retrieve user input for city name and change city name
+const cityNameSelector = document.querySelector('#city-name');
+
+cityNameSelector.addEventListener('change', (event) => {
+    // Get input value
+    city = event.target.value;
+    
+    // Change city name in banner
+    cityName = document.querySelector('#banner-city-name');
+    cityName.textContent = city;
+});
