@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css" />
     <title>Weather Report</title>
 </head>
 <body>
+<header>
+    <h1>Weather Report</h1>
+</header>
+
+<section id="one" class="grid">
+<div class="box">
+    <div class="column">
+    <h2>Temperature</h2>
+    <p class="arrow up"></p>
+    <p></p>
+    <p class="arrow down"></p>
+    </div>
+    <div class="column custom-select">
+    <h2>Sky</h2>
+    <select name="cars" id="cars">
+        <option value="1">Sunny</option>
+        <option value="2">Cloudy</option>
+        <option value="3">Rainy</option>
+        <option value="4">Snowy</option>
+    </select>
+    </div>
+    <div class="column">
+    <h2>City Name</h2>
+    <form>
+        <input type="text" id="cityname" name="cityname">
+    <!-- <form action="/.."> -->
+        <input type="submit" value="Submit">
+      </form>
+</div>
+</section>
+
+<section id="two" class="grid">
+    <div class="box">
+        <h2>Weather Garden</h2>
+    
+    </div>
+</section>
     
 </body>
 </html>
