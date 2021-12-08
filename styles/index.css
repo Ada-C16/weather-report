@@ -98,6 +98,31 @@ main {
     margin: 5px;
 }
 
+#up-arrow:hover, #down-arrow:hover {
+    cursor: pointer;
+}
+
+.hottest {
+    color: red;
+}
+
+.hot {
+    color: orange;
+}
+
+.temperate {
+    color: yellow;
+}
+
+.chilly {
+    color: green;
+}
+
+.cold {
+    color: teal;
+}
+
+
 .projects-item {
     border: 3px solid var(--accent-color-1);
     border-radius: 5px;
