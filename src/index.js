@@ -37,8 +37,8 @@ mainSection.appendChild(cityForm);
 
 // SKY MODE
 
-const playground = document.createElement('section');
-playground.setAttribute('id','playground');
+const playground = document.querySelector('#playground');
+//playground.setAttribute('id','playground');
 
 
     const skyMode = ["Morning", "Midday", "Sunset", "Midnight"];
@@ -70,16 +70,17 @@ playground.setAttribute('id','playground');
         });
         
         skyContainer.append(skySelector);
-
-        playground.appendChild(skyContainer);
+        const landscape = document.querySelector("#landscape");
+        playground.insertBefore(skyContainer,landscape);
 // add emoji weather
 
+/*
         const landscape = document.createElement('div');
         landscape.setAttribute("class", "round");
         landscape.setAttribute("id", "landscape");
 
         playground.appendChild(landscape)
-
+*/
 
         const changeSkyPrev = (id) => {
             document.body.setAttribute("class", `${id}`);
@@ -104,9 +105,30 @@ const state = {
     temp: 92
 };
 
+const weatherView = {
+    freezing: "", // < 0
+    cold: "", // 0 - 50
+    ok: "", // 51 - 70
+    hot: "", // 71 - 95
+    boiling: "" // 95+   
+}
+
+
+
 const updateTemp = () => {
     const temperature = document.querySelector("#temperature");
     temperature.textContent = `${state.temp}`;
+    if (state.temp < 50) {
+        temperature.style.color = "teal";
+    } else if (50 <= state.temp && state.temp < 60) {
+        temperature.style.color = "green";
+    } else if (60 <= state.temp && state.temp < 70) {
+        temperature.style.color = "yellow";
+    } else if (70 <= state.temp && state.temp < 80) {
+        temperature.style.color = "orange";
+    } else {
+        temperature.style.color = "red";
+    }
 }
 
 const raiseTemp = () => {
@@ -121,6 +143,7 @@ const lowerTemp = () => {
 
 
 // diff temp changes landscape
+// range of numbers changes the temp color
 
 
 // Register Events
