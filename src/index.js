@@ -18,26 +18,39 @@ const alterTemp = (event) => {
         state.tempDegrees -= 1;
     }
     
-    tempBlock = document.querySelector('#temperature-block');
+    // Associate color and ground landscape with temperature
     temp = state.tempDegrees;
-    // Associate color with temperature
+    tempBlock = document.querySelector('#temperature-block');
+    let tempColor;
+
+    groundLandscape = document.querySelector('#ground-landscape');
+    let groundLandscaping;
+    
     switch (true) {
         case temp >= 80:
-            tempBlock.style.setProperty('background-color', 'red');
+            tempColor = 'red';
+            groundLandscaping = '🥖🥖🐍🥖🌵🥖🐍🥖🥖';
             break;
         case temp >= 70:
-            tempBlock.style.setProperty('background-color', 'orange');
+            tempColor = 'orange';
+            groundLandscaping = '🔵🐟🔹〰️🏊‍♀️〰️🔹🐟🔵';
             break;
         case temp >= 60:
-            tempBlock.style.setProperty('background-color', 'yellow');
+            tempColor = 'yellow';
+            groundLandscaping = '🌻🌷🌳🌱🌲🌱🌳🌷🌻';
             break;
         case temp >= 50:
-            tempBlock.style.setProperty('background-color', 'green');
+            tempColor = 'green';
+            groundLandscaping = '🌱🌳🌳🌱🌲🌱🌳🌳🌱';
             break;
         default:
-            tempBlock.style.setProperty('background-color', 'teal');
+            tempColor = 'teal';
+            groundLandscaping = '❄️❄️🌲🌲❄️⛄️❄️🌲🌲❄️❄️';
     }
-
+    // Ground Landscaping
+    groundLandscape.textContent = groundLandscaping;
+    // Temp
+    tempBlock.style.setProperty('background-color', tempColor);
     tempElement.textContent = `${state.tempDegrees}`;
 };
 
@@ -52,3 +65,31 @@ const registerEventHandlers = (event) => {
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
+
+// #########
+// SKY LOGIC
+// #########
+
+// Retrieve sky selection and alter sky
+const skySelectElement = document.querySelector('#sky');
+
+skySelectElement.addEventListener('change', (event) => {
+    const sky = document.querySelector('#sky-landscape');
+
+    let newSky;
+    switch (event.target.value) {
+        case 'sunny':
+            newSky = `☀️`;
+            break;
+        case 'cloudy':
+            console.log('cloudy')
+            newSky = '☁️☁️☁️☁️⛅️☁️☁️☁️☁️';
+            break;
+        case 'snow':
+            newSky = '❄️🌨❄️❄️🌨❄️❄️🌨❄️';
+            break;
+        default:
+            newSky = '🌧⛈🌧🌧⛈🌧🌧🌧🌧'
+    }
+    sky.textContent = newSky;
+  });
