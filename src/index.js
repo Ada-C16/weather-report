@@ -6,10 +6,12 @@ weatherHeading.textContent = "Weather Report";
 mainSection.appendChild(weatherHeading)
 
 // LOCATION
+// change to <input type="text">
 const city = document.createElement('h2') ;
 city.setAttribute("contenteditable","true");
 city.textContent = "Mountain House";
 mainSection.appendChild(city);
+// reset city name element
 
 // SKY MODE
 const skyMode = ["Morning", "Midday", "Sunset", "Midnight"];
@@ -23,6 +25,8 @@ skyMode.forEach(mode => {
     skyTheme.setAttribute("onclick", "changeSky(this.id)");
     skyContainer.appendChild(skyTheme);
 });
+
+// add to select element at bottom
 
 mainSection.append(skyContainer);
 
@@ -66,3 +70,5 @@ const registerEventHandlers = () => {
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
 
 // add emoji weather
+// make a box for landscape
+// sky changes should effect the box
