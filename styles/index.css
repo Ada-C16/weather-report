@@ -68,6 +68,7 @@ main {
     border-radius: 5px;
     justify-content: space-between;
     padding: 10px;
+    background-image: linear-gradient(skyblue, green);
 }
 
 /* WEATHER CONTROLS */
@@ -111,17 +112,35 @@ main {
 }
 
 .temperate {
-    color: yellow;
-}
-
-.chilly {
-    color: green;
-}
-
-.cold {
     color: teal;
 }
 
+.chilly {
+    color: lightblue;
+}
+
+.cold {
+    color: blue;
+}
+
+#temp-display {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: var(--body-font)
+}
+
+#sky, #ground {
+    display: block;
+    text-align: center;
+    font-size: 4vw;
+}
+
+/* CITY */
+#city {
+    color: var(--accent-color-1);
+    font-weight: bold;
+    font-size: 1.2em;
+}
 
 .projects-item {
     border: 3px solid var(--accent-color-1);

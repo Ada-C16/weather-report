@@ -37,6 +37,10 @@ const state = {
     rainy: '🌧🌈⛈🌧💧⛈🌧🌦🌧💧🌧',
     snowy: '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨',
   },
+  city: {
+    defaultCity: 'Seattle',
+    inputCity: '',
+  },
 };
 
 const increaseTemp = () => {
@@ -91,6 +95,19 @@ const resetSky = () => {
   sky.innerHTML = state.sky.night;
 };
 
+const resetCity = () => {
+  const city = document.getElementById('city');
+  city.innerHTML = state.city.defaultCity;
+  const cityInput = document.getElementById('set-city');
+  cityInput.value = state.city.defaultCity;
+};
+
+const updateCity = (event) => {
+  const city = document.getElementById('city');
+  state.city.inputCity = event.explicitOriginalTarget.value;
+  city.innerText = state.city.inputCity;
+};
+
 const registerEventHandlers = () => {
   const upArrow = document.getElementById('up-arrow');
   upArrow.addEventListener('click', increaseTemp);
@@ -106,11 +123,18 @@ const registerEventHandlers = () => {
 
   const resetSkyButton = document.getElementById('reset-sky');
   resetSkyButton.addEventListener('click', resetSky);
+
+  const resetCityButton = document.getElementById('reset-city');
+  resetCityButton.addEventListener('click', resetCity);
+
+  const cityInput = document.getElementById('set-city');
+  cityInput.addEventListener('input', updateCity);
+
+  resetSky();
+  setTempDisplay();
+  resetCity();
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
-document.addEventListener('DOMContentLoaded', setTempDisplay);
-document.addEventListener('DOMContentLoaded', resetSky);
 
-// Wave 3: Selecting the sky
-// there must be a select element that lets users determine the sky to display
+// wave 4
