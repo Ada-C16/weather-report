@@ -1,0 +1,25 @@
+@font-face {
+  font-family: firaCodeRegular;
+  src: url(../assets/FiraCode-Regular.ttf);
+}
+
+:root {
+  --bg-color: #282a36;
+  --secondary-bg-color: #44475a;
+  --txt-color: #f8f8f2;
+  --h1-color: #ff79c6;
+  --h2-color: #50fa7b;
+  --hot-temp: #ff5555;
+  --warm-temp: #ffb86c;
+  --mid-temp: #f1fa8c;
+  --cool-temp: #50fa7b;
+  --cold-temp: #8be9fd;
+  --btn-bg-color: #6272a4;
+  --btn-txt-color: #bd93f9;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  font-family: firaCodeRegular;
+}
