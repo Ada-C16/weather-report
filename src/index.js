@@ -72,15 +72,6 @@ const playground = document.querySelector('#playground');
         skyContainer.append(skySelector);
         const landscape = document.querySelector("#landscape");
         playground.insertBefore(skyContainer,landscape);
-// add emoji weather
-
-/*
-        const landscape = document.createElement('div');
-        landscape.setAttribute("class", "round");
-        landscape.setAttribute("id", "landscape");
-
-        playground.appendChild(landscape)
-*/
 
         const changeSkyPrev = (id) => {
             document.body.setAttribute("class", `${id}`);
@@ -93,9 +84,7 @@ const playground = document.querySelector('#playground');
             document.body.setAttribute("class", `${val}`);   
             let landscapeSky = document.querySelector("#landscape");
             landscapeSky.setAttribute("class", `${val} round`);
-        }
-
-    
+        }   
     
 mainSection.append(playground)
 
@@ -136,10 +125,6 @@ const lowerTemp = () => {
     state.temp -= 1;
     updateTemp();
 }
-
-
-// diff temp changes landscape
-// range of numbers changes the temp color
 
 
 // Register Events
