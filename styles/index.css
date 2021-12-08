@@ -20,7 +20,6 @@ body {
 }
 
 body > * {
-    /* border-bottom: 1px solid var(--dark-blue); */
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -28,7 +27,6 @@ body > * {
 header {
     background-image: linear-gradient(var(--light-blue), var(--grey) 80%);
     padding-top: 40px;
-    /* padding-bottom: 50px; */
 }
 
 main {
@@ -47,7 +45,7 @@ h4 {
 }
 
 #cityName {
-    color: var(--grey);
+    color: hsla(222, 29%, 50%, 1);
     text-transform: uppercase;
 }
 
@@ -213,7 +211,7 @@ h4 {
     }
 
     #temp {
-        height: 150px;
+        height: 154px;
         padding: 25px 10px;
     }
 
