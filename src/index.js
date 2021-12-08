@@ -23,6 +23,8 @@ const displayTemp = () => {
         // console.log('to temp style')
         tempStyle(temp, tempBox);
     })
+
+    setSky();
 }
 
 const tempStyle = (temp, tempBox) => {
@@ -58,6 +60,24 @@ const tempStyle = (temp, tempBox) => {
         landscape.textContent = '🌬🌨 ️⛄🌬🌨 ️⛄🌬🌨 ️⛄🌬🌨 ️⛄'
     }
 }
+
+const setSky = () => {
+    console.log('firing setSky func')
+    const sky = document.getElementById('sky')
+    const skyMenu = document.getElementById('sky-select');
+    skyMenu.addEventListener('change', () => {
+        console.log(skyMenu.value)
+        if (skyMenu.value == 'sunny') {
+            sky.textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️"
+        } else if (skyMenu.value == 'cloudy') {
+            sky.textContent = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️"
+        } else if (skyMenu.value == 'rainy') {
+            sky.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧"
+        } else {
+            sky.textContent = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨"
+        }
+    }
+)};
 
 
 if (document.readyState !== 'loading') {
