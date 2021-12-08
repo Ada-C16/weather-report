@@ -8,8 +8,9 @@ body {
 h1 {
   font-family: Raleway, sans-serif;
   width: 100%;
-  height: 110px;
+  height: 200px;
   text-align: center;
   font-size: 4rem;
   color: whitesmoke;
+  padding-top: 50px;
 }

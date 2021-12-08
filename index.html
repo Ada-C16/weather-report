@@ -12,7 +12,32 @@
     <header>
         <h1><span>Seattle </span>Weather Report</h1>
     </header>
-    
+    <main id="main-container">
+        <section id="temp-container">
+            <h2>Temperature</h2>
+                <span>◀</span>
+                <span>▶</span>
+
+            <div>65</div>
+        </section>
+        <section id="sky-container">
+            <h2>Sky</h2>
+            <select>
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="rainy">Rainy</option>
+                <option value="snowy">Snowy</option>
+            </select>
+        </section>
+        <section id="city-container">
+            <h2>City</h2>
+            <input type="text" value="Seattle">
+            <button>reset</button>
+        </section>
+    </main>
+    <section id="layout-container">
+        <div><img src="assets/images/sunset.jpeg" height="300px" width="300px" alt="sunset"></div>
+    </section>
     <script src="src/index.js"></script>
 </body>
 </html>
