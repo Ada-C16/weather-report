@@ -58,5 +58,11 @@ select {
 }
 
 #layout-image {
-  margin-top: 70px;
+  margin-top: 80px;
+}
+
+footer {
+  margin-top: 600px;
+  margin-left: 35px;
+  color: whitesmoke;
 }
