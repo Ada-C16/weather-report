@@ -161,10 +161,11 @@ WEATHER CONTROL
 }
 
 #temperature {
+    color: orange;
     background-color: white;
     inline-size: 5vw;
     text-align: center;
-    color: orange;
+    
 }
 
 

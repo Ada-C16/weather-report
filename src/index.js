@@ -123,7 +123,12 @@ const lowerTemp = () => {
     updateTemp();
 }
 
-
+/*
+const inputTemp = (givenTemp) => {
+    state.temp = givenTemp;
+    updateTemp();
+}
+*/
 // Register Events
 
 const registerEventHandlers = () => {
@@ -132,6 +137,10 @@ const registerEventHandlers = () => {
 
     const decTemp = document.querySelector("#decTemp");
     decTemp.addEventListener("click", lowerTemp);
+/*
+    const changeTemp = document.querySelector("#temperature");
+    changeTemp.addEventListener("input", inputTemp(changeTemp.value));
+*/
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
