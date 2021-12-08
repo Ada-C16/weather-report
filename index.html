@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <title>Connecting HTML, CSS, and JS Demo</title>
     <link href="styles/index.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/43bce04ddf.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -16,8 +17,8 @@
             <h2>Temperature</h2>
             <div class="temperature_content">
                 <div class="temp_buttons">
-                    <button>up </button>
-                    <button>down </button>
+                    <button id="temp_up"><i class="fas fa-chevron-up"></i></button>
+                    <button id="temp_down"><i class="fas fa-chevron-down"></i></button>
                 </div>
                 <div class="temp_reading">32</div>
             </div>
@@ -25,10 +26,10 @@
         <div class="sky bg_br">
             <h2>Sky</h2>
             <div class="card-body">
-                <label for="sky">Choose a sky:</label>
-                <select id="sky" name="sky">
+                <label for="sky_condition">Choose a sky:</label>
+                <select id="sky_condition" name="sky">
                     <option value="rainy">Rainy</option>
-                    <option value="suny">Suny</option>
+                    <option value="suny">Sunny</option>
                     <option value="snowy">Snowy</option>
                     <option value="cloudy">Cloudy</option>
                 </select>
@@ -45,8 +46,8 @@
         <div class="weather ">
             <h2>Weather Garden</h2>
             <div class="weather_content ">
-                <div class="weather_sky">for the sky</div>
-                <div class="weather_garden">for the garden</div>
+                <div class="weather_sky">🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧"</div>
+                <div class="weather_garden">"🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"</div>
             </div>
         </div>
     </div>
