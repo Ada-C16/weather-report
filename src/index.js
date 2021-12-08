@@ -109,3 +109,15 @@ cityNameSelector.addEventListener('change', (event) => {
     cityName = document.querySelector('#banner-city-name');
     cityName.textContent = city;
 });
+
+// Reset city name
+const resetButton = document.querySelector('#reset');
+
+resetButton.addEventListener('click', (event) => {
+    // Changes banner display of city name to 'Defaultopia'
+    cityName = document.querySelector('#banner-city-name');
+    cityName.textContent = 'Defaultopia';
+
+    // Clears input text field
+    document.querySelector('#city-name').value = '';
+})
