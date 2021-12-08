@@ -90,7 +90,6 @@ LANDSCAPE
 }
 
 #landscape {
-    background: var(--morning);
     flex: 80;
     text-align: center;
 }
