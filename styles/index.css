@@ -15,5 +15,58 @@ nav {
     grid-column: 1;
     grid-column-end: 3;
     font-family: sans-serif;
-    color: white
+    color: white;
+    display: flex;
+    align-content: stretch;
+}
+
+.header-span {
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.report-span {
+    font-size: xx-large;
+}
+
+.container {
+    border-radius: 25px;
+    background: white;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    font-size: large;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+#nav-containers {
+    display: flex;
+    flex-direction: column;
+    align-content:space-around;
+}
+
+#garden-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border-radius: 25px;
+    background: white;
+    padding: 20px;
+    width: 600px;
+    height: 300px;
+    font-size: x-large;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+#temp-list {
+    list-style-type: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+li:nth-child(3) {
+    font-size: large;;
 }

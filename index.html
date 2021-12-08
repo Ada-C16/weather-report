@@ -9,18 +9,26 @@
 </head>
 <body class="grid">
     <header class="header">
-        <h1>Weather Report</h1><p>For the lovely city of Seattle</p>
+        <p><span class="report-span">Weather Report</span> For the lovely city of <span class="header-span">✨Seattle✨</span></p>
     </header>
     <nav>
-        <div>
-            <div>Temperature</div>
-            <div>Sky</div>
-            <div>City Name</div>
+        <div id="nav-containers">
+            <div class="container"><p>Temperature</p>
+                <ul id="temp-list">
+                    <li><button id="upButton">⬆️</button></li>
+                    <li><button id="downButton">⬇️</button></li>
+                    <li><h2 id="temp-gauge">70</h2></li>
+                </ul>
+            </div>
+            <div class="container">Sky</div>
+            <div class="container">City Name</div>
         </div>
     </nav>
-    <div>
-        <div>Weather Garden</div>
-        <div>EMOJIS :)</div>
+    <div id="garden-container">
+        <section>Weather Garden</section>
+        <div id="sky-emojis">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</div>
+        <div id="landscape-emojis">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</div>
     </div>
+    <script src="src/index.js"></script>
 </body>
 </html>
