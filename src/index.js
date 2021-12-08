@@ -19,16 +19,15 @@ skyContainer.setAttribute("id", "sky-container");
 skyMode.forEach(mode => {
     let skyTheme = document.createElement('div');
     skyTheme.setAttribute("class", `sky-color ${mode}`);
-    skyTheme.setAttribute("onclick", "changeSky");
+    skyTheme.setAttribute("id", `${mode}`)
+    skyTheme.setAttribute("onclick", "changeSky(this.id)");
     skyContainer.appendChild(skyTheme);
 });
 
 mainSection.append(skyContainer);
 
-function changeSky () {
-    let element = document.querySelector("sky-color");
-    // use id to choose toggle and apply to body
-    document.body.classList.toggle(`${element.class[0]}`)
+const changeSky = (id) => {
+    document.body.setAttribute("class", `${id} `)
 }
 
 
@@ -53,12 +52,20 @@ const lowerTemp = () => {
     updateTemp();
 }
 
+
+// Register Events
+
 const registerEventHandlers = () => {
     const incTemp = document.querySelector("#incTemp");
     incTemp.addEventListener("click", raiseTemp);
 
     const decTemp = document.querySelector("#decTemp");
     decTemp.addEventListener("click", lowerTemp);
+
+    /*
+    const skySelection = document.querySelector("#sky-color");
+    skySelection.addEventListener("click",changeSky);
+    */
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
