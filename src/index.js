@@ -66,12 +66,12 @@ const changeLandscape = () => {
   else {
     landscapeEmoji.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
   }
-}
+};
 
 // Adjusting Sky Levels According to Temperature
 const changeSky = () => {
   const skySelectedEl = document.querySelector(".skyChoice");
-  const skyLandscapeEl = document.querySelector("#sky")
+  const skyLandscapeEl = document.querySelector("#sky");
 
   if (skySelectedEl.value === "sunny") {
     skyLandscapeEl.textContent = "☁️☀️☁️☀️☁️☀️☁️☀️☁️☀️☁️";
@@ -88,8 +88,13 @@ const changeSky = () => {
   else {
     skyLandscapeEl.textContent = "🌨❄️🌨❄️🌨❄️🌨❄️🌨❄️❄️";
   }
+};
 
-}
+// Changing city name
+const updateCity = (event) => {
+  const cityDisplay = document.getElementById("cityDisplay")
+  cityDisplay.textContent = event.target.value;
+};
 
 // Registering event handlers
 const registerHandlers = () => {
@@ -101,6 +106,10 @@ const registerHandlers = () => {
 
   const selectSky = document.querySelector(".skyChoice");
   selectSky.addEventListener("change", changeSky)
+
+  const cityInput = document.querySelector("input");
+  cityInput.addEventListener('input', updateCity);
 };
+
 
 document.addEventListener("DOMContentLoaded", registerHandlers);
