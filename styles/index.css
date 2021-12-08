@@ -63,7 +63,7 @@ CITY
 #city-name {
     text-align: center;
     background: transparent;
-    color: white;
+    color: black;
     border: hidden;
 }
 
@@ -81,8 +81,9 @@ LANDSCAPE
 
 #playground {
     display: flex;
-    padding: 10px;
+    padding: 2vh;
     height: 50vh;
+    position:relative;
 }
 
 #sky-container {
@@ -90,8 +91,15 @@ LANDSCAPE
 }
 
 #landscape {
-    flex: 80;
-    text-align: center;
+    flex: 80;  
+    display: flex;
+}
+
+#landscape-text {
+    justify-content: center;
+    font-size: 4vw;
+    letter-spacing: 4px;
+    align-self: flex-end;
 }
 
 

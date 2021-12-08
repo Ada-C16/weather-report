@@ -97,7 +97,7 @@ const state = {
 const updateTemp = () => {
     const temperature = document.querySelector("#temperature");
     temperature.textContent = `${state.temp}`;
-    const landscapeEmoji = document.querySelector("#landscape");
+    const landscapeEmoji = document.querySelector("#landscape-text");
     if (state.temp < 50) {
         temperature.style.color = "teal";
         landscapeEmoji.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
