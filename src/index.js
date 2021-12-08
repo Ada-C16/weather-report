@@ -25,6 +25,8 @@ const displayTemp = () => {
     })
 
     setSky();
+
+    setCityName();
 }
 
 const tempStyle = (temp, tempBox) => {
@@ -78,6 +80,14 @@ const setSky = () => {
         }
     }
 )};
+
+const setCityName = () => {
+    const cityHeader = document.getElementById('display-city')
+    const cityInput= document.getElementById('city-name')
+    cityInput.addEventListener('input', () => {
+        cityHeader.innerHTML = cityInput.value
+    })
+}
 
 
 if (document.readyState !== 'loading') {
