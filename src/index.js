@@ -1,14 +1,7 @@
 // CHANGING CITY NAME
 let city = document.getElementById("cityName");
 let changeCity = document.getElementById("changeCity");
-changeCity.addEventListener("keyup", () => {
-    city.textContent = changeCity.value;
-});
-
 const resetButton = document.getElementById("resetButton");
-resetButton.addEventListener("click", () => {
-    city.textContent = "Seattle";
-});
 
 // CHANGING THE TEMPERATURE AND LANDSCAPE
 // -- TEMP VARIABLES -- //
@@ -40,16 +33,6 @@ const checkTemp = (changedTemp) => {
     }
 };
 
-increaseTemp.addEventListener("click", () => {
-    temp.textContent = (parseInt(temp.textContent) + 1).toString() + "°F";
-    checkTemp(temp.textContent);
-});
-
-decreaseTemp.addEventListener("click", () => {
-    temp.textContent = (parseInt(temp.textContent) - 1).toString() + "°F";
-    checkTemp(temp.textContent);
-});
-
 const changeSky = () => {
     if (selectSky.value === "sunny") {
         sky.textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
@@ -62,4 +45,27 @@ const changeSky = () => {
     }
 }
 
-selectSky.addEventListener("change", changeSky);
+const registerEventHandlers = () => {
+    // Adds event handlers to each object
+    changeCity.addEventListener("keyup", () => {
+        city.textContent = changeCity.value;
+    });
+
+    resetButton.addEventListener("click", () => {
+        city.textContent = "Seattle";
+    });
+
+    increaseTemp.addEventListener("click", () => {
+        temp.textContent = (parseInt(temp.textContent) + 1).toString() + "°F";
+        checkTemp(temp.textContent);
+    });
+    
+    decreaseTemp.addEventListener("click", () => {
+        temp.textContent = (parseInt(temp.textContent) - 1).toString() + "°F";
+        checkTemp(temp.textContent);
+    });
+
+    selectSky.addEventListener("change", changeSky);
+}
+
+document.addEventListener("DOMContentLoaded", registerEventHandlers)
