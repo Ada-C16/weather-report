@@ -59,6 +59,7 @@ const changeSky = (event) => {
 };
 
 // Event handler for changing the plants and produce based on temperature
+// as well as updating the color the the temperature text element
 const changeSeason = () => {
   const plantContainer = document.getElementById('plant-container');
   const produceContainer = document.getElementById('produce-container');
@@ -85,6 +86,20 @@ const changeSeason = () => {
   }
 };
 
+// Event handler for setting the city name (not done yet!)
+const setCityName = (event) => {
+  const input = document.getElementById('city-search-input').value;
+  const cityName = document.getElementById('city-name');
+  cityName.textContent = input;
+};
+
+// Event handler for resetting the city name (not done yet!)
+const resetCityName = () => {
+  const cityNameInput = document.getElementById('city-search-input');
+  cityNameInput.value = 'Philadelphia';
+  setCityName();
+};
+
 const registerHandlers = (event) => {
   const increaseTempEl = document.getElementById('increase-temp');
   increaseTempEl.addEventListener('click', increaseTemp);
@@ -94,6 +109,12 @@ const registerHandlers = (event) => {
 
   const skySelect = document.getElementById('drop-down');
   skySelect.addEventListener('change', changeSky);
+
+  const cityResetEl = document.getElementById('resetButton');
+  cityResetEl.addEventListener('click', resetCityName);
+
+  const cityNameInput = document.getElementById('city-search-input');
+  cityNameInput.addEventListener('input', setCityName);
 };
 
 document.addEventListener('DOMContentLoaded', registerHandlers);
