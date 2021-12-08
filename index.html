@@ -5,8 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link rel="stylesheet" href="styles/index.css"/>
 </head>
 <body>
-    
+    <main>
+        <header>
+            <h1>Weather Report From the City of Your Choice</h1>
+            <p>Currently showing the weather in:</p>
+            <p>Catalina Island</p>
+        </header>
+        <section class="temp-container">
+            <h3>Temperature</h3>
+            <div class="temp-controls">
+                <h5>Increase or Decrease the Temperature:</h5>
+                <button id="increase-temp">Increase</button>
+                <button id="decrease-temp">Decrease</button>
+                <span id="temp-display">70</span>
+            </div>
+        </section>
+        <section class="sky-container">
+            <h3>Sky</h3>
+            <h5>Choose the Sky Conditions:</h5>
+            <select id="sky-dropdown">
+                <option>Sunny</option>
+                <option>Cloudy</option>
+                <option>Rainy</option>
+                <option>Snowy</option>
+            </select>
+        </section>
+        <section class="garden-container">
+            <h3>Weather Garden</h3>
+            <div id="garden-container" class="gardenContainer">
+                <div id="sky-garden"></div>
+                <div id="landscape"></div>
+            </div>
+        </section>
+        <section class="city-name-container">
+            <h3>Change the City Name</h3>
+            <h4>Type in the name of a city:</h4>
+            <input type="text" id="city-input" value="Catalina Island"/>
+            <h4>Reset City:</h4>
+        <button id="city-reset">Reset</button>
+        </section>
+    </main>
+    <script src="src/index.js"></script>
 </body>
 </html>
