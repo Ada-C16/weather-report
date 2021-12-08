@@ -28,7 +28,7 @@ h1 {
 
 body {
     height: 100vh;
-    background: var(--sunset);
+    background: var(--morning);
 }
 
 .round {
@@ -156,6 +156,7 @@ WEATHER CONTROL
     background-color: white;
     inline-size: 5vw;
     text-align: center;
+    color: orange;
 }
 
 

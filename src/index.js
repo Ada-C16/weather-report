@@ -102,32 +102,28 @@ mainSection.append(playground)
 // WEATHER STATION
 
 const state = {
-    temp: 92
+    temp: 75
 };
-
-const weatherView = {
-    freezing: "", // < 0
-    cold: "", // 0 - 50
-    ok: "", // 51 - 70
-    hot: "", // 71 - 95
-    boiling: "" // 95+   
-}
-
-
 
 const updateTemp = () => {
     const temperature = document.querySelector("#temperature");
     temperature.textContent = `${state.temp}`;
+    const landscapeEmoji = document.querySelector("#landscape");
     if (state.temp < 50) {
         temperature.style.color = "teal";
+        landscapeEmoji.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
     } else if (50 <= state.temp && state.temp < 60) {
         temperature.style.color = "green";
+        landscapeEmoji.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
     } else if (60 <= state.temp && state.temp < 70) {
         temperature.style.color = "yellow";
+        landscapeEmoji.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
     } else if (70 <= state.temp && state.temp < 80) {
         temperature.style.color = "orange";
+        landscapeEmoji.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
     } else {
         temperature.style.color = "red";
+        landscapeEmoji.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
     }
 }
 
