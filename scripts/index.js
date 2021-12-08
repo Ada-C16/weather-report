@@ -30,22 +30,11 @@ sky_condition.addEventListener('change', function set_sky(e) {
   } else if (val === 'cloudy') {
     new_sky = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
     sky.innerHTML = new_sky;
-  } else if (val === 'snowy') {
+  } else {
     new_sky = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
     sky.innerHTML = new_sky;
   }
 });
-// const set_sky = (e) => {
-//   const val = e.target.value;
-//   if (val === 'rainy') {
-//     new_sky = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
-//     sky.innerHTML = new_sky;
-//   } else if (val === 'sunny') {
-//     new_sky = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️';
-//     sky.innerHTML = new_sky;
-//   }
-// };
-// set_sky();
 
 const set_weather = () => {
   if (temp >= 80) {
