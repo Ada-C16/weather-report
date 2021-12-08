@@ -71,27 +71,32 @@ playground.setAttribute('id','playground');
         
         skyContainer.append(skySelector);
 
+        playground.appendChild(skyContainer);
+// add emoji weather
+// sky changes should effect the box
+
+        const landscape = document.createElement('div');
+        landscape.setAttribute("class", "round");
+        landscape.setAttribute("id", "landscape");
+
+        playground.appendChild(landscape)
+
+
         const changeSkyPrev = (id) => {
-            document.body.setAttribute("class", `${id} `);
+            document.body.setAttribute("class", `${id}`);
+            let landscapeSky = document.querySelector("#landscape");
+            landscapeSky.setAttribute("class", `${id} round`);
         }
 
         const changeSkySelect = (selection) => {
             let val = selection.value;
             document.body.setAttribute("class", `${val}`);   
+            let landscapeSky = document.querySelector("#landscape");
+            landscapeSky.setAttribute("class", `${val} round`);
         }
 
     
-    playground.appendChild(skyContainer);
-// add emoji weather
-// make a box for landscape
-// sky changes should effect the box
-
-    const landscape = document.createElement('div');
-    landscape.setAttribute("class", "round");
-    landscape.setAttribute("id", "landscape");
-
-    playground.appendChild(landscape)
-
+    
 mainSection.append(playground)
 
 // WEATHER STATION

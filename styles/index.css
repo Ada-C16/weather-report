@@ -64,6 +64,28 @@ CITY
     padding: var(--curved-padding);
     
 }
+
+
+/*
+LANDSCAPE
+*/
+
+#playground {
+    display: flex;
+    padding: 10px;
+    height: 50vh;
+}
+
+#sky-container {
+    flex: 20;
+}
+
+#landscape {
+    /*background: var(--morning);*/
+    flex: 80;
+}
+
+
 /* 
 SKY BOX
 */
@@ -127,21 +149,3 @@ WEATHER CONTROL
 }
 
 
-/*
-LANDSCAPE
-*/
-
-#playground {
-    display: flex;
-    padding: 10px;
-    height: 50vh;
-}
-
-#sky-container {
-    flex: 20;
-}
-
-#landscape {
-    background: var(--morning);
-    flex: 80;
-}
