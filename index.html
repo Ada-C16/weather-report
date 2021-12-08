@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href = "styles/index.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    
+    <section id ="headers">
+         <div id ="weather-header"><span class='bigger'>Weather Report</span> &nbsp;&nbsp; <span class="small">For the lovely city of</span> <span class="dynamic">here change the city dynamically</span></div>
+         <!-- <div id ="lovely-city"> For the lovely city of</div>
+         <div id ="header-city">here change the city dynamically</div> -->
+    </section>
+
+    <section id =three-boxes>
+        <div id="temp">Temperature</div>
+        <div id="sky">
+            <label for ="skies">Sky</label><br>
+        <select id="sky-options">
+            <option value="sunny">Sunny</option>
+            <option value="cloudy">Cloudy</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowy">Snowy</option>
+          </select>
+        </div>
+        <div id="city-name">
+            <label for="city">City Name</label>
+            <input type="text" id = "city">
+            <input type="reset" value="Reset">
+        </div>
+    </section>
+    <!-- <button name="button" id="selectbutton">Select </button>
+    <input id="number" type="number"> -->
+   <script src="src/index.js"></script>
 </body>
 </html>
