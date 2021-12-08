@@ -48,7 +48,7 @@ const changeBackgroundTemp = () => {
   }
 };
 
-// Adjusting Landscape According to Weather
+// Adjusting Landscape According to Temperature
 const changeLandscape = () => {
   const landscapeEmoji = document.querySelector("#landscape")
 
@@ -68,6 +68,29 @@ const changeLandscape = () => {
   }
 }
 
+// Adjusting Sky Levels According to Temperature
+const changeSky = () => {
+  const skySelectedEl = document.querySelector(".skyChoice");
+  const skyLandscapeEl = document.querySelector("#sky")
+
+  if (skySelectedEl.value === "sunny") {
+    skyLandscapeEl.textContent = "☁️☀️☁️☀️☁️☀️☁️☀️☁️☀️☁️";
+  }
+
+  else if (skySelectedEl.value === "cloudy") {
+    skyLandscapeEl.textContent = "☁️☁️ 🌤 ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+  }
+
+  else if (skySelectedEl.value === "rainy") {
+    skyLandscapeEl.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌧💧🌧";
+  }
+
+  else {
+    skyLandscapeEl.textContent = "🌨❄️🌨❄️🌨❄️🌨❄️🌨❄️❄️";
+  }
+
+}
+
 // Registering event handlers
 const registerHandlers = () => {
   const decreaseButton = document.getElementById("decrease");
@@ -75,6 +98,9 @@ const registerHandlers = () => {
 
   const increaseButton = document.getElementById("increase");
   increaseButton.addEventListener("click", increaseTemp);
+
+  const selectSky = document.querySelector(".skyChoice");
+  selectSky.addEventListener("change", changeSky)
 };
 
 document.addEventListener("DOMContentLoaded", registerHandlers);
