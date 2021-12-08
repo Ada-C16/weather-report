@@ -10,11 +10,26 @@ const skyOptions = {
   catsAndDogs: '🌧️🌧️🐈🐶🌧️🐈🐶🌧️🐈🐶🌧️🐈🐶🌧️🐈🐶🌧️🐈🌧️🌧️',
 };
 
+const plantOptions = {
+  tooHot: '🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥',
+  summer: '🌿🌼🌷🌻🌿☘️🌱🌻🌷🌸🌿🌷🌻🌿☘️🌱🌻🌷',
+  spring: '🌳🌸🌼🌷🌳🌸🌼🌷🌳🌸🌼🌷🌳🌸🌼🌷🌳🌸',
+  winter: '🎄☃️🌲🎄☃️🌲🎄☃️🌲🎄☃️🌲🎄☃️🌲🎄☃️🌲🎄☃️',
+};
+
+const produceOptions = {
+  tooHot: '🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥',
+  summer: '🍆 🌽 🥭 🍒 🍉🍓🍆 🌽 🥭 🍒 🍉🍓🍆 🌽 🥭 🍒 🍉',
+  spring: '🥦🍑🥒🍍🍓🥦🍑🥒🍍🍓🥦🍑🥒🍍🍓🥦🍑🥒🍍🍓🥦🍑🥒🍍🍓',
+  winter: '🍊🌰🍋🥂🍊🌰🍋🥂🍊🌰🍋🥂🍊🌰🍋🥂🍊🌰🍋🥂🍊🌰🍋🥂🍊🌰',
+};
+
 // Event handler for increasing temperature
 const increaseTemp = (event) => {
   const currentTempEl = document.getElementById('current-temp');
   currentTempCounter.temp += 1;
   currentTempEl.textContent = currentTempCounter.temp;
+  changeSeason();
 };
 
 // Event handler for decreasing temperature
@@ -22,10 +37,11 @@ const decreaseTemp = (event) => {
   const currentTempEl = document.getElementById('current-temp');
   currentTempCounter.temp -= 1;
   currentTempEl.textContent = currentTempCounter.temp;
+  changeSeason();
 };
 
 // Event handler for changing the sky
-const changeSky = () => {
+const changeSky = (event) => {
   const skySelection = document.getElementById('drop-down').value;
   const skyContainer = document.getElementById('sky-container');
 
@@ -39,6 +55,25 @@ const changeSky = () => {
     skyContainer.textContent = skyOptions.snowy;
   } else if (skySelection === `It's raining cats and dogs!`) {
     skyContainer.textContent = skyOptions.catsAndDogs;
+  }
+};
+
+// Event handler for changing the plants and produce based on temperature
+const changeSeason = () => {
+  const plantContainer = document.getElementById('plant-container');
+  const produceContainer = document.getElementById('produce-container');
+  if (currentTempCounter.temp >= 99) {
+    plantContainer.textContent = plantOptions.tooHot;
+    produceContainer.textContent = produceOptions.tooHot;
+  } else if (currentTempCounter.temp >= 75) {
+    plantContainer.textContent = plantOptions.summer;
+    produceContainer.textContent = produceOptions.summer;
+  } else if (currentTempCounter.temp > 55) {
+    plantContainer.textContent = plantOptions.spring;
+    produceContainer.textContent = produceOptions.spring;
+  } else {
+    plantContainer.textContent = plantOptions.winter;
+    produceContainer.textContent = produceOptions.winter;
   }
 };
 

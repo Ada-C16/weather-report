@@ -63,7 +63,7 @@ main h3 {
     align-items: center;
 }
 
-#snack-option-emojis {
+#produce-container {
     grid-row: 2/3;
     grid-column: 1/4;
     background-color: white;
@@ -72,7 +72,7 @@ main h3 {
     align-items: center;
 }
 
-#temp-option-emojis {
+#plant-container {
     grid-row: 3/4;
     grid-column: 1/4;
     background-color: white;
