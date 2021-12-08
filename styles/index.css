@@ -14,7 +14,7 @@ header {
 
 .control-item {
     background-color: beige;
-    padding: 30px;
+    padding: 30px 60px;
 }
 
 .temp-control {
@@ -28,9 +28,20 @@ header {
     justify-content: space-between;
 }
 .btn {
-    margin: 10px
+    margin: 10px;
+    background-color: gray;
 }
 
 .view-section {
     background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-background {
+    background-color: skyblue;
+    width: 50%;
+    height: 50%;
 }

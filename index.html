@@ -22,15 +22,15 @@
             <div class="row">
                 <section class="col control-section">
                     <section class="temp-control control-item">
-                        <h3 id="temp">70</h3>
+                        <h3 id='temp'><span id='tempNum'>70</span> &#176;F</h3>
                         <div class="btn-container">
-                            <button class="btn btn-secondary">up</button>
-                            <button class="btn btn-secondary">down</button>
+                            <button class="btn temp-btn">up</button>
+                            <button class="btn temp-btn">down</button>
                         </div>
                     </section>
                     <section class="sky-control control-item">
                         <h3>Sky</h3>
-                        <select name="sky-condition" id="sky-condition">
+                        <select name="sky-condition" id="sky-condition" value="sunny">
                             <option value="sunny">Sunny</option>
                             <option value="cloudy">Cloudy</option>
                             <option value="rainy">Rainy</option>
@@ -40,18 +40,16 @@
                     <section class="location-control control-item">
                         <h3>Location</h3>
                         <form action="">
-                            <input type="text">
-                            <button type="submit">Change</button>
+                            <input id="location-input" type="text">
+                            <button class="submit" type="submit">Change</button>
                         </form>
                     </section>
                 </section>
                 <section class="col-8 view-section">
                     <h3>Weather Activity</h3>
-                    <div class="view-container">
+                    <div class="view-background">
                         <p class="sky-emoji"></p>
-                        <div class='img-container'>
-                            <img src="" alt="">
-                        </div>
+                        <p class="activity-emoji">
                     </div>
                 </section>
             </div>
