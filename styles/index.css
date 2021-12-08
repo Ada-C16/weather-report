@@ -86,3 +86,12 @@ color: white;
 .weather_garden {
     font-size: 2rem;
 }
+
+#reset {
+    width: 50px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}

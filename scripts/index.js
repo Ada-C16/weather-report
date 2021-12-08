@@ -1,15 +1,32 @@
+// change city name
+const city_name = document.querySelector('#city-name');
+const get_city_name = document.querySelector('#get-city-name');
+get_city_name.addEventListener('change', () => {
+  city_name.innerHTML = get_city_name.value;
+});
+
+//reset city name
+const resetButton = document.querySelector('#reset');
+resetButton.addEventListener('click', () => {
+  get_city_name.value = '';
+  city_name.innerHTML = get_city_name.value;
+});
+
 //set temperature
 const temp_up = document.querySelector('#temp_up');
 const temp_down = document.querySelector('#temp_down');
 const temp_reading = document.querySelector('.temp_reading');
 const temp_bg = document.querySelector('.temperature');
 let temp = temp_reading.innerHTML;
-temp_up.addEventListener('click', function () {
-  temp_reading.innerHTML = temp++;
+
+temp_up.addEventListener('click', (e) => {
+  temp++;
+  temp_reading.innerHTML = temp;
   set_weather();
 });
-temp_down.addEventListener('click', function () {
-  temp_reading.innerHTML = temp--;
+temp_down.addEventListener('click', () => {
+  temp--;
+  temp_reading.innerHTML = temp;
   set_weather();
 });
 //set landscape
@@ -19,7 +36,8 @@ let new_sky = sky.innerHTML;
 const sky_condition = document.querySelector('#sky_condition');
 const sky_val = sky_condition.value;
 
-sky_condition.addEventListener('change', function set_sky(e) {
+// sky_condition.addEventListener('change', function set_sky(e) {
+sky_condition.addEventListener('change', (e) => {
   let val = e.target.value;
   if (val === 'rainy') {
     new_sky = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
@@ -30,8 +48,11 @@ sky_condition.addEventListener('change', function set_sky(e) {
   } else if (val === 'cloudy') {
     new_sky = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
     sky.innerHTML = new_sky;
-  } else {
+  } else if (val === 'snowy') {
     new_sky = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
+    sky.innerHTML = new_sky;
+  } else {
+    new_sky = '';
     sky.innerHTML = new_sky;
   }
 });
@@ -50,7 +71,9 @@ const set_weather = () => {
   } else if (temp >= 50 && temp < 60) {
     temp_bg.style.backgroundColor = 'white';
     temp_reading.style.color = 'green';
-    temp_reading.style.color = 'skyblue';
+    garden.innerHTML = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+  } else {
+    temp_reading.style.color = 'blue';
     garden.innerHTML = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
   }
 };
