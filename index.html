@@ -9,7 +9,7 @@
 </head>
 <body>
     <div>
-        <h1>Weather Report <em>fir the lavely city of:"city name"</em></h1>
+        <h1>Weather Report <em>for the lovely city of:</em><em id="lovelyCity">"of your choice"</em></h1>
     </div>
     <div class="box-block">
         <div class="features" id="temperatureContainer">
@@ -28,18 +28,13 @@
         </div>
         <div class="features" id="cityContainer">
             <p class="city">City Name</p>
-            <select name="city" id="city">
-                <option valeu="seattle">Seattle</option>
-                <option value="tukwila">Tukwila</option>
-                <option value="Kirkland">Kirkland</option>
-                <option value="select city">select city</option>
-            </select>
-            <button id="addResetButton">Reset</button>
-
+            <input id="city" type="text" placeholder="Enter City Name"/>
+            <input id="addResetButton" type="reset"/>
         </div>
         <div class="features" id="gardenContainer">
             <p class="garden">Weather Garden</p>
             <section id="displayFeature"></section>
+            <section id="displayWeather"></section>
         </div>
         
         </div>
@@ -48,6 +43,5 @@
         <p>@2021 T. All Rights Reserved</p>
     </footer>
     <script src="src/index.js"></script>
-
 </body>
 </html>

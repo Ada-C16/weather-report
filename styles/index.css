@@ -8,6 +8,7 @@ body {
     width:50%; 
     display:grid;
     grid-template-columns:20% 70%;
+    /* grid-template-rows:30% 50%; */
     grid-gap:100px;
 }
 
@@ -23,6 +24,9 @@ body {
     display: block;
 
 } */
+em {
+    font-size: 0.6em;
+}
 
 .display-garden {
     height:200px;
@@ -45,6 +49,10 @@ body {
 .freezing{
     background-color:teal;
     
+}
+#lovelyCity{
+  color:green; 
+  font-size: 1em; 
 }
 
 
