@@ -17,7 +17,7 @@ const alterTemp = (event) => {
     } else if (event.target.id === 'down-arrow') {
         state.tempDegrees -= 1;
     }
-    
+
     // Associate color and ground landscape with temperature
     temp = state.tempDegrees;
     tempBlock = document.querySelector('#temperature-block');
@@ -62,7 +62,7 @@ const registerEventHandlers = (event) => {
     const tempUpArrow = document.querySelector('#up-arrow');
     tempUpArrow.addEventListener('click', alterTemp);
 
-    //Temperature Increase
+    //Temperature Decrease
     const tempDownArrow = document.querySelector('#down-arrow');
     tempDownArrow.addEventListener('click', alterTemp);
 };
