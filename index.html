@@ -14,66 +14,49 @@
     </header>
 
     <!-- CONTAINER -->
-    
-
-
     <div class="container">
+      <section id="headertitle">
+        <h1>Weather Forecast for <span id="header-City-Name"></span> </h1>
+      </section>
 
-
-    <section id="headertitle">
-      <h1>Weather Forecast for <span id="header-City-Name"></span> </h1>
-    </section>
-
-      <!-- TEMP CONTAINER  -->
+    <!-- TEMP CONTAINER  -->
       <div id="card" class="temp-container">
         <section id="temp">
-          <h2>Temp</h2>
-          <p>Click button to change temperature.</p>
-           
+          <h2>Today's Temp</h2>
+          <p>Click button to change temperature.</p> 
             <button id="warmer-button">
-            <span id="city-button-title">Warmer</span> 
+              <span>Warmer</span> 
             <button id="cooler-button">
-              <span id="city-button-title"> Colder </span>
+              <span> Colder </span>
               </section>
-
-              <span id="temp-value">32</span>
+            <span id="temp-value">32</span>
       </div>
 
-      <!-- LANDSCAPE CONTAINER -->
-      <div id="card" class="landscape-container">
-        <section id="landscape">
-          <h2>The Weather Landscape</h2> 
-          <div id="sky-display"></div>
-          <div id="garden-display"></div>
-        </section>
+    <!-- LANDSCAPE CONTAINER -->
+      <div id="card" >
+        <h2>The Weather Landscape</h2> 
+          <div id="sky-display">Sky: </div> 
+          <div id="garden-display">Garden: </div>
       </div>
 
-      <!-- CITY CONTAINER -->
+    <!-- CITY CONTAINER -->
       <div id="card" class="city-container">
-        <section id="city">
-          <h2>Enter a City</h2>
-              <input type="text" id="cityNameInputField" placeholder="Enter another city" value="Denver"/>
-            <button id="reset-button"><span >Reset</span> 
-        </section>
+        <h2>Enter a City</h2>
+          <input type="text" id="cityNameInputField" value="Denver"/>
+          <button id="reset-button"><span >Reset</span> 
       </div>
 
-      <!-- SKY SELECTION CONTAINER -->
+    <!-- SKY SELECTION CONTAINER -->
       <div id="card">
-        <section id="sky">
           <h2>Select a Sky</h2>
           <p>Use the drop-down menu to select the atmosphere.</p>
-          <div class="dropdown-sky">
             <select id="dropdown-sky">
               <option value="sky1">Snowy</option>
               <option value="sky2">Cloudy</option>
               <option value="sky3">Rainy</option>
               <option value="sky4">Sunny</option>
           </select>
-          </div> 
       </div>
-     
-     
-
     </div>
     <script src="src/index.js"></script>
   </body>
