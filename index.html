@@ -7,65 +7,66 @@
     <title>Weather Report</title>
     <link href="styles/index.css" rel="stylesheet">
 </head>
-<body>
-  <div class="wrapper">
-    <header>
-        <h1 class="cover_name">Weather report</h1>
-        <section>
-            <p>For the lovely city of</p>
-            <p class="city_name">Seattle 
-            </p>
-        </section>
-    </header>
-    <main>
-        <section class="Temp">
-            <h1 class="temperature">Temperature</h1>
-
-            <section>
-                <button id="tempUp">⬆️</button>
-            </section>
-
-            <section>
-                <button id="tempDown">⬇️</button>
-            </section>
-
-            <section class="temp">
-                <p id="tempCount">0</p>
-            </section>
-        </section>
-
-
-        <section class="Sky">
-          <h2 class="Sky">Sky</h2>
-          <label for="skyoption">Choose a sky:</label>
-
-          <select id="skyOptions">
-            <option value="sunny">Sunny</option>
-            <option value="cloudy">Cloudy</option>
-            <option value="rainy">Rainy</option>
-            <option value="snowy">Snowy</option>
-          </select>
-        </section>
-
-        <h3 class="city_name">City Name</h3>
-
-        <div class="Weather">
-          <h4 class="weather_garden">Weather Garden</h4>
-
+  <body>
+      <header>
+          <h1 class="cover_name">Weather report</h1>
           <section>
-            <p id="skyEmoji">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</p>
+              <p>For the lovely city of</p>
+              <p id="cityName">Seattle </p>
           </section>
-          
-          <section>
-            <p id="wetherEmoji">🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲</p>
+      </header>
+      <main>
+        
+          <section class="Temp">
+              <h1 class="temperature">Temperature</h1>
+              <div>
+                  <button id="tempUp">⬆️</button>
+              </div>
+              <div>
+                  <button id="tempDown">⬇️</button>
+              </div>
+              <div class="temp">
+                  <p id="tempCount">0</p>
+              </div>
           </section>
 
-        </div>
+          <section class="Sky">
+            <h2 class="Sky">Sky</h2>
+            <label for="skyoption">Choose a sky:</label>
+            <select id="skyOptions">
+              <option value="sunny">Sunny</option>
+              <option value="cloudy">Cloudy</option>
+              <option value="rainy">Rainy</option>
+              <option value="snowy">Snowy</option>
+            </select>
+          </section>
 
-        <script src="src/index.js"></script>
-    </main>
-  </div>
-</body>
+          <section class=City>
+            <h3 class="city_name">City Name</h3>
+            <label for="name">Add new city:</label>
+            <input type="text" id="name" name="name" required
+              minlength="1" maxlength="20" size="10">
+            <div id=resetButton>
+              <button>Reset</button>
+            </div>
+          </section>
+
+          <section class="Weather">
+            <h4 class="weather_garden">Weather Garden</h4>
+
+            <div>
+              <p id="skyEmoji">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</p>
+            </div>
+
+            <div>
+              <p id="wetherEmoji">🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲</p>
+            </div>
+
+          </section>
+
+          <script src="src/index.js"></script>
+      </main>
+  </body>
 </html>
 
 <!-- <body>

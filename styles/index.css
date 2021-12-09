@@ -1,18 +1,18 @@
-wrapper {
+.wrapper {
     width: 100vw;
     min-height: 100vh;
     margin: 0;
     padding: 0;
   }
 
-wrapper {
+.wrapper {
     display: grid;
-    grid-template-rows: 55px auto 50px 50px;
-    grid-template-columns: minmax(200px, 3fr) 4fr;
-    grid-template-areas: "header b"
-                        "h2    b"
-                        "h2    b"
-                        "a    b";
+    grid-template-rows: 55px 50px 50px 50px;
+    grid-template-columns: minmax(200px, 4fr);
+    grid-template-areas: "header header"
+                        "a    ."
+                        "c    b"
+                        "d   .";
 }
 
 header {
@@ -34,6 +34,15 @@ header {
 
 .Weather {
     grid-area: b;
+    background-color: #a14b4b;
+}
+
+.Sky {
+    grid-area: c;
+    background-color: #a14b4b;
+}
+.City {
+    grid-area: d;
     background-color: #a14b4b;
 }
 

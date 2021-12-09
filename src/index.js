@@ -20,9 +20,15 @@ const tempchanger = (temp) => {
 
 // Sky change function
 const skyChanger = (sky) => {
-  if (skySelect === "cloudy") {
-    document.getElementById("skyEmoji").innerHTML = "sunny";
-  }
+  if (sky === "sunny") {
+    return "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
+  } else if (sky === "cloudy") {
+    return "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+  } else if (sky === "rainy") {
+    return "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+  } else if (sky === "snowy") {
+    return "🌧🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
+  } 
 }
 
 
@@ -53,11 +59,23 @@ const downtemp = (event) => {
 // change skyline
 const skylinechange = (event) => {
   const skySelect = document.querySelector("#skyOptions").value;
-  if (skySelect === "cloudy") {
-    document.getElementById("skyEmoji").innerHTML = "sunny";
-  }
+  newsky = skyChanger(skySelect)
+  document.getElementById("skyEmoji").innerHTML = newsky;
 };
-  
+
+// change text
+const textChange = (event) => {
+  const textSelect = document.querySelector("#name").value;
+  document.getElementById("cityName").innerHTML = textSelect;
+};
+
+// Reset text 
+const resetText = (event) => {
+  const textSelect = document.querySelector("#name").value;
+  document.getElementById("cityName").innerHTML = 'Seattle';
+  document.getElementById('name').value = "";
+};
+
 // register event handler]
 
   const registerEventHandlers = (event) => {
@@ -69,6 +87,12 @@ const skylinechange = (event) => {
 
     const weatheroptions = document.querySelector("#skyOptions");
     weatheroptions.addEventListener("change", skylinechange);
-  };
+
+    const textrename = document.querySelector("#name");
+    textrename.addEventListener("input", textChange);
+
+    const reset = document.querySelector("#resetButton");
+    reset.addEventListener("click", resetText);
+};
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
 
