@@ -85,5 +85,15 @@ skySelect.addEventListener('change', updateSky);
 // an element that displays the city name
 // an element that lets you change city name
 
+const city = document.getElementById("city-name");
+const cityInput = document.getElementById("city-input");
+
+
+const changeCity = () => {
+  city.textContent = cityInput.value;
+};
+
+cityInput.addEventListener('keyup', changeCity);
+
 // WAVE 5
 // reset button to put city name back to default
