@@ -20,7 +20,7 @@ const updateTempStyles = (temp) => {
   }
   tempArrow.className = '';
   tempArrow.classList.add(color);
-  console.log(tempArrow);
+  // console.log(tempArrow);
 };
 
 const updateImages = (temp) => {
