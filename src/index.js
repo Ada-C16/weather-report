@@ -3,6 +3,10 @@ const temp = {
   tempByDegree: 70,
 };
 
+// variable holding garden ground emojis query
+const garden = document.querySelector('#ground-emojis')
+
+
 // behaviour of temp toggles
 const increaseTemp = () => {
   temp.tempByDegree += 1;
@@ -32,14 +36,19 @@ const changeTempColor = () => {
   let color = ''
   if (temp.tempByDegree  < 49) {
     color = "teal"
+    garden.innerHTML = "🌨❄️🥶🌬️❄️❄️⛄️⛄️⛄️🌬️🥶🌨"
   } else if (temp.tempByDegree  < 59) {
     color = "green"
+    garden.innerHTML = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲"
   } else if (temp.tempByDegree  < 69) {
     color = "yellow"
+    garden.innerHTML = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃"
   } else if (temp.tempByDegree  < 79) {
     color = "orange"
+    garden.innerHTML = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷"
   } else {
     color = "red"
+    garden.innerHTML = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"
 }
   return color
 
