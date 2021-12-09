@@ -54,7 +54,7 @@ const decreaseTemp = () => {
   updateTemp(state.temp);
 };
 
-// changing sky image when select different sky option
+// change sky image when select different sky option
 const updateSky = () => {
   let image = 'assets/images/sky_clipart3.png';
   const sky = document.getElementById('selectSky').value;
@@ -72,6 +72,20 @@ const updateSky = () => {
   skyImage.src = image;
 };
 
+// change city name
+const updateCityName = () => {
+  const inputName = document.getElementById('cityNameInput').value;
+  const cityName = document.getElementById('cityName');
+  cityName.textContent = inputName;
+};
+
+// reset city name to original name
+const resetCityName = () => {
+  const inputName = document.getElementById('cityNameInput');
+  inputName.value = 'Seattle';
+  updateCityName();
+};
+
 // ******** register that function as an 'event listening' ********
 const registerEventHandlers = () => {
   updateTemp(state.temp);
@@ -84,6 +98,13 @@ const registerEventHandlers = () => {
   updateSky();
   const skySelect = document.getElementById('selectSky');
   skySelect.addEventListener('change', updateSky);
+
+  updateCityName();
+  const cityNameInput = document.getElementById('cityNameInput');
+  cityNameInput.addEventListener('input', updateCityName);
+
+  const resetCityNameBtn = document.getElementById('resetCityNameBtn');
+  resetCityNameBtn.addEventListener('click', resetCityName);
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
