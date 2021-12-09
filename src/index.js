@@ -40,6 +40,7 @@ const landscape = {
 
 const changeColorAndLand = (value) => {
   const displayLandscape = document.getElementById('display-landscape');
+
   if (stateTemp.value >= 80) {
     temperatureValue.classList = 'red-text';
     displayLandscape.textContent = landscape.summer;
@@ -71,20 +72,36 @@ const changeTemperature = function (event) {
 
 //sky
 
-const sky = document.getElementsById('sky-type');
+const sky = document.getElementById('sky-type');
+const skyEmojis = {
+  sunny: '☁️ ☁️ ☁️ ☀️ ☁️ ☁️',
+  cloudy: '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️',
+  rainy: '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧',
+  snowy: '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨',
+};
 
-for (item in sky) {
-  console.log(item);
-}
+const changeSky = function (event) {
+  const displaySky = document.getElementById('display-sky');
+  if (event.target.value == 'Sunny') {
+    displaySky.textContent = skyEmojis.sunny;
+  } else if (event.target.value == 'Cloudy') {
+    displaySky.textContent = skyEmojis.cloudy;
+  } else if (event.target.value == 'Rainy') {
+    displaySky.textContent = skyEmojis.rainy;
+  } else if (event.target.value == 'Snowy') {
+    displaySky.textContent = skyEmojis.snowy;
+  }
+};
 
 // REGISTER EVENTS
 
-const registerEventsListeners = function () {
+const registeredEventsListeners = function () {
   resetButton.addEventListener('click', resetCityName);
   cityInput.addEventListener('input', updateCityValue);
   [decrementButton, increaseButton].forEach(() =>
     addEventListener('click', changeTemperature)
   );
+  sky.addEventListener('change', changeSky);
 };
 
-document.addEventListener('DOMContentLoaded', registerEventsListeners);
+document.addEventListener('DOMContentLoaded', registeredEventsListeners);

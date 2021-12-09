@@ -24,8 +24,20 @@ header h2{
 .city-display{
     font-size:200%;
     display: inline-block;
-    
 }
+
+
+@media only screen and (max-width:650px){
+    .city-display{
+        font-size:200%;
+        margin-left: 10%;
+    }
+    
+    header h2{
+        align-items: center;
+        display: block;
+        margin-left: 10%;
+    }
 
 
 footer {
@@ -118,7 +130,7 @@ form input[type="text"]{
     border-radius: 10px;
 }
 
-form label, span{
+form label,span{
     font-size: 250%;
 }
 
@@ -162,16 +174,18 @@ form label, span{
 
 .inner-grid-land{
     align-self: end;
+    text-align: center;
     width: 100%;
-    font-size:400%;
+    font-size:310%;
     margin-right: 10%;
     margin-bottom: 0%;
 }
 
-inner-grid-sky{
+.inner-grid-sky{
     align-self: start;
+    text-align: center;
     width: 100%;
-    font-size:400%;
+    font-size:310%;
     margin-right: 10%;
     margin-bottom: 0%;
 }
