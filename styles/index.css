@@ -2,9 +2,11 @@
     display:flex;
 }
 
+h1 {
+    border-style: dashed;
+}
+
 #weatherSky {
-    /* align-self: center; */
-    /* justify-content: center; */
     padding:25px;
     border-style: dotted;
     width: 500px;
