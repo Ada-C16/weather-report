@@ -39,7 +39,7 @@ section{
     
 }
 #tempAdjuster{
-    background-color: rgb(238, 238, 167);
+    
     grid-row: 3;
     grid-column: 2;
     padding: 20px;
@@ -49,6 +49,26 @@ section{
     flex-direction: column;
     
 }
+.orange{
+    background-color: orange;
+}
+.red{
+    background-color: red;
+
+}
+.blue{ 
+    background-color: royalblue;
+
+}
+.yellow{
+    background-color: yellow;
+
+}
+.green{
+    background-color: yellowgreen;
+
+}
+
 #skySection{
     background-color: rgb(238, 238, 167);
     grid-row: 4;
@@ -74,4 +94,8 @@ section{
 }
 #landscape p{
     font-size: 40px;
+}
+
+#tempNum {
+    font-size: 30px;
 }

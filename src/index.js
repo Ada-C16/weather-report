@@ -9,11 +9,30 @@ const increaseTemp = () => {
   // sets tempNum as object, finds it using ElementById
 
   tempNum.textContent = parseInt(tempNum.textContent) + 1;
+  changeTempBackground(tempNum.textContent);
 };
 const decreaseTemp = () => {
   // sets tempNum as object, finds it using ElementById
   // coverts tempNum.textContent (which is str) to an int and subtracts 1
   tempNum.textContent = parseInt(tempNum.textContent) - 1;
+  changeTempBackground(tempNum.textContent);
+};
+const changeTempBackground = (tempNum) => {
+  const changeColor = document.getElementById('tempAdjuster');
+  let color = 'blue';
+  if (tempNum >= 90) {
+    color = 'red';
+  } else if (tempNum >= 80) {
+    color = 'orange';
+  } else if (tempNum >= 70) {
+    color = 'yellow';
+  } else if (tempNum >= 60) {
+    color = 'green';
+  } else if (tempNum >= 40) {
+    color = 'blue';
+  }
+  //property assignmnet
+  changeColor.className = color;
 };
 
 const acceptInput = () => {
@@ -25,18 +44,23 @@ const acceptInput = () => {
 const changeTheSky = () => {
   const skySelect = document.getElementById('skySelect').value;
   const skyGarden = document.getElementById('skyGarden');
+  const emojiGarden = document.getElementById('emojiGarden');
   console.log(skySelect);
   if (skySelect === 'Cloudy with a chance of meatballs') {
     skyGarden.textContent = '☁️☁️ ☁️ ☁️☁️ ☁️☁️☁️ ☁️ ☁️☁️';
+    emojiGarden.textContent = '🍝🍝🥖🧀🍝🍝🍝🥖🧀🧀';
   } else if (skySelect === 'Sunny with a fall of fruit') {
     skyGarden.textContent = '☀️ ☀️☀️☀️ ☀️☀️☀️ ☀️☀️';
+    emojiGarden.textContent = '🍒🍒🍏🍏 🥬🍒🍒🫐🫐🍊🍊🥬🥒🥒';
   } else if (skySelect === 'Raining cats and dogs') {
     skyGarden.textContent = '🌧⚡️⛈🌧🌧💧⛈🌧⚡️🌧💧🌧🌧';
-  } else if (skySelect === 'Snowy with a slough of sweets') {
+    emojiGarden.textContent = '🐱🐱🐈‍⬛🐱🐶🐈🐈‍⬛🐕🐶🐶🐕‍🦺🐱🐶🐈🐈';
+  } else if (skySelect === 'Snowy with a spread of sweets') {
     skyGarden.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
+    emojiGarden.textContent = '🥮🍰🍰🍡🍪🍭🧁🥮🧁🧁🍭🍰🍡🍪🍪';
   }
 };
-console.log();
+
 const registerEvents = () => {
   //sets arrowUp as an object
   const arrowUp = document.getElementById('arrowUp');
