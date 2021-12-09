@@ -62,9 +62,9 @@ const changeClouds = () => {
   const skySelectValue = skySelect.value;
   if (skySelectValue === 'Sunny') {
     gardenClouds.textContent = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️';
-  } else if (state.temp === 'Cloudy') {
+  } else if (skySelectValue === 'Cloudy') {
     gardenClouds.textContent = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
-  } else if (state.temp === 'Rainy') {
+  } else if (skySelectValue === 'Rainy') {
     gardenClouds.textContent = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
   } else {
     gardenClouds.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
@@ -72,7 +72,8 @@ const changeClouds = () => {
 };
 
 // CITY DISPLAY
-const cityElement = document.getElementById('city');
+const cityElement = document.getElementById('city-input');
+console.log(cityElement);
 
 // REGISTER EVENTLISTENER
 

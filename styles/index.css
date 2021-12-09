@@ -8,7 +8,6 @@ Cold number color: #1F7001
 Cool number color: #F4D10A
 Warm number color: #F0940A
 Hot number color: #EA0009 */
-
 .grid {
     background-color: #324DF7;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -130,3 +129,8 @@ select {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+#city-input {
+    display: block;
+    font-size: 18pt;
+}
