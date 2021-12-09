@@ -62,6 +62,25 @@ decreaseTemp.addEventListener('click', decrementTemp);
 // dropdown menu to set the sky type
 // an element that displays the sky
 
+// grabbing html elements
+
+const sky = document.getElementById('sky');
+const skySelect = document.getElementById('sky-menu');
+
+const updateSky = () => {
+  if (skySelect.value === 'Sunny') {
+    sky.textContent = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️';
+  } else if (skySelect.value === 'Cloudy') {
+    sky.textContent = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
+  } else if (skySelect.value === 'Rainy') {
+    sky.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+  } else if (skySelect.value === 'Snowy') {
+    sky.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
+  };
+};
+
+skySelect.addEventListener('change', updateSky);
+
 // WAVE 4
 // an element that displays the city name
 // an element that lets you change city name
