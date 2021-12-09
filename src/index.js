@@ -4,12 +4,6 @@ const state = {
   tempC: 0,
 };
 
-// Select the HTML element the event will occur on.
-const increaseTempFButton = document.querySelector('#increaseTempFButton');
-const decreaseTempFButton = document.querySelector('#decreaseTempFButton');
-const increaseTempCButton = document.querySelector('#increaseTempCButton');
-const decreaseTempCButton = document.querySelector('#decreaseTempCButton');
-
 // update state (raise temp) function
 // Fahrenheit
 const updateTempF = () => {
@@ -23,7 +17,7 @@ const updateTempC = () => {
   tempCElement.textContent = `${state.tempC}`;
 };
 
-// Make a function to run when it occurs (behavior).
+// Make a function to run when event occurs (behavior).
 // Fahrenheit
 const increaseTempF = () => {
   const tempFContainer = document.querySelector('#tempFContainer');
@@ -58,11 +52,21 @@ const decreaseTempC = () => {
   updateTempC();
 };
 
-// Register that function as an 'event listener'.
-increaseTempFButton.addEventListener('click', increaseTempF);
-decreaseTempFButton.addEventListener('click', decreaseTempF);
-increaseTempCButton.addEventListener('click', increaseTempC);
-decreaseTempCButton.addEventListener('click', decreaseTempC);
+// Selecting the HTML element the event will occur on.
+// registering the event handlers
+const registerEventHandlers = () => {
+  const increaseTempFButton = document.querySelector('#increaseTempFButton');
+  increaseTempFButton.addEventListener('click', increaseTempF);
+  const decreaseTempFButton = document.querySelector('#decreaseTempFButton');
+  decreaseTempFButton.addEventListener('click', decreaseTempF);
+  const increaseTempCButton = document.querySelector('#increaseTempCButton');
+  increaseTempCButton.addEventListener('click', increaseTempC);
+  const decreaseTempCButton = document.querySelector('#decreaseTempCButton');
+  decreaseTempCButton.addEventListener('click', decreaseTempC);
+};
+
+// registers our event handlers in response to the event that fires when the DOM has loaded completely (DOMContentLoaded).
+document.addEventListener('DOMContentLoaded', registerEventHandlers);
 
 // can also pass in an annonymous function instead of a named on in the eventListener.
 // TempFElement.addEventListener('click', () => {
