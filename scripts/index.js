@@ -36,31 +36,45 @@ document.addEventListener("DOMContentLoaded", registerEventHandlers);
 const adjustTempColor = (tempNumber) => {
   const temp = document.getElementById("temp");
   const landscape = document.getElementById("landscape");
+  const garden = document.querySelector(".garden");
   temp.classList.remove("red", "yellow", "green", "orange", "teal");
+  garden.classList.remove(
+    "warmBackground",
+    "hotBackground",
+    "coolBackground",
+    "coldBackground"
+  );
   let color = null;
+  let background = null;
   switch (true) {
     case tempNumber <= 49:
       color = "teal";
+      background = "coldBackground";
       landscape.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
       break;
     case tempNumber <= 59:
       color = "green";
+      background = "coldBackground";
       landscape.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
       break;
     case tempNumber <= 69:
+      background = "coolBackground";
       color = "yellow";
       landscape.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
       break;
     case tempNumber <= 79:
+      background = "warmBackground";
       color = "orange";
       landscape.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
       break;
     default:
       color = "red";
+      background = "hotBackground";
       landscape.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
       break;
   }
   temp.classList = `${temp.classList} ${color}`;
+  garden.classList = `${garden.classList} ${background}`;
 };
 
 const increaseTemp = () => {

@@ -121,7 +121,7 @@ h4 {
     font-size: 150%;
 }
 
-#garden {
+.garden {
     align-self: center;
     background-color: rgb(255, 255, 255);
     height: 30vh;
@@ -148,7 +148,7 @@ p {
 }
 
 .yellow {
-    color: yellow;
+    color: rgb(232, 215, 36);
 }
 
 .orange {
@@ -161,4 +161,20 @@ p {
 
 .teal {
     color: teal;
+}
+
+.hotBackground {
+    background-color:rgb(227, 208, 187);
+}
+
+.warmBackground {
+    background-color: rgb(245, 217, 217);
+}
+
+.coolBackground {
+    background-color: rgb(190, 214, 237);
+}
+
+.coldBackground {
+    background-color: rgb(227, 232, 238);
 }
