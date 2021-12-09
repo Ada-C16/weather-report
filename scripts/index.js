@@ -17,30 +17,50 @@ window.addEventListener('load', function (){
     document.getElementById("reduceTemp").onclick = function() {
         setTemperature(-1);
     };
-    document.getElementById("increaseTemp").onclick = function() {
+    document.getElementById("increaseTemp").onclick = () => {
         setTemperature(+1);
     };    
-    document.getElementById("city").onkeyup = function() {
+    document.getElementById("city").onkeyup = () => {
         setCity();
-    };    
-    
-    document.getElementById("sky").onchange = function() {
+    };      
+    document.getElementById("sky").onchange = () => {
         console.log(this.event);
         changeSky();
-    };        
+    };     
+    document.getElementById("temperature_small").onfocus = () => {
+        document.getElementById("temperature_small").value = '';
+    }
+    document.getElementById("temperature_small").onblur = () =>{
+        document.getElementById("temperature_small").value = myTemp;
+    }    
+    
+    document.getElementById("temperature_small").onkeyup = function (){
+        let varInput = (document.getElementById("temperature_small").value).replace(String.fromCharCode(176), '');
+        console.log('varInput is: ' + varInput);
+        if (isNaN(varInput)){
+            alert('We only accept numbers.')
+            document.getElementById("temperature_small").value = myTemp;
+        }else{
+            theChange = varInput - myTemp;
+        }
+        setTemperature(theChange);
+    }   
 });
 
 const setTemperature = (tempChange) => {
     //reset the myTemp global variable
     myTemp = (myTemp + tempChange);
     //make a pretty label
-    let myTempLabel =  myTemp + '&deg;';
+    let myTempLabel =  myTemp + String.fromCharCode(176);
     //update the display elements for temp
     document.getElementById("temperature_big").innerHTML = myTempLabel;
-    document.getElementById("temperature_small").innerHTML = myTempLabel;
+    document.getElementById("temperature_small").value = myTempLabel.replace(String.fromCharCode(176), '');
 
     //do some conditional changes to the page based on the temp
     if (myTemp >= 80){
+        if (myTemp > 150){
+            alert('Planet earth in imminent danger.')
+        }
         setMainTextColor('red');
         document.getElementById('landscape-image').src = './assets/landscapes/summer.png';
     }else if ((myTemp >= 70)&&(myTemp < 80)){
