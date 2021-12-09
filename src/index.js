@@ -29,7 +29,7 @@ const increaseTemp = (event) => {
   const currentTempEl = document.getElementById('current-temp');
   currentTempCounter.temp += 1;
   currentTempEl.textContent = currentTempCounter.temp;
-  changeSeason();
+  changeElementsBasedOnTempNumber();
 };
 
 // Event handler for decreasing temperature
@@ -37,7 +37,7 @@ const decreaseTemp = (event) => {
   const currentTempEl = document.getElementById('current-temp');
   currentTempCounter.temp -= 1;
   currentTempEl.textContent = currentTempCounter.temp;
-  changeSeason();
+  changeElementsBasedOnTempNumber();
 };
 
 // Event handler for changing the sky
@@ -60,7 +60,7 @@ const changeSky = (event) => {
 
 // Event handler for changing the plants and produce based on temperature
 // as well as updating the color the the temperature text element
-const changeSeason = () => {
+const changeElementsBasedOnTempNumber = () => {
   const plantContainer = document.getElementById('plant-container');
   const produceContainer = document.getElementById('produce-container');
   const currentTempEl = document.getElementById('current-temp');
@@ -86,20 +86,21 @@ const changeSeason = () => {
   }
 };
 
-// Event handler for setting the city name (not done yet!)
+// Event handler for setting the city name in the main heading
 const setCityName = (event) => {
   const input = document.getElementById('city-search-input').value;
   const cityName = document.getElementById('city-name');
   cityName.textContent = input;
 };
 
-// Event handler for resetting the city name (not done yet!)
+// Event handler for resetting the city name in the heading to its default
 const resetCityName = () => {
   const cityNameInput = document.getElementById('city-search-input');
   cityNameInput.value = 'Philadelphia';
   setCityName();
 };
 
+// Registers event handlers
 const registerHandlers = (event) => {
   const increaseTempEl = document.getElementById('increase-temp');
   increaseTempEl.addEventListener('click', increaseTemp);
@@ -115,10 +116,6 @@ const registerHandlers = (event) => {
 
   const cityNameInput = document.getElementById('city-search-input');
   cityNameInput.addEventListener('input', setCityName);
-
-  document.addEventListener('DOMContentLoaded', function (event) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  });
 };
 
 document.addEventListener('DOMContentLoaded', registerHandlers);
