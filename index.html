@@ -1,3 +1,11 @@
+<!-- 
+commit 1 - forked repo
+commit 2 - setup
+commit 3 - blank project
+commit 4 - create files
+commit 5 - final commit 
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +15,29 @@
     <title>Weather Report</title>
 </head>
 <body>
-    
+    <main>
+        <h1>[City] Weather</h1>
+        <section>
+            <h2>Temperature</h2>
+            <button class='increase'>Up</button>
+            <button class='decrease'>Down</button>
+            <span id='temperature'>40&deg;F</span>
+        </section>
+        <section>
+            <h2>Outside Condition</h2>
+            <label for='weather'></label>
+            <select name='weather'>
+                <option value='null'></option>
+                <option value='Sunny'>Sunny</option>
+                <option value='Cloudy'>Cloudy</option>
+                <option value='Rainy'>Rainy</option>
+            </select>
+        </section>
+        <section>
+            <h2>Location</h2>
+            <input type='text' placeholder='Rep your city'></input>
+            <button>Reset</button>
+        </section>
+    </main>
 </body>
 </html>
