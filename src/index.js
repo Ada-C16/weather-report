@@ -160,21 +160,27 @@ function landscape(){
     scene = document.querySelector("#landscape");
     if(state.temp <= 0){
         scene.textContent = "☠️❄️☠️❄️☠️❄️☠️❄️☠️❄️☠️❄️☠️❄️☠️❄️☠️❄️☠️❄️☠️";
+        scene.className = "ice";
     }
     else if(state.temp <= 32){
         scene.textContent = "⛄️❄️🌲❄️⛄️❄️🌲❄️⛄️❄️🌲❄️⛄️❄️🌲";
+        scene.className = "ice";
     }
     else if(state.temp <= 45){
         scene.textContent = "🍁☕🍂🍁☕🍂🍁☕🍂🍁☕🍁🍂☕🍁🍂☕";
+        scene.className = "leaves";
     }
     else if(state.temp <= 55){
         scene.textContent = "🌸🌿🌼_🌧️🌷🌻🌿_☘️🌱_🌻🌷🌧️";
+        scene.className = "soil";
     }
     else if(state.temp <= 70){
         scene.textContent = "🍉☀️🍎☀️🍐☀️🍉☀️🍎☀️🍐☀️🍉☀️🍎☀️🍐";
+        scene.className = "soil";
     }
     else if(state.temp <= 85){
         scene.textContent = "🏖️🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊";
+        scene.className = "ocean";
     }
     else{
         scene.textContent = "🍳🍳🍳🍳🍳🍳🍳🍳🍳🍳🍳🍳🍳";
