@@ -20,10 +20,13 @@ h1 {
   color: white;
   border: 8px solid white;
   padding: 16px 12px;
-
+  width: 100%;
   display: inline-block;
   border-radius: 34px;
   background-image: linear-gradient(rgb(148, 171, 247), rgb(153, 170, 189));
+}
+p {
+  font-style: italic;
 }
 
 #card {
@@ -35,17 +38,46 @@ h1 {
   display: block;
 }
 
-#temp-button {
-  background: rgb(246, 247, 248);
-  border-radius: 0.5rem;
-  box-shadow: -2px -2px 4px 0px #ffffff,
-    50px 50px 50px 0px rgba(66, 62, 62, 0.25);
-  padding: 0.5rem 0.25rem;
-  margin-right: 10px;
-  color: black;
+#header-title {
+  width: 900px;
+}
+
+#reset-city-button {
+  background-color: #e0dfdf;
+  border: rgb(201, 199, 199) 2px solid;
+  border-radius: 3px;
+  color: #000000;
+  padding: 5px 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#warmer-button {
+  background-color: #810606;
+  border: rgb(201, 199, 199) 4px solid;
+  border-radius: 4px;
+  color: white;
+  padding: 5px 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#cooler-button {
+  background-color: #062781;
+  border: rgb(201, 199, 199) 4px solid;
+  border-radius: 3px;
+  color: white;
+  padding: 5px 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#temp-value {
+  font-size: 3rem;
+  font-weight: bold;
 }
 .city-container {
-  width: 40%;
+  width: 100%;
   height: 100px;
   background-color: black;
 }
@@ -57,9 +89,8 @@ h1 {
   /* display: flex; */
   display: grid;
   gap: 3rem;
-
   justify-content: space-evenly;
-  padding-top: 200px;
+  padding-top: 100px;
   /* align-items: center;
   flex-direction: column; */
   /* background-color: f2f2f2; */
@@ -67,7 +98,6 @@ h1 {
 }
 
 .temp-container {
-  width: 40%;
-  height: 100px;
+  width: 100%;
   border-radius: 0 0 8px 8px;
 }

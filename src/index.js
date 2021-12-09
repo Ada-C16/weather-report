@@ -1,16 +1,22 @@
 // ========= CHANGE TEMP =========
 
 const state = {
-  temp: 32,
+  temp: 42,
 };
 
 const increaseTemp = (event) => {
   state.temp += 1;
   const tempDisplayed = document.querySelector('#temp-value');
   tempDisplayed.textContent = state.temp;
-  if (state.temp > 50) {
+  if (state.temp >= 80) {
     tempDisplayed.style.color = 'red';
-  } else if (state.temp < 40) {
+  } else if (state.temp >= 70) {
+    tempDisplayed.style.color = 'pink';
+  } else if (state.temp >= 60) {
+    tempDisplayed.style.color = 'orange';
+  } else if (state.temp >= 50) {
+    tempDisplayed.style.color = 'green';
+  } else if (state.temp <= 49) {
     tempDisplayed.style.color = 'blue';
   }
 };
@@ -19,9 +25,15 @@ const decreaseTemp = (event) => {
   state.temp -= 1;
   const tempDisplayed = document.querySelector('#temp-value');
   tempDisplayed.textContent = state.temp;
-  if (state.temp > 50) {
+  if (state.temp >= 80) {
     tempDisplayed.style.color = 'red';
-  } else if (state.temp < 40) {
+  } else if (state.temp >= 70) {
+    tempDisplayed.style.color = 'pink';
+  } else if (state.temp >= 60) {
+    tempDisplayed.style.color = 'orange';
+  } else if (state.temp >= 50) {
+    tempDisplayed.style.color = 'green';
+  } else if (state.temp <= 49) {
     tempDisplayed.style.color = 'blue';
   }
 };
@@ -41,10 +53,11 @@ const changeCityName = (event) => {
 //   changeCity.value = '';
 // };
 
-// const resetCity = (event) => {
-//   const inputChangeCity = document.getElementById('#cityName');
-//   changeCity.value = 'Denver';
-// };
+// this function resets the field to Denver
+const resetCity = (event) => {
+  const inputNewCity = document.querySelector('#cityNameInputField').value;
+  inputNewCity.value = 'Denver';
+};
 
 // ========= REGISER EH =========
 
@@ -59,5 +72,6 @@ const registerEventHandlers = (event) => {
   const userChangesCity = document.querySelector('#cityNameInputField');
   userChangesCity.addEventListener('input', changeCityName);
 };
+const resetCityButton = document.querySelector('#reset-city-button');
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
