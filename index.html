@@ -25,13 +25,13 @@
                 <button  class="up-button" id="weather-up">⬆️</button>
                 <button  class="down-button" id="weather-down">⬇️</button>
                 </div>
-                <input class="temperature-digit" id="temperature" value="45" readonly></input></div>
+                <input class="temperature-digit" id="temperature" value="35" readonly></input></div>
 
         </section>
     
     <section class="sky-selection-section">
         <h2>SKY</h2>
-        <select class="selector">
+        <select id="skyselector" onchange="currentSky()">
             <option value="sunny">Sunny</option>
             <option value="cloudy">Cloudy</option>
             <option value="rainy">Rainy</option>
