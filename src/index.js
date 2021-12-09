@@ -4,6 +4,7 @@ const state = {
   temp: 42,
 };
 
+//function increase temp
 const increaseTemp = (event) => {
   state.temp += 1;
   const tempDisplayed = document.querySelector('#temp-value');
@@ -21,6 +22,7 @@ const increaseTemp = (event) => {
   }
 };
 
+//function decrease temp
 const decreaseTemp = (event) => {
   state.temp -= 1;
   const tempDisplayed = document.querySelector('#temp-value');
@@ -40,26 +42,55 @@ const decreaseTemp = (event) => {
 
 // ========= CHANGE CITY =========
 
-// const changeCity = document.getElementById('#cityName');
-
+//function change city name
 const changeCityName = (event) => {
   const inputNewCity = document.querySelector('#cityNameInputField').value;
   const cityDisplayed = document.querySelector('#header-City-Name');
   cityDisplayed.textContent = inputNewCity;
 };
 
-// const clearCity = (event) => {
-//   const inputChangeCity = document.getElementById('#cityName');
-//   changeCity.value = '';
-// };
-
-// this function resets the field to Denver
+// this function resets city field to Denver
 const resetCity = (event) => {
-  const inputNewCity = document.querySelector('#cityNameInputField').value;
-  inputNewCity.value = 'Denver';
+  const cityNameInputField = document.querySelector(
+    '#cityNameInputField'
+  ).value;
+  cityNameInputField.textContent.value = 'Denver';
+  changeCityName();
 };
 
-// ========= REGISER EH =========
+// ========= CHANGE SKY =========
+
+const changeSky = (event) => {
+  const selectNewSky = document.querySelector('#sky-display').value;
+  const skyDisplayArea = document.querySelector('#sky-display').value;
+  if (selectNewSky === 'Sunny') {
+    skyDisplayArea.textContent = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️';
+  } else if (selectNewSky === 'Cloudy') {
+    skyDisplayArea.textContent = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
+  } else if (selectNewSky === 'Rainy') {
+    skyDisplayArea.textContent = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
+  } else if (selectNewSky === 'Snowy') {
+    skyDisplayArea.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
+  }
+};
+
+// ========= CHANGE LANDSCAPE =========
+
+const changeLandscape = (event) => {
+  const selectNewLandscape = document.querySelector('#garden-display');
+  const landscapeDisplayArea = document.querySelector('#garden-display');
+  if (state.temp >= 80) {
+    slandscapeDisplayArea.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
+  } else if (state.temp >= 70) {
+    landscapeDisplayArea.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+  } else if (state.temp >= 60) {
+    landscapeDisplayArea.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
+  } else if (state.temp <= 59) {
+    landscapeDisplayArea.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+  }
+};
+
+// ========= REGISTER EH =========
 
 const registerEventHandlers = (event) => {
   const warmerButton = document.querySelector('#warmer-button');
@@ -69,9 +100,21 @@ const registerEventHandlers = (event) => {
   coolerButton.addEventListener('click', decreaseTemp);
 
   changeCityName();
-  const userChangesCity = document.querySelector('#cityNameInputField');
-  userChangesCity.addEventListener('input', changeCityName);
+  const inputDiffCity = document.querySelector('#cityNameInputField');
+  inputDiffCity.addEventListener('input', changeCityName);
+
+  const resetCityButton = document.querySelector('#reset-button');
+  resetCityButton.addEventListener('click', resetCity);
+
+  changeCityName();
+
+  changeSky();
+  const selectNewSky = document.querySelector('#sky-display');
+  selectNewSky.addEventListener('change', changeSky);
+
+  changeLandscape();
+  const selectNewLandscape = document.querySelector('#garden-display');
+  selectNewLandscape.addEventListener('change', changeLandscape);
 };
-const resetCityButton = document.querySelector('#reset-city-button');
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);

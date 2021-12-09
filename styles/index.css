@@ -42,7 +42,7 @@ p {
   width: 900px;
 }
 
-#reset-city-button {
+#reset-button {
   background-color: #e0dfdf;
   border: rgb(201, 199, 199) 2px solid;
   border-radius: 3px;
@@ -95,6 +95,10 @@ p {
   flex-direction: column; */
   /* background-color: f2f2f2; */
   /* background-color: rgb(201, 243, 243); */
+}
+
+.landscape-container {
+  height: ;
 }
 
 .temp-container {

@@ -21,7 +21,7 @@
 
 
     <section id="headertitle">
-      <h1>Weather Forecast for <span id="header-City-Name">Denver</span> </h1>
+      <h1>Weather Forecast for <span id="header-City-Name"></span> </h1>
     </section>
 
       <!-- TEMP CONTAINER  -->
@@ -43,6 +43,8 @@
       <div id="card" class="landscape-container">
         <section id="landscape">
           <h2>The Weather Landscape</h2> 
+          <div id="sky-display"></div>
+          <div id="garden-display"></div>
         </section>
       </div>
 
@@ -50,10 +52,8 @@
       <div id="card" class="city-container">
         <section id="city">
           <h2>Enter a City</h2>
-              <input type="text" id="cityNameInputField" placeholder="Enter another city" />
-          <div class="city">
-            <button id="reset-city-button">
-            <span id="city-button-title">Reset</span> </div>
+              <input type="text" id="cityNameInputField" placeholder="Enter another city" value="Denver"/>
+            <button id="reset-button"><span >Reset</span> 
         </section>
       </div>
 
@@ -61,12 +61,13 @@
       <div id="card">
         <section id="sky">
           <h2>Select a Sky</h2>
+          <p>Use the drop-down menu to select the atmosphere.</p>
           <div class="dropdown-sky">
             <select id="dropdown-sky">
-              <option value="sky1">Sunny</option>
+              <option value="sky1">Snowy</option>
               <option value="sky2">Cloudy</option>
               <option value="sky3">Rainy</option>
-              <option value="sky4">Snowy</option>
+              <option value="sky4">Sunny</option>
           </select>
           </div> 
       </div>
