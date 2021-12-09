@@ -101,16 +101,36 @@ const sky = (event) => {
 
 };
 
+
+//input box
+const city = (event) => {
+//if a city is entered do:
+const log = document.getElementById('city-name');
+log.textContent = event.target.value;
+};
+
+//reset
+const wipe = (event) =>{
+    const city = document.getElementById("city-input");
+    city.value = 'Seattle';
+    const log = document.getElementById('city-name');
+    log.textContent = 'Seattle';
+}
+
 //Event handler 
 
 const registerEventHandlers = (event) => {
     const upButton = document.getElementById("up-button");
     const downButton = document.getElementById("down-button");
     const dropDown = document.getElementById("dropdown");
+    const input = document.getElementById("city-input");
+    const reset = document.getElementById("reset");
 
     upButton.addEventListener('click', increase);
     downButton.addEventListener('click', decrease);
     dropDown.addEventListener('change', sky);
+    input.addEventListener('change', city);
+    reset.addEventListener('click', wipe);
 }
 
 //helper functions
@@ -161,6 +181,15 @@ function landscape(){
     }
 }
 
+//-------- dropdown related functions ---------//
+
 function skyscape(){}
+
+//-------- input related functions ---------//
+
+// function cityValue(event) {
+//     const log = document.getElementById('#city-name');
+//     log.textContent = event.target.value;
+// }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);

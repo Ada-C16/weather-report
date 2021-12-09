@@ -9,7 +9,13 @@
 </head>
 <body>
 <!-- weather heading -->
-    <header></header>
+    <header>
+        <div>
+            <section>Weather Report</section> 
+            <section>For the lovely city of</section>
+            <section id="city-name">...</section>
+        </div>
+    </header>
 <!-- weather garden -->
     <main id="weather">
         <p>Weather Garden</p>
@@ -34,6 +40,7 @@
             <p>Sky</p>
         </div>
         <select name="dropdown" id="dropdown">
+            <option value="">Select One</option>
             <option value="sunny">Sunny</option>
             <option value="cloudy">Cloudy</option>
             <option value="rainy">Rainy</option>
@@ -45,8 +52,8 @@
         <div class="city-title">
             <p>City</p>
         </div>
-        <input id="city-input"></input>
-        <button class="reset">Reset</button>
+        <input placeholder="Enter a city" id="city-input"/>
+        <button id="reset">Reset</button>
     </section>
     
     <!-- <div class="container">
