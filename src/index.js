@@ -1,6 +1,7 @@
 const state = {
   temp: 68,
   sky: 'sunny',
+  cityName: 'Tacoma',
 }
 
 const renderTemp = (temp) => {
@@ -78,11 +79,21 @@ const changeSky = (e) => {
   renderSky(state.sky);
 }
 
+const renderCityName = (cityName) => {
+  const nameElem = document.querySelector('#city-name');
+  nameElem.textContent = cityName;
+}
+
+const changeCityName = (e) => {
+  state.cityName = e.target.value;
+  renderCityName(state.cityName);
+}
 
 const startUp = () => {
   renderTemp(state.temp);
   renderLandscape(state.temp);
   renderSky(state.sky);
+  renderCityName(state.cityName);
 
   const increaseTempBtn = document.querySelector('#increase-temp');
   increaseTempBtn.addEventListener('click', increaseTemp);
@@ -92,6 +103,9 @@ const startUp = () => {
 
   const skySelector = document.querySelector('#select-sky');
   skySelector.addEventListener('change', changeSky);
+
+  const cityNameInp = document.querySelector('#change-name');
+  cityNameInp.addEventListener('input', changeCityName);
 }
 
 document.addEventListener('DOMContentLoaded', startUp);
