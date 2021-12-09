@@ -25,6 +25,9 @@ const registerEventHandlers = () => {
 
   const cityInput = document.querySelector("input");
   cityInput.addEventListener("input", updateCityName);
+
+  const resetButton = document.querySelector("#resetButton");
+  resetButton.addEventListener("click", resetCityName);
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
@@ -96,5 +99,17 @@ const changeSky = () => {
 const updateCityName = () => {
   const cityInput = document.querySelector("input");
   const cityHeader = document.querySelector("h2");
-  cityHeader.textContent = `for ✨${cityInput.value}✨`;
+  if (cityInput.value === "") {
+    cityHeader.textContent = `for ✨Seattle✨`;
+  } else {
+    cityHeader.textContent = `for ✨${cityInput.value}✨`;
+  }
+};
+
+// Reset Button
+const resetCityName = () => {
+  const cityInput = document.querySelector("input");
+  const cityHeader = document.querySelector("h2");
+  cityInput.value = null;
+  cityHeader.textContent = "for ✨Seattle✨";
 };
