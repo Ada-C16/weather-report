@@ -5,33 +5,16 @@ const weatherHeading = document.createElement('h1');
 weatherHeading.textContent = "Weather Report";
 mainSection.appendChild(weatherHeading)
 
-// LOCATION
-const cityForm = document.createElement('form');
-cityForm.setAttribute("id", "city-container");
-cityForm.setAttribute("class", "frosted round");
+const state = {
+    temp: 75,
+    city: "Mountain House"
+};
 
+// h2
+const cityHeading = document.createElement('h2');
+cityHeading.textContent = `${state.city}`;
+mainSection.appendChild(cityHeading);
 
-const cityNameContainer = document.createElement('div');
-cityNameContainer.setAttribute("id", "city-name-container");
-
-const city = document.createElement('input');
-city.setAttribute("id", "city-name");
-city.setAttribute("type","text");
-city.setAttribute("placeholder","Mountain House");
-cityNameContainer.appendChild(city);
-
-cityForm.appendChild(cityNameContainer);
-
-const cityReset = document.createElement('div');
-const resetName = document.createElement('input');
-resetName.setAttribute("id", "reset-city-button");
-resetName.setAttribute("type", "reset");
-resetName.setAttribute("value","↻");
-cityReset.appendChild(resetName);
-
-cityForm.appendChild(cityReset);
-
-mainSection.appendChild(cityForm);
 
 
 // SKY MODE
@@ -41,7 +24,47 @@ const playground = document.querySelector('#playground');
     const skyMode = ["Morning", "Midday", "Sunset", "Midnight"];
     const skyContainer = document.createElement('div');
     skyContainer.setAttribute("id", "sky-container");
-    skyContainer.setAttribute("class", "round frosted");
+    skyContainer.setAttribute("class", "round frosted");    
+
+        // LOCATION
+        const cityForm = document.createElement('form');
+        cityForm.setAttribute("id", "city-container");
+        cityForm.setAttribute("class", "frosted round");
+
+
+        const cityNameContainer = document.createElement('div');
+        cityNameContainer.setAttribute("id", "city-name-container");
+
+        const city = document.createElement('input');
+        city.setAttribute("id", "city-name");
+        city.setAttribute("type","text");
+        city.setAttribute("placeholder","Mountain House");
+        city.setAttribute("onInput", "changeCity(this.value)")
+        cityNameContainer.appendChild(city);
+
+            const changeCity = (name) => {
+                state.city = name;
+                document.querySelector("h2").textContent = `${state.city}`;
+            }
+
+        cityForm.appendChild(cityNameContainer);
+
+        const cityReset = document.createElement('div');
+        const resetName = document.createElement('input');
+        resetName.setAttribute("id", "reset-city-button");
+        resetName.setAttribute("type", "reset");
+        resetName.setAttribute("value","↻");
+        //resetName.setAttribute("onClick", "resetCity");
+
+            const resetCityFunc = () => {
+                state.city = "Mountain House";
+                document.querySelector("h2").textContent = `${state.city}`;
+            }
+        cityReset.appendChild(resetName);
+
+        cityForm.appendChild(cityReset);
+
+        skyContainer.appendChild(cityForm);
 
         const skySelectorLabel = document.createElement("label");
         skySelectorLabel.setAttribute("for", "select-sky");
@@ -87,9 +110,7 @@ mainSection.append(playground)
 
 // WEATHER STATION
 
-const state = {
-    temp: 75
-};
+
 
 const updateTemp = () => {
     const temperature = document.querySelector("#temperature");
@@ -137,10 +158,10 @@ const registerEventHandlers = () => {
 
     const decTemp = document.querySelector("#decTemp");
     decTemp.addEventListener("click", lowerTemp);
-/*
-    const changeTemp = document.querySelector("#temperature");
-    changeTemp.addEventListener("input", inputTemp(changeTemp.value));
-*/
+
+    const resetCity = document.querySelector("#reset-city-button");
+    resetCity.addEventListener("click", resetCityFunc)
+
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
