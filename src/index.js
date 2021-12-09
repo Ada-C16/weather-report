@@ -97,3 +97,11 @@ cityInput.addEventListener('keyup', changeCity);
 
 // WAVE 5
 // reset button to put city name back to default
+
+const resetButton = document.getElementById("reset-city");
+
+const resetCity = () => {
+  city.textContent = "Seattle"
+};
+
+resetButton.addEventListener('click', resetCity);
