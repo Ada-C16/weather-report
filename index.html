@@ -27,9 +27,9 @@
             <div class="container">
                 <!-- adding button and heading to show the digits -->
                 <!-- increment() and decrement() functions on button click-->
-                <button onclick="decrement()">-</button>
+                <button id = "minus_button">-</button>
                 <h2 id="counting"></h2>
-                <button onclick="increment()">+</button>
+                <button id = "plus_button">+</button>
             </div>
         </h1>
     </header>
@@ -53,27 +53,11 @@
         <h1>And the Garden Looks Like:
             <ul>
                 <li>🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧</li>
-                <li>🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃</li>
+                <li id ="ground"></li>
         </h1>
     </header>
 
-    <script>
-        //initialising a variable name data
-        var data = 72;
-
-        //printing default value of data that is 0 in h2 tag
-        document.getElementById("counting").innerText = data;
-
-        //creation of increment function
-        function increment() {
-            data = data + 1;
-            document.getElementById("counting").innerText = data;
-        }
-        //creation of decrement function
-        function decrement() {
-            data = data - 1;
-            document.getElementById("counting").innerText = data;
-        }
+    <script type= "text/javascript" src = "../src/index.js"></script>
     </script>
     
 </body>
