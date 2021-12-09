@@ -77,7 +77,7 @@ const updateSky = () => {
 const updateCityImage = () => {
   const city = document.getElementById('cityNameInput').value;
   const cityImage = document.getElementById('cityImage');
-  let image = 'assets/images/city_clipart.jpeg';
+  let image = 'assets/images/city_clipart4.jpeg';
   if (city == 'Tacoma') {
     image = 'assets/images/city_clipart1.png';
   } else if (city == 'Bellevue') {
@@ -88,7 +88,7 @@ const updateCityImage = () => {
     image = 'assets/images/city_clipart5.png';
   } else if (city == 'Seattle') {
     image = 'assets/images/city_clipart6.png';
-  } else {
+  } else if (city == '') {
     image = 'assets/images/city_clipart.jpeg';
   }
 
