@@ -1,5 +1,6 @@
 // city name
 const updateCityName = () => {
+  // need .value
   const cityNameInput = document.getElementById('cityNameInput').value;
   const headerCityName = document.getElementById('headerCityName');
   headerCityName.textContent = cityNameInput;
@@ -42,7 +43,7 @@ const updateSky = () => {
 const state = {
   temp: 52,
 };
-
+// State attributes wont updated automatically 
 const increaseTemp = () => {
   state.temp += 1;
   // I want to change temperature, so id="temperature"
@@ -51,6 +52,7 @@ const increaseTemp = () => {
   // need update other function use this global variable here.
   updateTempCol(state.temp);
   updateGarden(state.temp);
+  console.log(state.temp);
 };
 const decreaseTemp = () => {
   state.temp -= 1;
@@ -58,10 +60,10 @@ const decreaseTemp = () => {
   decreaseTemp.textContent = state.temp;
   updateTempCol(state.temp);
   updateGarden(state.temp);
+
+  console.log(state.temp);
 };
 
-// WHY console NOT update?
-console.log(state.temp);
 
 let cur = state.temp;
 const updateTempCol = (cur) => {
@@ -78,7 +80,7 @@ const updateTempCol = (cur) => {
   } else {
     col = 'teal';
   }
-  // WHY use classList not textContent???
+  // Use classList because holding a list of styles in css
   temperature.classList = col;
 };
 
@@ -98,16 +100,16 @@ const updateGarden = (cur) => {
 };
 
 // reflect on web
+// You can register things you want to see immediately when website loads
 const registerEventHandlers = () => {
-  // WHY register this one?
-  // updateCityName();
+  updateCityName();
   const cityNameInput = document.getElementById('cityNameInput');
   cityNameInput.addEventListener('input', updateCityName);
 
   const cityNameResetBtn = document.getElementById('cityNameResetBtn');
   cityNameResetBtn.addEventListener('click', resetCityName);
 
-  // updateSky();
+  updateSky();
   const skySelect = document.getElementById('skySelect');
   skySelect.addEventListener('change', updateSky);
 
