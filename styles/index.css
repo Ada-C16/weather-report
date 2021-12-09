@@ -4,7 +4,7 @@ body {
     background: #bfcfff;
 }
 
-section.title-block {
+section.titleBlock {
     background: #c8e7ed;
     border: 4px solid #dabfff;
     color: #ffffc2;
@@ -12,7 +12,7 @@ section.title-block {
     -webkit-text-stroke-color: black;
 }
 
-section.sky-block {
+section.skyBlock {
     background: #ffffc2;
     border: 4px solid #ffa5a5;
     color: white;
@@ -20,7 +20,7 @@ section.sky-block {
     -webkit-text-stroke-color: black;
 }
 
-section.landscape-block {
+section.landscapeBlock {
     background: #c8efed;
     border: 4px solid #ffffc2;
     color: white;
@@ -28,7 +28,7 @@ section.landscape-block {
     -webkit-text-stroke-color: black;
 }
 
-section.temp-block {
+section.tempBlock {
     background: #dabfff;
     border: 4px solid #c8e7ed;
     color: white;
@@ -36,7 +36,11 @@ section.temp-block {
     -webkit-text-stroke-color: black;
 }
 
-section.temp-displays {
+section.tempDisplays {
     background: #ffffc2;
     border: 4px solid #ffa5a5
+}
+
+h2.tempTitleText {
+    color: #2cb978
 }

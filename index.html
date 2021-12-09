@@ -8,46 +8,47 @@
     <link href="styles/index.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <section class="title-block">
+    <section class="titleBlock">
         <h1>
             What is your weather like today?
         </h1>
     </section>
 
-    <section class="sky-block">
+    <section class="skyBlock">
         <h1>
             What does your sky look like?
         </h1>
     </section>
 
-    <section class="landscape-block">
+    <section class="landscapeBlock">
         <h1>
             Welcome to ...
         </h1>
     </section>
 
-    <section class="temp-block">
+    <section class="tempBlock">
         <h1>Temperature</h1>
-        <section class="temp-displays">
-            <h2>
-                Temp in Farhenheit
-            </h2>
-            <button id="increase-temp">+</button>
-            <section id="chosen-temp-container">
-                <h3 id="default-temp">32</h3>
+        <section class="tempDisplays">
+            <h2 class="tempTitleText">Farhenheit</h2>
+            <section>
+                <button id="increaseTempFButton">+</button>
+                <section class="generalTemp">
+                    <h3 id="tempFContainer">32</h3>
+                </section>
+                <button id="decreaseTempFButton">-</button>
             </section>
-            <button id="decrease-temp">-</button>
         </section>
-        <section class="temp-displays">
-            <h2>
-                Temp in Celcuis
-            </h2>
-            <button id="increase-temp">+</button>
-            <section id="chosen-temp-container">
-                <h2 id="default-temp">0</h2>
+
+        <section class="tempDisplays">
+            <h2 class="tempTitleText">Celcius</h2>
+            <section>
+                <button id="increaseTempCButton">+</button>
+                <section class="generalTemp">
+                    <h3 id="TempCContainer">0</h3>
+                </section>
+                <button id="decreaseTempCButton">-</button>
             </section>
-            <button id="decrease-temp">-</button>
-        </section>
+    </section>
     </section>
     <script src="src/index.js"></script>
 </body>
