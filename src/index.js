@@ -20,6 +20,7 @@ const increaseTemp = (event) => {
   } else if (state.temp <= 49) {
     tempDisplayed.style.color = 'blue';
   }
+  changeLandscape();
 };
 
 //function decrease temp
@@ -38,23 +39,22 @@ const decreaseTemp = (event) => {
   } else if (state.temp <= 49) {
     tempDisplayed.style.color = 'blue';
   }
+  changeLandscape();
 };
 
 // ========= CHANGE CITY =========
 
 //function change city name
 const changeCityName = (event) => {
-  const inputNewCity = document.querySelector('#cityNameInputField').value;
+  const inputNewCity = document.getElementById('cityNameInputField').value;
   const cityDisplayed = document.querySelector('#header-City-Name');
   cityDisplayed.textContent = inputNewCity;
 };
 
 // this function resets city field to Denver
 const resetCity = (event) => {
-  const cityNameInputField = document.querySelector(
-    '#cityNameInputField'
-  ).value;
-  cityNameInputField.textContent.value = 'Denver';
+  const inputDiffCity = document.getElementById('cityNameInputField');
+  cityNameInputField.value = 'Denver';
   changeCityName();
 };
 
@@ -62,8 +62,8 @@ const resetCity = (event) => {
 
 const changeSky = (event) => {
   const selectNewSky = document.getElementById('dropdown-sky').value;
-  const skyDisplayArea = document.getElementById('sky-display');
-  skyDisplayArea.textContent = selectNewSky;
+  const skyDisplayArea = document.getElementById('sky-image');
+  // skyDisplayArea.textContent = selectNewSky;
   if (selectNewSky === 'Snowy') {
     skyDisplayArea.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
   } else if (selectNewSky === 'Cloudy') {
@@ -78,19 +78,18 @@ const changeSky = (event) => {
 // ========= CHANGE LANDSCAPE =========
 
 const changeLandscape = (event) => {
-  const selectNewLandscape = document.querySelector('#garden-display');
-  const landscapeDisplayArea = document.querySelector('#garden-display');
-  if (state.temp >= 80) {
-    landscapeDisplayArea.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
-  } else if (state.temp >= 70) {
-    landscapeDisplayArea.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
-  } else if (state.temp >= 60) {
-    landscapeDisplayArea.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
-  } else if (state.temp <= 59) {
-    landscapeDisplayArea.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
-  }
+  const landscapeDisplay = document.getElementById('garden-image');
+  let landscape = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+  // if (state.temp >= 80) {
+  //   landscapeDisplay.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
+  // } else if (state.temp < 80 && state.temperature >= 70) {
+  //   landscapeDisplay.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+  // } else if (state.temperature < 70 && state.temperature >= 60) {
+  //   landscapeDisplay.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
+  // } else if (state.temp < 60) {
+  //   landscapeDisplay.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+  landscapeDisplay.textContent = landscape;
 };
-
 // ========= REGISTER EH =========
 
 const registerEventHandlers = (event) => {
@@ -101,19 +100,20 @@ const registerEventHandlers = (event) => {
   coolerButton.addEventListener('click', decreaseTemp);
 
   changeCityName();
-  const inputDiffCity = document.querySelector('#cityNameInputField');
+  const inputDiffCity = document.getElementById('cityNameInputField');
   inputDiffCity.addEventListener('input', changeCityName);
 
-  const resetCityButton = document.querySelector('#reset-button');
-  resetCityButton.addEventListener('click', resetCityButton);
+  const resetCityButton = document.getElementById('reset-button');
+  resetCityButton.addEventListener('click', resetCity);
 
   changeSky();
-  const selectNewSky = document.querySelector('#sky-display');
+  const selectNewSky = document.querySelector('#dropdown-sky');
   selectNewSky.addEventListener('change', changeSky);
 
+  // find where the event is happening
   changeLandscape();
-  const selectNewLandscape = document.querySelector('#garden-display');
-  selectNewLandscape.addEventListener('change', changeLandscape);
+  const landscapeDisplay = document.getElementById('garden');
+  landscapeDisplay.addEventListener('change', changeLandscape);
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
