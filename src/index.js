@@ -54,7 +54,6 @@ const playground = document.querySelector('#playground');
         resetName.setAttribute("id", "reset-city-button");
         resetName.setAttribute("type", "reset");
         resetName.setAttribute("value","↻");
-        //resetName.setAttribute("onClick", "resetCity");
 
             const resetCityFunc = () => {
                 state.city = "Mountain House";
@@ -109,8 +108,6 @@ const playground = document.querySelector('#playground');
 mainSection.append(playground)
 
 // WEATHER STATION
-
-
 
 const updateTemp = () => {
     const temperature = document.querySelector("#temperature");
