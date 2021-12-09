@@ -19,8 +19,7 @@ img {
 }
 
 /* Select button */
-
-label {
+/* label {
   font-family: Bebas;
   font-size: 1rem;
   padding-right: 10px;
@@ -29,4 +28,11 @@ label {
 select {
   font-size: 0.9rem;
   padding: 2px 5px;
+} */
+
+.pickerWindow {
+  text-align: center;
+  font-family: Bebas;
+  font-size: 1.5rem;
+  padding-right: 10px;
 }
