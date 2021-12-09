@@ -16,16 +16,16 @@
       <section>
         <article id="temp">
             <h3>Temperature degC</h3>
-            <p id='temp const'>19</p>
-            <button id="lower temp"> ⬅️ </button>
-            <button id="higher temp"> ➡️ </button>
+            <p id='temp_const'>19</p>
+            <button id="lower_temp"> &#x2796; </button>
+            <button id="higher_temp"> &#x2795; </button>
         </article>
       </section>
 
       <section>
-        <article id="sky">
+        <article>
             <h3>Sky</h3>
-            <label for="sky">How does the sky look?</label>
+            <label for="sky">How does the sky look?
 
             <select name="sky" id="sky">
               <option value="sunny">Sunny</option>
@@ -33,7 +33,9 @@
               <option value="rainy">Rainy</option>
               <option value="snowy">Snowy</option>
             </select> 
+            </label>
         </article>
+        <div class="result"></div>
         <article id="city">
             <h3>City Name</h3>
             <label for="city">City Name:</label>
