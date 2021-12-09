@@ -24,29 +24,29 @@ const increaseTemp =  () => {
 };
 
 // Adjusting Background Temp According to Weather
-const changeBackgroundTemp = () => {
-  const tempSectionEl = document.querySelector(".tempDefault");
+// const changeBackgroundTemp = () => {
+//   const tempSectionEl = document.querySelector(".tempDefault");
 
-  if (state.tempCurrent >=80) {
-    tempSectionEl.id = "veryHotTemp";
-  }
+//   if (state.tempCurrent >=80) {
+//     tempSectionEl.id = "veryHotTemp";
+//   }
 
-  else if (state.tempCurrent <=79 && state.tempCurrent >= 70) {
-    tempSectionEl.id = "hotTemp";
-  }
+//   else if (state.tempCurrent <=79 && state.tempCurrent >= 70) {
+//     tempSectionEl.id = "hotTemp";
+//   }
 
-  else if(state.tempCurrent <=69 && state.tempCurrent >=60) {
-    tempSectionEl.id = "middleTemp";
-  }
+//   else if(state.tempCurrent <=69 && state.tempCurrent >=60) {
+//     tempSectionEl.id = "middleTemp";
+//   }
 
-  else if (state.tempCurrent <= 59 && state.tempCurrent >= 50) {
-    tempSectionEl.id = "coldTemp";
-  }
+//   else if (state.tempCurrent <= 59 && state.tempCurrent >= 50) {
+//     tempSectionEl.id = "coldTemp";
+//   }
 
-  else if (state.tempCurrent < 50) {
-    tempSectionEl.id = "veryColdTemp";
-  }
-};
+//   else if (state.tempCurrent < 50) {
+//     tempSectionEl.id = "veryColdTemp";
+//   }
+// };
 
 // Adjusting Landscape According to Temperature
 const changeLandscape = () => {
@@ -77,9 +77,6 @@ const changeLandscape = () => {
     landscapeEmoji.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
     tempSectionEl.id = "veryColdTemp";
   }
-  // else {
-  //   landscapeEmoji.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
-  // }
 };
 
 // Adjusting Sky Levels According to Temperature
