@@ -1,5 +1,6 @@
 const state = {
   temp: 68,
+  sky: 'sunny',
 }
 
 const renderTemp = (temp) => {
@@ -23,25 +24,12 @@ const getTempClass = (temp) => {
   }
 }
 
-
-const increaseTemp = () => {
-  state.temp++;
-  renderTemp(state.temp);
-  renderLandscape(state.temp);
-}
-
-const decreaseTemp = () => {
-  state.temp--;
-  renderTemp(state.temp);
-  renderLandscape(state.temp);
-}
-
 const renderLandscape = (temp) => {
   const landscapeElem = document.querySelector('#landscape');
-  landscapeElem.textContent = getLandscapeFromTemp(temp);
+  landscapeElem.textContent = getLandscapeContent(temp);
 }
 
-const getLandscapeFromTemp = (temp) => {
+const getLandscapeContent = (temp) => {
   if (temp >= 80) {
     return '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
   } else if (temp >= 70) {
@@ -55,15 +43,55 @@ const getLandscapeFromTemp = (temp) => {
   }
 }
 
+const increaseTemp = () => {
+  state.temp++;
+  renderTemp(state.temp);
+  renderLandscape(state.temp);
+}
+
+const decreaseTemp = () => {
+  state.temp--;
+  renderTemp(state.temp);
+  renderLandscape(state.temp);
+}
+
+const renderSky = (sky) => {
+  const skyElem = document.querySelector('#sky');
+  skyElem.textContent = getSkyContent(sky);
+}
+
+const getSkyContent = (sky) => {
+  switch (sky) {
+    case 'sunny':
+      return '☁️ ☁️ ☁️ ☀️ ☁️ ☁️';
+    case 'cloudy':
+      return '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
+    case 'rainy':
+      return '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
+    case 'snowy':
+      return '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨'; 
+  }
+}
+
+const changeSky = (e) => {
+  state.sky = e.target.value;
+  renderSky(state.sky);
+}
+
+
 const startUp = () => {
   renderTemp(state.temp);
   renderLandscape(state.temp);
+  renderSky(state.sky);
 
   const increaseTempBtn = document.querySelector('#increase-temp');
   increaseTempBtn.addEventListener('click', increaseTemp);
 
   const decreaseTempBtn = document.querySelector('#decrease-temp');
   decreaseTempBtn.addEventListener('click', decreaseTemp);
+
+  const skySelector = document.querySelector('#select-sky');
+  skySelector.addEventListener('change', changeSky);
 }
 
 document.addEventListener('DOMContentLoaded', startUp);
