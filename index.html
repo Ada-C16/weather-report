@@ -13,8 +13,8 @@
     </header>
     <section>
         <h1 id="city">
-            <input type="text" id="typeCityName" value="San Antonio" name="name">
-            San Antonio
+            <input type="text" id="typeCityName" value="San Antonio">
+            
             <button id="reset" type="reset">
                 Reset
             </button>
@@ -22,10 +22,15 @@
     </section>
     <section id="weatherContainer">
         <div id=tempControl>
+            <p id="label">Change the Temperature Here</p>
             <section id="tempDisplay" class="tempColor">70F</section>
-            <button id="tempDecrease"><</button>
-            <button id="tempIncrease">></button>
+            <img src="/assets/hotWeather.jpg" id="landscape">
+            <section id="buttons">
+                <button id="tempDecrease"><</button>
+                <button id="tempIncrease">></button>
+            </section>
         </div>
+        <section id="buffer"></section>
         <div id="weatherSky">
             <label>How is the weather today?</label>
             <select id="changeSky">
@@ -38,6 +43,8 @@
         </div>
         <div id="weatherLand"></div>
     </section>
-    <script src="src/index.js"></script>
+    <script src="src/index.js">
+        
+    </script>
 </body>
 </html>

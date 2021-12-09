@@ -2,43 +2,56 @@ const state = {
     temp: 70,
 };
 
-const displayTemp = () => {
-    const tempDisplay = document.querySelector("#tempDisplay");
-    const display = document.createElement("span");
-    display.textContent = state.temp;
-};
+const changeCity = () => {
+    const textField = document.querySelector("#city");
+    const textInput = document.querySelector("#typeCityName");
+    textField.innerHTML = textInput.value;
+    // textField.oninput = "changeCity()";
+} 
 
 const increaseTemp = () => {
     state.temp += 1;
     const tempDisplay = document.querySelector("#tempDisplay");
+    const landscape = document.querySelector("#landscape");
     tempDisplay.textContent = `${state.temp}F`;
     if (state.temp >= 80){
         tempDisplay.setAttribute("style", "background-color: red");
+        landscape.src = "/assets/texasWeather.jpg";
     } else if (state.temp >= 70){
-        tempDisplay.setAttribute("style", "background-color: orange")
+        tempDisplay.setAttribute("style", "background-color: orange");
+        landscape.src = "/assets/hotWeather.jpg";
     } else if (state.temp >= 60){
-        tempDisplay.setAttribute("style", "background-color: yellow")
+        tempDisplay.setAttribute("style", "background-color: yellow");
+        landscape.src = "/assets/springWeather.jpg";
     } else if (state.temp >= 50){
-        tempDisplay.setAttribute("style", "background-color: green")
+        tempDisplay.setAttribute("style", "background-color: green; color: white");
+        landscape.src = "/assets/fallWeather.jpg";
     } else {
-        tempDisplay.setAttribute("style", "background-color: teal")
+        tempDisplay.setAttribute("style", "background-color: teal; color: white");
+        landscape.src = "/assets/winterWeather.jpg";
     }
 }
 
 const decreaseTemp = () => {
     state.temp -= 1;
     const tempDisplay = document.querySelector("#tempDisplay");
+    const landscape = document.querySelector("#landscape");
     tempDisplay.textContent = `${state.temp}F`;
     if (state.temp >= 80){
         tempDisplay.setAttribute("style", "background-color: red");
+        landscape.src = "/assets/texasWeather.jpg";
     } else if (state.temp >= 70){
-        tempDisplay.setAttribute("style", "background-color: orange")
+        tempDisplay.setAttribute("style", "background-color: orange");
+        landscape.src = "/assets/hotWeather.jpg";
     } else if (state.temp >= 60){
-        tempDisplay.setAttribute("style", "background-color: yellow")
+        tempDisplay.setAttribute("style", "background-color: yellow");
+        landscape.src = "/assets/springWeather.jpg";
     } else if (state.temp >= 50){
-        tempDisplay.setAttribute("style", "background-color: green")
+        tempDisplay.setAttribute("style", "background-color: green; color: white");
+        landscape.src = "/assets/fallWeather.jpg";
     } else {
-        tempDisplay.setAttribute("style", "background-color: cyan")
+        tempDisplay.setAttribute("style", "background-color: cyan; color: white");
+        landscape.src = "/assets/winterWeather.jpg";
     }
 }
 
@@ -63,9 +76,11 @@ const registerEventHandlers = () => {
     const tempIncreaseButton = document.querySelector("#tempIncrease");
     const tempDecreaseButton = document.querySelector("#tempDecrease");
     const weatherButton = document.querySelector("#changeSky");
+    const changesCity =  document.querySelector("#typeCityName").value;
     tempIncreaseButton.addEventListener("click", increaseTemp);
     tempDecreaseButton.addEventListener("click", decreaseTemp);
-    weatherButton.addEventListener("click", displayWeather)
+    weatherButton.addEventListener("click", displayWeather);
+    changesCity.addEventListener("alert", changeCity)
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
