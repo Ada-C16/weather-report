@@ -17,7 +17,6 @@ const colorTempDisplay = () => {
     }
 }
 
-
 // increase temp event handler
 const increaseTemp = () => {
     //increment temperature
@@ -36,6 +35,23 @@ const decreaseTemp = () => {
     console.log("temperature is now:", state.temperature);
 }
 
+//change landscape
+const changeLandscape = () => {
+    if (state.temperature > 59 && state.temperature < 70) {
+        document.querySelector('#landscape-block').style.backgroundImage = "url(/imgs/landscape-mild.jpg)";
+    } else if (state.temperature > 69 && state.temperature < 80) {
+        document.querySelector('#landscape-block').style.backgroundImage = "url(/imgs/landscape-default.jpg)";
+    } else if (state.temperature > 49 && state.temperature < 60) {
+        document.querySelector('#landscape-block').style.backgroundImage = "url(/imgs/landscape-cool.jpg)";
+    } else if (state.temperature <= 49) {
+        document.querySelector('#landscape-block').style.backgroundImage = "url(/imgs/landscape-snow.jpg)";
+    } else if (state.temperature >= 80) {
+        document.querySelector('#landscape-block').style.backgroundImage = "url(/imgs/landscape-hot.jpg)";
+    }
+}
+
+
+
 const registerEventHandlers = (event) => {
     //increase temp
     const increaseTempButton = document.querySelector('#increase-temp');
@@ -46,6 +62,9 @@ const registerEventHandlers = (event) => {
     //temperature color change
     increaseTempButton.addEventListener("click", colorTempDisplay);
     decreaseTempButton.addEventListener("click", colorTempDisplay);
+    //change landscape
+    increaseTempButton.addEventListener("click", changeLandscape);
+    decreaseTempButton.addEventListener("click", changeLandscape);
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
