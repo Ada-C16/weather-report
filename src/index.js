@@ -1,55 +1,41 @@
-// Wave 2 Increase & Decreasing Temp
 const state = {
   tempCurrent: 60
 };
 
 // Combine decreaseTemp and increaseTemp into one function during refactor
-const decreaseTemp = () => {
-  const currentTempEl = document.getElementById("currentTemp");
+// const decreaseTemp = () => {
+//   const currentTempEl = document.getElementById("currentTemp");
 
-  state.tempCurrent -= 1
-  currentTempEl.textContent = `${state.tempCurrent}°F`;
+//   state.tempCurrent -= 1
+//   currentTempEl.textContent = `${state.tempCurrent}°F`;
 
-  // changeBackgroundTemp()
-  changeLandscape()
-};
-
-const increaseTemp =  () => {
-  const currentTempEl = document.getElementById("currentTemp");
-
-  state.tempCurrent += 1
-  currentTempEl.textContent = `${state.tempCurrent}°F`;
-  // changeBackgroundTemp()
-  changeLandscape()
-};
-
-// Adjusting Background Temp According to Weather
-// const changeBackgroundTemp = () => {
-//   const tempSectionEl = document.querySelector(".tempDefault");
-
-//   if (state.tempCurrent >=80) {
-//     tempSectionEl.id = "veryHotTemp";
-//   }
-
-//   else if (state.tempCurrent <=79 && state.tempCurrent >= 70) {
-//     tempSectionEl.id = "hotTemp";
-//   }
-
-//   else if(state.tempCurrent <=69 && state.tempCurrent >=60) {
-//     tempSectionEl.id = "middleTemp";
-//   }
-
-//   else if (state.tempCurrent <= 59 && state.tempCurrent >= 50) {
-//     tempSectionEl.id = "coldTemp";
-//   }
-
-//   else if (state.tempCurrent < 50) {
-//     tempSectionEl.id = "veryColdTemp";
-//   }
+//   changeLandscapeColor()
 // };
 
-// Adjusting Landscape According to Temperature
-const changeLandscape = () => {
+// const increaseTemp =  () => {
+//   const currentTempEl = document.getElementById("currentTemp");
+
+//   state.tempCurrent += 1
+//   currentTempEl.textContent = `${state.tempCurrent}°F`;
+//   changeLandscapeColor()
+// };
+
+const adjustTemp = (event) => {
+  const currentTempEl = document.querySelector("#currentTemp");
+
+  if (event.target.id === "decrease") {
+    state.tempCurrent -= 1;
+  } 
+  else if (event.target.id === "increase") {
+    state.tempCurrent += 1;
+  }
+
+  currentTempEl.textContent = `${state.tempCurrent}°F`;
+  changeLandscapeColor()
+}
+
+// Adjusting Landscape & Background Color According to Temperature
+const changeLandscapeColor = () => {
   const landscapeEmoji = document.querySelector("#landscape")
   const tempSectionEl = document.querySelector(".tempDefault");
 
@@ -73,7 +59,7 @@ const changeLandscape = () => {
     tempSectionEl.id = "coldTemp";
   }
 
-  else if (state.tempCurrent < 50) {
+  else {
     landscapeEmoji.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
     tempSectionEl.id = "veryColdTemp";
   }
@@ -116,10 +102,16 @@ const resetCity = () => {
 // Registering event handlers
 const registerHandlers = () => {
   const decreaseButton = document.getElementById("decrease");
-  decreaseButton.addEventListener("click", decreaseTemp);
+  decreaseButton.addEventListener("click", adjustTemp);
 
   const increaseButton = document.getElementById("increase");
-  increaseButton.addEventListener("click", increaseTemp);
+  increaseButton.addEventListener("click", adjustTemp);
+
+  // const decreaseButton = document.getElementById("decrease");
+  // decreaseButton.addEventListener("click", decreaseTemp);
+
+  // const increaseButton = document.getElementById("increase");
+  // increaseButton.addEventListener("click", increaseTemp);
 
   const selectSky = document.querySelector(".skyChoice");
   selectSky.addEventListener("change", changeSky)
