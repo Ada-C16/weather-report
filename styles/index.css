@@ -88,9 +88,53 @@ Hot number color: #EA0009 */
 
 #garden-display {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: lightskyblue;
     border-radius: 10px;
     height: 50%;
     width: 60%;
+    padding-left: 0em;
 }
+
+#garden-clouds{
+    display: inline;
+    text-align: center;
+    list-style-type: none;
+}
+
+#garden-flowers{
+    display: inline;
+    text-align: center;;
+    list-style-type: none;
+}
+
+
+.dropbtn {
+    background-color: lightskyblue;
+    color: black;
+    padding: 10px;
+    border: none;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: rgb(27, 168, 255);
+}
+
+.dropdown {
+    display: inline-block;
+    text-align: center;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    background-color: lightskyblue;
+    z-index: 1;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
