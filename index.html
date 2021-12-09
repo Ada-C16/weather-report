@@ -11,21 +11,39 @@
     <h1>Show Me The Weather</h1>
   </header>
   <body>
-    <img src="assets/sky_photo.jpg" alt="A photo of a cloudy sky" />
+    <img
+      src="assets/sky_photo.jpg"
+      alt="A photo of a cloudy sky"
+      id="skyViews"
+    />
+    <section class="pickerWindow">
+      <section>
+        <label>Temperature</label>
+        <div>
+          <button id="clickButtonIn">⬆️</button>
+          <button id="clickButtonDe">⬇️</button>
+        </div>
+      </section>
+      <section>
+        <label for="skySelect">Select a Sky View</label>
+        <div>
+          <select name="sky" id="skySelect">
+            <option value="">Please choose an option</option>
 
-    <div class="pickerWindow">
-      <button id="clickButtonIn">Increase</button>
-      <button id="clickButtonDe">Decrease</button>
-      <label for="sky-select">Select a Sky View</label>
-      <select name="sky" id="sky-select">
-        <option value="">Please choose an option</option>
-
-        <option value="sunny">Sunny</option>
-        <option value="cloudy">Cloudy</option>
-        <option value="rainy">Rainy</option>
-        <option value="snowy">Snowy</option>
-      </select>
-    </div>
+            <option value="sunny">Sunny</option>
+            <option value="cloudy">Cloudy</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowy">Snowy</option>
+          </select>
+        </div>
+      </section>
+      <section>
+        <label for="cityName">Enter a City</label>
+        <div>
+          <input type="text" id="cityNameInput" />
+          <button id="cityNameReset" class="cityName_resetBtn">Reset</button>
+        </div>
+      </section>
     <div>
       <!-- Weather Type Photo here -->
     </div>
@@ -34,7 +52,7 @@
     </div>
     <div>
       <!-- City Element goes here -->
-    </div>
+    </section>
     <script src="src/index.js"></script>
   </body>
 </html>

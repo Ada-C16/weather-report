@@ -1,11 +1,12 @@
 body {
-  background-color: skyblue;
+  background-color: rgb(93, 155, 174);
   font-family: Bebas;
 }
 
 h1 {
   text-align: center;
   font-size: xxx-large;
+  color: #eba487;
 }
 
 img {
@@ -18,21 +19,17 @@ img {
   display: block;
 }
 
-/* Select button */
-/* label {
-  font-family: Bebas;
-  font-size: 1rem;
-  padding-right: 10px;
+button,
+label {
+  margin-right: 40px;
 }
-
-select {
-  font-size: 0.9rem;
-  padding: 2px 5px;
-} */
 
 .pickerWindow {
   text-align: center;
   font-family: Bebas;
   font-size: 1.5rem;
+  font-weight: bold;
   padding-right: 10px;
+  color: #eba487;
+  display: inline-flex;
 }
