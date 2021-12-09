@@ -40,6 +40,12 @@ header {
     font-size: 1.85em;
     font-weight: bold;
 }
+/* #city-name {
+    text-shadow:10px 10px 10px;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(23, 64, 142);
+} */
 footer {
     background-color: #dc85bc;
     grid-area: footer;

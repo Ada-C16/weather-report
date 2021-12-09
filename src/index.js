@@ -7,7 +7,7 @@ function tempCheck(tempConst) {
   } else if (tempConst < 35 && tempConst >= 25) {
     document.getElementById('temp_const').style.color = '#86340A';
     document.getElementById('container').style.backgroundImage =
-      'url(assets/warm-weather.jpg)';
+      'url(assets/sunny-sky.jpg)';
   } else if (tempConst < 25 && tempConst >= 19) {
     document.getElementById('temp_const').style.color = '#7EB5A6';
     document.getElementById('container').style.backgroundImage =
@@ -57,14 +57,11 @@ selectElement.addEventListener('change', (event) => {
 
 // Wave 4: Naming the City
 
-// const addCityName = () => {
-//   const newCity = document.createElement('span');
-//   const city_result = document.querySelector('#city_result');
-//   newCity.textContent = '🦀';
-//   city_result.appendChild(newCity);
-// };
+const cityButton = document.getElementById('city');
+const cityName = document.getElementById('page-title').innerHTML;
 
-// const registerEventHandlers = () => {
-//   const submitButton = document.querySelector('#cityButton');
-//   submitButton.addEventListener('click', addCityName);
-// };
+cityButton.addEventListener('click', () => {
+  document.getElementById(
+    'page-title'
+  ).innerHTML = `Weather Report - 🌟 ${cityButton.value} 🌟`;
+});
