@@ -1,6 +1,10 @@
 const tempNum = document.getElementById('tempNum');
 tempNum.textContent = 90;
 
+const resetCityName = () => {
+  const resetButton = document.getElementById('inputCityName');
+  resetButton.value = '';
+};
 const increaseTemp = () => {
   // sets tempNum as object, finds it using ElementById
 
@@ -18,6 +22,20 @@ const acceptInput = () => {
   // reassigning nameToChange to userInput.value
   nameToChange.textContent = userInput.value;
 };
+const changeTheSky = () => {
+  const skySelect = document.getElementById('skySelect').value;
+  const skyGarden = document.getElementById('skyGarden');
+  console.log(skySelect);
+  if (skySelect === 'Cloudy with a chance of meatballs') {
+    skyGarden.textContent = '☁️☁️ ☁️ ☁️☁️ ☁️☁️☁️ ☁️ ☁️☁️';
+  } else if (skySelect === 'Sunny with a fall of fruit') {
+    skyGarden.textContent = '☀️ ☀️☀️☀️ ☀️☀️☀️ ☀️☀️';
+  } else if (skySelect === 'Raining cats and dogs') {
+    skyGarden.textContent = '🌧⚡️⛈🌧🌧💧⛈🌧⚡️🌧💧🌧🌧';
+  } else if (skySelect === 'Snowy with a slough of sweets') {
+    skyGarden.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
+  }
+};
 console.log();
 const registerEvents = () => {
   //sets arrowUp as an object
@@ -31,6 +49,10 @@ const registerEvents = () => {
   arrowDown.addEventListener('click', decreaseTemp);
   const inputCityName = document.getElementById('inputCityName');
   inputCityName.addEventListener('input', acceptInput);
+  const resetButton = document.getElementById('Reset');
+  resetButton.addEventListener('click', resetCityName);
+  const changeSky = document.getElementById('skySelect');
+  changeSky.addEventListener('change', changeTheSky);
 };
 
 document.addEventListener('DOMContentLoaded', registerEvents);
