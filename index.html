@@ -18,12 +18,22 @@
         <h1>
             What does your sky look like?
         </h1>
+        <label for="skyOptions">Pick a Sky:</label>
+        <select id="skyDropMenu">
+            <option>Snowy</option>
+            <option>Cloudy</option>
+            <option>Rainy</option>
+            <option>Sunny</option>
+        </select>
     </section>
 
     <section class="landscapeBlock">
         <h1>
             Welcome to ...
         </h1>
+        <section id="cityInput">
+            
+        </section>
     </section>
 
     <section class="tempBlock">
@@ -31,25 +41,17 @@
         <section class="tempDisplays">
             <h2 class="tempTitleText">Fahrenheit</h2>
             <section>
-                <button id="increaseTempFButton">+</button>
-                <section class="generalTemp">
-                    <h3 id="tempFContainer">32</h3>
+                <button id="plusButton">+</button>
+                <section class="temp">
+                    <h3 id="tempContainer">32</h3>
                 </section>
-                <button id="decreaseTempFButton">-</button>
+                <button id="minusButton">-</button>
             </section>
         </section>
 
-        <section class="tempDisplays">
-            <h2 class="tempTitleText">Celsius</h2>
-            <section>
-                <button id="increaseTempCButton">+</button>
-                <section class="generalTemp">
-                    <h3 id="tempCContainer">0</h3>
-                </section>
-                <button id="decreaseTempCButton">-</button>
-            </section>
     </section>
     </section>
     <script src="src/index.js"></script>
 </body>
 </html>
+

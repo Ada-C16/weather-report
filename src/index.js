@@ -1,74 +1,69 @@
 // Add state
 const state = {
-  tempF: 32,
-  tempC: 0,
+  temp: 32,
 };
+
+// **********************************************
+// Temperature Increase and Decrease Buttons
+// **********************************************
 
 // update state (raise temp) function
-// Fahrenheit
-const updateTempF = () => {
-  const tempFElement = document.querySelector('#tempFContainer');
-  tempFElement.textContent = `${state.tempF}`;
-};
-
-// Celsius
-const updateTempC = () => {
-  const tempCElement = document.querySelector('#tempCContainer');
-  tempCElement.textContent = `${state.tempC}`;
+// Fahrenheit***
+const updateTemp = () => {
+  const tempElement = document.querySelector('#tempContainer');
+  tempElement.textContent = `${state.temp}`;
+  // colorLandscapeChange();
 };
 
 // Make a function to run when event occurs (behavior).
-// Fahrenheit
-const increaseTempF = () => {
-  const tempFContainer = document.querySelector('#tempFContainer');
-  const tempFSpan = document.createElement('span');
-  tempFContainer.appendChild(tempFSpan);
-  state.tempF += 1;
-  updateTempF();
+// Fahrenheit***
+const increaseTemp = () => {
+  const tempContainer = document.querySelector('#tempContainer');
+  const tempSpan = document.createElement('span');
+  tempContainer.appendChild(tempSpan);
+  state.temp += 1;
+  updateTemp();
 };
 
-const decreaseTempF = () => {
-  const tempFContainer = document.querySelector('#tempFContainer');
-  const tempFSpan = document.createElement('span');
-  tempFContainer.appendChild(tempFSpan);
-  state.tempF -= 1;
-  updateTempF();
+const decreaseTemp = () => {
+  const tempContainer = document.querySelector('#tempContainer');
+  const tempSpan = document.createElement('span');
+  tempContainer.appendChild(tempSpan);
+  state.temp -= 1;
+  updateTemp();
 };
 
-// Celsius
-const increaseTempC = () => {
-  const tempCContainer = document.querySelector('#tempCContainer');
-  const tempCSpan = document.createElement('span');
-  tempCContainer.appendChild(tempCSpan);
-  state.tempC += 1;
-  updateTempC();
-};
+// **************************************************************
+// Temperature Changing Number Text Color and Landscape Behavior
+// **************************************************************
 
-const decreaseTempC = () => {
-  const tempCContainer = document.querySelector('#tempCContainer');
-  const tempCSpan = document.createElement('span');
-  tempCContainer.appendChild(tempCSpan);
-  state.tempC -= 1;
-  updateTempC();
-};
+// const colorLandscapeChange = () => {
+//   if (state.temp <= 40) {
+//     color = #a4fbe3;
+//   };
+//   document.querySelector("#tempContainer").getElementsByClassName.color = color;
+// };
+
+// **********************************************
+// Sky Selecting Behavior
+// **********************************************
+
+// **********************************************
+// Registering the Event Handlers
+// **********************************************
 
 // Selecting the HTML element the event will occur on.
-// registering the event handlers
 const registerEventHandlers = () => {
-  const increaseTempFButton = document.querySelector('#increaseTempFButton');
-  increaseTempFButton.addEventListener('click', increaseTempF);
-  const decreaseTempFButton = document.querySelector('#decreaseTempFButton');
-  decreaseTempFButton.addEventListener('click', decreaseTempF);
-  const increaseTempCButton = document.querySelector('#increaseTempCButton');
-  increaseTempCButton.addEventListener('click', increaseTempC);
-  const decreaseTempCButton = document.querySelector('#decreaseTempCButton');
-  decreaseTempCButton.addEventListener('click', decreaseTempC);
+  const plusButton = document.querySelector('#plusButton');
+  plusButton.addEventListener('click', increaseTemp);
+  const minusButton = document.querySelector('#minusButton');
+  minusButton.addEventListener('click', decreaseTemp);
 };
 
 // registers our event handlers in response to the event that fires when the DOM has loaded completely (DOMContentLoaded).
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
 
 // can also pass in an annonymous function instead of a named on in the eventListener.
-// TempFElement.addEventListener('click', () => {
-//   TempFElement.textContent = 'Hi';
+// tempElement.addEventListener('click', () => {
+//   tempElement.textContent = 'Hi';
 // });
