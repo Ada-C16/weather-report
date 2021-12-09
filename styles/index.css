@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -54,4 +54,16 @@ h1 {
 
 .degree-section h2 {
     font-size: 40px;
+}
+
+#decrease-temperature {
+    height: 5vh;
+    width: 20%;
+    padding: 5px;
+}
+
+#increase-temperature {
+    height: 5vh;
+    width: 20%;
+    padding: 5px;
 }
