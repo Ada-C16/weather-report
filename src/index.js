@@ -5,6 +5,7 @@ const state = {
   temp: 49,
 };
 // temperature settings
+// changing color
 const updateTempStyles = (temp) => {
   const tempArrow = document.getElementById('temp-number');
   let color = 'teal';
@@ -17,14 +18,30 @@ const updateTempStyles = (temp) => {
   } else if (temp >= 50) {
     color = 'green';
   }
-  tempArrow.classList = color;
+  tempArrow.classList.add(color);
+  console.log(tempArrow);
+};
+
+const updateImages = (temp) => {
+  const layoutImage = document.getElementById('layout-image');
+  let image = 'assets/images/layout_snow1.png';
+  if (temp >= 80) {
+    image = 'assets/images/layout_desert1.png';
+  } else if (temp >= 70) {
+    image = 'assets/images/layout_sunny1.jpeg';
+  } else if (temp >= 60) {
+    image = 'assets/images/rainy_layout.png';
+  } else if (temp >= 50) {
+    image = 'assets/images/layout_snow1.png';
+  }
+  layoutImage.src = image;
 };
 
 const updateTemp = (temp) => {
   const tempContainer = document.getElementById('temp-number');
   tempContainer.textContent = temp;
   updateTempStyles(state.temp);
-  updateGarden(state.temp);
+  updateImages(state.temp);
 };
 
 const increaseTemp = () => {
@@ -38,15 +55,38 @@ const decreaseTemp = () => {
 };
 
 // changing sky image when select different sky option
-const selectSky = document.getElementById('selectSky').value;
-selectSky.addEventListener('change', event);
+const updateSky = () => {
+  let image = 'assets/images/sky_clipart3.png';
+  const sky = document.getElementById('selectSky').value;
+  const skyImage = document.getElementById('skyImage');
+  if (sky == 'cloudy') {
+    image = 'assets/images/sky_clipart3.png';
+  } else if (sky == 'sunny') {
+    image = 'assets/images/sunny_image.jpeg';
+  } else if (sky == 'rainy') {
+    image = 'assets/images/rainy_clipart2.png';
+  } else if (sky == 'snowy') {
+    image = 'assets/images/snowy_clipart1.png';
+  }
+
+  skyImage.src = image;
+};
 
 // ******** register that function as an 'event listening' ********
 const registerEventHandlers = () => {
+  updateTemp(state.temp);
+  const tempDecrease = document.getElementById('decreaseArrow');
+  tempDecrease.addEventListener('click', decreaseTemp);
+
+  const tempIncrease = document.getElementById('increaseArrow');
+  tempIncrease.addEventListener('click', increaseTemp);
+
   updateSky();
   const skySelect = document.getElementById('selectSky');
   skySelect.addEventListener('change', updateSky);
 };
+
+document.addEventListener('DOMContentLoaded', registerEventHandlers);
 
 // set date of the week
 let day;
@@ -73,5 +113,3 @@ switch (new Date().getDay()) {
     day = 'Saturday';
 }
 document.getElementById('date-time').innerHTML = day;
-
-document.addEventListener('DOMContentLoaded', registerEventHandlers);

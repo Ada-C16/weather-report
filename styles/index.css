@@ -23,7 +23,6 @@ h1 {
 
 #temp-arrow {
   margin-bottom: 25px;
-  /* padding-bottom: 15px; */
 }
 
 img {
@@ -65,4 +64,24 @@ footer {
   margin-top: 600px;
   margin-left: 35px;
   color: whitesmoke;
+}
+
+.red {
+  color: red;
+}
+
+.orange {
+  color: orange;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.green {
+  color: green;
+}
+
+.teal {
+  color: teal;
 }
