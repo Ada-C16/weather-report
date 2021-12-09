@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
 </head>
+
 <body>
     <h1 id="heading">Weather Report</h1>
-
+    <h2 id="city-title"></h2>
     <div id="temp-box">
         <button id="up">Up</button>
         <p id="temp">50</p>
@@ -25,8 +26,9 @@
     </div>
 
     <div id="city">
-        <form>City
-            <input type="text" name="city-name" size="20">
+        <form onsubmit='return displayCity();'>City
+            <input type="text" name="user" size="20" id="user">
+            <input type="submit" id="submit" value="Submit"></input>
         </form>
     <div id="emoji-scene">
     </div>

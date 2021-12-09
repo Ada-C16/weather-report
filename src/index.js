@@ -22,9 +22,17 @@ const decreaseClickCount = () => {
   console.log('down');
 };
 
+const displayCity = () => {
+  console.log('test');
+  document.getElementById('city-title').textContent =
+    document.getElementById('user').value;
+  return false;
+};
+
 const registerEventHandlers = () => {
   const tempUp = document.getElementById('up');
   const tempDown = document.getElementById('down');
+  const cityPopulate = document.getElementById('submit');
   tempUp.addEventListener('click', increaseClickCount);
   tempDown.addEventListener('click', decreaseClickCount);
 };
