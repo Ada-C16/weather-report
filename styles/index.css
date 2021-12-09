@@ -36,4 +36,7 @@ section.temp-block {
     -webkit-text-stroke-color: black;
 }
 
-
+section.temp-displays {
+    background: #ffffc2;
+    border: 4px solid #ffa5a5
+}
