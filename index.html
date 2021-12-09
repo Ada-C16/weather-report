@@ -8,27 +8,36 @@
     <link href="styles/index.css" rel="stylesheet" type="text/css">
 </head>
 <body class="grid">
-    <header class="header">
+    <header>
         <p><span class="report-span">Weather Report</span> For the lovely city of <span class="header-span">✨Seattle✨</span></p>
     </header>
-    <nav>
-        <div id="nav-containers">
-            <div class="container"><p>Temperature</p>
-                <ul id="temp-list">
-                    <li><button id="upButton">⬆️</button></li>
-                    <li><button id="downButton">⬇️</button></li>
-                    <li><h2 id="temp-gauge">70</h2></li>
-                </ul>
-            </div>
-            <div class="container">Sky</div>
-            <div class="container">City Name</div>
+    <nav id="nav-containers">
+        <div class="container"><h2>Temperature</h2>
+            <ul id="temp-list">
+                <li><button id="upButton">⬆️</button></li>
+                <li><button id="downButton">⬇️</button></li>
+                <li><h2 id="temp-gauge">70</h2></li>
+            </ul>
+        </div>
+        <div class="container" id="sky-container">
+            <h2>Sky</h2>
+            <select name="sky-select" id="sky-select">
+                <option value="">--Please choose an option--</option>
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="rainy">Rainy</option>
+                <option value="snowy">Snowy</option>
+            </select>
+        </div>
+        <div class="container">
+            <h2>City Name</h2>
         </div>
     </nav>
-    <div id="garden-container">
-        <section>Weather Garden</section>
+    <section id="garden-container">
+        <h2>Weather Garden</h2>
         <div id="sky-emojis">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</div>
         <div id="landscape-emojis">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</div>
-    </div>
+    </section>
     <script src="src/index.js"></script>
 </body>
 </html>

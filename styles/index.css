@@ -11,7 +11,7 @@ nav {
     background-color: #324DF7;
 }
 
-.header {
+header {
     grid-column: 1;
     grid-column-end: 3;
     font-family: sans-serif;
@@ -69,4 +69,24 @@ nav {
 
 li:nth-child(3) {
     font-size: large;;
+}
+
+.normal {
+    color: orange;
+}
+
+.hot {
+    color:red;
+}
+
+.chilly {
+    color: yellow;
+}
+
+.cold {
+    color: green;
+}
+
+.freezing {
+    color: teal;
 }
