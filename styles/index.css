@@ -59,7 +59,7 @@ Hot number color: #EA0009 */
     margin: 1em;
 }
 
-#emoji-holder {
+#temp-emoji-holder {
     text-align: center;
 }
 
@@ -81,12 +81,16 @@ Hot number color: #EA0009 */
 
 #temp-text {
     color:#F0940A;
-    font-size: 24pt;
     margin: 0;
+    font-size: 24pt;
     text-align: center;
 }
 
-.garden-display {
+#garden-display {
+    display: flex;
+    justify-content: space-between;
     background-color: lightskyblue;
     border-radius: 10px;
+    height: 50%;
+    width: 60%;
 }

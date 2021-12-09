@@ -2,38 +2,55 @@
 const tempElement = document.getElementById('temp');
 
 // TEMP DISPLAY
-const emojiHolder = document.querySelector('#emoji-holder');
-console.log(emojiHolder);
+const tempEmojiHolder = document.querySelector('#temp-emoji-holder');
+// console.log(tempEmojiHolder);
 
 const tempUp = document.createElement('button');
+tempUp.id = 'temp-up';
 tempUp.textContent = '⬆️';
-emojiHolder.appendChild(tempUp);
+tempEmojiHolder.appendChild(tempUp);
 
 const tempDown = document.createElement('button');
+tempDown.id = 'temp-down';
 tempDown.textContent = '⬇️';
-emojiHolder.appendChild(tempDown);
-tempElement.appendChild(emojiHolder);
+tempEmojiHolder.appendChild(tempDown);
+tempElement.appendChild(tempEmojiHolder);
 
-const tempNum = document.createElement('h3');
-tempNum.textContent = 68;
+const state = {
+  temp: 68,
+};
+
+const tempNum = document.createElement('p');
+tempNum.textContent = state.temp;
 tempNum.id = 'temp-text';
 tempElement.appendChild(tempNum);
 
 // ADD TEMP FUNCTIONALITY
-let webTemp = 68;
 
-let currentTemp = (document.getElementById('temp-text').innerText = webTemp);
-console.log(currentTemp);
+// ADD TEMP
 
 const upTempFunc = () => {
-  webTemp = webTemp + 1;
-  document.getElementById('temp-text').innerText = webTemp;
+  state.temp = state.temp + 1;
+  document.getElementById('temp-text').innerHTML = state.temp;
 };
 
+// SUBTRACT TEMP
 const downTempFunc = () => {
-  webTemp = webTemp + 1;
-  document.getElementById('temp-text').innerText = webTemp;
+  state.temp = state.temp - 1;
+  document.getElementById('temp-text').innerHTML = state.temp;
 };
+
+const addTempButton = document.getElementById('temp-up');
+const downTempButton = document.getElementById('temp-down');
+
+// REGISTER EVENT HANDLER
+addTempButton.addEventListener('click', () => upTempFunc());
+downTempButton.addEventListener('click', () => downTempFunc());
+
+// WEATHER GARDEN
+const weatherGarden = document.getElementById('garden-display');
+
+// WAVE 3&4
 
 // SKY DISPLAY
 
@@ -42,14 +59,23 @@ const skyElement = document.getElementById('temp');
 // CITY DISPLAY
 const cityElement = document.getElementById('temp');
 
-// WEATHER GARDEN
-const weatherGarden = document.getElementsByClassName('garden-display');
-
 // Need to add this for eventListener
 // document.addEventListener('DOMContentLoaded', registerEventHandlers);
 
+// const registerEventHandlers = (event) => {
+//   console.log('in registerEventHandlers:', event);
+//   // ... other registerEventHandler functionality
+// };
+
+// const registerEventHandlers = (event) => {
+//   const addTempButton = document.getElementById('temp-up');
+//   addTempButton.addEventListener('click', addCrab);
+// };
+
+// document.addEventListener('DOMContentLoaded', registerEventHandlers);
+
 // if (document.readyState !== 'loading') {
-//   loadTasks();
+//   __func__;
 // } else {
-//   document.addEventListener('DOMContentLoaded', loadTasks);
+//   document.addEventListener('DOMContentLoaded', _____);
 // }
