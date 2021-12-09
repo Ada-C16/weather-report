@@ -1,0 +1,97 @@
+body {
+background-color: blue;
+color: white;
+}
+.container {
+    display: grid;
+    grid-template-columns:2fr 4fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header_block header_block"
+    "temperature  weather"
+    "sky weather"
+    "city weather";
+    align-items: center;
+    text-align: center;
+}
+/* header */
+.header_block {
+    grid-area: header_block
+}
+.header_h1{
+    font-size: 3rem;
+    margin-right: 10px;
+}
+/* temperature */
+.temperature {
+    grid-area: temperature   
+}
+.temperature_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.temp_buttons {
+    display: flex; 
+    flex-direction: column;
+    margin-right: 10px;
+}
+.temp_reading {
+    font-size: 2rem;
+}
+
+/* sky */
+.sky {
+    grid-area: sky
+}
+.bg_br{
+    color: black;
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 80%;
+
+}
+/* city */
+.city {
+    grid-area: city
+}
+#city-name {
+    margin-left: 10px;
+    font-size: 2rem;
+    font-style: italic;
+}
+/* weather */
+.weather {
+    grid-area: weather;
+}
+
+.weather_content {
+    background-color: lightblue;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+.weather_sky {
+    font-size: 2rem;
+}
+.weather_garden {
+    font-size: 2rem;
+}
+
+#reset {
+    width: 50px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}

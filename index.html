@@ -1,12 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Connecting HTML, CSS, and JS Demo</title>
+    <link href="styles/index.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/43bce04ddf.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="container">
+        <div class="header_block">
+            <span class="header_h1"> Weather Report </span><span>For the lovely city of </span> <span id="city-name">City Name</span> 
+        </div>
     
+        <div class="temperature bg_br">
+            <h2>Temperature</h2>
+            <div class="temperature_content">
+                <div class="temp_buttons">
+                    <button id="temp_up"><i class="fas fa-chevron-up"></i></button>
+                    <button id="temp_down"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="temp_reading">32</div>
+            </div>
+        </div>
+        <div class="sky bg_br">
+            <h2>Sky</h2>
+            <div class="card-body">
+                <select id="sky_condition" name="sky" required>
+                    <option value="choose one" selected>Choose a sky</option>
+                    <option value="rainy">Rainy</option>
+                    <option value="sunny">Sunny</option>
+                    <option value="snowy">Snowy</option>
+                    <option value="cloudy">Cloudy</option>
+                </select>
+                
+            </div>
+        </div>
+        <div class="city bg_br">
+            <h2>City Name</h2>
+            <div class="card-body">
+                <input id="get-city-name" type='text' placeholder="City name"/>
+                <button id="reset">reset</button>
+            </div>
+        </div>
+
+        <div class="weather ">
+            <h2>Weather Garden</h2>
+            <div class="weather_content">
+                <div class="weather_sky">🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨</div>
+                <div class="weather_garden">🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲</div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
