@@ -107,7 +107,8 @@ skySelectElement.addEventListener('change', (event) => {
 // Retrieve user input for city name and change city name
 const cityNameSelector = document.querySelector('#city-name');
 
-cityNameSelector.addEventListener('change', (event) => {
+// cityNameSelector.addEventListener('change', (event) => {
+cityNameSelector.addEventListener('keyup', function changeCityName(event) {
     // Get input value
     city = event.target.value;
     
