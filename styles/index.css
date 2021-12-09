@@ -34,11 +34,11 @@ h1 {
 .temperature-degree {
     font-size: 400px;
     padding: 0;
-    margin: 0;
+    margin: 20;
 }
 
 .temperature{
-    flex-direction: column;
+    flex-direction: row-reverse;
 }
 
 .degree-section {

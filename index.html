@@ -21,24 +21,28 @@
             <!-- ::after -->
         </span>
     </header>
-
-    <div class="location">
-        <h2 class="location-timezone">Timezone</h2>
-        <p>Icon</p>
-    </div>
     <div class="temperature">
         <div class="degree-section">
         <p class="temperature-degree">34</p>
         <span>F</span>
     </div>
-        <div class="temperature-description">Chilly Willy</div>
         <button id="increase-temperature" type="button">🔼</button>
         <button id="decrease-temperature" type="button">🔽</button>
     </div>
-    <div>
-
-    </div>
-
+    <section class="sky-section">
+        <h2>Sky</h2>
+        <select id="sky-select">
+            <option>Sunny</option>
+            <option>Cloudy</option>
+            <option>Rainy</option>
+            <option>Snowy</option>
+        </select>
+    </section>
+    <section class="city-name-section">
+        <h2>city name</h2>
+        <input id="city-name-input" type="text" value="Salt Lake City">
+        <button id="city-name-reset" class="city-name-reset-button">reset</button>
+    </section>
     <script src="../src/index.js"></script>
 </body>
 </html>
