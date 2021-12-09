@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --background-color: #05668D;;
+    --text-color: #CAF0F8;
+    --accent-color-1: #62C370;
+    --title-font: 'Moulpali', sans-serif;
+    --body-font: 'Space Grotesk', sans-serif;
+}
+
+/* GENERAL */
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: var(--title-font);
+    text-align: center;
+    padding: 10px;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-family: var(--title-font);
+    color: var(--text-color);
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+h3 {
+    font-family: var(--title-font);
+    color: var(--text-color);
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1em;
+    padding: 15px;
+}
+
+p {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    line-height: 1em;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.button {
+    display: block;
+    padding: 5px;
+    margin-top: 5px;
+    color: var(--background-color);
+    background-color: var(--accent-color-1);
+    width: 100px;
+    text-align: center;
+    font-family: var(--body-font);
+    border-radius: 10px;
+    font-size: .9em;
+}
+
+.button:hover {
+    background-color: var(--text-color);
+}
+
+/* WEATHER GARDEN */
+
+#garden {
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    min-height: 200px;
+    border: 1px solid var(--accent-color-1);
+    border-radius: 5px;
+    justify-content: space-between;
+    padding: 10px;
+    background-image: linear-gradient(skyblue, green);
+}
+
+/* WEATHER CONTROLS */
+
+#weather-controls {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+#weather-controls section {
+    border: 1px solid var(--accent-color-1);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#temp-controls {
+    display: flex;
+    flex-direction: row;
+}
+
+#up-arrow, #down-arrow, #temp-display {
+    margin: 5px;
+}
+
+#up-arrow:hover, #down-arrow:hover {
+    cursor: pointer;
+}
+
+.hottest {
+    color: red;
+}
+
+.hot {
+    color: orange;
+}
+
+.temperate {
+    color: yellow;
+}
+
+.chilly {
+    color: lightblue;
+}
+
+.cold {
+    color: blue;
+}
+
+#temp-display {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: var(--body-font)
+}
+
+#sky, #ground {
+    display: block;
+    text-align: center;
+    font-size: 4vw;
+}
+
+/* CITY */
+#city {
+    color: var(--accent-color-1);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
