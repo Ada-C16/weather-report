@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
     <title>Weather Report</title>
 </head>
 <body>
-    
+    <header class="header_class">
+    <h1>Weather Report</h1>
+    <span>For the City of
+    <span class="header_city">New York</span>
+    </span></header>
+    <section class="temperature_section"></section>
+    <h2>Temperature</h2>
+    <div class="temperature_body">
+        <div class="temperature_clickables">
+            <button id="increase_temperature">⬆️</button>
+            <button id="decrease_temperature">⬇️</button>
+        </div>
+        <span id="temperature_in_fahrenheit" class="temp_value">
+            38 
+        </span>
+    </div>
+    <section class="sky_section">
+        <h2>Sky</h2>
+        <label for="city-select">Select a Sky:</label>
+        <select id="select_sky">
+            <option value="">--Please choose an option--</option>
+            <option value="sunny">Sunny</option>
+            <option value="cloudy">Cloudy</option>
+            <option value="rainey">Rainey</option>
+            <option value="snowy">Snowy</option>
+        </select>
+    </section>
+    <section class="landscape_section">
+        <h2>Landscape</h2>
+        <div id="landscapeContent" class="???">
+            <div id="sky">????</div>
+            <div id="landscape">???</div>
+        </div>
+    </section>
+    <section class="city_selection_section">
+        <h2>City Name</h2>
+        <input id="cityNameInput" type="text" value="New York">
+        <button id="cityNameReset" class="city_name_reset_button">Reset</button>
+    </section>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
