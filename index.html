@@ -10,11 +10,12 @@
 
 <body>
     <header>
-    <h1>Stress Meter Weather Report</h1>
+    <h1><span class=fancy>S</span>tress<span class=fancy> M</span>eter <span class=fancy>W</span>eather <span class=fancy>R</span>eport</h1>
     </header>
         <main> 
             <h2>For the awesomely amazing student named <span id=student-name>Michelle</span></h2>  
             <section id=grid-container>
+                <section id="temperature-section">
                 <h2>Temperature - Pending Ada Assignments</h2>
                 <div id="arrows">
                     <p id="increase-temp">⬆️</p>
@@ -23,8 +24,17 @@
                 <div id="temp-convert-container">
                     <span id="temp-integer"></span>
                 </div>
-            </section> 
-            <section id="sky-section">
+                </section>
+
+            <section id="garden-section">
+                <h2>Garden of the Soul</h2>
+                <div id="weather-content">
+                    <div id="landscape"></div>
+                    <div id="sky"></div>
+                </div>
+            </section>
+        </section> 
+            <section class="bottom-sections">
                 <h2>Sky - Life @ home</h2>
                 <div>
                     <select id="sky-dropdown">
@@ -36,20 +46,14 @@
                     </select>
                 </div>
             </section>
-            <section id="name-field">
+            <section class="bottom-sections">
                 <h2>Student Name</h2>
                 <div>
-                    <input type="text" id="city" value="Michelle">
+                    <input type="text" id="name" value="Michelle">
                     <button id="reset-button">Reset</button>
                 </div>
             </section>
-            <section id="garden-field">
-                <h2>Garden of the Soul</h2>
-                <div id="weather-content">
-                    <div id="landscape"></div>
-                    <div id="sky"></div>
-                </div>
-            </section>
+
         </main>
     <script src="src/index.js" type="text/javascript"></script>
 </body>

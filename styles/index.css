@@ -1,39 +1,99 @@
-body {
-    position: absolute;
-    left: 0%;
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+
+
+body h2 {
     text-align: center;
 }
 
-.container {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    height: 100%;
-    text-align: center;
+body {
+    background-color: #11130f;
+    color: #e0e8b5;
+    font-family: 'Blippo';
+    font-size: 20px;
 }
 
 button {
-    width: 90px;
-    height: 60px;
-    font-size: 30px;
-    background-color: green;
-    color: honeydew;
-}
-
-button:hover {
-    background-color: greenyellow;
-    color: grey;
-}
-
-h2 {
+    background-color: #373e30;
     color: black;
-    margin: 0 50px;
-    font-size: 45px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-h1 {
-    font-size: 35px;
-    color: green;
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #373e30;
+    width: 100%;
+    padding: 0px;
+    font-family: 'Blippo', serif;
+    font-size: 30px;
+    margin-top: 0px;
+}
+span.fancy {
+    font-family: 'Snell Roundhand', cursive;
+    font-size: 90px;
+}
+
+
+p {
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+select {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#sky p, #landscape p {
+    padding: 10px;
+    margin: 10px;
+    cursor: default;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+} 
+
+.bottom-sections {
     text-align: center;
-    padding-left: 10%;
+    background-color: #819373;
+    border-radius: 10px;
+}
+#temperature-section {
+    text-align: center;
+    background-color: #819373;
+    border-radius: 20px;
+}
+#garden-section {
+    text-align: center;
+    background-color: #cce8b5;
+    border-radius: 20px;
+}
+#temperature-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#temp-integer {
+    font-size: 50px;
+}
+
+#arrows {
+    font-size: 15px;
+}
+
+#name {
+    border: none;
+    font-size: 20px;
+    margin-top: 20px;
 }
