@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/index.css"/>
 </head>
 <body>
-    <main>
+    <main class="main-container">
         <header>
             <h1>Weather Report From the City of Your Choice</h1>
             <p>Currently showing the weather in:</p>
@@ -25,6 +25,13 @@
                 </div>
             </div>
         </section>
+        <section class="garden-container">
+            <h3>Weather Garden</h3>
+            <div id="garden-container">
+                <div id="sky-garden">☀️ ☀️ ☀️ ☀️ ☀️ ☀️ ☀️</div>
+                <div id="landscape">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</div>
+            </div>
+        </section>
         <section class="sky-container">
             <h3>Sky</h3>
             <h5>Choose the Sky Conditions:</h5>
@@ -35,17 +42,12 @@
                 <option>Snowy</option>
             </select>
         </section>
-        <section class="garden-container">
-            <h3>Weather Garden</h3>
-            <div id="garden-container">
-                <div id="sky-garden">☀️ ☀️ ☀️ ☀️ ☀️ ☀️ ☀️</div>
-                <div id="landscape">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</div>
-            </div>
-        </section>
         <section class="city-name-container">
             <h3>Change the City Name</h3>
             <h4>Type in the name of a city:</h4>
             <input type="text" id="city-input" value="Catalina Island"/>
+        </section>
+        <section class="reset">
             <h4>Reset City:</h4>
         <button id="city-reset">Reset</button>
         </section>
