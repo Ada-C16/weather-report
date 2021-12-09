@@ -33,11 +33,18 @@ const renderCityName = () => {
   nameElem.textContent = cityName;
 };
 
+const renderConvertBtn = () => {
+  const { tempType } = state;
+  const convertBtn = document.querySelector("#convert-btn");
+  convertBtn.textContent = tempType === 'f' ? 'To Fahrenheit' : 'To Celsius';
+}
+
 const renderAll = () => {
   renderTemp();
   renderLandscape();
   renderSky();
   renderCityName();
+  renderConvertBtn();
 };
 
 // helper logic for rendering
@@ -109,12 +116,14 @@ const increaseTemp = () => {
     state.temp.cTemp++
     setFTemp();
   }
+
   renderTemp();
   renderLandscape();
 };
 
 const decreaseTemp = () => {
   const { tempType } = state;
+
   if (tempType === 'f') {
     state.temp.fTemp--
     setCTemp();
@@ -122,6 +131,7 @@ const decreaseTemp = () => {
     state.temp.cTemp--
     setFTemp();
   }
+
   renderTemp();
   renderLandscape();
 };
@@ -142,17 +152,16 @@ const resetCityName = () => {
   renderCityName();
 };
 
-const toggleTempType = (e) => {
+const toggleTempType = () => {
   const { tempType } = state;
   if (tempType === 'f') {
     setCTemp();
     state.tempType = 'c';
-    e.target.textContent = 'To Fahrenheit';
   } else if (tempType === 'c') {
     setFTemp();
     state.tempType = 'f';
-    e.target.textContent = 'To Celsius';
   }
+  renderConvertBtn();
   renderTemp();
 }
 
