@@ -112,9 +112,9 @@ log.textContent = event.target.value;
 //reset
 const wipe = (event) =>{
     const city = document.getElementById("city-input");
-    city.value = 'Seattle';
+    city.value = 'My City';
     const log = document.getElementById('city-name');
-    log.textContent = 'Seattle';
+    log.textContent = 'My City';
 }
 
 //Event handler 
