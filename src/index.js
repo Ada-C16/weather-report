@@ -44,7 +44,11 @@ const playground = document.querySelector('#playground');
 
             const changeCity = (name) => {
                 state.city = name;
+                if (state.city === "") {
+                    state.city = "-";
+                }
                 document.querySelector("h2").textContent = `${state.city}`;
+
             }
 
         cityForm.appendChild(cityNameContainer);
