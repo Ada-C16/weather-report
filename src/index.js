@@ -5,15 +5,15 @@ function tempCheck(tempConst) {
     document.getElementById('container').style.backgroundImage =
       'url(assets/desert-heat.jpg)';
   } else if (tempConst < 35 && tempConst >= 25) {
-    document.getElementById('temp_const').style.color = 'orange';
+    document.getElementById('temp_const').style.color = '#86340A';
     document.getElementById('container').style.backgroundImage =
-      'url(assets/warm-spring.jpg)';
+      'url(assets/warm-weather.jpg)';
   } else if (tempConst < 25 && tempConst >= 19) {
-    document.getElementById('temp_const').style.color = 'green';
+    document.getElementById('temp_const').style.color = '#7EB5A6';
     document.getElementById('container').style.backgroundImage =
-      'url(assets/cool.jpg)';
+      'url(assets/gloomy-weather.jpg)';
   } else if (tempConst < 19 && tempConst >= 5) {
-    document.getElementById('temp_const').style.color = 'blue';
+    document.getElementById('temp_const').style.color = '#CEE5D0';
     document.getElementById('container').style.backgroundImage =
       'url(assets/Cold.jpg)';
   } else if (tempConst < 5) {

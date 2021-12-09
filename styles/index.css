@@ -8,6 +8,7 @@ body {
         grid-template-columns: 50% auto;
         grid-template-rows: 30% 60vh 30%;
         grid-template-areas: "hd hd" "temperature skycity" "footer footer";
+        background-size:1600px 680px;
         /* justify-content: center;
         align-content: center; */
     }
@@ -32,6 +33,12 @@ header {
 }
 #city {
     grid-area: skycity;
+}
+#temp_const {
+    text-shadow:10px 10px 10px;
+    text-indent: 0.55em;
+    font-size: 1.85em;
+    font-weight: bold;
 }
 footer {
     background-color: #dc85bc;
