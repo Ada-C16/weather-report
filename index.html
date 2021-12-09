@@ -7,64 +7,61 @@
     <title>Weather Report</title>
     <link href="styles/index.css" rel="stylesheet">
 </head>
-<body id="main">
-    <header class="col-12" >
-        <div>
-            <h1>Weather Report </h1>
-                <p style="float:left">For the lovely city of ✨	</p>
-                <span style="float:right">city  ✨</span>
-        </div>
-
-        <!-- <img src="assets/sky.jpeg" alt="background_sky"> -->
-    </header>
-    <div>
-        <!-- <section id="change-temp">
+<body >
+    <main id="main_cover">
+        <header class="col-12 " >
+            <div>
+                <h1>Weather Report </h1>
+                    <p class="col-12 center_columns">For the lovely city of ✨
+                    <span id="cityLog">  </span></p>
             </div>
-            <ul id="temp-adjust" class="group">
-              <li>🔼;</li>
-              <li>&#x25BC;</li>
-            </ul>
-        </section> -->
-        <!-- <section>
-            <div class="select-sky" style="width:200px;">
-                <select>
-                  <option value="0">Select sky:</option>
-                  <option value="1">Sunny</option>
-                  <option value="2">Rainy</option>
-                  <option value="3">Cloudy</option>
-                  <option value="4">Snowy</option>
-                </select>
-              </div>
-        </section> -->
-        <section>
-            <div class="col-4 " style="width:400px;">
-                <select class="select-sky">
+        </header>
+        <div class="">
+            <div class="col-4 " style="width:500px;">
+                <select id="selectSky" class="box">
                     <option value="0">Today is:</option>
                     <option value="1">Sunny</option>
                     <option value="2">Rainy</option>
                     <option value="3">Cloudy</option>
-                    <option value="4">Snowy</option>
+                    <option value="4">Snowing</option>
                 </select>
             </div>
-        </section>
+            <!-- <div class=" item col-3 city-input"><label style="color:white">City:</label>
+                <input type="text" id="inputCity" required minlength="4" maxlength="15" size="20">
+                <button onclick="resetCity()">clear</button>
+            </div> -->
+        </div >
+        <section >
             <div class="col-3 city-input"><label style="color:white">City:</label>
-            <input type="text" id="input-city" required minlength="4" maxlength="15" size="20">
-            <button onclick="resetCity()">clear</button>
+                <input type="text" placeholder="Seattle" id="inputCity" required minlength="4" maxlength="15" size="20">
+                <button onclick="document.getElementById('inputCity').value = ''">clear</button>
             </div>
-
-        <section class= "col-3" id="temp-display">
-          <span > <!--76&deg;-->
-            <span style="font-size: 3rem;"> 🔼  </span>
-            <span id="current-temp">76&deg; </span>
-            <span id="temp-adjust"> 🔽 </span>
-          </span>  
+            
+        </section>    
+        <section class= "container" id="tempDisplay"  >
+            <div class="item sunnyMode " > 
+            <!-- <span id="tempAdjustUp" style="font-size: 3rem;" > 🔼  </span> -->
+                <button id="tempAdjustUp" class="changeTempButton"  onclick="increment()"> 🔼  </button>
+                <span id="currentTemp" class="tempText">&deg; </span>
+                <button id="tempAdjustLow" class="changeTempButton" onclick="decrement()"> 🔽 </button>
+                <!-- <span id="landScape"> </span> -->
+            </div>
+            <div class="item garden">
+                <span >
+                    <h4 >`"☁️ ☁️ ☁️ ☀️ ☁️ ☁️"`</h4>
+                    <h5>`"🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷"`</h5>
+                </span>
+            </div>  
         </section>
-    </div>
-    <div>
-    <footer class="col-12" id="footer">
-        <div class="footer-text"><p>&copy; Eunice Gonzalez Regis 2021</p></div>
-    </footer>
-    </div>
+        <section>
+            
+        </section>
+        <div>
+            <footer class="col-12" id="footer">
+                <div class="footer-text"><h2>&copy; Eunice Gonzalez Regis 2021</h2></div>
+            </footer>
+        </div>
+    </main >
     <script src="src/index.js" type="text/javascript"></script>
 </body>
 

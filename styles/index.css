@@ -16,9 +16,21 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-#main{
+.center_columns{
+    padding:5pt;
+    /* margin-left: 25%; */
+    text-align: center;
+    vertical-align: middle;
+}
+.tempText{
+    color: black;
+}
+.textRed{
+    color: red;
+}
+#main_cover{
     /* width: 100%; */
-    /* background-image: url("assets/sky.jpeg"); */
+    /* background-image: url("/assets/sky.jpeg"); */
     background: linear-gradient(to bottom, rgb(9, 47, 73),rgb(32, 108, 158),
         rgb(87, 139, 187),hsl(204, 47%, 52%),rgb(88, 174, 214),rgb(141, 199, 209),
         rgb(86, 179, 207),
@@ -27,7 +39,7 @@
         rgb(235, 228, 172),
         rgb(236, 221, 106),
         rgb(231, 196, 99));
-    /* background-color:rgb(153, 219, 245); */
+    /* background-color:rgb(153, 219, 245);
     /* background: no-repeat; */
     /* height: 100vh; */
     font-size: 2rem;
@@ -37,20 +49,40 @@
     margin: 5px 1px 3px 0;
     border: 1px solid #424242;
     border: 1px solid rgba(66, 66, 66, 0.25);
-}  
-#header-image{
+}   
+#headerImage{
     top: 10px;
     position: relative;  
 }
-/* h1 {
+h1 {
+    color: white;
 
-} */
-#header-image img{
-    /* background-image: url(assets/sky.jpeg); */
+}
+h2{
+    color:lightseagreen
+}
+p {
+    color: white;
+    font-size: 3rem;
+}
+#landscapeImage{
+    background-image: url(../assets/landscapes/sunny.jpeg);
     width:100%;
+    height: 100%;
     max-height: 200px;
-    margin:none;
-    padding: none;
+}
+.box{
+    /* background:transparent */
+    color:lightseagreen;
+}
+.garden{
+    display: flex;
+    /* vertical-align: top; */
+    height: 5em;
+    background-color: white;
+    /* margin-left: 25%; */
+    margin-top: 5%;
+    
 }
 #footer{
     background-color: white;
@@ -78,35 +110,130 @@
 
 }
 
-.select-sky{
+#selectSky{
     position:relative;
     right:-200%;
     box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
     font-size: 2rem;
 
 }
+.container {
+    /* padding:1rem; */
+    display: flex;
+    overflow:auto;
+    /* background-color: thistle; */
+    /* height: 10%; */
+    
+}
 
-#temp-display{
+/* #tempDisplay{
     position:relative;
     left:15%;
     height: 5em;
-    padding: 1em;
+    padding: 2rem;
     text-align:center;
-    font-size: 7rem;
+    font-size: 5rem;
     clear: both;
-    background-color: #fff;
+    background-image: url(../assets/landscapes/sunny.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
     border-top: 3px solid #424242;
-    border-top: 3px solid rgba(66, 66, 66, 0.8);
+    box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
+} */
+.item{
+    margin-left:20%;
+    float:left;
+    
+}
+.rainyMode{
+    position:relative;
+    /* left:10%; */
+    height: 5em;
+    padding: 2rem;
+    text-align:center;
+    font-size: 5rem;
+    clear: both;
+    background-image: url(../assets/landscapes/imagen.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+    border-top: 3px solid #424242;
     box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
 }
+.sunnyMode{
+    display: flex;
+    /* vertical-align:baseline; */
+    /* position:relative; */
+    margin-left: 15%;
+    width: 5.5em;
+    height: 5em;
+    padding: 2rem;
+    text-align:center;
+    font-size: 5rem;
+    clear: both;
+    background-image: url(../assets/landscapes/sunny.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+    border-top: 3px solid #424242;
+    box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
+}
+.snowyMode{
+    position:relative;
+    left:15%;
+    height: 5em;
+    padding: 2rem;
+    text-align:center;
+    font-size: 5rem;
+    clear: both;
+    background-image: url(../assets/landscapes/imagen.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+    border-top: 3px solid #424242;
+    box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
+}
+.cloudyMode{
+    position:relative;
+    left:15%;
+    height: 5em;
+    padding: 2rem;
+    text-align:center;
+    font-size: 5rem;
+    clear: both;
+    background-image: url(../assets/landscapes/imagen.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+    border-top: 3px solid #424242;
+    box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
+}
+/* #landScape{
+    background-image: url(../assets/landscapes/sunny.jpeg);
+    background-repeat: no-repeat;
+    background-size: 7rem;
+} */
 #temp-adjust{
     font-size: 3rem;
     /* white-space:pre-wrap; */
 
 }
-#change-temp{
-    width:250px;
-    margin:0 auto;
+.changeTempButton{
+    width: 6rem;
+    height: 4rem;
+    /* font-size: 30px; */
+    background-color:transparent;
+    color:white;
+    font-size: 3rem;
+    border: transparent;
 }
 
 
+  
+/*apply hover effect to button tag*/
+  
+/* button:hover {
+    background-color: yellow;
+    color: grey;
+} */
