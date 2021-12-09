@@ -19,10 +19,10 @@ body {
     align-self: start;
     
 }
-button{
+/* button{
     display: block;
 
-}
+} */
 
 .display-garden {
     height:200px;
@@ -30,21 +30,21 @@ button{
     grid-row: span 1;
 }
 .burning{
-    color:crimson;
+    background-color:red;
 }
 
-.freezing{
-    color:white;
-    background-color:black;
-}
 .worning{
-    color:yellow;
+    background-color:orange;
 }
 .sunny{
-    color:darkorange;
+    background-color:yellow;
 }
 .cold{
-    color:burlywood;
+    background-color:aqua;
+}
+.freezing{
+    background-color:teal;
+    
 }
 
 
