@@ -1,15 +1,20 @@
 const state = {
-  temp: 68,
+  temp: {
+    cTemp: 20,
+    fTemp: 68
+  },
   sky: 'sunny',
   cityName: 'Tacoma',
+  tempType: 'f'
 };
 
 // rendering
 const renderTemp = () => {
-  const { temp } = state;
+  const { temp: { cTemp, fTemp }, tempType } = state;
   const tempElem = document.querySelector('#current-temp');
   tempElem.className = getTempClass();
-  tempElem.textContent = `${temp}`;
+  
+  tempElem.textContent = `${tempType === 'f' ? `${fTemp}°F` : `${cTemp}°C`}`;
 };
 
 const renderLandscape = () => {
@@ -37,14 +42,14 @@ const renderAll = () => {
 
 // helper logic for rendering
 const getTempClass = () => {
-  const { temp } = state;
-  if (temp >= 80) {
+  const { temp: { fTemp } } = state;
+  if (fTemp >= 80) {
     return 'hot';
-  } else if (temp >= 70) {
+  } else if (fTemp >= 70) {
     return 'warm';
-  } else if (temp >= 60) {
+  } else if (fTemp >= 60) {
     return 'mid';
-  } else if (temp >= 50) {
+  } else if (fTemp >= 50) {
     return 'cool';
   } else {
     return 'cold';
@@ -52,14 +57,14 @@ const getTempClass = () => {
 };
 
 const getLandscapeContent = () => {
-  const { temp } = state;
-  if (temp >= 80) {
+  const { temp: { fTemp } } = state;
+  if (fTemp >= 80) {
     return '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
-  } else if (temp >= 70) {
+  } else if (fTemp >= 70) {
     return '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
-  } else if (temp >= 60) {
+  } else if (fTemp >= 60) {
     return '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
-  } else if (temp >= 50) {
+  } else if (fTemp >= 50) {
     return '🌲🌲🍁🌲🍁___🍁🌲_🍃🍂🌲';
   } else {
     return '🌲🌲_️🌲⛄️❄️🌲❄️__🌲⛄️❄️_️';
@@ -81,16 +86,42 @@ const getSkyContent = () => {
   }
 };
 
-// logic for event listeners
+const setCTemp = () => {
+  const { temp: { fTemp } } = state;
+  state.temp.cTemp = Math.round(5 / 9 * (fTemp - 32));
+}
 
+const setFTemp = () => {
+  const { temp: { cTemp } } = state;
+  state.temp.fTemp = Math.round(cTemp * (9 / 5) + 32);
+}
+
+
+
+// logic for event listeners
 const increaseTemp = () => {
-  state.temp++;
+  const { tempType } = state;
+
+  if (tempType === 'f') {
+    state.temp.fTemp++
+    setCTemp();
+  } else if (tempType === 'c') {
+    state.temp.cTemp++
+    setFTemp();
+  }
   renderTemp();
   renderLandscape();
 };
 
 const decreaseTemp = () => {
-  state.temp--;
+  const { tempType } = state;
+  if (tempType === 'f') {
+    state.temp.fTemp--
+    setCTemp();
+  } else if (tempType === 'c') {
+    state.temp.cTemp--
+    setFTemp();
+  }
   renderTemp();
   renderLandscape();
 };
@@ -111,6 +142,20 @@ const resetCityName = () => {
   renderCityName();
 };
 
+const toggleTempType = (e) => {
+  const { tempType } = state;
+  if (tempType === 'f') {
+    setCTemp();
+    state.tempType = 'c';
+    e.target.textContent = 'To Fahrenheit';
+  } else if (tempType === 'c') {
+    setFTemp();
+    state.tempType = 'f';
+    e.target.textContent = 'To Celsius';
+  }
+  renderTemp();
+}
+
 // startup logic
 
 const registerEventHandlers = () => {
@@ -128,6 +173,9 @@ const registerEventHandlers = () => {
 
   const resetCityNameBtn = document.querySelector('#reset-name');
   resetCityNameBtn.addEventListener('click', resetCityName);
+
+  const convertTempTypeBtn = document.querySelector("#convert-btn");
+  convertTempTypeBtn.addEventListener('click', toggleTempType);
 };
 
 const startUp = () => {
