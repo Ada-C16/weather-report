@@ -18,6 +18,7 @@ const updateTempStyles = (temp) => {
   } else if (temp >= 50) {
     color = 'green';
   }
+  tempArrow.className = '';
   tempArrow.classList.add(color);
   console.log(tempArrow);
 };
