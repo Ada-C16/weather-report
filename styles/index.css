@@ -3,6 +3,10 @@ body {
     display: grid;
     grid-template: 25% 25% 25% 25%/ 50% 50%;
     gap: 10px;
+    
+}
+section{
+    border-radius: 25px;
 }
 #titleGreeting{
     background-color: rgb(238, 238, 167);
@@ -57,5 +61,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     
+}
+#landscape p{
+    font-size: 40px;
 }
