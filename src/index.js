@@ -1,6 +1,6 @@
 // Temperature //
 const state = {
-  tempByDegree: 75,
+  tempByDegree: 70,
 };
 
 const clickButtonUp = () => {
@@ -29,10 +29,6 @@ const clickButtonDown = () => {
   landElement.textContent = landscape;
 };
 
-const selectSky = () => {
-  const skySelector = document.querySelector('#sky');
-  console.log(skySelector.value);
-};
 const tempDown = document.querySelector('#tempDown');
 tempDown.addEventListener('click', clickButtonDown);
 
@@ -70,8 +66,21 @@ const lanscapeScale = () => {
 };
 
 // Sky //
-const skySelector = document.querySelector('#sky');
+const selectSky = () => {
+  const skySelector = document.querySelector('#sky');
+  const skyEmojis = document.querySelector('#weather');
+  if (skySelector.value === 'cloudy') {
+    skyEmojis.innerHTML = '☁️☁️ ☁️ ☁️☁️ ☁️ ☁️ ☁️☁️';
+  } else if (skySelector.value === 'rainy') {
+    skyEmojis.innerHTML = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
+  } else if (skySelector.value === 'sunny') {
+    skyEmojis.innerHTML = '☁️ ☁️☁️ ☀️ ☁️☁️ ☁️';
+  } else if (skySelector.value === 'snowy') {
+    skyEmojis.innerHTML = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
+  }
+};
 
+const skySelector = document.querySelector('#sky');
 skySelector.addEventListener('change', selectSky);
 
 // City Name //
