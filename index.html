@@ -14,6 +14,10 @@
 <body>
     <header>
         <h1 class="header-text">Weather Report</h1>
+        <city>
+            <city class="city-text">for the city of: </city>
+            <city id="header-city">Seattle</city>
+        </city>
     </header>
 
     <section>
@@ -43,18 +47,18 @@
 
                 <div class="sidebar-obj">
                     <h2>Sky</h2>
-                    <form>
-                        <select name="Sky" id="wallpaper" size="7">
+                    <form id="form">
+                        <select name="Sky" id="skyForm" size="4">
                         <option value="sunrise">Sunrise</option>
                         <option value="bluesky">Blue Sky</option>
                         <option value="clouds">Clouds</option>
-                        <option value="overcast">Overcase</option>
+                        <option value="overcast">Overcast</option>
                         <option value="sunset">Sunset</option>
                         <option value="starrynight">Starry Night</option>
                         <option value="rainbow">Rainbow</option>
                         <option value="kittens">MEOW!</option>
                         </select><br>
-                        <input id="sky_submit" type="submit" value="try me :-)" />
+                        <input type="submit" value="submit" id="skyButton" />
                     </form>
                 </div>
 
@@ -64,7 +68,7 @@
                     <city_input>
                     <form action="#something-here">
                         <input type="text" name="city" id="city" placeholder="City Name">
-                        <input type="submit" value="Submit" />
+                        <input type="submit" value="Submit" id="cityButton"/>
                     </city_input>
                 </div>
 
@@ -75,7 +79,7 @@
                 <div class="information-title">
                     <h2>Weather Garden</h2>
                 </div>
-                <div class="information-obj">
+                <div class="information-obj" id="garden">
                     <sky id="sky"></sky>
                     <plants id="plants"></plants>
                     <ground id="ground"></ground>
@@ -86,7 +90,8 @@
 
     </section>
     <footer>
-        <p>Copyright &copy; 2020</p>
+        <p>Copyright &copy; Kristel Jabbusch
+        (Sorry I know this is the bare minimum)</p>
     </footer>
 
     <script src="src/index.js"></script>
