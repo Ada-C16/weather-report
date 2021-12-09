@@ -15,7 +15,8 @@ const state = {
         'Meh' : '🍂🍂🍂🍂🍂🍂🍂🍂🍂🍂',
         'Cold' : '❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️',
         'Freezing' : '☃️☃️☃️☃️☃️☃️☃️☃️☃️☃️'
-    }
+    },
+    cityName : ''
 };
 
 const upTemp = (event) => {
@@ -37,6 +38,11 @@ const skyDisplayer = (event) => {
     const skyType = document.getElementById('sky-type');
     const selection = skyType.value
     skyDisplayElement.textContent = `${state.skyDisplay[selection]}`;
+    if (skyType.value === 'Gay') {
+        document.body.style.background = 'linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red)';
+    } else {
+        document.body.style.background = 'gray';
+    }
 };
 
 const tempChecker = (temp, tempDisplay) => {
@@ -44,27 +50,32 @@ const tempChecker = (temp, tempDisplay) => {
     if (temp > 90) {
         tempDisplay.style.color = 'red';
         landscapeDisplay.textContent = state.landscapeDisplay['Hot'];
-    } else if (65 <= temp <= 90) {
+    } else if ((temp <= 90) && (temp > 65)) {
         tempDisplay.style.color = 'orange';
         landscapeDisplay.textContent = state.landscapeDisplay['Warm'];
-    } else if (45 <= temp < 65) {
+    } else if ((temp >= 45) && (temp <= 65)) {
         tempDisplay.style.color = 'black';
         landscapeDisplay.textContent = state.landscapeDisplay['Meh'];
-        console.log("meh");
-    } else if (32 < temp < 45) {
+    } else if ((temp > 32) && (temp < 45)) {
         tempDisplay.style.color = 'purple';
         landscapeDisplay.textContent = state.landscapeDisplay['Cold'];
     } else if (temp <= 32) {
-        tempDisplay.style.color = 'dark-blue';
+        tempDisplay.style.color = 'teal';
         landscapeDisplay.textContent = state.landscapeDisplay['Freezing'];
     }
 };
 
-const cityDisplayer = (event) => {
+const cityDisplayerType = (event) => {
     const cityDisplay = document.getElementById('city-display');
     const cityType = document.getElementById('type-city-box');
     cityDisplay.textContent = cityType.value;
-    console.log('shit');
+    state.cityName = cityType.value;
+};
+
+const cityReset = (event) => {
+    const cityDisplay = document.getElementById('city-display');
+    state.cityName = 'Your City Here';
+    cityDisplay.textContent = state.cityName;
 };
 
 const registerEventHandlers = (event) => {
@@ -72,11 +83,14 @@ const registerEventHandlers = (event) => {
     const downButton = document.getElementById("down");
     const skyType = document.getElementById('sky-type');
     const cityType = document.getElementById('type-city-box');
+    const resetButton = document.getElementById('reset-city');
+
 
     upButton.addEventListener("click", upTemp);
     downButton.addEventListener("click", downTemp);
     skyType.addEventListener('change', skyDisplayer);
-    cityType.addEventListener('input', cityDisplayer);
+    cityType.addEventListener('input', cityDisplayerType);
+    resetButton.addEventListener('click', cityReset);
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
