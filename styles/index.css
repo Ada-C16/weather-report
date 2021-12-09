@@ -11,10 +11,14 @@ body {
     flex-direction: column;
     align-items: center;
     background: linear-gradient(rgb(47,150,163), rgb(48,16,143));
-    font-family: 'IBM Plex Mono', monospace;
-    font-family: 'Syncopate', sans-serif;
+    font-family: 'Major Mono Display', monospace;
     color: white;
 
+}
+
+h1 {
+    font-size: 90px;
+    font-weight: lighter;
 }
 
 .location, 
@@ -25,6 +29,12 @@ body {
     justify-content: space-around;
     align-items: center;
 
+}
+
+.temperature-degree {
+    font-size: 400px;
+    padding: 0;
+    margin: 0;
 }
 
 .temperature{
@@ -39,7 +49,7 @@ body {
 
 .degree-section span {
     margin: 10px;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .degree-section h2 {
