@@ -1,0 +1,240 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: skyblue;
+    padding-left: 5px;
+    padding-right: 5px;
+} 
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+main {
+    background-color: white;
+    border-radius: 25px;
+    min-width: 300px;
+    grid-row: 2 / 4;
+    grid-column: 3 / 8;
+    display: flex;  
+    justify-content: center; 
+    align-items: center;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* city name in main heading container  */
+#city-name{
+    background-color: white;
+}
+
+main h1 {
+    background-color: white;
+    grid-row: 1/2;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center; 
+}
+
+main h3 {
+    background-color: white;
+    grid-row: 2/4;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center; 
+}
+
+.emoji-section {
+    background-color: white;
+    min-width: 500px;
+    min-height: 100px;
+    border-radius: 30px;
+    padding: 10px;
+    grid-row: 4 / 6;
+    grid-column: 2/9;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#sky-container{
+    grid-row: 1/2;
+    grid-column: 1/4;
+    background-color: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+#produce-container {
+    grid-row: 2/3;
+    grid-column: 1/4;
+    background-color: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+#plant-container {
+    grid-row: 3/4;
+    grid-column: 1/4;
+    background-color: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.temperature-section {
+    background-color: white;
+    height: 200px;
+    min-width: 270px;
+    border-radius: 15px 50px;
+    grid-row: 6/10;
+    grid-column: 1 / 4;
+    display: flex;  
+    justify-content: center; 
+    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#temperature-heading {
+    background-color: white;
+    grid-row: 6/9;
+    grid-column: 2/8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 170%;
+}
+
+#current-temp {
+    background-color: white;
+    grid-row: 2/7;
+    grid-column: 5/6;
+    font-size: 350%;
+    color: orange;
+}
+
+#increase-temp {
+    background-color: white;
+    grid-row: 3/5;
+    grid-column: 4/5;
+    font-size: 150%;
+    cursor: pointer;
+}
+
+#decrease-temp {
+    background-color: white;
+    grid-row: 4/6;
+    grid-column: 4/5;
+    font-size: 150%;
+    cursor: pointer;
+}
+
+.sky-section {
+    background-color: white;
+    height: 200px;
+    min-width: 270px;
+    border-radius: 15px 50px;
+    grid-row: 6/10;
+    grid-column: 4 / 7;
+    display: flex;  
+    justify-content: center; 
+    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#sky-heading {
+    background-color: white;
+    grid-row: 6/9;
+    grid-column: 4/6;
+    display: flex;
+    align-items: center;
+    font-size: 170%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#drop-down {
+    background-color: white;
+    grid-row: 4/5;
+    grid-column: 1/10;
+    display: flex;
+    align-items: center;
+    font-size: 90%;
+    grid-column: 3/7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+option {
+    background-color: white;
+}
+
+.city-section {
+    background-color: white;
+    height: 200px;
+    min-width:270px;
+    border-radius: 15px 50px;
+    grid-row: 6/10;
+    grid-column: 7 / 10;
+    display: flex;  
+    justify-content: center; 
+    align-items: center;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#city-heading {
+    background-color: white;
+    grid-row: 6/9;
+    grid-column: 2/8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 170%;
+}
+
+#city-search-label{
+    background-color: white;
+    grid-row: 2/4;
+    grid-column: 2/8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#city-search-input{
+    background-color: white;
+    grid-row: 4/5;
+    display: flex;
+    align-items: center;
+    grid-column: 3/6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#resetButton{
+    background-color: white;
+    border-radius: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    display: flex;
+    grid-row: 4/5;
+    grid-column: 6/7;
+    margin-left: 10px;
+}
