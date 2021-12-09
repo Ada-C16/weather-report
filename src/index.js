@@ -2,7 +2,7 @@ const state = {
   temp: 68,
   sky: 'sunny',
   cityName: 'Tacoma',
-}
+};
 
 // rendering
 const renderTemp = () => {
@@ -10,31 +10,30 @@ const renderTemp = () => {
   const tempElem = document.querySelector('#current-temp');
   tempElem.className = getTempClass();
   tempElem.textContent = `${temp}`;
-}
+};
 
 const renderLandscape = () => {
   const landscapeElem = document.querySelector('#landscape');
   landscapeElem.textContent = getLandscapeContent();
-}
+};
 
 const renderSky = () => {
   const skyElem = document.querySelector('#sky');
   skyElem.textContent = getSkyContent();
-}
+};
 
 const renderCityName = () => {
   const { cityName } = state;
   const nameElem = document.querySelector('#city-name');
   nameElem.textContent = cityName;
-}
+};
 
 const renderAll = () => {
   renderTemp();
   renderLandscape();
   renderSky();
   renderCityName();
-}
-
+};
 
 // helper logic for rendering
 const getTempClass = () => {
@@ -50,7 +49,7 @@ const getTempClass = () => {
   } else {
     return 'cold';
   }
-}
+};
 
 const getLandscapeContent = () => {
   const { temp } = state;
@@ -65,7 +64,7 @@ const getLandscapeContent = () => {
   } else {
     return '🌲🌲_️🌲⛄️❄️🌲❄️__🌲⛄️❄️_️';
   }
-}
+};
 
 const getSkyContent = () => {
   const { sky } = state;
@@ -78,9 +77,9 @@ const getSkyContent = () => {
     case 'rainy':
       return '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
     case 'snowy':
-      return '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨'; 
+      return '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
   }
-}
+};
 
 // logic for event listeners
 
@@ -88,29 +87,29 @@ const increaseTemp = () => {
   state.temp++;
   renderTemp();
   renderLandscape();
-}
+};
 
 const decreaseTemp = () => {
   state.temp--;
   renderTemp();
   renderLandscape();
-}
+};
 
 const changeSky = (e) => {
   state.sky = e.target.value;
   renderSky();
-}
+};
 
 const changeCityName = (e) => {
   state.cityName = e.target.value;
   renderCityName();
-}
+};
 
 const resetCityName = () => {
   state.cityName = 'Tacoma';
   document.querySelector('#change-name').value = state.cityName;
   renderCityName();
-}
+};
 
 // startup logic
 
@@ -129,11 +128,11 @@ const registerEventHandlers = () => {
 
   const resetCityNameBtn = document.querySelector('#reset-name');
   resetCityNameBtn.addEventListener('click', resetCityName);
-}
+};
 
 const startUp = () => {
   renderAll();
   registerEventHandlers();
-}
+};
 
 document.addEventListener('DOMContentLoaded', startUp);
