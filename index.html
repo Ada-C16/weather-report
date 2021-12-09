@@ -7,21 +7,58 @@
     <title>Weather Report</title>
     <link href="../styles/index.css" rel="stylesheet">
 </head>
-<body>
-    <header class="header">
-        <ul>
-          <li>TEMPERATURE</li>
-        </ul>
-        <ul class = "big-container grid-container">
-          <li class = day-box>what</li>
-          <li class = day-box>if</li>
-          <li class = day-box>it</li>
-          <li class = day-box>were</li>
-          <li class = day-box>pur-</li>
-          <li class = day-box>ple</li>
-          <li class = day-box>?</li>
-        </ul>
+<body class = background>
+
+    <header class = current-temp-box>
+        <!-- give a suitable heading using h1 tag-->
+        <h1>Temperature
+            <div class="container">
+                <!-- adding button and heading to show the digits -->
+                <!-- increment() and decrement() functions on button click-->
+                <button onclick="decrement()">-</button>
+                <h2 id="counting"></h2>
+                <button onclick="increment()">+</button>
+            </div>
+        </h1>
     </header>
+    <!-- JavaScript code-->
+
+    <header class="header">
+        <h1 class = current-temp-box>
+            HOMETOWN
+        </h1>
+
+        <h1 class = weather-garden-box>WEATHER GARDEN
+            <ul class = week-grid-container>
+                <li class = day-box>Mon</li>
+                <li class = day-box>Tues</li>
+                <li class = day-box>Wed</li>
+                <li class = day-box>Thurs</li>
+                <li class = day-box>Fri</li>
+                <li class = day-box>Sat</li>
+                <li class = day-box>Sun</li>
+            </ul>
+        </h1>
+    </header>
+
+    <script>
+        //initialising a variable name data
+        var data = 72;
+
+        //printing default value of data that is 0 in h2 tag
+        document.getElementById("counting").innerText = data;
+
+        //creation of increment function
+        function increment() {
+            data = data + 1;
+            document.getElementById("counting").innerText = data;
+        }
+        //creation of decrement function
+        function decrement() {
+            data = data - 1;
+            document.getElementById("counting").innerText = data;
+        }
+    </script>
     
 </body>
 </html>

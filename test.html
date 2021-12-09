@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../styles/index.css" rel="stylesheet">
+    </head>
+  
+    <body>
+        <!-- give a suitable heading using h1 tag-->
+        <h1>Temperature</h1>
+  
+        <div class="container">
+            <!-- adding button and heading to show the digits -->
+            <!-- increment() and decrement() functions on button click-->
+            <button onclick="increment()">+</button>
+            <h2 id="counting"></h2>
+            <button onclick="decrement()">-</button>
+        </div>
+        <!-- JavaScript code-->
+        <script>
+            //initialising a variable name data
+            var data = 0;
+  
+            //printing default value of data that is 0 in h2 tag
+            document.getElementById("counting").innerText = data;
+  
+            //creation of increment function
+            function increment() {
+                data = data + 1;
+                document.getElementById("counting").innerText = data;
+            }
+            //creation of decrement function
+            function decrement() {
+                data = data - 1;
+                document.getElementById("counting").innerText = data;
+            }
+        </script>
+    </body>
+</html>
