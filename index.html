@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet">
 </head>
-<body>
-    
+
+<body id="skyColor">
+
+    <header>
+        <h1> Weather Report
+            <span>
+                <span id="headerCityName" class="city-name">Los Gatos</span>
+                <input type="text" id="cityNameInput" value="Los Gatos">
+                <button id="cityNameResetBtn" class="cityName-resetBtn"> Reset </button>
+            </span>
+        </h1>
+        <header>
+
+            <section>
+                <h2>Choose Sky
+                    <select id="skySelect" class="skySelect-class">
+                        <option>Sunny</option>
+                        <option>Cloudy</option>
+                        <option>Rainy</option>
+                        <option>Snowy</option>
+                    </select>
+                </h2>
+                <section id="skyImg" class="skyPic-class"> 🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨 </section>
+            </section>
+
+            <section>
+                <h2>
+                    Temperature
+                    <span id="temperature" class="yellow">60</span>
+                    <span class="temperature__controls">
+                        <span id="increaseTemp">⬆️</span>
+                        <span id="decreaseTemp">⬇️</span>
+                    </span>
+                </h2>
+            </section>
+            <section>
+                <div id="garden" class="skyPic-class">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</div>
+            </section>
+
+            <script src="src/index.js"></script>
 </body>
+
 </html>

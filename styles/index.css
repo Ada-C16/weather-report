@@ -1,0 +1,77 @@
+h1 {
+    margin-left: 1rem;
+    font-style: sans-serif;
+    font-size: 3rem;
+    color: #1e1e24;
+}
+.city-name {
+    font-style: italic;
+    font-size: 6rem;
+    color: rgb(155, 3, 36);
+    margin-left: 5rem;
+    margin-right: 3rem;
+}
+
+h2 {
+    margin-left: 1rem;
+    font-style: sans-serif;
+    font-size: 2rem;
+    color: #1e1e24;
+}
+
+.skySelect-class {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-size: 0.9em;
+}
+
+.cloudy {
+    background-color: #debac0;
+}
+
+.sunny {
+    background-color: #f5ee9e;
+}
+
+.rainy {
+    background-color: #3b8ea5;
+}
+
+.snowy {
+    background-color: #fff8f0;
+}
+
+.skyPic-class {
+    margin-top: 2rem;
+    font-size: 5rem;
+}
+
+.temperature__controls {
+    margin-left: 2rem;
+}
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: gold;
+    margin-left: 1rem;
+    font-size: 3rem;
+}
+
+.yellow-green {
+    color: yellowgreen;
+}
+
+.green {
+    color: green;
+}
+
+.teal {
+    color: teal;
+}
