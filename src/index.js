@@ -42,19 +42,19 @@ const changeColorAndLand = (value) => {
   const displayLandscape = document.getElementById('display-landscape');
 
   if (stateTemp.value >= 80) {
-    temperatureValue.classList = 'red-text';
+    temperatureValue.className = 'red-text';
     displayLandscape.textContent = landscape.summer;
   } else if (stateTemp.value >= 70 && stateTemp.value <= 79) {
-    temperatureValue.classList = 'orange-text';
+    temperatureValue.className = 'orange-text';
     displayLandscape.textContent = landscape.spring;
   } else if (stateTemp.value >= 60 && stateTemp.value <= 69) {
-    temperatureValue.classList = 'yellow-text';
+    temperatureValue.className = 'yellow-text';
     displayLandscape.textContent = landscape.autumn;
   } else if (stateTemp.value >= 35 && stateTemp.value <= 59) {
-    temperatureValue.classList = 'green-text';
+    temperatureValue.className = 'green-text';
     displayLandscape.textContent = landscape.winter;
   } else {
-    temperatureValue.classList = 'white-text';
+    temperatureValue.className = 'white-text';
     displayLandscape.textContent = landscape.freezing;
   }
 };
@@ -63,44 +63,78 @@ const changeTemperature = function (event) {
   changeColorAndLand(stateTemp.value);
   if (event.target.id === 'increment') {
     stateTemp.value++;
-    temperatureValue.innerHTML = stateTemp.value;
+    temperatureValue.textContent = stateTemp.value;
   } else if (event.target.id === 'decrement') {
     stateTemp.value--;
-    temperatureValue.innerHTML = stateTemp.value;
+    temperatureValue.textContent = stateTemp.value;
   }
 };
 
 //sky
 
 const sky = document.getElementById('sky-type');
-const skyEmojis = {
-  sunny: '☁️ ☁️ ☁️ ☀️ ☁️ ☁️',
-  cloudy: '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️',
-  rainy: '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧',
-  snowy: '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨',
-};
 
 const changeSky = function (event) {
   const displaySky = document.getElementById('display-sky');
+
+  while (displaySky.firstChild) {
+    displaySky.removeChild(displaySky.firstChild);
+  }
+
+  const skyLeft = document.createElement('span');
+  const skyMiddle = document.createElement('span');
+  const skyRight = document.createElement('span');
+
+  displaySky.appendChild(skyLeft);
+  displaySky.appendChild(skyMiddle);
+  displaySky.appendChild(skyRight);
+
   if (event.target.value == 'Sunny') {
-    displaySky.textContent = skyEmojis.sunny;
+    sunnyDisplay(skyLeft, skyMiddle, skyRight);
   } else if (event.target.value == 'Cloudy') {
-    displaySky.textContent = skyEmojis.cloudy;
+    cloudyDisplay(skyLeft, skyMiddle, skyRight);
   } else if (event.target.value == 'Rainy') {
-    displaySky.textContent = skyEmojis.rainy;
+    rainyDisplay(skyLeft, skyMiddle, skyRight);
   } else if (event.target.value == 'Snowy') {
-    displaySky.textContent = skyEmojis.snowy;
+    snowyDisplay(skyLeft, skyMiddle, skyRight);
   }
 };
 
-// REGISTER EVENTS
+const sunnyDisplay = (left, middle, right) => {
+  left.className = 'cloudy';
+  middle.className = 'sunny';
+  right.className = 'cloudy';
+};
+
+const cloudyDisplay = (left, middle, right) => {
+  left.className = 'cloudy';
+  middle.className = 'cloudy';
+  right.className = 'cloudy';
+};
+
+const rainyDisplay = (left, middle, right) => {
+  left.className = 'rainy';
+  middle.className = 'rainbow';
+  right.className = 'rainy';
+};
+
+const snowyDisplay = (left, middle, right) => {
+  left.className = 'snowy';
+  middle.className = 'snowy';
+  right.className = 'snowy';
+};
+
+// Events REGISTERED
 
 const registeredEventsListeners = function () {
   resetButton.addEventListener('click', resetCityName);
+
   cityInput.addEventListener('input', updateCityValue);
+
   [decrementButton, increaseButton].forEach(() =>
     addEventListener('click', changeTemperature)
   );
+
   sky.addEventListener('change', changeSky);
 };
 

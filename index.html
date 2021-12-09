@@ -7,17 +7,16 @@
     <title>Weather Report</title>
     <link rel="stylesheet" href="styles/index.css">
 </head>
-<body>
+<body >
 
     <header>
         <h1 id ="title" >Weather Report</h1>
         <h2>  for the lovely city</h2>
     </header>
     
-    
     <main class="parent-side-container">
         <form class="temperature-side-container" action="#"> 
-            <span>Temperature</span><br><br>
+            <span class="subtitle">Temperature</span><br><br>
             <button id="decrement">⬇️</button>
             <p id = "temperature-value"> 0 </p>
             <button id ="increment">⬆️</button>
@@ -25,7 +24,7 @@
         </form>
 
         <form class ="sky-side-container" action="#">
-            <span>Sky</span><br><br>
+            <span class='subtitle'>Sky</span><br><br>
             <select id="sky-type" name="sky">
                 <option value="select">select one</option>
                 <option value="Rainy">Rainy</option>
@@ -37,7 +36,7 @@
         
 
         <form  class = "city-side-container" action="#">
-            <label for="city">City Name</label><br><br>
+            <label for="city" class='subtitle'>City Name</label><br><br>
             <input type="text" id="city" name="city" placeholder="type here">
             <!-- <input type="reset"> -->
             <button id="reset-button" type="button">Reset</button>
@@ -51,10 +50,7 @@
                 <p id ="display-landscape"  class ="inner-grid-land"></p>
             </div>
         </section>     
-    </main>
-
-
-    
+    </main> 
     <footer> @Ana Gabriele</footer>
     <script src="src/index.js"></script>
 </body>
