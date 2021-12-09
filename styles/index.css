@@ -15,28 +15,9 @@
     -webkit-transform: rotate(45deg);
   }
 
-  //Change Temperature color 
-  .red {
-    color: red;
+  #cityNameDisplay {
+    color:rebeccapurple;
   }
 
-  .orange {
-    color: orange;
-  }
 
-  .yellow {
-    color: yellow;
-  }
-
-  .green {
-    color: green;
-  }
-
-  .teal {
-    color: teal; 
-  }
-  //default
-  #temperatureDegree {
-    color: teal;
-  }
 

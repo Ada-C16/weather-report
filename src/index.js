@@ -2,25 +2,25 @@
 
 const tempDegree = document.querySelector('#temperatureDegree');
 const landscape = document.querySelector('#landscape');
+const selectedSky = document.querySelector('#skyEmojis');
+const gardenBackground = document.querySelector('#weatherGardenContainer');
+const inputCity = document.querySelector('#inputCity');
+const displayCity = document.getElementById('#cityNameDisplay');
 const state = {
   tempNumber: 80,
+  skyState: ' ☁️ ☁️ ☀️ ☁️ ☁️ ☀️ ☀️ ☀️ ☁️ ☀️',
+  gardenColor: '#D6FFFF',
 };
 
 // Temperature up and down buttons
-const increaseTemperature = (event) => {
-  console.log(event);
+const increaseTemperature = () => {
   state.tempNumber += 1;
-  //   const temperatureChangeContainer =
-  //     document.querySelector('#temperatureDegree');
   tempDegree.textContent = `${state.tempNumber}`;
   changeTheme();
 };
 
-const decreaseTemperature = (event) => {
-  console.log(event);
+const decreaseTemperature = () => {
   state.tempNumber -= 1;
-  // const temperatureChangeContainer =
-  //   document.querySelector('#temperatureDegree');
   tempDegree.textContent = `${state.tempNumber}`;
   changeTheme();
 };
@@ -29,21 +29,25 @@ const decreaseTemperature = (event) => {
 const changeTheme = () => {
   // if different ranges, change color
   if (state.tempNumber >= 80) {
-    tempDegree.style.color = 'red';
+    tempDegree.style.color = '#EA0009';
     landscape.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
   } else if (state.tempNumber >= 70 && state.tempNumber <= 79) {
-    tempDegree.style.color = 'orange';
+    tempDegree.style.color = '#F0940A';
     landscape.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
   } else if (state.tempNumber >= 60 && state.tempNumber <= 69) {
-    tempDegree.style.color = 'yellow';
+    tempDegree.style.color = '#F4D10A';
     landscape.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
   } else if (state.tempNumber >= 50 && state.tempNumber <= 59) {
-    tempDegree.style.color = 'green';
+    tempDegree.style.color = '#1F7001';
     landscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
   } else {
-    tempDegree.style.color = 'teal';
+    tempDegree.style.color = '#256D6C';
     landscape.textContent = '⛄️⛄️⛄️⛄️⛄️🌲⛄️⛄️🌲⛄️🌲⛄️🌲';
   }
+};
+
+const updateCity = (event) => {
+  displayCity.textContent = event.target.value;
 };
 
 //register event handlers
@@ -56,11 +60,32 @@ const registerEventHandlers = () => {
   const tempDownButton = document.querySelector('#tempButtonDown');
   tempDownButton.addEventListener('click', decreaseTemperature);
 
-  //wave 4: onchangehandler
+  //City input
+  inputCity.addEventListener('change', updateCity);
+
+  //wave 3: onchangehandler
+  const skyDropdown = document.querySelector('.sky');
+  skyDropdown.addEventListener('change', (event) => {
+    if (event.target.value === 'sunny') {
+      selectedSky.textContent = ' ☁️ ☁️ ☀️ ☁️ ☁️ ☀️ ☀️ ☀️ ☁️ ☀️';
+      gardenBackground.style.backgroundColor = '#D6FFFF';
+    } else if (event.target.value === 'cloudy') {
+      selectedSky.textContent = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
+      gardenBackground.style.backgroundColor = '#C9C9C9';
+    } else if (event.target.value === 'rainy') {
+      selectedSky.textContent = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
+      gardenBackground.style.backgroundColor = '#9FCFE0';
+    } else if (event.target.value === 'snowy') {
+      selectedSky.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
+      gardenBackground.style.backgroundColor = '#A1B6D6';
+    }
+  });
 };
 
 const setUp = () => {
   tempDegree.textContent = `${state.tempNumber}`;
+  selectedSky.textContent = `${state.skyState}`;
+  gardenBackground.style.backgroundColor = `${state.gardenColor}`;
   registerEventHandlers();
   changeTheme();
 };

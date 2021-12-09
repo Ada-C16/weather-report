@@ -11,7 +11,7 @@
     <header>
         <section class="header-cover" id="top">
             <h1 class="title"> Kristin's Weather Report</h1>
-            <span id="subtitle">For the lovely city of city_name</span>
+            <h3 id="subtitle">For the lovely city of <span id="cityNameDisplay">Seattle</span></h3>
         </section>
     </header>
     <main>
@@ -25,24 +25,27 @@
 
         <section id="cityNameContainer">
             <h2>City Name</h2>
+            <label for="city">Enter City Name:</label>
+            <input type="text" id="inputCity" name="inputCity" placeholder="Seattle" />
+            <p id="logCity"></p>
         </section>
 
         <section id="skyContainer">
             <h2>Sky</h2>
             <label for="sky-select">Select a sky:</label>
-            <select name="sky" id="sky-select">
-                <option value="">--Please choose an option--</option>
+            <select class="sky" name="sky" id="sky-select">
+                <!-- <option value="">--Please choose an option--</option> -->
                 <option value="sunny">Sunny</option>
                 <option value="cloudy">Cloudy</option>
                 <option value="rainy">Rainy</option>
-                <option value="Snowy">Snowy</option>
+                <option value="snowy">Snowy</option>
                 
             </select>
         </section>
 
         <section id="weatherGardenContainer">
             <h2>Weather Garden</h2>
-            <span id="sky"></span>
+            <div id="skyEmojis"></div>
             <span id="landscape"></span>
         </section>
     </main>
