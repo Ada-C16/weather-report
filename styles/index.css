@@ -1,9 +1,9 @@
 header {
-    min-height: 15vh;
+    height: 15vh;
 }
 .col,
 .col-8 {
-    min-height: 70vh;
+    height: 75vh;
 }
 
 .control-section {
@@ -38,18 +38,37 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px
 }
 
 .view-background {
-    background-color: skyblue;
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 90%
+}
+.sky-background {
+    height: 25%;
+    padding-left: 100px
+}
+
+.activity-background {
+    height: 65%;
+    display: flex;
+    justify-content: center;
 }
 
 .emoji {
     font-size: 5rem;
 }
 
-.activity-emoji {
+img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 20px;
+}
+
+.activity-desc {
+    height: 10%;
     text-align: center;
+    text-transform: capitalize;
+    font-size: larger;
 }

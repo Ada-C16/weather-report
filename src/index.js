@@ -39,22 +39,61 @@ const changeTempColor = () => {
 };
 
 const changeActivityView = () => {
-  const activityEmoji = document.querySelector('.activity-emoji');
-  let emoji = '';
-  if (state.temp >= 87 && state.sky === 'sunny') {
-    emoji = 'hot and sunny';
-  } else if (state.temp >= 82) {
-    emoji = '🔥';
-  } else if (state.temp >= 68) {
-    emoji = '&#127957';
-  } else if (state.temp >= 60) {
-    emoji = '&#9918';
-  } else if (state.temp >= 50) {
-    emoji = '🔥';
-  } else {
-    emoji = '&#9924';
+  const activity_img = document.querySelector('.activity-img');
+  const activity_desc = document.querySelector('.activity-desc');
+  let address = '';
+  let alt = '';
+
+  if (state.sky === 'snowy' && state.temp > 46) {
+    address =
+      'https://1.bp.blogspot.com/-_6_7CpBWod4/X1CK2ZNr0RI/AAAAAAABauo/C_cSxWVokzUJEHL18yUlPt2ZKGwhFa2qgCNcBGAsYHQ/s180-c/akusyu_uchuujin.png';
+    alt = 'the sky is broken. immigrate to other planet.';
+  } else if (state.temp >= 93 || state.temp <= 28) {
+    address =
+      'https://4.bp.blogspot.com/-LKypdYBi7d4/Vq88uGX4TYI/AAAAAAAA3ew/sJ5TQHcLAM8/s180-c/passport_checkin.png';
+    alt = 'vacation somewhere nice';
+  } else if (state.sky === 'snowy') {
+    address = 'images/IMG_9974.jpg';
+    alt = 'Snow!!';
+  } else if (state.sky === 'rainy') {
+    if (state.temp >= 50) {
+      address = 'images/IMG_7409.jpg';
+      alt = 'chill day';
+    } else {
+      address = 'images/IMG_8031.JPG';
+      alt = 'fireplace hog';
+    }
+  } else if (state.sky == 'cloudy') {
+    if (state.temp >= 85) {
+      address =
+        'https://3.bp.blogspot.com/-w3pVe9WxicA/XNE-_wHnIzI/AAAAAAABSto/F4VZ4fKWhVgT3MFpmbse7mwMMXvbge7FACLcBGAs/s180-c/gekijou_butai_kansyou.png';
+      alt = 'theater';
+    }
+    if (state.temp >= 60) {
+      address =
+        'https://1.bp.blogspot.com/-59_nvImHVnM/XkZdUFSPVeI/AAAAAAABXWQ/Vbu2acjd6dwZjOoQIhRGeYjKPY2EtUCewCNcBGAsYHQ/s180-c/yagai_kyoushitsu_casual_walk.png';
+      alt = 'hiking';
+    } else {
+      address =
+        'http://3.bp.blogspot.com/-24UH5DXPPq4/U7O6zkrGQSI/AAAAAAAAiTM/gnBuOEzdvJk/s180-c/neko_cafe.png';
+      alt = 'cat cafe';
+    }
+  } else if (state.sky === 'sunny') {
+    if (state.temp >= 70) {
+      address = 'images/IMG_3412.jpg';
+      alt = 'kayaking';
+    } else if (state.temp >= 50) {
+      address =
+        'https://1.bp.blogspot.com/-59_nvImHVnM/XkZdUFSPVeI/AAAAAAABXWQ/Vbu2acjd6dwZjOoQIhRGeYjKPY2EtUCewCNcBGAsYHQ/s180-c/yagai_kyoushitsu_casual_walk.png';
+      alt = 'hiking';
+    } else {
+      address = 'images/IMG_8031.JPG';
+      alt = 'fireplace hog';
+    }
   }
-  activityEmoji.innerHTML = emoji;
+  activity_img.src = address;
+  activity_img.alt = alt;
+  activity_desc.textContent = alt;
 };
 
 const controlSky = (e) => {
@@ -117,4 +156,5 @@ document.addEventListener('DOMContentLoaded', () => {
   changeSkyView();
   changeActivityView();
   registerHandler();
+  changeTempColor();
 });
