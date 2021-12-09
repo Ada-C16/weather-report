@@ -45,3 +45,11 @@ header {
     width: 50%;
     height: 50%;
 }
+
+.emoji {
+    font-size: 5rem;
+}
+
+.activity-emoji {
+    text-align: center;
+}
