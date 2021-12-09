@@ -10,7 +10,6 @@ function down() {
 }
 
 const currenttemperature = (temperature) => {
-   
     if(temperature >= 1 && temperature <= 49){
         document.getElementById("temperature").style.color = "teal";
         earth.textContent =  "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
@@ -35,6 +34,20 @@ const currenttemperature = (temperature) => {
     }
 
 }
+const currentSky = () => {
+    var skyselection = document.getElementById("skyselector").value;
+    console.log(skyselection);
+
+    if (skyselection === 'sunny') {
+        sky.textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
+    } else if (skyselection === "cloudy") {
+        sky.textContent =  "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+    } else if (skyselection === "rainy") {
+        sky.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+    } else if (skyselection === "snowy") {
+        sky.textContent = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
+    }
+}
 
 
 window.onload = function(){
@@ -44,5 +57,7 @@ window.onload = function(){
     var down_btn = document.getElementById("weather-down");
     down_btn.onclick = down;
 
+    var selector_pick= document.getElementById("skyselector");
+    selector_pick.addEventListener('change', currentSky);
 }
 
