@@ -115,6 +115,10 @@ const registerHandlers = (event) => {
 
   const cityNameInput = document.getElementById('city-search-input');
   cityNameInput.addEventListener('input', setCityName);
+
+  document.addEventListener('DOMContentLoaded', function (event) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  });
 };
 
 document.addEventListener('DOMContentLoaded', registerHandlers);
