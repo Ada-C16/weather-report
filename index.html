@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/index.css" rel="stylesheet" />
     <title>Weather Report</title>
 </head>
+
 <body>
-    
+    <main class="container">
+        <header id="banner">
+            <h1>Weather Report
+                <span id="banner-city-of">
+                    <h3>the city of <span id="banner-city-name">Seattle</span></h3>
+                </span>
+            </h1>
+        </header>
+
+        <!--TEMPERATURE BLOCK-->
+        <section id="temperature-block">
+            <h2 class="heading-temp">Temperature</h2>
+            <h2 id="temp">64</h2>
+            <button id="up-arrow-button"><h2 class="arrow" id="up-arrow"></h2></button>
+            <button id="down-arrow-button"><h2 class="arrow" id="down-arrow"></h2></button>
+        </section>
+
+        <!--SKY BLOCK-->
+        <section id="sky-block">
+            <h2 class="headings">Sky</h2>
+            <select id="sky">
+                <option value="rainy">Rainy</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="sunny">Sunny</option>
+                <option value="snow">Snow</option>
+            </select>
+        </section>
+
+        <!--CITY BLOCK-->
+        <section id="city-name-block">
+            <h2 class="headings">City Name</h2>
+            <input id="city-name" type="text"><button id="reset">Reset</button>
+        </section>
+
+        <!--WEATHER GARDEN BLOCK-->
+        <section id="weather-garden-block">
+            <h2>Weather Garden</h2>
+            <h4 id="sky-landscape">🌧⛈🌧</h4>
+            <h4 id="ground-landscape">🌷🌳🌱</h4>
+        </section>
+
+        <script src="src/index.js"></script>
+    </main>
 </body>
 </html>

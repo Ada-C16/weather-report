@@ -1,0 +1,133 @@
+/***********************/
+/*** GENERAL STYLING ***/
+/***********************/
+
+body {
+    background: rgb(44, 89, 225);
+    padding: 0 1em;
+    font-family: Arial;
+}
+
+.container {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 1%;
+    row-gap: 2%;
+}
+
+section {
+    background: white;
+    border-radius: 1em;
+    padding: .5em 1em;
+}
+
+button {
+    /* height: 2em;
+    width: 2em; */
+    background-color: transparent;
+    border-style: none;
+    border-radius: 50%;
+}
+
+h4 {
+    font-size: 4em;
+}
+
+/**************/
+/*** BANNER ***/
+/**************/
+
+#banner {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    color: white;
+}
+
+#banner-city-of {
+    display: inline;
+    font-size: .5em;
+}
+
+/*************************/
+/*** TEMPERATURE BLOCK ***/
+/*************************/
+
+#temperature-block {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: yellow;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#heading-temp {
+    grid-column: 1 / span 3;
+}
+
+#temp {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+    font-size: 3em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#up-arrow-button {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#up-arrow {
+    /* Syling credit: https://css-tricks.com/snippets/css/css-triangle/ */
+    width: 0px;
+    height: 0px;
+    border-left: .5em solid transparent;
+    border-right: .5em solid transparent;
+    border-bottom: 1em solid black;
+}
+  
+#down-arrow-button {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+#down-arrow {
+    /* Syling credit: https://css-tricks.com/snippets/css/css-triangle/ */
+    width: 0px;
+    height: 0px;
+    border-left: .5em solid transparent;
+    border-right: .5em solid transparent;
+    border-top: 1em solid black;
+}
+
+/*****************/
+/*** SKY BLOCK ***/
+/*****************/
+
+#sky-block {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+/******************/
+/*** CITY BLOCK ***/
+/******************/
+
+#city-name-block {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+/****************************/
+/*** WEATHER GARDEN BLOCK ***/
+/****************************/
+
+#weather-garden-block {
+    grid-column: 2;
+    grid-row: 2 / span 3;
+    background: rgb(180, 235, 253);
+}
