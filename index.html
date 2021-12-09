@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="styles/index.css" rel="stylesheet"/>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Report</title>
+        <link href="styles/index.css" rel="stylesheet"/>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>🌥 Weather Report</title>
 </head>
 <body>
     <header class="header">
-        <h1>Weather Report</h1>
-        <h3>for the lovely city of ✨<span id="header-city">Tacoma</span>✨</h3>
+        <h1>🌥 Weather Report</h1>
+        <h3>for the lovely city of ✨<span id="headerCity">yr lover's hometown</span>✨</h3>
     </header>
 
-    <section class="temperature">
+    <section class="temperature-section">
         <h2>Temperature</h2>
-        <div id="temperature-content">
-            <div id="toggle-arrows">
+        <div id=temperature-content>
+            <div id="up-down-arrows">
                 <p><button id="increase-temp">⬆</button></p>
                 <p><button id="decrease-temp">⬇</button></p>
             </div>
-            <p><span id="current-temp">44</span></p>
+            <span id="currentTemp">63</span>
         </div>
     </section>
 
-    <section class="sky">
+    <section class="sky-section">
         <h2>Sky</h2>
-
         <select id="sky-options">
-            <option value="sunny">sunny</option>
-            <option value="cloudy">cloudy</option>
-            <option value="rainy">rainy</option>
-            <option value="snowy">snowy</option>
+            <option>— select —</option>
+            <option>sunny</option>
+            <option>cloudy</option>
+            <option>rainy</option>
+            <option>snowy</option>
         </select>
     </section>
 
-    <section class="city">
+    <section class="city-section">
         <h2>City</h2>
-        <form>
-            <input type="text">
-            <input type="reset" value="reset">
-        </form>
+        <input type="text" id="inputCity" placeholder="type your city name…">
+        <button id="reset">reset</button>
     </section>
 
-    <section class="weather">
+    <section class="weather-section">
         <h1>Weather Garden</h1>
+        <div id="weather-content">
+            <div id="sky"></div>
+            <div id="landscape"></div>
+        </div>
     </section>
+    <script src="src/index.js"></script>
 </body>
 </html>
