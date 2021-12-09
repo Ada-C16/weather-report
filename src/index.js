@@ -3,7 +3,7 @@
 const state = {
   degrees: 35,
   landscape: "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲",
-  skyState: 	"☁️ ☁️ ☁️ ☀️ ☁️ ☁️",
+  skyState: 	"Pick Sky state!",
   city: "City of Seattle",
 }; 
 
@@ -60,18 +60,36 @@ const changeCity = () => {
 }
 
 const changeSky = () => {
+  skyState.textContent = ""
   const selectMenu = document.querySelector("#skies");
+  const sunny = document.getElementById("sky-sunny");
+  const cloudy = document.getElementById("sky-cloudy");
+  const rainy = document.getElementById("sky-rainy");
+  const snowy = document.getElementById("sky-snowy");
+
   if (selectMenu.value === "Sunny"){
-    skyState.textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
+    cloudy.style.display = "none";
+    rainy.style.display = "none";
+    snowy.style.display = "none";
+    sunny.style.display = "block";
   }
   else if (selectMenu.value === "Cloudy"){
-    skyState.textContent = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+    sunny.style.display = "none";
+    rainy.style.display = "none";
+    snowy.style.display = "none";
+    cloudy.style.display = "block";
   }
   else if (selectMenu.value === "Rainy"){
-    skyState.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+    cloudy.style.display = "none";
+    sunny.style.display = "none";
+    snowy.style.display = "none";
+    rainy.style.display = "block";
   }
   else {
-    skyState.textContent ="🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
+    cloudy.style.display = "none";
+    sunny.style.display = "none";
+    rainy.style.display = "none";
+    snowy.style.display = "block";
   }
   
 }
