@@ -1,20 +1,34 @@
+//Create a temp variable
+
+
+
+
+
+
+
+
 // Event Listeners
 const registerEvents = () => {
     console.log("loaded");
 
-    const clickButton = document.getElementById("clickButton");
-    clickButton.addEventListener("click", () => {
+    const increaseButton = document.getElementById("clickButtonIn");
+    increaseButton.addEventListener("click", () => {
         console.log("clicked");
     });
 
-    const selectedSel = document.getElementById("selectedSel");
-    selectedSel.addEventListener("change", (event) => {
-        console.log("select changed");
-        console.log(event);
-        console.log(selectedSel.value);
+    const decreaseButton = document.getElementById("clickButtonDe");
+    decreaseButton.addEventListener("click", () => {
+        console.log("clicked2");
     });
 
-    selectedSel.addEventListener("click", () => {
+    const skySelect = document.getElementById("sky-select");
+    skySelect.addEventListener("change", (event) => {
+        console.log("select changed");
+        console.log(event);
+        console.log(skySelect.value);
+    });
+
+    skySelect.addEventListener("click", () => {
         console.log("clicked select");
     });
     
