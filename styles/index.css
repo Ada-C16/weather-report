@@ -1,0 +1,40 @@
+body {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    display: grid;
+    grid-template-rows: 55px auto 50px 50px;
+    grid-template-columns: minmax(200px, 3fr) 4fr;
+    grid-template-areas: "header header"
+                        "Temp    Weather"
+                        "h2    Weather"
+                        "h2    Weather";
+}
+
+header {
+    grid-area: header;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid grey;
+    justify-content: space-evenly;
+    text-align: center;
+    }
+
+.Temp {
+    grid-area: Temp;
+    background-color: #a14b4b;
+}
+
+.temp {
+    color: white;
+}
+
+.Weather {
+    grid-area: Weather;
+    background-color: #a14b4b;
+}
+
+
