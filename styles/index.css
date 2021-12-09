@@ -1,0 +1,94 @@
+body {
+    background-color: rgb(62, 62, 177);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3em;
+}
+
+p {
+    font-size:1.2em;
+    color: lightblue;
+}
+
+.widget * {
+    background-color: rgb(110, 107, 107);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#temperatureChanger {
+    padding: 15px;
+}
+
+.arrowKeys * {
+    display: inline;
+}
+
+#skyChanger {
+    padding: 15px;
+}
+
+#hometownChanger {
+    padding: 15px;
+}
+
+.gardenBackground {
+    background-color: green;
+}
+
+.header * {
+    display: inline-block;
+}
+
+.subHeader {
+    display: inline-block;
+}
+
+.hide {
+    max-height: 0 !important;
+}
+
+.dropdown{
+	border: 0.1em solid black;
+	width: 10em;
+	margin-bottom: 1em;
+}
+
+.dropdown .title{
+	margin: .3em .3em .3em .3em;	
+	width: 100%;
+}
+
+.dropdown .title .weatherClass{
+	float: right;
+	margin-right: .7em;
+	transition: transform .3s;
+}
+
+.dropdown .menu{
+	transition: max-height .5s ease-out;
+	max-height: 20em;
+	overflow: hidden;
+}
+
+.dropdown .menu .option{
+	margin: .3em .3em .3em .3em;
+	margin-top: 0.3em;
+}
+
+.dropdown .menu .option:hover{
+	background: rgba(0,0,0,0.2);
+}
+
+.pointerCursor:hover{
+	cursor: pointer;
+}
+
+.rotate-90{
+	transform: rotate(90deg);
+}
