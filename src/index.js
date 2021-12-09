@@ -54,8 +54,15 @@ const changeCity = () =>{
     console.log(userInput);
     var cityGreeting = document.getElementById("cityGreeting").textContent;
     console.log(cityGreeting);
-    document.getElementById("cityGreeting").textContent ="Beautiful city of " + `${userInput}!`;
-    
+    document.getElementById("cityGreeting").textContent ="Beautiful city of " + `${userInput}!`; 
+    document.getElementById("cityName").value = "";
+}
+
+const resetCity = () =>{
+    var cityGreeting = document.getElementById("cityGreeting").textContent;
+    console.log(cityGreeting);
+    document.getElementById("cityGreeting").textContent ="Beautiful city of Nuevo San Juan Parangaricutiro!"; 
+    document.getElementById("cityName").value = "";
 }
 
 window.onload = function(){
@@ -70,5 +77,8 @@ window.onload = function(){
 
     var city_name = document.getElementById("submit_city_name");
     city_name.onclick = changeCity;
+
+    var reset_city_name = document.getElementById("reset_city_name");
+    reset_city_name.onclick = resetCity;
 }
 

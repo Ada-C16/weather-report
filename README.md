@@ -173,7 +173,7 @@ There must be at least four skies.
 
 Our solution uses the following sky options, which you may use if desired:
 
-| Option | Sky                           |
+S| Option | Sky                           |
 | ------ | ----------------------------- |
 | Sunny  | `"☁️ ☁️ ☁️ ☀️ ☁️ ☁️"`         |
 | Cloudy | `"☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️"` |
