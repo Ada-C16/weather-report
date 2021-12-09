@@ -84,3 +84,19 @@ const skySelector = document.querySelector('#sky');
 skySelector.addEventListener('change', selectSky);
 
 // City Name //
+const changeCity = () => {
+  // code to change city input
+  const cityName = document.querySelector('#city-name');
+  let cityText = cityName.value;
+  console.log(cityText);
+};
+
+const cityName = document.querySelector('#city-name');
+cityName.addEventListener('input', changeCity);
+
+// City Name Reset Button //
+const resetCity = () => {
+  document.querySelector('#city-name').value = '';
+};
+const resetButton = document.querySelector('#reset');
+resetButton.addEventListener('click', resetCity);
