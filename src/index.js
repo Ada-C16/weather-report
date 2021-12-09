@@ -56,9 +56,9 @@ const decreaseTemp = () => {
 
 // change sky image when select different sky option
 const updateSky = () => {
-  let image = 'assets/images/sky_clipart3.png';
   const sky = document.getElementById('selectSky').value;
   const skyImage = document.getElementById('skyImage');
+  let image = 'assets/images/sky_clipart3.png';
   if (sky == 'cloudy') {
     image = 'assets/images/sky_clipart3.png';
   } else if (sky == 'sunny') {
@@ -72,14 +72,37 @@ const updateSky = () => {
   skyImage.src = image;
 };
 
-// change city name
+// change image when city name change
+const updateCityImage = () => {
+  const city = document.getElementById('cityNameInput').value;
+  const cityImage = document.getElementById('cityImage');
+  let image = 'assets/images/city_clipart.jpeg';
+  if (city == 'Tacoma') {
+    image = 'assets/images/city_clipart1.png';
+  } else if (city == 'Bellevue') {
+    image = 'assets/images/city_clipart2.png';
+  } else if (city == 'Renton') {
+    image = 'assets/images/city_clipart3.png';
+  } else if (city == 'Federal Way') {
+    image = 'assets/images/city_clipart5.png';
+  } else if (city == 'Seattle') {
+    image = 'assets/images/city_clipart6.png';
+  } else {
+    image = 'assets/images/city_clipart.jpeg';
+  }
+
+  cityImage.src = image;
+};
+
+// change city name and invoking updateCityImage to change city image
 const updateCityName = () => {
   const inputName = document.getElementById('cityNameInput').value;
   const cityName = document.getElementById('cityName');
   cityName.textContent = inputName;
+  updateCityImage();
 };
 
-// reset city name to original name
+// reset city name to original name, Seattle
 const resetCityName = () => {
   const inputName = document.getElementById('cityNameInput');
   inputName.value = 'Seattle';
@@ -99,6 +122,7 @@ const registerEventHandlers = () => {
   const skySelect = document.getElementById('selectSky');
   skySelect.addEventListener('change', updateSky);
 
+  updateCityImage();
   updateCityName();
   const cityNameInput = document.getElementById('cityNameInput');
   cityNameInput.addEventListener('input', updateCityName);
