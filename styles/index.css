@@ -1,7 +1,8 @@
 
 section {
-    border-style: solid;
-    border-color: coral;
+    /* border-style: solid; */
+    /* border-color: coral; */
+    background-color: #292D3E;
     border-radius: 20px;
     padding: 10px 15px;
 }
@@ -16,7 +17,15 @@ section {
 }
 
 body {
+    background-color: #A6ACCD;
     padding: 30px 50px;
+}
+
+#title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: transparent;
+    padding: 5px;
 }
 
 #sky-display {
@@ -51,8 +60,13 @@ body {
 
 .text {
     font-family: Arial, Helvetica, sans-serif;
+    /* color: #eeffff; */
+    color: #676E95;
+    text-align: center;
 }
 
 #title-text {
-    font-size: 25pt;
+    font-size: 30pt;
+    text-align: left;
+    color: #292D3E;
 }
