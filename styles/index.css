@@ -1,0 +1,28 @@
+body {
+    background: black;
+}
+
+.temperature {
+    background: white;
+    
+}
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.yellow { 
+    color: yellow;
+}
+
+.aqua {
+    color: aqua;
+}
+
+.blue {
+    color: blue;
+}
