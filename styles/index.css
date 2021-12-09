@@ -5,7 +5,7 @@ body {
     width: 100vw;
     font-family: Arial;
     background-color: blue;
-    /* color: white; */
+    color: white;
 }
 
 #section1 {
@@ -33,6 +33,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    color: black;
 }
 
 .toggleBox {
@@ -69,12 +70,12 @@ h3 {
 }
 
 #temp {
-    /* background-color: green; */
     grid-row-start: 2;
     grid-row-end: 4;
-    /* Need to get it to be centered horizontally */
     margin-left: 3vw;
     font-size: 400%;
+    vertical-align: middle;
+    line-height: 12vh;
 }
 
 #skyBox {
@@ -83,25 +84,30 @@ h3 {
     justify-content: space-evenly;
 }
 
-select, input {
+select {
+    width: 7vw;
+    margin-left: 2vw;
+    height: 20.5pt;
+}
+
+input {
     width: 7vw;
     margin-left: 2vw;
     height: 16pt;
+    align-self: flex-end;
+    margin-bottom: 4vh;
 }
 
-#cityBox, #cityFirstHalfBox {
+#cityBox {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-}
-
-#citySecondHalfBox {
-    display: flex;
+    grid-template: 2fr 1fr / 1fr 2fr;
 }
 
 #resetButton {
     margin-left: 1vw;
     margin-bottom: 4vh;
-    height: 16pt;
+    height: 20.5pt;
+    width: 7vw;
     align-self: flex-end;
 }
 
