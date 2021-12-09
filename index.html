@@ -9,7 +9,7 @@
 </head>
 <body>
     <header id="weatherApp">
-        Weather App Name
+        The Weather Mage
     </header>
     <section>
         <h1 id="city">
@@ -21,19 +21,20 @@
         </h1>
     </section>
     <section id="weatherContainer">
+        <div id=tempControl>
+            <section id="tempDisplay" class="tempColor">70F</section>
+            <button id="tempDecrease"><</button>
+            <button id="tempIncrease">></button>
+        </div>
         <div id="weatherSky">
+            <label>How is the weather today?</label>
             <select id="changeSky">
-                <option>Today the sky looks...</option>
+                <option selected>Today the sky looks...</option>
                 <option id="clearSky">Clear as Can Be</option>
                 <option id="cloudySky">Skies of Gray</option>
                 <option id="rainySky">Drip. Drop. Drip.</option>
-                <option id="snowySky">Wanna Build a Snowman?</option>
+                <option id="coldSky">Time for Hot Cocoa!</option>
             </select>
-        </div>
-        <div id=tempControl>
-            <section id="tempDisplay" class="tempColor">70F</section>
-            <button id="tempIncrease">></button>
-            <button id="tempDecrease"><</button>
         </div>
         <div id="weatherLand"></div>
     </section>

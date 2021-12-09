@@ -42,12 +42,30 @@ const decreaseTemp = () => {
     }
 }
 
+const displayWeather = () => {
+    const weatherDisplay = document.querySelector("#weatherSky");
+    const sunnyOption = document.querySelector("#clearSky");
+    const cloudyOption = document.querySelector("#cloudySky");
+    const rainyOption = document.querySelector("#rainySky");
+    const coldOption = document.querySelector("#coldSky");
+    if (sunnyOption.selected) {
+        weatherDisplay.setAttribute("style", "background-image: url('/assets/Sun_GIF.gif')"); 
+    } else if (cloudyOption.selected) {
+        weatherDisplay.setAttribute("style", "background-image: url('/assets/Cloudy_GIF.webp')");
+    } else if (rainyOption.selected) {
+        weatherDisplay.setAttribute("style", "background-image: url('/assets/Rainy_GIF.gif')");
+    } else if (coldOption.selected) {
+        weatherDisplay.setAttribute("style", "background-image: url('/assets/Cold_GIF.gif')");
+    }
+}
 
 const registerEventHandlers = () => {
     const tempIncreaseButton = document.querySelector("#tempIncrease");
     const tempDecreaseButton = document.querySelector("#tempDecrease");
+    const weatherButton = document.querySelector("#changeSky");
     tempIncreaseButton.addEventListener("click", increaseTemp);
     tempDecreaseButton.addEventListener("click", decreaseTemp);
+    weatherButton.addEventListener("click", displayWeather)
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);

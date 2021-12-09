@@ -1,4 +1,44 @@
+#weatherContainer {
+    display:flex;
+}
+
+#weatherSky {
+    /* align-self: center; */
+    /* justify-content: center; */
+    padding:25px;
+    border-style: dotted;
+    width: 500px;
+    height: 400px
+}
+
+#weatherSky {
+    background-image: url("/assets/Plain_GIF.gif");
+}
+
+#changeSky {
+    width: 200px;
+    height:25px;
+    align-items: top;
+}
+
 #tempDisplay {
+    padding: 25px;
     background-color: orange;
-    font-display: white;
+    font-size: 75px;
+    text-align:center;
+    color: white;
+    width: 200px;
+    height: 100px
+}
+
+#weatherApp {
+    text-align: center;
+    font-size: 55px;
+    color: white;
+    font-family: fantasy;
+    font-style: italic;
+    background-color: rgb(62, 6, 77);
+}
+body {
+    background-color: rgb(165, 199, 161);
 }
