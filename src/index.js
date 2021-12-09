@@ -131,7 +131,7 @@ const registerEventHandlers = () => {
   cityInput.addEventListener('input', updateCity);
 
   resetSky();
-  setTempDisplay();
+  resetTemp();
   resetCity();
 };
 
