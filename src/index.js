@@ -4,14 +4,41 @@ const state = {
   cityName: 'Tacoma',
 }
 
-const renderTemp = (temp) => {
+// rendering
+const renderTemp = () => {
+  const { temp } = state;
   const tempElem = document.querySelector('#current-temp');
-  tempElem.className = getTempClass(temp);
+  tempElem.className = getTempClass();
   tempElem.textContent = `${temp}`;
 }
 
+const renderLandscape = () => {
+  const landscapeElem = document.querySelector('#landscape');
+  landscapeElem.textContent = getLandscapeContent();
+}
 
-const getTempClass = (temp) => {
+const renderSky = () => {
+  const skyElem = document.querySelector('#sky');
+  skyElem.textContent = getSkyContent();
+}
+
+const renderCityName = () => {
+  const { cityName } = state;
+  const nameElem = document.querySelector('#city-name');
+  nameElem.textContent = cityName;
+}
+
+const renderAll = () => {
+  renderTemp();
+  renderLandscape();
+  renderSky();
+  renderCityName();
+}
+
+
+// helper logic for rendering
+const getTempClass = () => {
+  const { temp } = state;
   if (temp >= 80) {
     return 'hot';
   } else if (temp >= 70) {
@@ -25,12 +52,8 @@ const getTempClass = (temp) => {
   }
 }
 
-const renderLandscape = (temp) => {
-  const landscapeElem = document.querySelector('#landscape');
-  landscapeElem.textContent = getLandscapeContent(temp);
-}
-
-const getLandscapeContent = (temp) => {
+const getLandscapeContent = () => {
+  const { temp } = state;
   if (temp >= 80) {
     return '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
   } else if (temp >= 70) {
@@ -44,24 +67,9 @@ const getLandscapeContent = (temp) => {
   }
 }
 
-const increaseTemp = () => {
-  state.temp++;
-  renderTemp(state.temp);
-  renderLandscape(state.temp);
-}
-
-const decreaseTemp = () => {
-  state.temp--;
-  renderTemp(state.temp);
-  renderLandscape(state.temp);
-}
-
-const renderSky = (sky) => {
-  const skyElem = document.querySelector('#sky');
-  skyElem.textContent = getSkyContent(sky);
-}
-
-const getSkyContent = (sky) => {
+const getSkyContent = () => {
+  const { sky } = state;
+  console.log(sky);
   switch (sky) {
     case 'sunny':
       return '☁️ ☁️ ☁️ ☀️ ☁️ ☁️';
@@ -74,33 +82,39 @@ const getSkyContent = (sky) => {
   }
 }
 
-const changeSky = (e) => {
-  state.sky = e.target.value;
-  renderSky(state.sky);
+// logic for event listeners
+
+const increaseTemp = () => {
+  state.temp++;
+  renderTemp();
+  renderLandscape();
 }
 
-const renderCityName = (cityName) => {
-  const nameElem = document.querySelector('#city-name');
-  nameElem.textContent = cityName;
+const decreaseTemp = () => {
+  state.temp--;
+  renderTemp();
+  renderLandscape();
+}
+
+const changeSky = (e) => {
+  state.sky = e.target.value;
+  renderSky();
 }
 
 const changeCityName = (e) => {
   state.cityName = e.target.value;
-  renderCityName(state.cityName);
+  renderCityName();
 }
 
 const resetCityName = () => {
   state.cityName = 'Tacoma';
-  renderCityName(state.cityName);
   document.querySelector('#change-name').value = state.cityName;
+  renderCityName();
 }
 
-const startUp = () => {
-  renderTemp(state.temp);
-  renderLandscape(state.temp);
-  renderSky(state.sky);
-  renderCityName(state.cityName);
+// startup logic
 
+const registerEventHandlers = () => {
   const increaseTempBtn = document.querySelector('#increase-temp');
   increaseTempBtn.addEventListener('click', increaseTemp);
 
@@ -115,6 +129,11 @@ const startUp = () => {
 
   const resetCityNameBtn = document.querySelector('#reset-name');
   resetCityNameBtn.addEventListener('click', resetCityName);
+}
+
+const startUp = () => {
+  renderAll();
+  registerEventHandlers();
 }
 
 document.addEventListener('DOMContentLoaded', startUp);
