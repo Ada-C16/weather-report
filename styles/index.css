@@ -97,6 +97,9 @@ footer {
     margin-top: 10%;
 }
 
+
+
+
 form button[type="button"]{
     background-color: #f0ebd8; 
     font-size: 80%;
@@ -133,10 +136,10 @@ form label, span{
     grid-column-start:2;
     grid-column-end:3;
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 3;
     margin-left: 10%;
     border-radius: 15px;;
-    height: 50%;
+    height: 90%;
     width: 120%
 }
 
@@ -147,5 +150,49 @@ form label, span{
     background-color:#f0ebd8;
     border-radius: 15px;
     height: 90%;
-
 }
+
+
+.inner-grid-garden{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+.inner-grid-land{
+    align-self: end;
+    width: 100%;
+    font-size:400%;
+    margin-right: 10%;
+    margin-bottom: 0%;
+}
+
+inner-grid-sky{
+    align-self: start;
+    width: 100%;
+    font-size:400%;
+    margin-right: 10%;
+    margin-bottom: 0%;
+}
+
+
+.red-text{
+    color: #bf4044; 
+}
+
+.orange-text{
+    color: #bf9240;
+}
+.yellow-text{
+    color: #d3e21d;
+}
+.green-text{
+    color:#4fb085;
+}
+.white-text{
+    color:#ecf9ff;
+}
+
+
+
