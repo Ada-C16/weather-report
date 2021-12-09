@@ -5,7 +5,7 @@
 // make an input city name display on the page
 
 const state = {
-  clickCount: 0,
+  clickCount: 50,
 };
 
 const increaseClickCount = () => {
