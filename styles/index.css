@@ -1,18 +1,18 @@
-body {
+wrapper {
     width: 100vw;
     min-height: 100vh;
     margin: 0;
     padding: 0;
   }
 
-body {
+wrapper {
     display: grid;
     grid-template-rows: 55px auto 50px 50px;
     grid-template-columns: minmax(200px, 3fr) 4fr;
-    grid-template-areas: "header header"
-                        "Temp    Weather"
-                        "h2    Weather"
-                        "h2    Weather";
+    grid-template-areas: "header b"
+                        "h2    b"
+                        "h2    b"
+                        "a    b";
 }
 
 header {
@@ -24,7 +24,7 @@ header {
     }
 
 .Temp {
-    grid-area: Temp;
+    grid-area: a;
     background-color: #a14b4b;
 }
 
@@ -33,7 +33,7 @@ header {
 }
 
 .Weather {
-    grid-area: Weather;
+    grid-area: b;
     background-color: #a14b4b;
 }
 

@@ -18,6 +18,13 @@ const tempchanger = (temp) => {
 
 }
 
+// Sky change function
+const skyChanger = (sky) => {
+  if (skySelect === "cloudy") {
+    document.getElementById("skyEmoji").innerHTML = "sunny";
+  }
+}
+
 
 // Up Temp
 const uptemp = (event) => {
@@ -40,14 +47,13 @@ const downtemp = (event) => {
     tempData = tempchanger(state.tempCount)
     div.style.color = tempData[0]
     temp.textContent = `${state.tempCount}`
-    document.getElementById("wetherEmoji").innerHTML = tempData[1];;
+    document.getElementById("wetherEmoji").innerHTML = tempData[1];
   };
 
 // change skyline
 const skylinechange = (event) => {
-  state.tempCount -= 1;
-  const sky = document.querySelector("#sky")
-  if (sky == sunny) {
+  const skySelect = document.querySelector("#skyOptions").value;
+  if (skySelect === "cloudy") {
     document.getElementById("skyEmoji").innerHTML = "sunny";
   }
 };
@@ -61,7 +67,7 @@ const skylinechange = (event) => {
     const tempdownbutton = document.querySelector("#tempDown");
     tempdownbutton.addEventListener("click", downtemp);
 
-    const weatheroptions = document.querySelector("#sky");
+    const weatheroptions = document.querySelector("#skyOptions");
     weatheroptions.addEventListener("change", skylinechange);
   };
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
