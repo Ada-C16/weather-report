@@ -5,29 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="/styles/index.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Weather Report</h1>
-        <span>for</span>
-        <span class="cityName"></span>
-        <section class="cityNameBox">
-            <h2>Change City</h2>
-            <input type="text" value = "Terre Haute">
-            <button>Reset</button> 
-        </section>
-    </header>
-    <section class="tempLandscape">
+    <h1>Weather Report</h1>
+    <span class="cityName"></span>
+    <section class="box" id="cityNameBox">
+        <h2 id="changeCity">Change City</h2>
+        <input type="text" value = "Terre Haute">
+        <button>Reset</button> 
     </section>
-    <section class="skyPicture">
+    
+    <section class="picture" id="tempLandscape">
     </section>
-    <section class="tempBox">
-        <h2>Temperature</h2>
+    <section class="picture" id="skyPicture">
+    </section>
+    <section class="tempBox box">
+        <h2 id="tempHeading">Temperature</h2>
         <span id="temp">75 &#8457;</span>
-        <span id="increseTemp">&#8593;</span>
-        <span id="decreseTemp">&#8595;</span>
+        <span class="changeTemp" id="increaseTemp">&#8593;</span>
+        <span class="changeTemp" id="decreaseTemp">&#8595;</span>
     </section>
-    <section class="skyBox">
+    <section class="skyBox box">
         <h2>Sky</h2>
         <select>
             <option>Sunny</option>

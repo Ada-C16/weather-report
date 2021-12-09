@@ -1,0 +1,153 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template: 6em 4em 28em 10em / 50% 50%;
+    background-color: black;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+}
+
+h1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    font-size: 45pt;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0px;
+    color:white;
+}
+
+h2 {
+    text-align: center;
+}
+
+header {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2; 
+}
+
+input {
+    border-radius: 6px;
+    width: 165px;
+    margin-left: 8px;
+}
+
+select {
+    display: block;
+    margin: auto;
+    padding: 2px;
+    border-radius: 6px;
+    color: white;
+    background-color: black;
+    border: black;
+}
+
+.box {
+    border-radius: 6px;
+    width: 225px;
+    height: 125px;
+    margin: auto;
+}
+
+.changeTemp {
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 14pt;
+    font-weight: 800;
+}
+
+.cityName {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    font-size: 18pt;
+    text-align: center;
+    color: white;
+}
+
+.cityName::before {
+    content: "for";
+}
+
+.picture {
+    border-radius: 6px;
+    border: white 2px solid;
+    height: 25em;
+    width: 25em;
+    margin: auto;
+    grid-row: 3 / 4;
+}
+
+.skyBox {
+    grid-column: 2 / 3;
+    background-color: lightskyblue;
+}
+
+.tempBox {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5; 
+    background-color: lightskyblue; 
+    display: grid;
+    grid-template: 44% 28% 28% / 5fr 2fr;
+}
+
+#changeCity {
+    margin: 5px;
+}
+
+#cityNameBox {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: lightskyblue;
+    height: 70px;
+    width: 250px;
+    margin-right: 20px;
+    margin-left: auto;
+    padding-top: 0pt;
+}
+
+#decreaseTemp {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+#increaseTemp {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#skyPicture {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+#temp {
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+    text-align: center;
+    font-size: 36px;
+    padding-top: 6px;
+}
+
+#tempHeading {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+#tempLandscape {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
