@@ -46,7 +46,7 @@ cursor:pointer;
 }
 
 #temp, #sky, #city-name {
-    height:10vh;
+    height:20vh;
     width:30vw;
     background-color: white;
     margin-bottom: 15px;
@@ -63,6 +63,39 @@ cursor:pointer;
 
 #city {
     margin-top:15px;
-   
+}
+#buttons {
+    display: flex;
+    flex-direction:column;
+}
+#up-arrow, #down-arrow{
+    width:2vw;
+    background-color: Transparent;
+    border: none; 
+    cursor:pointer; 
+}
+#button-tempvalue {
+    display:flex;    
+}
+
+#temp-value{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.red {
+    color: red;
+}
+.orange {
+    color:orange;
+}
+.yellow {
+    color:yellow;
+}
+.green {
+    color: green;
+}
+.teal {
+    color: teal;
 }
 
