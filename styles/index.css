@@ -1,9 +1,7 @@
 body {
-    /* font-family: "Lucida Console", "Courier New", monospace; */
-    font-family: "Comic Sans MS", "Comic Sans", "cursive";
+    font-family: "Lucida Console", "Courier New", monospace;
 
-    /* background-image: linear-gradient(to top, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); */
-    background-image: linear-gradient(to bottom, #64b3f4 0%, #c2e59c 100%);
+    background-image: linear-gradient(to top, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
     margin: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -29,9 +27,7 @@ body {
 .city-box {
     border-radius: 8px;
     padding: 2rem;
-    /* background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%); */
-    /* background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%); */
-    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
     border: 2px solid rgb(104, 100, 100);
     text-align: center;
 }
@@ -133,18 +129,19 @@ body {
 
 .cloudy {
     background: none;
-    background-image: url("../assets/blue-sky-sun-and-white-clouds.jpg");
+    background-image: url("../assets/sun-cloud.gif");
     border-radius: 50%;
-    /* max-width: 80%; */
+    max-width: 80%;
     background-size: cover;
 }
 
 .raining {
     background: none;
     /* background-image: url("raining-cloud.jpg"); */
-    background-image: url('../assets/raining-clouds.gif');
+    background-image: url('../assets/rain-cloud.gif');
+    align-items: center;
     border-radius: 50%;
-    max-width: 80%;
+    max-width: 70%;
     background-size: cover;
 }
 
@@ -152,43 +149,43 @@ body {
     background: none;
     background-image: url("../assets/snowing.gif");
     align-items: center;
-    border-radius: 10%;
+    border-radius: 50%;
     grid-column: span 3;
 }
 
 .sunshine {
     background: none;
-    /* background-image: url("blue-sky-sun-and-white-clouds.jpg"); */
-    background-image: url("../assets/bouncing-sun.gif");
+    background-image: url("../assets/sun-waving.gif");
     align-items: center;
     border-radius: 50%;
-    max-width: 80%;
+    max-width: 60%;
     background-size: cover;
 }
 
 .autumn {
     background: none;
     /* background-image: url('autumn-scene.jpg'); */
-    background-image: url('../assets/autumn-trees.jpg');
+    background-image: url('../assets/autumn_scene.gif');
 }
 
 .desert {
     background: none;
     background-image: url('../assets/desert-cactus.jpg');
     align-items: center;
+    border-radius: 50%;
     background-size: cover;
 }
 
 .garden-summer {
     background: none;
-    background-image: url("../assets/spring-grass-with-flowers.png");
+    background-image: url("../assets/spring-flowers.gif");
     align-items: center;
     background-size: cover;
 }
 
 .snowfield {
     background: none;
-    background-image: url("../assets/winter-snow.jpg");
+    background-image: url("../assets/snow.gif");
     align-items: center;
 }
 
