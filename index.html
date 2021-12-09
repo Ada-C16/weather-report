@@ -15,21 +15,41 @@
   <link href="styles/index.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <!-- div will be our container -->
+    <!-- div main-container will be our container -->
   <div class="main-container">
     <header>
       <h1 class="logo">Weather Report</h1>
       <h3 class="sub"> For the lovely city of [city name]</h3>
     </header>
     <main>
-      <section class="left-section">Temperature
-        <br>
+      <section class="left-section">
+        <h3>Temperature</h3>
         <button id="up-arrow">⬆️</button>
         <br>
         <button id="down-arrow">⬇️ </button>
+        <div id="temperature">70</div>
       </section>
-      <div id="temperature">70</div>
-      <section class="weather-garden">Weather Garden</section>
+      <section> 
+        <h3>Sky</h3>   
+        <select name="sky" id="sky">
+          <option value="sunny">Sunny</option>
+          <option value="cloudy">Cloudy</option>
+          <option value="rainy">Rainy</option>
+          <option value="snowy">Snowy</option>
+        </select>
+        <div>
+          <h3 class="city-container">City Name</h3>
+            <input placeholder="City name"/>
+
+        </div>
+      </section>  
+      <section class="weather-garden">
+        <h2>Weather Garden</h2>
+        <div id="sky-emojis">🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧</div>
+        <br>
+        <div id="ground-emojis">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</div>
+      </section>
+      
     </main>
     <footer>©Lizet Tovar</footer>
   </div>

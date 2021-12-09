@@ -25,7 +25,7 @@ header .sub {
 }
 
 main {
-    background-color: rgba(180, 166, 241, 0.5);
+    /* background-color: rgba(180, 166, 241, 0.5); */
     display: grid;
     justify-content: space-between; 
     grid-template-columns: 50%;
@@ -35,18 +35,37 @@ main {
         "main section.image-section"
 }
 main section.left-section {
-    background-color: rgba(0,0,0,.1);
+    background-color: rgba(221, 12, 12, 0.1);
     /* grid-area: left; */
 }
 main section.weather-garden {
-    background-color: rgba(0,0,0,.1);
+    background-color: rgba(120, 230, 18, 0.678);
 }
 
 main #temperature {
-    color: rgb(172, 12, 12);
+    /* color: rgb(172, 12, 12); */
     font-weight: bold;
 }
 
 footer {
     background-color: rgb(240, 240, 147);
 }
+
+.red {
+    color:red;
+}
+
+.orange {
+    color: orange;
+}
+.yellow {
+    color: yellow;
+}
+.green {
+    color: green;
+}
+.blue {
+    color: teal;
+}
+
+
