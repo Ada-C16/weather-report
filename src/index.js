@@ -2,7 +2,7 @@ const state = {
     temperature: 72
 };
 
-//add helper functions to change temperature color
+// change temperature color
 const colorTempDisplay = () => {
     if (state.temperature > 79) {
         document.querySelector('#temperature-display').style.color = "#f07178";
@@ -18,7 +18,7 @@ const colorTempDisplay = () => {
 }
 
 
-//increase temp event handler
+// increase temp event handler
 const increaseTemp = () => {
     //increment temperature
     ++state.temperature;
@@ -27,7 +27,7 @@ const increaseTemp = () => {
     console.log("temperature is now:", state.temperature);
 }
 
-//decrease temp event handler
+// decrease temp event handler
 const decreaseTemp = () => {
     //increment temperature
     --state.temperature;
