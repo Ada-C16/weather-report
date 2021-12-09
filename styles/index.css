@@ -1,5 +1,5 @@
 
-section {
+.card {
     /* border-style: solid; */
     /* border-color: coral; */
     background-color: #292D3E;
@@ -25,7 +25,7 @@ body {
     grid-column: 1/2;
     grid-row: 1/2;
     background-color: transparent;
-    padding: 5px;
+    padding: 0px;
 }
 
 #sky-display {
@@ -67,6 +67,30 @@ body {
 
 #title-text {
     font-size: 30pt;
+    font-style: italic;
     text-align: left;
     color: #292D3E;
+}
+
+.inner-card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-color: #c792ea;
+    border-style: solid;
+}
+
+#temperature-title {
+    font-size: 25pt;
+    border-color: #c3e88d;
+    border-style: solid;
+}
+
+#temperature-display {
+    border-color: #c3e88d;
+    border-style: solid;
+    font-size: 45pt;
+    font-;
 }
