@@ -13,9 +13,9 @@
             <h1> Today's darn<br> report</h>
         </section>
         <section class="city-name">
-            <p> for the city of:</p>
+            <p id="city"> for the city of:</p>
         </section>
-        <section class="input">
+        <section class="input-container">
             <div class = "temp">
                 <div class = "up-down">
                     <button id ="up"><img src= "assets/chevron-up.png"></button>
@@ -42,10 +42,12 @@
 
         </section>
         <section class="refresh">
-            <button class="button-refresh"> reset button <img src= "assets/arrow.png"></button> 
+            <button id="button-refresh"> change city</button> 
         </section>
         <section class="display">
             <p> display</p>
+            <div id="skyState"> sky </div>
+            <div id="landscape"> landscape</div>
         </section>
     </main>
     <script src="src/index.js" type="text/javascript"></script>
