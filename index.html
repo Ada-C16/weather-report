@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;300;900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">  
+    <script src="src/landscapes.js"></script>  
     <title>Weather Report</title>
 </head>
 <body>
     <header>
-        <h1>Weather Report</h1>
+        <h1 class="header-text">Weather Report</h1>
     </header>
 
     <section>
@@ -20,25 +21,70 @@
             <div class="sidebar-container">
                 <div class="sidebar-obj">
                     <h2>Temperature</h2>
+                    <button_area>
+                        <button id="up">
+                            ⬆️ temp up
+                        </button>
+                        <button id="down">
+                            temp down ⬇️ 
+                        </button>
+                        <button id="fahrenheit">
+                            °F
+                        </button>
+                        <button id="celsius">
+                            °C
+                        </button>
+                        <div id="temperature">
+                            <temp id="tempNum">74</temp><temp id="tempType">℉</temp>
+                        </div>
+                    </button_area>
                 </div>
+
+
                 <div class="sidebar-obj">
-                    <h2>Sky</h2>  
+                    <h2>Sky</h2>
+                    <form>
+                        <select name="Sky" id="wallpaper" size="7">
+                        <option value="sunrise">Sunrise</option>
+                        <option value="bluesky">Blue Sky</option>
+                        <option value="clouds">Clouds</option>
+                        <option value="overcast">Overcase</option>
+                        <option value="sunset">Sunset</option>
+                        <option value="starrynight">Starry Night</option>
+                        <option value="rainbow">Rainbow</option>
+                        <option value="kittens">MEOW!</option>
+                        </select><br>
+                        <input id="sky_submit" type="submit" value="try me :-)" />
+                    </form>
                 </div>
+
+
                 <div class="sidebar-obj">
                     <h2>City Name</h2>
+                    <city_input>
+                    <form action="#something-here">
+                        <input type="text" name="city" id="city" placeholder="City Name">
+                        <input type="submit" value="Submit" />
+                    </city_input>
                 </div>
 
             </div>
         </sidebar>
         <information>
             <div class="information-container">
-                <div class="information-obj">
+                <div class="information-title">
                     <h2>Weather Garden</h2>
+                </div>
+                <div class="information-obj">
+                    <sky id="sky"></sky>
+                    <plants id="plants"></plants>
+                    <ground id="ground"></ground>
                 </div>
             </div>
         </information>
-    </section>
+    
 
+    </section>
     <footer>
         <p>Copyright &copy; 2020</p>
     </footer>
