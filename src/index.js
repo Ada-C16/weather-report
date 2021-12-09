@@ -89,6 +89,12 @@ const changeCityName = (e) => {
   renderCityName(state.cityName);
 }
 
+const resetCityName = () => {
+  state.cityName = 'Tacoma';
+  renderCityName(state.cityName);
+  document.querySelector('#change-name').value = state.cityName;
+}
+
 const startUp = () => {
   renderTemp(state.temp);
   renderLandscape(state.temp);
@@ -106,6 +112,9 @@ const startUp = () => {
 
   const cityNameInp = document.querySelector('#change-name');
   cityNameInp.addEventListener('input', changeCityName);
+
+  const resetCityNameBtn = document.querySelector('#reset-name');
+  resetCityNameBtn.addEventListener('click', resetCityName);
 }
 
 document.addEventListener('DOMContentLoaded', startUp);
