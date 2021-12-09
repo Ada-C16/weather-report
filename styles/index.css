@@ -130,7 +130,18 @@ select {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
+#city-div {
+    display: inline;
+    text-align: center;;
+}
+
 #city-input {
     display: block;
     font-size: 18pt;
+    display: inline;
+    text-align: center;;
 }
+/* 
+#city-reset {
+
+} */

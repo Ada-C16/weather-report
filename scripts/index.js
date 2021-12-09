@@ -72,8 +72,17 @@ const changeClouds = () => {
 };
 
 // CITY DISPLAY
-const cityElement = document.getElementById('city-input');
-console.log(cityElement);
+const input = document.getElementById('city-input');
+
+const changeCity = () => {
+  const cityHeader = document.getElementById('city-header');
+  cityHeader.textContent = input.value;
+};
+
+const resetCity = () => {
+  input.value = 'Welcome to Okaytown!';
+  changeCity();
+};
 
 // REGISTER EVENTLISTENER
 
@@ -85,6 +94,10 @@ const registerEventHandlers = (event) => {
   downTempButton.addEventListener('click', () => downTempFunc());
 
   skySelect.addEventListener('change', () => changeClouds());
+  input.addEventListener('change', () => changeCity());
+
+  // const resetButton = document.getElementById('city-reset');
+  // resetButton.addEventListener('click', resetCity());
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
