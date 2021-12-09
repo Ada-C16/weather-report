@@ -1,13 +1,16 @@
 var tempLower = document.getElementById('lower_temp');
 var tempHigher = document.getElementById('higher_temp');
-const tempConst = document.getElementById('temp_const');
+var tempConst = document.getElementById('temp_const').innerHTML;
+console.log(tempConst);
 
-tempLower.addEventListener('click', (tempConst) => {
-  tempConstText = tempConst.toString();
-  tempConst.textContent = tempConstText;
+tempLower.addEventListener('click', () => {
+  tempConst = parseInt(tempConst) - 1;
+  document.getElementById('temp_const').innerHTML = tempConst;
+  // tempConst.style.color = 'blue';
 });
 tempHigher.addEventListener('click', () => {
-  alert('Youve increased the temperature');
+  tempConst = parseInt(tempConst) + 1;
+  document.getElementById('temp_const').innerHTML = tempConst;
 });
 
 // if (tempLower) {
@@ -42,6 +45,8 @@ tempHigher.addEventListener('click', () => {
 //   }
 // }
 
+/////
+
 // Wave 3: Selecting the Sky
 const selectElement = document.querySelector('#sky');
 
@@ -57,3 +62,18 @@ selectElement.addEventListener('change', (event) => {
     result.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
   }
 });
+
+// ...... //
+// Wave 4: Naming the City
+
+// const addCityName = () => {
+//   const newCity = document.createElement('span');
+//   const city_result = document.querySelector('#city_result');
+//   newCity.textContent = '🦀';
+//   city_result.appendChild(newCity);
+// };
+
+// const registerEventHandlers = () => {
+//   const submitButton = document.querySelector('#cityButton');
+//   submitButton.addEventListener('click', addCityName);
+// };
