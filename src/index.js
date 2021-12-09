@@ -34,12 +34,30 @@ const decreaseTemp = () => {
     updateTemp(currentTemp);
 };
 
+const updateCity = () => {
+    const inputCity = document.getElementById("inputCity").value;
+    const headerCity = document.getElementById("headerCity");
+    headerCity.textContent = inputCity;
+};
+
+const resetCity = () => {
+    const cityNameInput = document.getElementById("inputCity");
+    cityNameInput.value = "yr lover's hometown";
+    updateCity();
+};
+
 const registerEventHandlers = () => {
     const increaseTempButton = document.getElementById("increase-temp");
     increaseTempButton.addEventListener("click", increaseTemp);
 
     const decreaseTempButton = document.getElementById("decrease-temp");
     decreaseTempButton.addEventListener("click", decreaseTemp);
+
+    const inputCity = document.getElementById("inputCity");
+    inputCity.addEventListener("input", updateCity);
+
+    const resetCityButton = document.getElementById("reset");
+    resetCityButton.addEventListener("click", resetCity);
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
