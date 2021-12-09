@@ -5,7 +5,8 @@ const landscape = document.querySelector('#landscape');
 const selectedSky = document.querySelector('#skyEmojis');
 const gardenBackground = document.querySelector('#weatherGardenContainer');
 const inputCity = document.querySelector('#inputCity');
-const displayCity = document.getElementById('#cityNameDisplay');
+const displayCity = document.getElementById('cityNameDisplay');
+const resetButton = document.getElementById('resetCity');
 const state = {
   tempNumber: 80,
   skyState: ' ☁️ ☁️ ☀️ ☁️ ☁️ ☀️ ☀️ ☀️ ☁️ ☀️',
@@ -46,7 +47,15 @@ const changeTheme = () => {
   }
 };
 
+//City name reset button
+
 const updateCity = (event) => {
+  displayCity.textContent = event.target.value;
+};
+
+//reset City
+const resetCity = (event) => {
+  event.target.value = 'Seattle';
   displayCity.textContent = event.target.value;
 };
 
@@ -62,6 +71,9 @@ const registerEventHandlers = () => {
 
   //City input
   inputCity.addEventListener('change', updateCity);
+
+  //reset city
+  resetButton.addEventListener('click', resetCity);
 
   //wave 3: onchangehandler
   const skyDropdown = document.querySelector('.sky');
