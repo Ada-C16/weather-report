@@ -45,6 +45,9 @@ section:nth-of-type(3){
 .freezing{
     color: blue;
 }
+.really-cold{
+    color: lightblue;
+}
 .cold{
     color: green;
 }
@@ -56,6 +59,19 @@ section:nth-of-type(3){
 }
 .scorching{
     color: red;
+}
+
+.sunny{
+    background-color: lightcyan;
+}
+.cloudy{
+    background-color: silver;
+}
+.rainy{
+    background-color:lightsteelblue;
+}
+.snowy{
+    background-color: whitesmoke;
 }
 
 
