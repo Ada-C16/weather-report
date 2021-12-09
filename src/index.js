@@ -33,6 +33,14 @@ const increaseTempF = () => {
   updateTempF();
 };
 
+const decreaseTempF = () => {
+  const tempFContainer = document.querySelector('#tempFContainer');
+  const tempFSpan = document.createElement('span');
+  tempFContainer.appendChild(tempFSpan);
+  state.tempF -= 1;
+  updateTempF();
+};
+
 // Celsius
 const increaseTempC = () => {
   const tempCContainer = document.querySelector('#tempCContainer');
@@ -42,9 +50,19 @@ const increaseTempC = () => {
   updateTempC();
 };
 
+const decreaseTempC = () => {
+  const tempCContainer = document.querySelector('#tempCContainer');
+  const tempCSpan = document.createElement('span');
+  tempCContainer.appendChild(tempCSpan);
+  state.tempC -= 1;
+  updateTempC();
+};
+
 // Register that function as an 'event listener'.
 increaseTempFButton.addEventListener('click', increaseTempF);
+decreaseTempFButton.addEventListener('click', decreaseTempF);
 increaseTempCButton.addEventListener('click', increaseTempC);
+decreaseTempCButton.addEventListener('click', decreaseTempC);
 
 // can also pass in an annonymous function instead of a named on in the eventListener.
 // TempFElement.addEventListener('click', () => {
