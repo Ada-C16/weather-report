@@ -106,7 +106,7 @@ const updateCityName = () => {
 // reset city name to original name, Seattle
 const resetCityName = () => {
   const inputName = document.getElementById('cityNameInput');
-  inputName.value = 'Seattle';
+  inputName.value = '';
   updateCityName();
 };
 
