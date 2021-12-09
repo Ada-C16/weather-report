@@ -11,12 +11,47 @@
     <header>
         <section class="header-cover" id="top">
             <h1 class="title"> Kristin's Weather Report</h1>
-            <h3 class="subtitle">For the lovely city of</h3>
+            <span id="subtitle">For the lovely city of city_name</span>
         </section>
     </header>
+    <main>
+        <section id="temperatureContainer">
+            <h2 id="temperatureTitle">Temperature</h2>
+            <h2 id="temperatureDegree"></h2>
+            <button id="tempButtonUp"><i class="arrow up"></i></button></br>
+            <button id="tempButtonDown"><i class="arrow down"></i></button>
+
+        </section>
+
+        <section id="cityNameContainer">
+            <h2>City Name</h2>
+        </section>
+
+        <section id="skyContainer">
+            <h2>Sky</h2>
+            <label for="sky-select">Select a sky:</label>
+            <select name="sky" id="sky-select">
+                <option value="">--Please choose an option--</option>
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="rainy">Rainy</option>
+                <option value="Snowy">Snowy</option>
+                
+            </select>
+        </section>
+
+        <section id="weatherGardenContainer">
+            <h2>Weather Garden</h2>
+            <span id="sky"></span>
+            <span id="landscape"></span>
+        </section>
+    </main>
     
     <footer>
-
+        <div class="footer">
+            <p>Copyright 2021 Kristin Lee. All rights reserved.</p>
+          </div>
     </footer>
+    <script src="src/index.js"></script>
 </body>
 </html>
