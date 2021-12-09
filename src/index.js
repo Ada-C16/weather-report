@@ -2,8 +2,10 @@ const tempNum = document.getElementById('tempNum');
 tempNum.textContent = 90;
 
 const resetCityName = () => {
+  const cityName = document.getElementById('headerCityName');
   const resetButton = document.getElementById('inputCityName');
   resetButton.value = '';
+  cityName.textContent = 'Chewandswallow';
 };
 const increaseTemp = () => {
   // sets tempNum as object, finds it using ElementById
