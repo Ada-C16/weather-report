@@ -28,24 +28,20 @@ tempElement.appendChild(tempNum);
 const upTempFunc = () => {
   state.temp = state.temp + 1;
   document.getElementById('temp-text').innerHTML = state.temp;
-
-  displayFlowers(state.temp);
+  changeFlowers();
 };
 
 // SUBTRACT
 const downTempFunc = () => {
   state.temp = state.temp - 1;
   document.getElementById('temp-text').innerHTML = state.temp;
+  changeFlowers();
 };
 
-// REGISTER EVENT HANDLER
-
 // WEATHER GARDEN
-
 const changeFlowerGarden = document.getElementById('garden-flowers');
 
 const changeFlowers = () => {
-  console.log(state.temp);
   if (state.temp < 59) {
     changeFlowerGarden.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
   } else if (state.temp <= 69) {
@@ -56,36 +52,29 @@ const changeFlowers = () => {
     changeFlowerGarden.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
   }
 };
-changeFlowerGarden.addEventListener('ADD EVENT NAME', () => changeFlowers());
 
 // SKY DISPLAY
 
-const skyElement = document.getElementById('sky');
+const skySelect = document.getElementById('skySelection');
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-const changeSky = () => {
-  document.getElementById('myDropdown').classList.toggle('show');
-};
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function (event) {
-  if (!event.target.matches('.dropbtn')) {
-    let dropdowns = document.getElementsByClassName('dropdown-content');
-    let i;
-    for (i = 0; i < dropdowns.length; i++) {
-      let openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
+const changeClouds = () => {
+  const gardenClouds = document.getElementById('garden-clouds');
+  const skySelectValue = skySelect.value;
+  if (skySelectValue === 'Sunny') {
+    gardenClouds.textContent = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️';
+  } else if (state.temp === 'Cloudy') {
+    gardenClouds.textContent = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
+  } else if (state.temp === 'Rainy') {
+    gardenClouds.textContent = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
+  } else {
+    gardenClouds.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
   }
 };
 
 // CITY DISPLAY
 const cityElement = document.getElementById('city');
 
-// Need to add this for eventListener
+// REGISTER EVENTLISTENER
 
 const registerEventHandlers = (event) => {
   const addTempButton = document.getElementById('temp-up');
@@ -93,6 +82,8 @@ const registerEventHandlers = (event) => {
 
   const downTempButton = document.getElementById('temp-down');
   downTempButton.addEventListener('click', () => downTempFunc());
+
+  skySelect.addEventListener('change', () => changeClouds());
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);

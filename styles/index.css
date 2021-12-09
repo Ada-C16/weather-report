@@ -110,27 +110,19 @@ Hot number color: #EA0009 */
 }
 
 
-.dropbtn {
-    background-color: lightskyblue;
-    color: black;
-    padding: 10px;
-    border: none;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: rgb(27, 168, 255);
-}
-
-.dropdown {
-    display: inline-block;
-    text-align: center;
+select {
+    font-size: .9rem;
+    padding: 2px 5px;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-    display: none;
+    display: inline-block;
+    text-align: center;
     background-color: lightskyblue;
     z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Change color of dropdown links on hover */
