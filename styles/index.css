@@ -36,7 +36,7 @@ main {
 }
 main section.left-section {
     background-color: rgba(221, 12, 12, 0.1);
-    /* grid-area: left; */
+    /* grid-area: right; */
 }
 main section.weather-garden {
     background-color: rgba(120, 230, 18, 0.678);

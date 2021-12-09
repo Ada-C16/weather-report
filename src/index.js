@@ -7,6 +7,8 @@ const temp = {
 const garden = document.querySelector('#ground-emojis')
 
 
+
+
 // behaviour of temp toggles
 const increaseTemp = () => {
   temp.tempByDegree += 1;
@@ -27,7 +29,17 @@ const decreaseTemp = () => {
 // behaviour of selecting sky dropdown
 const selectSky = () => {
   const skySelector = document.querySelector('#sky')
-  console.log(skySelector.value)
+  const skyEmojis = document.querySelector('#sky-emojis')
+  // console.log(skySelector.value)
+  if (skySelector.value === "cloudy") {
+    skyEmojis.innerHTML = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️"
+  } else if (skySelector.value === "rainy") {
+    skyEmojis.innerHTML = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧"
+  } else if (skySelector.value ==="sunny"){
+    skyEmojis.innerHTML = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️"
+  } else if (skySelector.value === "snowy") {
+    skyEmojis.innerHTML = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨"
+  }
 }
 
 // behaviour of temperature changes
@@ -51,8 +63,17 @@ const changeTempColor = () => {
     garden.innerHTML = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"
 }
   return color
-
 }
+
+// behaviour of sky changes
+// const changeSky = () => {
+//   let sky = ''
+//   if (skySelector === "cloudy") {
+//     skyEmojis.innerHTML = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️"
+//   } else if (skySelector === "rainy") {
+//     skyEmojis.innerHTML = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧"
+//   }
+// }
 
 // event handler for temperature toggle
 const registerEventHandlers = () => {
@@ -61,10 +82,10 @@ const registerEventHandlers = () => {
 
   const downButton = document.querySelector('#down-arrow');
   downButton.addEventListener('click', decreaseTemp);
-};
 
   const skySelector  = document.querySelector('#sky');
   skySelector.addEventListener('change', selectSky);
+};
 
 
 registerEventHandlers();
