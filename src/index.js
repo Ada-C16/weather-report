@@ -59,9 +59,18 @@ selectElement.addEventListener('change', (event) => {
 
 const cityButton = document.getElementById('city');
 const cityName = document.getElementById('page-title').innerHTML;
+cityButton.addEventListener('keyup', function (event) {
+  if (event.key === 'Enter') {
+    document.getElementById(
+      'page-title'
+    ).innerHTML = `Weather Report - 🌟 ${cityButton.value} 🌟`;
+  }
+});
 
-cityButton.addEventListener('click', () => {
-  document.getElementById(
-    'page-title'
-  ).innerHTML = `Weather Report - 🌟 ${cityButton.value} 🌟`;
+// Wave 5: Resetting the City Name
+
+resetButton.addEventListener('click', () => {
+  document.getElementById('page-title').innerHTML =
+    'Weather Report - 🌟 Sharjah 🌟';
+  cityButton.value = '';
 });
