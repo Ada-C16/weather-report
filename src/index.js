@@ -49,6 +49,14 @@ const currentSky = () => {
     }
 }
 
+const changeCity = () =>{
+    var userInput = document.getElementById("cityName").value;
+    console.log(userInput);
+    var cityGreeting = document.getElementById("cityGreeting").textContent;
+    console.log(cityGreeting);
+    document.getElementById("cityGreeting").textContent ="Beautiful city of " + `${userInput}!`;
+    
+}
 
 window.onload = function(){
     var up_btn = document.getElementById("weather-up");
@@ -59,5 +67,8 @@ window.onload = function(){
 
     var selector_pick= document.getElementById("skyselector");
     selector_pick.addEventListener('change', currentSky);
+
+    var city_name = document.getElementById("submit_city_name");
+    city_name.onclick = changeCity;
 }
 

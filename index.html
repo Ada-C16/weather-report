@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="styles/index.css" />
         <h1>Weather</h1>
         <h1>Report</h1>
-        <span class="city-header-welcome"><h3>Beautiful city of Squirrelnonia!</h3> </span>
+        <span class="city-header-welcome" ><h3 id="cityGreeting">Beautiful city of Nuevo San Juan Parangaricutiro!</h3></span>
+        <input id="cityName" placeholder="City Name"></input>
+        <button class="submit_btn" id="submit_city_name">Submit</button>
     </header>
 
     <div id="sky-temperature-container">
@@ -25,12 +27,12 @@
                 <button  class="up-button" id="weather-up">⬆️</button>
                 <button  class="down-button" id="weather-down">⬇️</button>
                 </div>
-                <input class="temperature-digit" id="temperature" value="35" readonly></input></div>
-
+                <input class="temperature-digit" id="temperature" value="35" readonly></input><h4>C°</h4></div>
         </section>
     
     <section class="sky-selection-section">
         <h2>SKY</h2>
+        
         <select id="skyselector" >
             <option value="">select option</option>
             <option value="sunny">Sunny</option>
