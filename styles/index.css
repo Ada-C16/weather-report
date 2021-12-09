@@ -11,6 +11,7 @@ h1, h3 {
 
 header {
     background-color: deepskyblue;
+    text-align: center;
 }
 
 body {
@@ -30,26 +31,6 @@ body {
     grid-gap: 10px;
     margin-bottom: 2em;
     column-count: 3;
-}
-
-.arrow {
-    border: solid rgb(174, 255, 174);
-    border-width: 0 7px 7px 0;
-    display: inline-block;
-    padding: 15px;
-}
-
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-.up {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-}
-
-.row {
-    display: flex;
 }
 
 .column {

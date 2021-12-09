@@ -1,26 +1,14 @@
 let count = 80;
 
-// const landscape = document.getElementById("landscape");
-// let landscape_text = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
-// landscape.textContent = landscape
-
-// const sky = document.getElementById("sky");
-// let sky_text = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+// const state = {
+//     count = 80,
+//     landscape = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"
+// }
 
 const increaseTemp = document.getElementById("increaseTemp");
 const decreaseTemp = document.getElementById("decreaseTemp");
 const counter = document.getElementById("count");
 counter.innerHTML = count;
-
-increaseTemp.addEventListener("click", function() {
-    counter.innerHTML = ++count;
-});
-
-decreaseTemp.addEventListener("click", function() {
-    counter.innerHTML = --count;
-});
-
-
 
 // const temp = document.getElementById('temp');
 // function increaseTemp() {
@@ -33,28 +21,12 @@ decreaseTemp.addEventListener("click", function() {
 //     currentTemp--;
 // }
 
-function changeColor(newColor) {
-    const elem = document.getElementById("count");
-    elem.style.color = newColor
-    // elem.style.backgroundColor = newColor
-}
+// function changeColor(newColor) {
+//     const elem = document.getElementById("count");
+//     elem.style.color = newColor
+//     // elem.style.backgroundColor = newColor
+// }
 
-function updateColorAndLandscapeByTemp(count) {
-        if (count >= 80) {
-            // count.color = 'red';
-            changeColor('red');
-            landscape_text = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
-        }
-        else if (count >= 79) {
-            // count.style.color = 'orange';
-            changeColor('orange');
-            landscape_text = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
-        }
-    }
-
-// function changeEmoji(emoji) {
-//     const elem = document.getElementById("landscape");
-//     elem.style.text
 // }
 // function updateColorAndLandscapeByTemp(updatedTemp) {
 //     switch(updatedTemp){
@@ -85,6 +57,8 @@ function updateColorAndLandscapeByTemp(count) {
 //     }
 // }
 
+// const sky = document.getElementById("sky");
+// let sky_text = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
 // const sky = document.querySelector('#sky');
 // const updateSkyEmoji = (updatedSky) => {
 //     switch(updatedSky) {
@@ -105,12 +79,13 @@ function updateColorAndLandscapeByTemp(count) {
 //     }
 // }
 
-// const updateCity = (updatedCity) => {
-//     const cityName = document.querySelector('#city');
-//     cityName.textContent = updatedCity.target.value;
-// }
+increaseTemp.addEventListener("click", function() {
+    counter.innerHTML = ++count;
+});
 
-
+decreaseTemp.addEventListener("click", function() {
+    counter.innerHTML = --count;
+});
 
 const updateCity = () => {
     const cityInput = document.getElementById("cityInput").value;
