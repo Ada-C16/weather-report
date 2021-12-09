@@ -59,7 +59,7 @@ const changeSky = (event) => {
 };
 
 // Event handler for changing the plants and produce based on temperature
-// as well as updating the color the the temperature text element
+// as well as updating the color of the temperature text element
 const changeElementsBasedOnTempNumber = () => {
   const plantContainer = document.getElementById('plant-container');
   const produceContainer = document.getElementById('produce-container');
