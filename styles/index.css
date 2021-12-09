@@ -24,7 +24,7 @@ label {
   margin-right: 40px;
 }
 
-.pickerWindow {
+.buttonWindow {
   text-align: center;
   font-family: Bebas;
   font-size: 1.5rem;
@@ -32,4 +32,47 @@ label {
   padding-right: 10px;
   color: #eba487;
   display: inline-flex;
+}
+
+/* Temperature Colors */
+.blue {
+  color: blue;
+}
+
+.green {
+  color: darkgreen;
+}
+
+.orange {
+  color: orange;
+}
+
+.red {
+  color: orangered;
+}
+
+.yellow {
+  color: gold;
+}
+
+.salmon {
+  color: #eba487;
+}
+
+/* Landscape Colors */
+
+.lightgreen {
+  color: rgb(93, 155, 174);
+}
+
+.lightblue {
+  color: lightblue;
+}
+
+.cadetblue {
+  color: cadetblue;
+}
+
+.lightgrey {
+  color: lightslategrey;
 }
