@@ -6,23 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link href="styles/index.css" rel="stylesheet">
 </head>
 <body class="container">
     <section class="heading">
-        <h1>Weather Report For</h1>
+        <h1>🌸 Weather Report For 🌸 </h1>
         <h2 id= "cityDisplay">New York</h2>
     </section>
 
     <section class="tempDefault border border-dark">
-        <h2>Temperature</h2>
+        <h2 class= "tempHeading">Temperature <i class="bi bi-thermometer"></i></h2>
         <h2 id= "currentTemp">60°F</h2>
         <button id= "decrease">-</button>
         <button id= "increase">+</button>
     </section>
 
     <section class="skyLevel border border-primary">
-        <h2>Sky</h2>
+        <h2>Sky <i class="bi bi-sun"></i></h2>
         <select class= "skyChoice" name="skyChoice">
             <option value="sunny">Sunny</option>
             <option value="cloudy">Cloudy</option>
@@ -33,7 +34,7 @@
     </section>
 
     <section class="citySelect border border-success">
-        <h2>Which city?</h2>
+        <h2>Location <i class="bi bi-search"></i></h2>
         <label for="city">City</label>
         <form id = "cityForm">
         <input value= "New York" name="city">
@@ -41,7 +42,7 @@
         </form>
     </section>
 
-    <section class="weatherLandscape">
+    <section class="weatherLandscape border border-warning">
         <h2>Weather Landscape</h2>
         <p id= "landscape">🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃</p>
     </section>
