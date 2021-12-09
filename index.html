@@ -8,22 +8,22 @@
     <link href="styles/index.css" rel="stylesheet">
 </head>
 <body >
-    <main id="main_cover">
+    <main id="mainCover">
         <header class="col-12 " >
-            <div>
-                <h1>Weather Report </h1>
-                    <p class="col-12 center_columns">For the lovely city of ✨
+            <div >
+                <h1 id="headers">Weather Report </h1>
+                    <p id="lovelyCity"class="col-12 center_columns headersText">For the lovely city of ✨
                     <span id="cityLog">  </span></p>
             </div>
         </header>
         <div class="">
             <div class="col-4 " style="width:500px;">
-                <select id="selectSky" class="box">
-                    <option value="0">Today is:</option>
-                    <option value="1">Sunny</option>
-                    <option value="2">Rainy</option>
-                    <option value="3">Cloudy</option>
-                    <option value="4">Snowing</option>
+                <select id="selectSky" class="box ">
+                    <option value="0">Today the Sky is:</option>
+                    <option value="sunny">Sunny</option>
+                    <option value="rainy">Rainy</option>
+                    <option value="cloudy">Cloudy</option>
+                    <option value="snow">Snowing</option>
                 </select>
             </div>
             <!-- <div class=" item col-3 city-input"><label style="color:white">City:</label>
@@ -32,24 +32,24 @@
             </div> -->
         </div >
         <section >
-            <div class="col-3 city-input"><label style="color:white">City:</label>
-                <input type="text" placeholder="Seattle" id="inputCity" required minlength="4" maxlength="15" size="20">
+            <div class="col-3 city-input "><label style="color:white">City:</label>
+                <input type="text" placeholder="Enter a City" name="name" id="inputCity" required minlength="4" maxlength="15" size="20">
                 <button onclick="document.getElementById('inputCity').value = ''">clear</button>
             </div>
             
         </section>    
-        <section class= "container" id="tempDisplay"  >
-            <div class="item sunnyMode " > 
+        <section class= "container"   >
+            <div class="item sunnyMode formatBoxes" id="tempDisplay" > 
             <!-- <span id="tempAdjustUp" style="font-size: 3rem;" > 🔼  </span> -->
                 <button id="tempAdjustUp" class="changeTempButton"  onclick="increment()"> 🔼  </button>
                 <span id="currentTemp" class="tempText">&deg; </span>
                 <button id="tempAdjustLow" class="changeTempButton" onclick="decrement()"> 🔽 </button>
                 <!-- <span id="landScape"> </span> -->
             </div>
-            <div class="item garden">
-                <span >
-                    <h4 >`"☁️ ☁️ ☁️ ☀️ ☁️ ☁️"`</h4>
-                    <h5>`"🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷"`</h5>
+            <div class="item garden formatBoxes">
+                <span >Weather Garden 
+                    <h4 id="sky" ></h4>
+                    <h5 id="land"></h5>
                 </span>
             </div>  
         </section>

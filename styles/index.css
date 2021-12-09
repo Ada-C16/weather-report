@@ -23,12 +23,23 @@
     vertical-align: middle;
 }
 .tempText{
-    color: black;
+    color: gray;
+}
+.headersText{
+    color: white;
+    font-size: 3rem;
+}
+.headersText h1{
+    color: white;
+
+}
+.formatBoxes{
+    border-radius: 20px ;
 }
 .textRed{
     color: red;
 }
-#main_cover{
+#mainCover{
     /* width: 100%; */
     /* background-image: url("/assets/sky.jpeg"); */
     background: linear-gradient(to bottom, rgb(9, 47, 73),rgb(32, 108, 158),
@@ -79,7 +90,7 @@ p {
     display: flex;
     /* vertical-align: top; */
     height: 5em;
-    background-color: white;
+    background-color:transparent;
     /* margin-left: 25%; */
     margin-top: 5%;
     
@@ -126,35 +137,38 @@ p {
     
 }
 
-/* #tempDisplay{
-    position:relative;
-    left:15%;
+.noClass{
+    display: flex;
+    /* vertical-align: baseline;
+    position: relative; */
+    margin-left: 15%;
+    width: 5.5em;
     height: 5em;
     padding: 2rem;
     text-align:center;
     font-size: 5rem;
     clear: both;
-    background-image: url(../assets/landscapes/sunny.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: white;
     align-content: center;
     border-top: 3px solid #424242;
     box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
-} */
+}
 .item{
     margin-left:20%;
     float:left;
     
 }
 .rainyMode{
-    position:relative;
-    /* left:10%; */
+    display: flex;
+    margin-left: 15%;
+    width: 5.5em;
     height: 5em;
     padding: 2rem;
     text-align:center;
     font-size: 5rem;
     clear: both;
-    background-image: url(../assets/landscapes/imagen.jpeg);
+    /* background-color: blue; */
+    background-image: url(../assets/landscapes/rainy.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     align-content: center;
@@ -163,12 +177,13 @@ p {
 }
 .sunnyMode{
     display: flex;
-    /* vertical-align:baseline; */
-    /* position:relative; */
-    margin-left: 15%;
+    /* vertical-align: baseline;
+    position: relative; */
+    margin-left: 14.5%;
     width: 5.5em;
     height: 5em;
-    padding: 2rem;
+    padding-left: 3rem;
+    padding-top: 2em;
     text-align:center;
     font-size: 5rem;
     clear: both;
@@ -180,14 +195,15 @@ p {
     box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
 }
 .snowyMode{
-    position:relative;
-    left:15%;
+    display: flex;
+    margin-left: 15%;
+    width: 5.5em;
     height: 5em;
     padding: 2rem;
     text-align:center;
     font-size: 5rem;
     clear: both;
-    background-image: url(../assets/landscapes/imagen.jpeg);
+    background-image: url(../assets/landscapes/snow.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     align-content: center;
@@ -195,14 +211,15 @@ p {
     box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
 }
 .cloudyMode{
-    position:relative;
-    left:15%;
+    display: flex;
+    margin-left: 15%;
+    width: 5.5em;
     height: 5em;
     padding: 2rem;
     text-align:center;
     font-size: 5rem;
     clear: both;
-    background-image: url(../assets/landscapes/imagen.jpeg);
+    background-image: url(../assets/landscapes/cloudy.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     align-content: center;

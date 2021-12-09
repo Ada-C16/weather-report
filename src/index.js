@@ -1,152 +1,121 @@
 let initTemp = 71;
 const city = 'Seattle';
 
-document.getElementById('currentTemp').innerHTML = initTemp;
+document.getElementById('currentTemp').innerHTML = `${initTemp}&deg;`;
 
 cityValue = document.getElementById('inputCity').value = city;
 document.getElementById('cityLog').innerHTML = `${cityValue}✨`;
-// const cityUserInput = () => {
-//   newCityValue = document.getElementById('inputCity').value;
-//   if (newCityValue != cityValue) {
-//     document.getElementById('city1').innerHTML = `${newcityValue}✨`;
-//   }
-// };
 
-const input = document.querySelector('inputCity');
-
-console.log(log);
-
-input.addEventListener('input', updateValue);
+const input = document.getElementById('inputCity').value;
+console.log(input);
 
 function updateValue(e) {
+  console.log(e);
   const log = document.getElementById('cityLog');
-  log.innerHTML = `${e.input.value}✨`;
+  log.innerHTML = `${e.target.value}✨`;
 }
 
-// cityValue.addEventListener('type', cityUserInput);
-
-// document.getElementById('selectSky').onchange = function () {
-//   alert(this.value);
-// };
-
-// const state = {
-//   currentTemp: (document.getElementById('currentTemp').innerHTML = initTemp),
-// };
-
-// document.getElementById('currentTemp';
-
-// const changeTemp = () => {
-//   console.log('hello');
-//   var tempToChange = document.getElementById('currentTemp').innerHTML;
-//   console.log(tempToChange);
-//   let increment = tempToChange;
-//   console.log(increment);
-//   ++increment;
-//   console.log(increment);
-//   document.getElementById('currentTemp').innerHTML = increment;
-// };
-
-//printing default value of data that is 0 in h2 tag
 document.getElementById('currentTemp').innerHTML = `${initTemp}&deg;`;
-
 //creation of increment function
 function increment() {
   initTemp += 1;
   document.getElementById('currentTemp').innerHTML = `${initTemp}&deg;`;
+  tempColor(initTemp);
 }
 //creation of decrement function
 function decrement() {
   initTemp -= 1;
   document.getElementById('currentTemp').innerHTML = `${initTemp}&deg;`;
+  tempColor(initTemp);
 }
 
-const tempTextColor = () => {
-  const tempToColor = document.getElementById('currentTemp').innerHTML;
-  console.log(tempToColor);
-  if (tempToColor >= 80) {
-    document.getElementById('currentTemp').classList.toggle('textRed');
+function tempColor() {
+  if (initTemp >= 80) {
+    document.getElementById('currentTemp').style.color = '#EA0009';
+    document.getElementById('land').textContent = `"🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"`;
+  } else if (initTemp > 69 && initTemp < 80) {
+    document.getElementById('currentTemp').style.color = '#F0940A';
+    document.getElementById('land').textContent = `"🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷"`;
+  } else if (initTemp > 59 && initTemp < 70) {
+    document.getElementById('currentTemp').style.color = '#F4D10A';
+    document.getElementById('land').textContent = `"🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃"`;
+  } else if (initTemp > 49 && initTemp < 60) {
+    document.getElementById('currentTemp').style.color = '#1F7001';
+    document.getElementById(
+      'land'
+    ).textContent = `"🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲"`;
+  } else {
+    document.getElementById('currentTemp').style.color = '#256D6C';
+    document.getElementById(
+      'land'
+    ).textContent = `"🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲"`;
+  }
+}
+
+// // Function for changing color of temp text
+// const tempTextColor = () => {
+//   const tempToColor = document.getElementById('currentTemp').innerHTML;
+//   console.log(tempToColor);
+// };
+
+// const tempValue = document.getElementById('currentTemp').innerHTML;
+// console.log(tempValue);
+
+const changeSky = () => {
+  console.log('hello');
+  const changeDisplay = document.getElementById('tempDisplay');
+  const changeBackground = document.getElementById('mainCover');
+  const changeHeaders = document.getElementById('headers');
+  const changeCity = document.getElementById('lovelyCity');
+  const changeName = document.getElementById('cityLog');
+  console.log(changeDisplay);
+  console.log(changeBackground);
+  const selector = document.getElementById('selectSky');
+  const choice = selector.value;
+  console.log(choice);
+  currentClass = changeDisplay.classList;
+  if (choice === 'sunny') {
+    changeDisplay.style.backgroundImage =
+      "url('./assets/landscapes/" + choice + ".jpeg')";
+    changeBackground.style.background = '#D6FFFF';
+    changeHeaders.style.color = 'gray';
+    changeCity.style.color = 'gray';
+    changeName.style.color = 'gray';
+    document.getElementById('sky').textContent = `"☁️ ☁️ ☁️ ☀️ ☁️ ☁️"`;
+  } else if (choice === 'rainy') {
+    changeDisplay.style.backgroundImage =
+      "url('./assets/landscapes/" + choice + ".jpeg')";
+    changeBackground.style.background = '#9FCFE0';
+    changeHeaders.style.color = 'white';
+    changeCity.style.color = 'white';
+    changeName.style.color = 'white';
+    document.getElementById('sky').textContent = `"🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧"`;
+  } else if (choice === 'cloudy') {
+    changeDisplay.style.backgroundImage =
+      "url('./assets/landscapes/" + choice + ".jpeg')";
+    changeBackground.style.background = '#C9C9C9';
+    changeHeaders.style.color = 'white';
+    changeCity.style.color = 'white';
+    changeName.style.color = 'white';
+    document.getElementById('sky').textContent = `"☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️"`;
+  } else if (choice === 'snow') {
+    changeDisplay.style.backgroundImage =
+      "url('./assets/landscapes/" + choice + ".jpeg')";
+    changeBackground.style.background = '#A1B6D6';
+    changeHeaders.style.color = 'white';
+    changeCity.style.color = 'white';
+    changeName.style.color = 'white';
+    document.getElementById('sky').textContent = `"🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨"`;
+    console.log(changeDisplay);
   }
 };
-
-// const changeSky = () => {
-//   console.log('hello');
-//   const changeDisplay = document.querySelector('#tempDisplay');
-//   console.log(changeDisplay);
-//   changeDisplay.classList.toggle('rainyMode');
-// };
-
-const selectSky = document.querySelector('#selectSky');
-const backGround = document.querySelector('#tempDisplay');
-console.log(backGround.classList);
-
-selectSky.addEventListener('change', setSky);
-
-function setSky() {
-  const choice = selectSky.value;
-  console.log(choice);
-  if (choice === 1) {
-    backGround.classList.toggle('sunnyMode');
-  } else if (choice === 2) {
-    backGround.classList(2).toggle('rainyMode');
-  } else if (choice === 4) {
-    backGround.classList.toggle('snowyMode');
-  } else {
-    backGround.classList.toggle('CloudyMode');
-  }
-}
-
-// const changeTempDown = () => {
-//   state.currentTemp += 1;
-//   var tempToChange = document.getElementById('currentTemp').innerHTML;
-//   tempToChange = state.currentTemp;
-// let decrease = ;
-// --decrease;
-// console.log(decrease);
-// document.getElementById('currentTemp').innerHTML = decrease;
-// };
 
 const registerEventHandlers = () => {
-  // const changeSky = document.querySelector('#select-sky');
-  // changeSky.addEventListener('change', changeTheme);
-  // const textColor = document.querySelector('#currentTemp');
-  // textColor.addEventListener('value', tempTextColor);
-  // const selectSky = document.querySelector('#selectSky');
-  // const BackGround = document.querySelector('#tempDisplay');
-  // selectSky.addEventListener('change', setSky);
-  // const tempUp = document.getElementById('tempAdjustUp');
-  // tempUp.addEventListener('click', increment);
-  // const tempLow = document.getElementById('tempAdjustLow');
-  // tempLow.addEventListener('click', changeTempDown);
-};
-// const changeTemp = () => {
-//   const tempToChange = document.getElementById('#currentTemp');
-//   consol
-//   const tempValue = tempToChange.innerHTML;
-//   console.log(tempValue);
-//   ++tempValue;
-//   console.log(tempvalue);
-//   document.getElementById('#currentTemp').innerHTML = tempValue;
-// };
+  const input = document.getElementById('inputCity');
+  input.addEventListener('input', updateValue);
 
-// const registerEventHandlers = () => {
-//   const tempUp = document.getElementById('#tempAdjustUp');
-//   tempUp.addEventListener('click', changeTemp);
-// };
+  const selectSky = document.getElementById('selectSky');
+  selectSky.addEventListener('change', changeSky);
+};
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
-
-// onst tempUp = document.getElementById('currentTemp').value;
-//   document.getElementById('current-temp').innerHTML = inputTempVariable
-
-// document.getElementById('tempAdjustHigh').onclick;
-// document.getElementById('');
-
-// const setTemp()=>{
-//   let
-//   initTemp=initTemp
-// }
-
-const resetCity = () => {
-  let inputCityVariable = document.getElementById('input-city').value;
-  document.getElementById('seattleCity').innerHTML = inputCityVariable;
-};
