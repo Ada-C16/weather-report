@@ -1,3 +1,33 @@
+body {
+    background-color: #324DF7;
+}
+
+button {
+    border-radius: 10px;
+}
+
+header {
+    display: flex;
+    align-items: baseline;
+}
+
+
+section {
+    background-color: #FFFFFF;
+    height: 300px;
+    width: 300px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+
+#sky-background {
+    background-color: #C9C9C9;
+    width: 280px;
+    height: 50px;
+}
+
+
 #temp {
     color: #F0940A;
 }
