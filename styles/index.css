@@ -41,6 +41,10 @@ p {
   cursor: pointer;
 }
 
+#garden-image {
+  font-size: x-large;
+}
+
 #header-title {
   width: 900px;
 }
@@ -53,6 +57,10 @@ p {
   padding: 5px 10px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+#sky-image {
+  font-size: x-large;
 }
 
 #temp-value {
