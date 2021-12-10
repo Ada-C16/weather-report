@@ -12,17 +12,19 @@ const colors = (clicks, text) => {
   } else if (clicks < 59) {
     text.style.color = 'green';
   } else if (clicks < 69) {
-    text.style.color = 'yellow';
+    text.style.color = 'pink';
   } else if (clicks < 79) {
-    text.style.color = 'pink';
+    text.style.color = 'orange';
   } else {
-    text.style.color = 'pink';
+    text.style.color = 'red';
   }
 };
 
 const landscape = (clicks, container) => {
-  if (clicks < 59) {
+  if (clicks < 50) {
     container.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+  } else if (clicks < 59) {
+    container.textContent = '🍁🍃🍂🍁🍃🍂🍁🍃🍂🍁🍃🦙';
   } else if (clicks < 69) {
     container.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
   } else if (clicks < 79) {
