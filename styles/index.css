@@ -86,11 +86,13 @@ h2 {
 
 .box3 {
     background-color: rgb(105, 161, 124);
-    height: 28vh;
+    height: 22vh;
     border-radius: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 2rem;
     
 }
 
@@ -142,6 +144,23 @@ button {
     padding-left: .5rem;
     }
 
+input {
+    margin-top: 10px;
+    width: 90%;
+}
+
+#reset {
+    width: 30%;
+    height: 50px;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+#reset:hover {
+    color: black;
+    background: ghostwhite;
+}
+
 .degree{
     color:#fff;
     position:absolute;
@@ -174,6 +193,15 @@ button {
     color: teal;
 }
 
+/* garden box */
+.all-garden {
+    font-size: 30px;
+}
+
+#plants {
+    margin-top: 190px;
+}
+
 .cloudy {
     background-image: url(cloudy.jpeg);
     background-size: cover;
@@ -194,7 +222,19 @@ button {
 }
 
 /* dropdown */
+#sky-select {
+    width: 7rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    border-radius: 5px;
+    margin-top: 10px;
+}
 
+input:focus, select:focus {
+    box-shadow: none;
+    outline: none;
+    }
 
 /* city name */
 
