@@ -1,0 +1,55 @@
+body {
+    color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    background: rgb(150,254,255);
+    background: linear-gradient(0deg, whitesmoke 0%, rgba(75,157,255,1) 100%);
+}
+
+.wholeThing{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 1500px;
+    margin: 0 auto;
+}
+
+.red {
+    color: red;
+}
+
+.orange {
+color: orange;
+}
+
+.yellow {
+color: gold;
+}
+
+.blue {
+color: blue;
+}
+
+.green {
+color: green;
+}
+
+.teal {
+color: teal;
+}
+
+.cloudy {
+background-color: lightgrey;
+}
+
+.sunny {
+background-color: rgb(221, 255, 255);
+}
+
+.rainy {
+background-color: lightblue;
+}
+
+.snowy {
+background-color: lightsteelblue;
+}
