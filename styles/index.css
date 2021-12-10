@@ -7,12 +7,50 @@ body{
 }
 
 #landscapeDisplay{
-    border-radius: 3%;
-    border-color: mediumpurple;
-    /* background: magenta; */
+    background: lightskyblue;
     margin: auto;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     height: 325px;
     width: 570px;
     align-items: center;
+    font-size: xx-large;
 }
+#landmark{
+    position:absolute;
+}
+
+#lax_plane{
+    width: 500px;
+}
+
+#mickey{
+    height:250px;
+}
+
+#angelyne{
+    width:200px;
+}
+
+#muscle_beach{
+    height: 320px;
+}
+
+#cloud{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:absolute;
+    opacity: .6;
+}
+
+#sunny_cloud, #stormy_cloud{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#windy_cloud {
+    width: 100%; 
+}
+

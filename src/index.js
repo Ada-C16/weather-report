@@ -69,6 +69,8 @@ const niceDayMouseleaveEffect = (event) => {
     console.log("mouseover?");
 };
 
+
+
 // add live video
 const replaceWithLiveSantaMonica = (event) => {
     const landscapeContainer = document.getElementById("landscapeDisplay");
