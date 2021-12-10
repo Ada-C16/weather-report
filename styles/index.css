@@ -58,9 +58,15 @@ body, html {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-size: x-large;
+}
+
+.sky div {
+    font-size: 75px;
 }
 
 #garden {
     width: 100%;
     text-align: center;
+    font-size: 75px;
 }
