@@ -27,9 +27,9 @@
             <div class="container">
                 <!-- adding button and heading to show the digits -->
                 <!-- increment() and decrement() functions on button click-->
-                <button id = "minus_button">-</button>
+                <button id = "minus-button">-</button>
                 <h2 id="counting"></h2>
-                <button id = "plus_button">+</button>
+                <button id = "plus-button">+</button>
             </div>
         </h1>
     </header>
@@ -46,18 +46,28 @@
                     <a href="#">Snowy</a>
                 </div>
             </h2>
-        </h1>
+            
+            <!-- <select id="skySelection" class="dropdown-content">
+                <option>--Please choose an option--</option>
+                <option>Sunny</option>
+                <option>Cloudy</option>
+                <option>Rainy</option>
+                <option>Snowy</option>
+            </select> -->
+
     </header>
 
     <header class = current-temp-box>
         <h1>And the Garden Looks Like:
-            <ul>
-                <li>🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧</li>
-                <li id ="ground"></li>
+            <ul id=weather-garden-display>
+                <li id = "sky">sky</li>
+                <li id ="ground">Flowers
+                </li>
+            </ul>
         </h1>
     </header>
 
-    <script type= "text/javascript" src = "../src/index.js"></script>
+    <script type= "text/javascript" src = "scripts/index.js"></script>
     </script>
     
 </body>
