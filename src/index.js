@@ -5,6 +5,26 @@
 // When user clicks on "down" 
     // --> Temperature decreases by 1 degree.
     // --> Will also "change" the landscape
+const state = {
+    tempDegrees: parseInt(document.getElementById('temperature').textContent)
+}
+
+function increaseTemp() {
+    let tempSpan = document.getElementById('temperature');
+    const upButton = document.getElementById('up');
+    upButton.addEventListener('click', (event) => {
+        state.tempDegrees += 1;
+        tempSpan.textContent = `${state.tempDegrees}`;
+    });
+}
+function decreaseTemp() {
+    let tempSpan = document.getElementById('temperature');
+    const downButton = document.getElementById('down');
+    downButton.addEventListener('click', (event) => {
+        state.tempDegrees -= 1;
+        tempSpan.textContent = `${state.tempDegrees}`;
+    });
+}
 
 
 // OUTSIDE CONDITION
@@ -17,10 +37,18 @@
     // Pressing the reset button will change the name of the city to the default value
 
 function modifyCity() {
-    const city = document.getElementById('city');
-    city.addEventListener('keyup', (event) => {
-        document.getElementById('h1').textContent = `${event.target.value}`;
+    const h1 = document.getElementById('h1')
+    const cityText = document.getElementById('city-text');
+    cityText.addEventListener('keyup', (event) => {
+        h1.textContent = `${event.target.value}`;
+    });
+
+    const cityButton = document.getElementById('city-button');
+    cityButton.addEventListener('click', (event) => {
+        h1.textContent = 'Bay Area';
     });
 }
 
 document.addEventListener("DOMContentLoaded", modifyCity);
+document.addEventListener("DOMContentLoaded", increaseTemp);
+document.addEventListener("DOMContentLoaded", decreaseTemp);
