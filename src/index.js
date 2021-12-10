@@ -15,6 +15,21 @@ const decreaseTempCount = () => {
   tempCountContainer.textContent = state.tempCount;
 };
 
+const updateTempColor = (temperature) => {
+  const tempCountContainer = document.getElementById('tempValue');
+  let color = 'teal';
+  if (temperature >= 80) {
+    color = 'red';
+  } else if (temperature >= 70) {
+    color = 'orange';
+  } else if (temperature >= 60) {
+    color = 'yellow';
+  } else if (temperature >= 50) {
+    color = 'green';
+  }
+  tempCountContainer.classList = color;
+};
+
 const updateSeason = () => {
   const inputSeason = document.getElementById('seasonSelect').value;
   const seasonContainer = document.getElementById('season');
@@ -39,6 +54,9 @@ const updateSeason = () => {
 };
 
 const registerEventHandlers = () => {
+  const temperature = document.getElementsByClassName('orange');
+  temperature.addEventListener('click', updateTempColor);
+
   const increase = document.getElementById('clickIncrease');
   increase.addEventListener('click', increaseTempCount);
 
