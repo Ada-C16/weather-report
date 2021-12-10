@@ -13,7 +13,7 @@ let temp = 70;
 const tempColors = () => {
     if (temp >= 80){
         tempDisplay.className = "red"
-    } else if (temp<80 && temp>=70){
+    } else if (temp < 80 && temp >= 70){
         tempDisplay.className = "orange"
     }else if (temp<70 && temp>=60){
         tempDisplay.className = "yellow"
@@ -27,7 +27,7 @@ const tempColors = () => {
 const tempLand = () => {
     if (temp >= 80){
         landscape.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"
-    } else if (temp<80 && temp>=70){
+    } else if (temp < 80 && temp >= 70){
         landscape.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷"
     }else if (temp<70 && temp>=60){
         landscape.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃"
@@ -35,8 +35,6 @@ const tempLand = () => {
         landscape.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲"
     }
 };
-
-
 
 const increaseTemp = () => {
     temp += 1
@@ -52,39 +50,34 @@ const decreaseTemp = () => {
     tempLand();
 };
 
-const displayCountry = (event) => {
-    event.className = "visible"
-};
+
 
 // ***** Sky Variables *****
-
-
 
 const changeSky = () => {
     const skyDropdown = document.querySelector("#sky-dropdown").value;
     const skyGarden = document.querySelector("#sky-garden")
-    if (skyDropdown==="Sunny"){
-        skyGarden.textContent="☀️ ☀️ ☀️ ☀️ ☀️ ☀️ ☀️"
-    } else if (skyDropdown==="Cloudy"){
+    if (skyDropdown === "Sunny"){
+        skyGarden.textContent = "☀️ ☀️ ☀️ ☀️ ☀️ ☀️ ☀️"
+    } else if (skyDropdown === "Cloudy"){
         skyGarden.textContent = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️"
-    }else if (skyDropdown==="Rainy"){
+    }else if (skyDropdown === "Rainy"){
         skyGarden.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧"
-    }else if (skyDropdown==="Snowy"){
+    }else if (skyDropdown === "Snowy"){
         skyGarden.textContent = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨"
     }
 };
 
-// ***** City Name Function *****
+// ***** City Name and Reset Function *****
+
 const cityHeader = document.querySelector("#city-header");
 
 const cityChange = () =>{
-    
     const cityInputValue = document.querySelector("#city-input").value;
     cityHeader.textContent = cityInputValue;
     
 };
 
-// ***** Reset Variables *****
 const reset= () =>{
     cityHeader.textContent = "Catalina Island";
     document.querySelector("#city-input").value = "Catalina Island"
@@ -94,14 +87,15 @@ const reset= () =>{
 
 // ***** Event Handlers *****
 const registerEventHandlers = () => {
-    // const incTemp = document.querySelector("#increase-temp");
-    // const decTemp = document.querySelector("#increase-temp");
     incTemp.addEventListener("click", increaseTemp);
     decTemp.addEventListener("click", decreaseTemp);
+
     const skyDrop = document.querySelector("#sky-dropdown");
     skyDrop.addEventListener("change", changeSky);
+
     const cityInput = document.querySelector("#city-input");
     cityInput.addEventListener("input", cityChange);
+
     const resetButton = document.querySelector("#city-reset")
     resetButton.addEventListener("click", reset);
     

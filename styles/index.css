@@ -34,7 +34,7 @@
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template: 25% auto 20% / 1fr 3fr;
+    grid-template: 25% 55% auto / 1fr 2fr 1fr;
   }
   
 header {
@@ -44,7 +44,11 @@ header {
     font-size: large;
     font-weight: bold;
     padding: 4px;
-  }
+}
+
+#city-header{
+    font-size: x-large;
+}
   
 .temp-container {
     text-align: center;
@@ -63,14 +67,15 @@ header {
     background-color:cornflowerblue;
     text-align: left;
     font-size: large;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 50px;
+    padding-left: 15px;
   }
   
 .garden-container {
     text-align: center;
     background-color: #67b19d;
-    padding: 45px;
+    padding-top: 20px;
+    padding-bottom: 35px;
     font-size: xx-large;
   }
 
@@ -81,11 +86,27 @@ header {
 
 .city-name-container {
     background-color: #e8ecae;
-    padding-top: 10px;
+    text-align: center;
+    padding-top: 5px;
     padding-left: 10px;
+    padding-bottom: 15px;
+
   }
-  .reset {
+#city-input{
+    font-size: 17px;
+}
+
+.reset {
     background-color: #f59055;
     padding-top: 10px;
     padding-left: 10px;
   }
+
+button{
+      font-size: 17px;
+}
+
+select{
+    font-size: 20px;
+}
+
