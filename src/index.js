@@ -39,6 +39,7 @@ const changeTempColor = (event) => {
     landscape.textContent = '🌲🌲_🌲🍂__🌲🍁🌲_🌲🍂🌲';
   } else {
     temp.className = 'blue';
+    landscape.textContent = '❄️🌨🥶__❄️❄️_🥶🌨❄️';
   }
 };
 
