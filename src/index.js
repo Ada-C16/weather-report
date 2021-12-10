@@ -10,14 +10,16 @@ const updateTemperature = (currentTemp) => {
     landscape = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
   } else if (currentTemp >= 70) {
     tempValue.className = 'orange';
-    ('🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷');
+    landscape = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
   } else if (currentTemp >= 60) {
     tempValue.className = 'yellow';
-    ('🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃');
+    landscape = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
   } else if (currentTemp >= 50) {
     tempValue.className = 'green';
+    landscape = '🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲';
   } else if (currentTemp >= 40) {
     tempValue.className = 'teal';
+    landscape = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
   }
   landscapeContainer.textContent = landscape;
 };
@@ -84,9 +86,6 @@ const registerEventHandlers = () => {
 
   const cityNameReset = document.querySelector('#resetCityName');
   cityNameReset.addEventListener('click', resetCityName);
-
-  const landscapeInput = document.querySelector('#landscape');
-  landscapeInput.addEventListener;
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);

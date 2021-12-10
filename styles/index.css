@@ -6,6 +6,30 @@
     background-color: yellow;
 }
 
+.rainy {
+    background-color: rgb(37, 37, 222);
+}
+
+.snowy {
+    background-color: whitesmoke;
+}
+
 .orange {
-    color: orange
+    color: orange;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+}
+
+.teal {
+    color: rgb(34, 78, 189);
 }
