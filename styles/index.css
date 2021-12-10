@@ -1,0 +1,171 @@
+:root {
+    --twelve: rgb(9, 56, 145);
+    --four: rgb(57, 75, 87);
+    --six: rgb(163, 221, 216);
+    --eight: rgb(35, 200, 241);
+    --twelvep: rgb(19, 199, 253);
+    --fourp: rgb(37, 114, 177);
+    --sixp: rgb(247, 191, 88);
+    --eightp: rgb(243, 116, 190);
+
+    --morning: linear-gradient(0deg, var(--twelve) 0%, var(--four) 20%,var(--six) 100%);
+    --midday: linear-gradient(0deg, var(--eight) 0%, var(--twelvep) 20%, var(--fourp) 100%);
+    --sunset:linear-gradient(0deg, var(--fourp) 0%, var(--sixp) 20%, var(--eightp) 100%);
+    --midnight:linear-gradient(0deg, var(--sixp) 0%, var(--eightp) 20%, var(--twelve) 100%);
+    --curved-rad: 16px;
+    --curved-padding: 10px;
+    --fill-in: rgb(10, 0, 0);
+}
+
+::placeholder {
+    color: var(--fill-in);
+}
+
+h1, h2 {
+    text-align: center;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    background: var(--morning);
+}
+
+.round {
+    border: hidden;
+    border-radius: var(--curved-rad);
+    padding: var(--curved-padding);   
+}
+
+/* 
+CITY 
+*/
+
+.frosted {
+    background: rgba(243, 234, 234, 0.308);;
+    backdrop-filter: blur(30px);
+}
+
+#city-container {
+    display: flex;
+    margin: 10px auto;
+    /*padding: 2px;*/
+    width: 30vw;
+}
+
+#city-name-container {
+    margin: auto;
+    background: white;
+    border-radius: var(--curved-rad);
+    padding: var(--curved-padding);
+}
+
+#city-name {
+    text-align: center;
+    background: transparent;
+    color: black;
+    border: hidden;
+}
+
+#reset-city-button {
+    border: hidden;
+    border-radius: var(--curved-rad);
+    padding: var(--curved-padding);
+    
+}
+
+
+/*
+LANDSCAPE
+*/
+
+#playground {
+    display: flex;
+    padding: 2vh;
+    height: 50vh;
+    position:relative;
+}
+
+#sky-container {
+    flex: 20;
+}
+
+#landscape {
+    flex: 80;  
+    display: flex;
+    justify-content: center;
+}
+
+#landscape-text {
+    
+    font-size: 4vw;
+    letter-spacing: 4px;
+    align-self: flex-end;
+}
+
+
+/* 
+SKY BOX
+*/
+
+#sky-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-right: 10px;
+} 
+
+.sky-color {
+    flex: 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+     /* // hover behavior
+   */
+}
+
+.Midnight {
+    background: var(--midnight);
+}
+
+.Midday {
+    background: var(--midday);
+}
+
+.Sunset {
+    background: var(--sunset);
+}
+
+.Morning {
+    background: var(--morning);
+}
+
+
+/* 
+WEATHER CONTROL
+*/
+#temp-container {
+    display: flex;
+    margin: 0 auto;
+    width: 30vw;
+    justify-content: space-evenly;
+}
+
+.temp-gauge {
+    background: transparent;
+}
+
+#incTemp, #decTemp {
+    background-color: white;
+    border:hidden;
+
+}
+
+#temperature {
+    color: orange;
+    background-color: white;
+    inline-size: 5vw;
+    text-align: center;
+    
+}
+
+
