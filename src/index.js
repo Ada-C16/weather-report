@@ -1,5 +1,5 @@
 const state = {
-  tempCurrent: 60,
+  tempCurrent: 60
 };
 
 // Adjusting Temperature Depending on Which Button is Clicked
@@ -14,7 +14,7 @@ const adjustTemp = (event) => {
 
   currentTempEl.textContent = `${state.tempCurrent}°F`;
   changeLandscapeColor();
-};
+}
 
 // Adjusting Landscape & Background Color According to Temperature
 const changeLandscapeColor = () => {
@@ -36,25 +36,28 @@ const changeLandscapeColor = () => {
     cloudImageTwoEl.src="https://64.media.tumblr.com/ce433dca252fd3cab981eff965970978/tumblr_myd7lbOUFp1r9mp00o1_500.gifv";
     cloudImageOneEl.src="https://64.media.tumblr.com/7f0c1f27921d7af9b9cb0ce9c6dd8051/tumblr_myd7lbOUFp1r9mp00o5_400.jpg";
   } 
+
   else if (state.tempCurrent <= 69 && state.tempCurrent >= 60) {
     tempSectionEl.id = 'middleTemp';
     landscapeEmoji.textContent = '🍁🍃💨🪨🍃🍂🍃💨🍁🍃🪨🍂🏠💨🌲';
     cloudImageOneEl.src="https://64.media.tumblr.com/0d64589f9007cc152174260fa7940543/tumblr_myd7lbOUFp1r9mp00o9_400.jpg";
     cloudImageTwoEl.src="https://64.media.tumblr.com/2dac3b04d52ef531c85373e878d7e862/tumblr_myd7lbOUFp1r9mp00o8_400.jpg";
   } 
+
   else if (state.tempCurrent <= 59 && state.tempCurrent >= 50) {
     tempSectionEl.id = 'coldTemp';
     landscapeEmoji.textContent = '🍂🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂⛄️🌲';
     cloudImageOneEl.src="https://64.media.tumblr.com/7680edca261309cb74e55ad052e65273/tumblr_myd7lbOUFp1r9mp00o7_400.jpg";
     cloudImageTwoEl.src="https://64.media.tumblr.com/7680edca261309cb74e55ad052e65273/tumblr_myd7lbOUFp1r9mp00o7_400.jpg";
   } 
+
   else {
     tempSectionEl.id = 'veryColdTemp';
     landscapeEmoji.textContent = '🍂🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂⛄️🌲';
     cloudImageOneEl.src="https://64.media.tumblr.com/7680edca261309cb74e55ad052e65273/tumblr_myd7lbOUFp1r9mp00o7_400.jpg";
     cloudImageTwoEl.src="https://64.media.tumblr.com/7680edca261309cb74e55ad052e65273/tumblr_myd7lbOUFp1r9mp00o7_400.jpg";
   }
-};
+}
 
 // Adjusting Sky Levels
 const changeSky = () => {
@@ -75,19 +78,19 @@ const changeSky = () => {
     skyLandscapeEl.textContent = '🌨❄️🌨❄️🌨❄️🌨❄️🌨❄️❄️';
     alert("Bundle up and don't forget your gloves! It's snowing outside!");
   }
-};
+}
 
 // Changing city name
 const updateCity = (event) => {
   const cityDisplay = document.querySelector('#city-display');
   cityDisplay.textContent = event.target.value;
-};
+}
 
 // Reset city button
 const resetCity = () => {
   const cityInput = document.querySelector('#city-form');
   cityInput.reset();
-};
+}
 
 // Registering event handlers
 const registerHandlers = () => {
@@ -105,6 +108,6 @@ const registerHandlers = () => {
 
   const resetCityButton = document.querySelector('#reset-city');
   resetCityButton.addEventListener('click', resetCity);
-};
+}
 
 document.addEventListener('DOMContentLoaded', registerHandlers);
