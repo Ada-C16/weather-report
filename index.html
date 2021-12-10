@@ -8,17 +8,21 @@
   </head>
   <body>
     <main>
-      <h1>Weather Report</h1>
-      
-
-      <section>
+    <header class ="title">
+        <h1>Weather Report</h1>
+        <h3>For the lovely city of</h3>
+        <h2 id="default-city">✨Seattle✨</h2>
+    </header>
+ 
+    <div id="widget">
+      <section class="temp-container">
         <h3>Temperature</h3>  
         <button id="tempUp">⬆️</button>
         <button id="tempDown">⬇️</button>
         <p id="temp"> 70</p>        
       </section>
 
-    <section> 
+    <section class="sky-container"> 
     <h3>Sky</h3>   
     <select name="sky" id="sky">
         <option value="sunny">Sunny</option>
@@ -28,25 +32,23 @@
       </select>
     </section>    
 
-    <section> 
+    <section class="city-container"> 
         <h3>City Name</h3> 
         <input type="text" id="city-name" name="name" required
         minlength="4" maxlength="15" size="10">
         <input type="reset" id ="reset" value="Reset">    
         </section> 
-    </section>    
+    </section>  
+    </div>      
 
-    <section> 
+    <section class="garden-container"> 
     <h3> Weather Garden</h3> 
+    <div class="weather-box">
     <p id="weather">☁️ ☁️ ☁️ ☀️ ☁️ ☁️ ☁️</p>
     <p id="landscape">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</p>
-
+    </div>   
     </section>    
 
-      <section id="tempContainer">
-
-
-      </section>
     </main>
     <script src="src/index.js"></script>
   </body>

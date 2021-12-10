@@ -87,7 +87,9 @@ skySelector.addEventListener('change', selectSky);
 const changeCity = () => {
   // code to change city input
   const cityName = document.querySelector('#city-name');
+  const getCityDefault = document.querySelector('#default-city');
   let cityText = cityName.value;
+  getCityDefault.innerHTML = cityText;
   console.log(cityText);
 };
 
