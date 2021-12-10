@@ -10,7 +10,9 @@
 <body>
     <section class= "main_header">
         <h1>Weather Report</h1>
-        <h3>For the wonderful city..</h3>
+        <h3>For the wonderful city:
+            <span id="headerCity" class="header_city"></span
+        ></h3>
     </section>
     <section class= "temperature">
         <h2>Temperature</h2>
@@ -31,14 +33,14 @@
     </section>
     <section class="city_name">
         <h2>City Name</h2>
-        <input type="text" id="cityNameInput" value="Seattle"/>
-        <button id="cityNameReset">Reset</button>
+        <input type="text" id="cityInput" value="Philadelphia"/>
+        <button id="cityReset">Reset</button>
     </section>
-    <section class="garden">
-        <h2>Weather Garden</h2>
-        <div id="gardenContent" class="garden_content">
-            <div id="sky"></div>
-            <div id="ground"></div>
+    <section class="outside">
+        <h2>A Look Outside</h2>
+        <div id="outsideContent" class="outside_content">
+            <span id="sky">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</span>
+            <span id="ground">🌵🏜🐍🦂🏜🌵🦂🌵🐍🐍🏜🦂</span>
         </div>
     </section>
     <script src="src/index.js"></script>
