@@ -86,6 +86,12 @@ const changeSky = () => {
   }
 };
 
+const changeCityName = () => {
+  const cityNameInput = document.getElementById('cityInput').value;
+  const cityName = document.getElementById('cityName');
+  cityName.textContent = cityNameInput;
+};
+
 const registerEventHandlers = () => {
   const increaseTempClick = document.getElementById('increaseTemp');
   increaseTempClick.addEventListener('click', increaseTemp);
@@ -95,6 +101,9 @@ const registerEventHandlers = () => {
 
   const selectSky = document.getElementById('skySelect');
   selectSky.addEventListener('change', changeSky);
+
+  const inputCityName = document.getElementById('cityInput');
+  inputCityName.addEventListener('input', changeCityName);
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
