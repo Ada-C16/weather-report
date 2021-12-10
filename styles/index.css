@@ -229,6 +229,7 @@ input {
     font-weight: 300;
     border-radius: 5px;
     margin-top: 10px;
+    padding-left: .5rem;
 }
 
 input:focus, select:focus {
