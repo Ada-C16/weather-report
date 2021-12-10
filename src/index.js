@@ -62,15 +62,31 @@ const removeCity = () => {
   return false;
 };
 
+const skyChange = () => {
+  let skyDisplay = document.getElementById('sky-scene');
+  let currentSky = document.getElementById('sky').value;
+  if (currentSky === 'sunny') {
+    skyDisplay.textContent = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️☁️ ☁️ ☁️ ☀️ ☁️';
+  } else if (currentSky === 'rainy') {
+    skyDisplay.textContent = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧';
+  } else if (currentSky === 'snowy') {
+    skyDisplay.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
+  } else if (currentSky === 'cloudy') {
+    skyDisplay.textContent = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
+  }
+};
+
 const registerEventHandlers = () => {
   const tempUp = document.getElementById('up');
   const tempDown = document.getElementById('down');
   const cityPopulate = document.getElementById('submit');
   const cityRemove = document.getElementById('reset');
+  const skySelect = document.getElementById('sky');
   tempUp.addEventListener('click', increaseClickCount);
   tempDown.addEventListener('click', decreaseClickCount);
   cityPopulate.addEventListener('click', displayCity);
   cityRemove.addEventListener('click', removeCity);
+  sky.addEventListener('change', skyChange);
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
