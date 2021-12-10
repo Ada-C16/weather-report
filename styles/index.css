@@ -18,24 +18,12 @@
     color:teal;
 }
 
-/* .temp-container {
-    background-color: lightslategray;
-} */
-
-#temp-display{
-    font-size: 50px;
-    font-weight: bold;
-}
-
-
-/* grid code */
-
 .main-container {
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template: 25% 55% auto / 1fr 2fr 1fr;
-  }
+}
   
 header {
     background-color: #cf83cc;
@@ -43,13 +31,26 @@ header {
     text-align: center;
     font-size: large;
     font-weight: bold;
-    padding: 4px;
+    padding: 10px;
 }
 
 #city-header{
-    font-size: x-large;
+    font-size: 30px;
+    text-decoration: underline;
 }
-  
+
+h4 {
+    font-size: 19px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+button {
+    font-size: 16px;  
+}
+
 .temp-container {
     text-align: center;
     background-color: #91d0f5;
@@ -57,56 +58,61 @@ header {
     font-size: large;
     padding-top: 100px;
     padding-left: 10px;
-  }
+}
 
 #temp-display{
+    font-size: 50px;
+    font-weight: bold;
     text-align: center;
 }
+
 .sky-container {
-    /* grid-row: span 1 / auto; */
     background-color:cornflowerblue;
     text-align: left;
     font-size: large;
-    padding-top: 50px;
+    padding-top: 100px;
     padding-left: 15px;
-  }
+}
+
+select {
+    font-size: 30px;
+}
   
 .garden-container {
     text-align: center;
     background-color: #67b19d;
     padding-top: 20px;
-    padding-bottom: 35px;
-    font-size: xx-large;
-  }
+    font-size: 25px;
+}
 
 #sky-garden {
-    padding-bottom: 100px;
-    
-  }
+    padding-top: 20px;
+    padding-bottom: 115px;
+    font-size: 45px;  
+}
+
+#landscape {
+    font-size: 35px;
+}
 
 .city-name-container {
     background-color: #e8ecae;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 10px;
     padding-left: 10px;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
+}
 
-  }
-#city-input{
+#city-input {
     font-size: 17px;
 }
 
 .reset {
     background-color: #f59055;
     padding-top: 10px;
-    padding-left: 10px;
-  }
-
-button{
-      font-size: 17px;
+    padding-left: 15px;
 }
 
-select{
-    font-size: 20px;
-}
+
+
 

@@ -15,11 +15,11 @@ const tempColors = () => {
         tempDisplay.className = "red"
     } else if (temp < 80 && temp >= 70){
         tempDisplay.className = "orange"
-    }else if (temp<70 && temp>=60){
+    }else if (temp < 70 && temp >= 60){
         tempDisplay.className = "yellow"
-    }else if (temp<60 && temp>=50){
+    }else if (temp <60 && temp >= 50){
         tempDisplay.className = "green"
-    }else if (temp<=49){
+    }else if (temp <= 49){
         tempDisplay.className = "teal"
     }
 };
@@ -29,10 +29,12 @@ const tempLand = () => {
         landscape.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"
     } else if (temp < 80 && temp >= 70){
         landscape.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷"
-    }else if (temp<70 && temp>=60){
+    }else if (temp < 70 && temp >= 60){
         landscape.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃"
-    }else if (temp<60){
-        landscape.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲"
+    }else if (temp <60 && temp >= 50){
+        landscape.textContent = "🌲🌲🍁🌲🍁🍂🌲🍁🌲🌲🍂🌲"
+    }else if (temp <= 49){
+        landscape.textContent = "⛄️☃️__⛄️__⛄️☃️⛄️_⛄️☃️_⛄️"
     }
 };
 
@@ -51,7 +53,6 @@ const decreaseTemp = () => {
 };
 
 
-
 // ***** Sky Variables *****
 
 const changeSky = () => {
@@ -62,13 +63,14 @@ const changeSky = () => {
     } else if (skyDropdown === "Cloudy"){
         skyGarden.textContent = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️"
     }else if (skyDropdown === "Rainy"){
-        skyGarden.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧"
+        skyGarden.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧"
     }else if (skyDropdown === "Snowy"){
         skyGarden.textContent = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨"
     }
 };
 
-// ***** City Name and Reset Function *****
+
+// ***** City Name Input and Reset Functions *****
 
 const cityHeader = document.querySelector("#city-header");
 
