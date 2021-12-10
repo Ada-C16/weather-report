@@ -157,7 +157,8 @@ input {
     color: black;
     background: transparent;
     border: solid 2px black;
-    transition: 0.2s
+    transition: 0.2s;
+    border-radius: 5px;
 }
 
 #reset:hover {
@@ -248,7 +249,8 @@ input:focus, select:focus {
 #city-name {
     /* margin-top: 18%; */
     background-color: #fff;
-    color: black;   
+    color: black; 
+    border-radius: 5px;
 }
 
 .enter-city {
