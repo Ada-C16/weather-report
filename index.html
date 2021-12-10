@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="/styles/index.css" rel="stylesheet">
 </head>
 <body>
-    
+    <h1>Weather Report</h1>
+    <p class="cityInfo">for <span id="cityName">Terre Haute</span></p>
+    <section class="box" id="cityNameBox">
+        <h2 id="changeCity">Change City</h2>
+        <input id="cityInput" type="text" value = "Terre Haute">
+        <button id="reset">Reset</button> 
+    </section>
+    <img class="picture" id="tempPic" src="assets/60-79.jpg" alt="Purple flowers growing our of dried leaves">
+    <img class="picture" id="skyPic" src="assets/sunny.jpg" alt="Sun shinning through trees with orange, green, and yellow foliage">
+    <section class="box" id="tempBox">
+        <h2 id="tempHeading">Temperature</h2>
+        <p id="tempDisplay"><span id="temp">75</span>&#8457;</p>
+        <button class="changeTemp" id="increaseTemp">&#8593;</button>
+        <button class="changeTemp" id="decreaseTemp">&#8595;</button>
+    </section>
+    <section class="box" id="skyBox">
+        <h2>Sky</h2>
+        <select id="skySelect">
+            <option>Sunny</option>
+            <option>Cloudy</option>
+            <option>Rainy</option>
+            <option>Snowy</option>
+            <option>Firenado</option>
+        </select>
+    </section>
+    <script src="src/index.js" type="text/javascript"></script>
 </body>
 </html>
