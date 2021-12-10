@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles/index.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles/index.css" rel="stylesheet" />
     <title>Weather Report</title>
-</head>
-<body>
-    <header id="weatherApp">
-        The Weather Mage
-    </header>
+  </head>
+  <body>
+    <header id="weatherApp">The Weather Mage</header>
     <section>
-        <h1>
-            Welcome to My World 
-            <p id="city">San Antonio</p>
-            <input type="text" id="typeCityName" value="San Antonio">
-            <button id="reset" type="reset">Reset</button>
-        </h1>
+      <h1>
+        Welcome to My World
+        <p id="city">San Antonio</p>
+        <input type="text" id="typeCityName" value="San Antonio" />
+        <button id="reset" type="reset">Reset</button>
+      </h1>
     </section>
     <section id="weatherContainer">
-        <div id=tempControl>
-            <p id="label">Change the Temperature Here</p>
-            <section id="tempDisplay" class="tempColor">70F</section>
-            <img src="/assets/hotWeather.jpg" id="landscape">
-            <section id="buttons">
-                <button id="tempDecrease"><</button>
-                <button id="tempIncrease">></button>
-            </section>
-        </div>
-        <section id="buffer"></section>
-        <div id="weatherSky">
-            <label>How is the weather?</label>
-            <select id="changeSky">
-                <option id="plainSky" selected>Today the sky looks...</option>
-                <option id="clearSky">Clear as Can Be</option>
-                <option id="cloudySky">Skies of Gray</option>
-                <option id="rainySky">Drip. Drop. Drip.</option>
-                <option id="coldSky">Time for Hot Cocoa!</option>
-            </select>
-        </div>
-        <div id="weatherLand"></div>
+      <div id="tempControl">
+        <p id="label">Change the Temperature Here</p>
+        <section id="tempDisplay" class="tempColor">70F</section>
+        <img src="/assets/hotWeather.jpg" id="landscape" />
+        <section id="buttons">
+          <button id="tempDecrease"><</button>
+          <button id="tempIncrease">></button>
+        </section>
+      </div>
+      <section id="buffer"></section>
+      <div id="weatherSky">
+        <label>How is the weather?</label>
+        <select id="changeSky">
+          <option id="plainSky" selected>Today the sky looks...</option>
+          <option id="clearSky">Clear as Can Be</option>
+          <option id="cloudySky">Skies of Gray</option>
+          <option id="rainySky">Drip. Drop. Drip.</option>
+          <option id="coldSky">Time for Hot Cocoa!</option>
+        </select>
+      </div>
+      <div id="weatherLand"></div>
     </section>
     <script src="src/index.js"></script>
-</body>
+  </body>
 </html>

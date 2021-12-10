@@ -1,93 +1,93 @@
 #weatherContainer {
-    display:flex;
+  display: flex;
 }
 
 h1 {
-    font-family: cursive;
-    text-align: center;
-    height:150px;
+  font-family: cursive;
+  text-align: center;
+  height: 150px;
 }
 
 #weatherSky {
-    padding:25px;
-    border-style:inset;
-    border-color: rgb(62, 6, 77);
-    width: 500px;
-    height: 300px;
-    background-image: url("/assets/Plain_GIF.gif");
+  padding: 25px;
+  border-style: inset;
+  border-color: rgb(62, 6, 77);
+  width: 500px;
+  height: 300px;
+  background-image: url('/assets/Plain_GIF.gif');
 }
 
 #changeSky {
-    width: 200px;
-    height:25px;
-    align-items: top;
+  width: 200px;
+  height: 25px;
+  align-items: top;
 }
 
 #tempDisplay {
-    background-color: orange;
-    font-size: 75px;
-    text-align:center;
-    font-family: fantasy;
-    color: black;
-    width: 150px;
-    height: 100px;
-    padding-top: 35px;
-    padding-bottom: 30px;
+  background-color: orange;
+  font-size: 75px;
+  text-align: center;
+  font-family: fantasy;
+  color: black;
+  width: 150px;
+  height: 100px;
+  padding-top: 35px;
+  padding-bottom: 30px;
 }
 
 #landscape {
-    width: 150px;
-    height: 70px;
+  width: 150px;
+  height: 70px;
 }
 
 #label {
-    background-color: #5bc5c9;
-    font-family: cursive;
-    color: white;
-    width: 150px;
-    height: 50px;
-    text-align: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
-
+  background-color: #5bc5c9;
+  font-family: cursive;
+  color: white;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 label {
-    background-color: white;
-    border-style:groove;
-    border-color: peachpuff;
-    padding: 5px
+  background-color: white;
+  border-style: groove;
+  border-color: peachpuff;
+  padding: 5px;
 }
 
 #buffer {
-    width: 250px;
-    height: 250px;
+  width: 250px;
+  height: 250px;
 }
 
 #tempControl {
-    border-style:ridge;
-    height:fit-content;
-    width: fit-content;
+  border-style: ridge;
+  height: fit-content;
+  width: fit-content;
 }
 
 #weatherApp {
-    text-align: center;
-    font-size: 55px;
-    color: white;
-    font-family: fantasy;
-    font-style: italic;
-    background-color: #EB6E80;
+  text-align: center;
+  font-size: 55px;
+  color: white;
+  font-family: fantasy;
+  font-style: italic;
+  background-color: #eb6e80;
 }
 
 #buttons {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-#tempDecrease, #tempIncrease {
-    font-size: larger;
-    align-content:space-between;
+#tempDecrease,
+#tempIncrease {
+  font-size: larger;
+  align-content: space-between;
 }
 
 body {
-    background-color: beige;
+  background-color: beige;
 }
