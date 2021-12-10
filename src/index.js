@@ -69,6 +69,13 @@ const niceDayMouseleaveEffect = (event) => {
     console.log("mouseover?");
 };
 
+// add live video
+const replaceWithLiveSantaMonica = (event) => {
+    const landscapeContainer = document.getElementById("landscapeDisplay");
+    landscapeContainer.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/OWbI6WtlI-k?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    
+    // hmm remember to change the text of the viewLivebutton
+};
 
 // Register all events
 const registerEventHandlers = () => {
@@ -92,6 +99,10 @@ const registerEventHandlers = () => {
     const niceDayMouseoverBox = document.getElementById("niceDayButton");
     niceDayMouseoverBox.addEventListener("mouseenter", niceDayMouseoverEffect);
     niceDayMouseoverBox.addEventListener("mouseleave", niceDayMouseleaveEffect);
+
+    // add live video
+    const viewLiveSantaMonicaButton = document.getElementById("viewLiveButton");
+    viewLiveSantaMonicaButton.addEventListener("click", replaceWithLiveSantaMonica);
 };
 
 // DOM listener

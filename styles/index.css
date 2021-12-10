@@ -1,0 +1,18 @@
+body{
+    /* background: lightsteelblue; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#landscapeDisplay{
+    border-radius: 3%;
+    border-color: mediumpurple;
+    /* background: magenta; */
+    margin: auto;
+    display: flex;
+    height: 325px;
+    width: 570px;
+    align-items: center;
+}
