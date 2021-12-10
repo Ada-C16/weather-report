@@ -15,28 +15,30 @@
     </header>
     <main>
         <section>
-            <h2>Temperature</h2>
-            <h3 class="fahrenheit" id="temp">70 ºF</h3>
-            <button id="increase-temp">Increase</button>
-            <button id="decrease-temp">Decrease</button>
-            <button id="convert-temp">Convert to Celsius</button>
+            <div class="widget">
+                <h2>Temperature</h2>
+                <h3 class="fahrenheit" id="temp">70 ºF</h3>
+                <button id="increase-temp">Increase</button>
+                <button id="decrease-temp">Decrease</button>
+                <button id="convert-temp">Convert to Celsius</button> 
+            </div>
+            <div class="widget">
+                <h2>Sky</h2>
+                <select name="sky-select" id="sky-menu">
+                    <option value="---Select Sky Option---">---Select Sky Option---</option>
+                    <option value="Sunny">Sunny</option>
+                    <option value="Cloudy" selected>Cloudy</option>
+                    <option value="Rainy">Rainy</option>
+                    <option value="Snowy">Snowy</option>
+                </select>
+            </div>
+            <div class="widget">
+                <h2>City Name</h2>
+                <input type="text" id="city-input" name="city" placeholder="Seattle" value="">
+                <button id="reset-city">Reset</button>
+            </div>
         </section>
-        <section>
-            <h2>Sky</h2>
-            <select name="sky-select" id="sky-menu">
-                <option value="---Select Sky Option---">---Select Sky Option---</option>
-                <option value="Sunny">Sunny</option>
-                <option value="Cloudy" selected>Cloudy</option>
-                <option value="Rainy">Rainy</option>
-                <option value="Snowy">Snowy</option>
-            </select>
-        </section>
-        <section>
-            <h2>City Name</h2>
-            <input type="text" id="city-input" name="city" placeholder="Seattle" value="">
-            <button id="reset-city">Reset</button>
-        </section>
-        <section>
+        <section id="weather-garden">
             <h2>Weather Garden</h2>
             <div id='sky-background'>
                 <div id="sky">☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️</div>

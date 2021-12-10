@@ -73,7 +73,6 @@ const convertTemp = () => {
 };
 
 const updateTemp = () => {
-
   if (currentTemp.className === "fahrenheit") {
     currentTemp.textContent = `${state.temp} ºF`;
   } else if (currentTemp.className === "celsius") {
