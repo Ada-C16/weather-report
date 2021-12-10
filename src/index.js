@@ -1,12 +1,31 @@
 function up() {
     var temperature = document.getElementById("temperature").value = parseInt(document.getElementById("temperature").value) + 1;
-    console.log(temperature);
+
     currenttemperature(temperature);
+
+/////SETS MAX TEMPERATURUE ON EARTH
+if(temperature> 134){
+    document.getElementById("temperature").value = parseInt(134);
+    console.log(document.getElementById("temperature").textContent )
+}
 }
 function down() {
     var temperature = document.getElementById("temperature").value = parseInt(document.getElementById("temperature").value) - 1;
-    console.log(temperature); 
     currenttemperature(temperature);
+
+///SETS MIN TEMPERATURUE ON EARTH
+    if(temperature< -89){
+        document.getElementById("temperature").value = parseInt(-89);
+        console.log(document.getElementById("temperature").textContent )
+    }
+}
+
+const temperatureMinMax = () => {
+    var tempy=  document.getElementById("temperature").textContent;
+
+    if(temperature>134){
+        document.getElementById("temperature").textContent = parseInt(-89);
+    }
 }
 
 const currenttemperature = (temperature) => {
@@ -51,16 +70,13 @@ const currentSky = () => {
 
 const changeCity = () =>{
     var userInput = document.getElementById("cityName").value;
-    console.log(userInput);
-    var cityGreeting = document.getElementById("cityGreeting").textContent;
-    console.log(cityGreeting);
+
     document.getElementById("cityGreeting").textContent ="Beautiful city of " + `${userInput}!`; 
     document.getElementById("cityName").value = "";
 }
 
 const resetCity = () =>{
-    var cityGreeting = document.getElementById("cityGreeting").textContent;
-    console.log(cityGreeting);
+
     document.getElementById("cityGreeting").textContent ="Beautiful city of Nuevo San Juan Parangaricutiro!"; 
     document.getElementById("cityName").value = "";
 }

@@ -47,9 +47,17 @@ h4{
 .weather-landscape{
     text-align: center;
     background-color: turquoise;
-     border-bottom-left-radius: 25px;
-      border-bottom-right-radius: 25px;
-
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-image: linear-gradient(180deg, turquoise, aliceblue);
+}
+#earth-landscape{
+    min-height: 50px;
+    background-color: green;
+    margin-top: 80px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-image: linear-gradient(180deg, #093824, green);
 }
 
 #sky-temperature-container{
@@ -82,8 +90,8 @@ h4{
     border-width:3px;
     border-style:solid;
     border-color: white;
-  
 }
+
 .temperature-buttons{
     width: 50px;
     background-color: transparent;
@@ -118,7 +126,7 @@ h4{
     float: right;
     width: 80px;
     border: hidden;
-    font-size: 45px;
+    font-size: 40px;
     color:teal;
 }
 
