@@ -53,19 +53,19 @@ temperature.textContent = state.temperature;
 
 const updateGarden = function () {
   if (state.temperature > 79) {
-    garden.textContent = '🌵🐪🏜🐍🦂_🌵🌵__🐍_🏜🐫🦂';
+    garden.textContent = '🌵 🐪 🏜 🐍 🦂 🌵 🌵 🐍 🏜 🐫 🦂 🌵';
     temperature.style.color = 'red';
   }
   if (state.temperature > 69 && state.temperature < 80) {
-    garden.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+    garden.textContent = '🌸 🌿 🌼 🌷 🌻 🍄 🌺 🌹 ☘️ 🌱 🌻 🌷';
     temperature.style.color = 'orange';
   }
   if (state.temperature > 59 && state.temperature < 70) {
-    garden.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
+    garden.textContent = '🌾 🍁 🌾 🍃 🪨 🛤 🌾 🍂 🌾 🌾 🪨 🍃';
     temperature.style.color = 'yellow';
   }
   if (state.temperature < 60) {
-    garden.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+    garden.textContent = '🌲 ⛄️ 🌲 ⛄️ 🍂 🌲 ☃️ 🍁 🌲 ⛄️ 🍂 🌲';
     temperature.style.color = 'green';
   }
   if (state.temperature < 50) {
