@@ -1,23 +1,39 @@
+function twoDecimals(str,val) {
+    str = str.toString();
+    str = str.slice(0, (str.indexOf(".")) + val + 1); 
+    return Number(str);   
+}
+
 function up() {
     var temperature = document.getElementById("temperature").value = parseInt(document.getElementById("temperature").value) + 1;
+    var convert = (parseInt(document.getElementById("temperature").value )- 32)/1.8;
 
-    currenttemperature(temperature);
+//// returns  current temperature
+    var celsius = document.getElementById("celsius-temperature").value = parseFloat(twoDecimals(convert,2));
+    console.log(celsius);
+    currenttemperature(temperature, celsius);
 
 /////SETS MAX TEMPERATURUE ON EARTH
-if(temperature> 134){
-    document.getElementById("temperature").value = parseInt(134);
-    console.log(document.getElementById("temperature").textContent )
-}
+    if(temperature> 134){
+        document.getElementById("temperature").value = parseInt(134);
+        console.log(document.getElementById("temperature").textContent )
+    }
 }
 function down() {
     var temperature = document.getElementById("temperature").value = parseInt(document.getElementById("temperature").value) - 1;
-    currenttemperature(temperature);
+    var convert = (parseInt(document.getElementById("temperature").value )- 32)/1.8;
+
+//// returns  current temperature
+    var celsius = document.getElementById("celsius-temperature").value = parseFloat(twoDecimals(convert,2));
+    console.log(celsius);
 
 ///SETS MIN TEMPERATURUE ON EARTH
     if(temperature< -89){
         document.getElementById("temperature").value = parseInt(-89);
         console.log(document.getElementById("temperature").textContent )
     }
+
+    currenttemperature(temperature, celsius);
 }
 
 const temperatureMinMax = () => {
@@ -101,6 +117,7 @@ const resetCity = () =>{
 const resetEverything = () =>{
 
     document.getElementById("temperature").value = parseInt(35);
+    document.getElementById("celsius-temperature").value = parseFloat(1.66);
     document.getElementById("temperature").style.color = "teal";
     document.getElementById("sky-landscape").style.backgroundImage = "linear-gradient(180deg, LightSeaGreen, DodgerBlue)"
     document.getElementById("earth-landscape").style.backgroundImage = "linear-gradient(180deg, #093824, green)";

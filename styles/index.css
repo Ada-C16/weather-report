@@ -139,6 +139,14 @@ h4{
     font-size: 40px;
     color:teal;
 }
+.celsius-digit{
+    outline: none;
+    background-color: transparent;
+    width: 90px;
+    border: hidden;
+    font-size: 30px;
+    color:#020949;
+}
 
 #conversor-reset-container{
     display: flex;
