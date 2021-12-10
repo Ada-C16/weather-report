@@ -12,8 +12,8 @@
         <header class="col-12 " >
             <div >
                 <h1 id="headers">Weather Report </h1>
-                    <p id="lovelyCity"class="col-12 center_columns headersText">For the lovely city of ✨
-                    <span id="cityLog">  </span></p>
+                    <p id="lovelyCity"class="col-12 center_columns headersText">For the lovely city of 
+                    <span id="cityLog" style="font-size: 2em;">  </span></p>
             </div>
         </header>
         <div class="">
@@ -23,7 +23,7 @@
                     <option value="sunny">Sunny</option>
                     <option value="rainy">Rainy</option>
                     <option value="cloudy">Cloudy</option>
-                    <option value="snow">Snowing</option>
+                    <option value="snow">Snowy</option>
                 </select>
             </div>
             <!-- <div class=" item col-3 city-input"><label style="color:white">City:</label>
@@ -32,9 +32,9 @@
             </div> -->
         </div >
         <section >
-            <div class="col-3 city-input "><label style="color:white">City:</label>
-                <input type="text" placeholder="Enter a City" name="name" id="inputCity" required minlength="4" maxlength="15" size="20">
-                <button onclick="document.getElementById('inputCity').value = ''">clear</button>
+            <div class="col-3 city-input "><label style="color:gray">City:</label>
+                <input  type="text" placeholder="Enter a City" name="name" id="inputCity" required minlength="4" maxlength="15" size="20">
+                <button id="clearButton" onclick="document.getElementById('inputCity').value = ''">clear</button>
             </div>
             
         </section>    
@@ -48,7 +48,7 @@
             </div>
             <div class="item garden formatBoxes">
                 <span >Weather Garden 
-                    <h4 id="sky" ></h4>
+                    <p id="sky" ></p>
                     <h5 id="land"></h5>
                 </span>
             </div>  

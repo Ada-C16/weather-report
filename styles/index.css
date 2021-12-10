@@ -24,10 +24,12 @@
 }
 .tempText{
     color: gray;
+    text-shadow: 5px 5px 8px white;
+ 
 }
 .headersText{
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 .headersText h1{
     color: white;
@@ -47,9 +49,7 @@
         rgb(86, 179, 207),
         rgb(228, 210, 131),
         rgb(224, 218, 162),
-        rgb(235, 228, 172),
-        rgb(236, 221, 106),
-        rgb(231, 196, 99));
+        rgb(235, 228, 172));
     /* background-color:rgb(153, 219, 245);
     /* background: no-repeat; */
     /* height: 100vh; */
@@ -93,6 +93,9 @@ p {
     background-color:transparent;
     /* margin-left: 25%; */
     margin-top: 5%;
+    color:goldenrod;
+    text-align: center;
+    text-shadow: 2px 2px 8px white;
     
 }
 #footer{
@@ -158,7 +161,7 @@ p {
     float:left;
     
 }
-.rainyMode{
+/* .rainyMode{
     display: flex;
     margin-left: 15%;
     width: 5.5em;
@@ -167,14 +170,14 @@ p {
     text-align:center;
     font-size: 5rem;
     clear: both;
-    /* background-color: blue; */
+    background-color: blue;
     background-image: url(../assets/landscapes/rainy.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     align-content: center;
     border-top: 3px solid #424242;
     box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
-}
+} */
 .sunnyMode{
     display: flex;
     /* vertical-align: baseline;
@@ -187,14 +190,22 @@ p {
     text-align:center;
     font-size: 5rem;
     clear: both;
-    background-image: url(../assets/landscapes/sunny.jpeg);
+    background-image: url(../assets/landscapes/cover.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     align-content: center;
     border-top: 3px solid #424242;
     box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
 }
-.snowyMode{
+/* .sunnyMode::before{
+    background-image: url(../assets/landscapes/sunny.jpeg);
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    opacity: 0.5;
+} */
+  
+/* .snowyMode{
     display: flex;
     margin-left: 15%;
     width: 5.5em;
@@ -209,8 +220,8 @@ p {
     align-content: center;
     border-top: 3px solid #424242;
     box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
-}
-.cloudyMode{
+} */
+/* .cloudyMode{
     display: flex;
     margin-left: 15%;
     width: 5.5em;
@@ -225,7 +236,7 @@ p {
     align-content: center;
     border-top: 3px solid #424242;
     box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
-}
+} */
 /* #landScape{
     background-image: url(../assets/landscapes/sunny.jpeg);
     background-repeat: no-repeat;
