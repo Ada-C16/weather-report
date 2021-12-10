@@ -42,6 +42,11 @@ select {
   margin-top: 30px;
 }
 
+.footer {
+  margin-top: 150px;
+  color: #eba487;
+}
+
 /* Temperature Colors */
 .blue {
   color: blue;
