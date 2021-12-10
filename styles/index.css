@@ -1,54 +1,71 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+body {
+    background-color: blue;
+    color: white;
+    border: 200px
+    }
 
-.main-container {
-    background-color: rgba(0,0,0,.1);
-    height: 100vh;
-    justify-content:space-between;
-    flex-direction: column;
+main {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 100px;
+    grid-row-gap: 30px;
+    align-items: center;
 }
 
 header {
-    background-color: ivory;
-    display: flex;
+    grid-column: auto / span 2;
+    text-align: center;       
     justify-content:space-between;
 }
 
-header .logo {
-    background-color: rgba(0,0,0,.1);
-}
-
-header .sub {
-    background-color: rgba(0,0,0,.1);
-}
-
-main {
-    /* background-color: rgba(180, 166, 241, 0.5); */
+#widget-container {
     display: grid;
-    justify-content: space-between; 
-    grid-template-columns: 50%;
-    grid-template-rows: 50%;
-    grid-template-areas:
-        "main section.left-section"
-        "main section.image-section"
-}
-main section.left-section {
-    background-color: rgba(221, 12, 12, 0.1);
-    /* grid-area: right; */
-}
-main section.weather-garden {
-    background-color: rgba(120, 230, 18, 0.678);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 30px;
+    justify-items: center;
 }
 
-main #temperature {
-    /* color: rgb(172, 12, 12); */
-    font-weight: bold;
+.temperature-section {
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 250px;
+    height: 150px;
+    text-align: center;
+}
+#temperature {
+    text-align: center;
+}
+.sky-section {
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 250px;
+    height: 150px;
+    text-align: center;
 }
 
-footer {
-    background-color: rgb(240, 240, 147);
+.city-section {
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 250px;
+    height: 150px;    
+    text-align: center;
+}
+
+.weather-box {
+    background-color: rgb(230, 228, 228);
+    border-radius: 5px;
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;     
 }
 
 .red {
