@@ -92,6 +92,12 @@ const changeCityName = () => {
   cityName.textContent = cityNameInput;
 };
 
+const resetCity = () => {
+  const cityNameInput = document.getElementById('cityInput');
+  cityNameInput.value = 'Terre Haute';
+  changeCityName();
+};
+
 const registerEventHandlers = () => {
   const increaseTempClick = document.getElementById('increaseTemp');
   increaseTempClick.addEventListener('click', increaseTemp);
@@ -104,6 +110,9 @@ const registerEventHandlers = () => {
 
   const inputCityName = document.getElementById('cityInput');
   inputCityName.addEventListener('input', changeCityName);
+
+  const resetCityClick = document.getElementById('reset');
+  resetCityClick.addEventListener('click', resetCity);
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
