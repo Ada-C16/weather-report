@@ -24,7 +24,7 @@ const tempText = document.getElementById('temp-text');
 const changeFlowers = () => {
   if (state.temp < 49) {
     tempText.style.color = 'teal';
-  } else if (state.temp < 59) {
+  } else if (state.temp <= 59) {
     changeFlowerGarden.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
     tempText.style.color = 'green';
   } else if (state.temp <= 69) {
