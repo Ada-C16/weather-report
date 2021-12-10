@@ -70,10 +70,6 @@ const landscapeChange = () => {
   }
 };
 
-{
-  /* <a href='https://dryicons.com/free-icons/seasons'> Icon by Dryicons </a> */
-}
-
 // **********************************************
 // Sky Selecting Behavior
 // **********************************************

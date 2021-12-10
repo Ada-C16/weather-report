@@ -8,44 +8,58 @@
     <link href="styles/index.css" rel="stylesheet" type="text/css"/>
 </head>
 
-<body class="grid-1">
+<body id="page">
     <header class="titleBlock">
         <h1>Weather Report</h1>
         <h2>What is your weather like today?</h2>
+        <h2>Welcome to </h2>
     </header>
 
-    <section class="tempBlock">
-        <h1>Temperature</h1>
-        <section class="tempDisplays">
-            <section>
-                <button id="plusButton">+</button>
-                <section class="temp">
-                    <h3 id="tempContainer">32°F</h3>
+    <section id="inputs">
+        <h1 class="inputTitle">Inputs and Options:</h1>
+
+        <section class="inputCityBlock">
+            <h2>City Name</h2>
+            <form>
+                <label for="cityName">Enter a City Name:<input type="text" id="inputCity" placeholder="Chicago"/></label>
+                <button type="reset" id="resetButton">Reset</button>
+            </form>
+        </section>
+
+        <section class="skyBlock">
+            <h2>Sky</h2>
+            <label id="skyOptions">Pick a Sky:</label>
+            <select id="skyDropMenu">
+                <option id="snowy">Snowy</option>
+                <option id="cloudy">Cloudy</option>
+                <option id="rainy">Rainy</option>
+                <option id="sunny">Sunny</option>
+            </select>
+        </section>
+
+        <section class="tempBlock">
+            <h2>Temperature</h2>
+            <section class="tempDisplays">
+                <section>
+                    <button id="plusButton">+</button>
+                    <section class="temp">
+                        <h3 id="tempContainer">32°F</h3>
+                    </section>
+                    <button id="minusButton">-</button>
                 </section>
-                <button id="minusButton">-</button>
             </section>
         </section>
     </section>
 
-    <section id="landscape">
-        <h1>Landscape</h1>
+    <section class="cityScape">
+        <section id="sky">
+            <h1>Sky</h1>
+        </section>
+
+        <section id="landscape">
+            <h1 id="city">Landscape</h1>
+        </section>
     </section>
-
-    <section class="inputBlock">
-        <h1>Inputs</h1>
-        <h2>City Name</h2>
-        <label for="cityName">Enter a City Name:<input placeholder="Chicago" city="city"/></label>
-        <button type="reset" value="Reset">Reset</button>
-        <h2>Sky</h2>
-        <label id="skyOptions">Pick a Sky:</label>
-        <select id="skyDropMenu">
-            <option value="1">Snowy</option>
-            <option value="2">Cloudy</option>
-            <option value="3">Rainy</option>
-            <option value="4">Sunny</option>
-    </section>
-
-
 
     <script src="src/index.js"></script>
 </body>
