@@ -30,11 +30,11 @@ const changeTempColor = () => {
   } else if (state.temp >= 68) {
     color = 'green';
   } else if (state.temp >= 60) {
-    color = 'gray';
+    color = 'brown';
   } else if (state.temp >= 50) {
-    color = 'blue';
+    color = 'gray';
   } else {
-    color = 'white';
+    color = 'blue';
   }
   tempText.style.color = color;
 };
@@ -48,20 +48,20 @@ const changeActivityView = () => {
   if (state.sky === 'snowy' && state.temp > 46) {
     address =
       'https://1.bp.blogspot.com/-_6_7CpBWod4/X1CK2ZNr0RI/AAAAAAABauo/C_cSxWVokzUJEHL18yUlPt2ZKGwhFa2qgCNcBGAsYHQ/s180-c/akusyu_uchuujin.png';
-    alt = 'the sky is broken. immigrate to other planet.';
+    alt = 'the sky is broken. immigrate to another planet.';
   } else if (state.temp >= 93 || state.temp <= 28) {
     address =
       'https://4.bp.blogspot.com/-LKypdYBi7d4/Vq88uGX4TYI/AAAAAAAA3ew/sJ5TQHcLAM8/s180-c/passport_checkin.png';
     alt = 'vacation somewhere nice';
   } else if (state.sky === 'snowy') {
-    address = 'images/IMG_9974.jpg';
+    address = 'assets/IMG_9974.jpg';
     alt = 'Snow!!';
   } else if (state.sky === 'rainy') {
     if (state.temp >= 50) {
-      address = 'images/IMG_7409.jpg';
+      address = 'assets/IMG_7409.jpg';
       alt = 'chill day';
     } else {
-      address = 'images/IMG_8031.JPG';
+      address = 'assets/IMG_8031.JPG';
       alt = 'fireplace hog';
     }
   } else if (state.sky == 'cloudy') {
@@ -81,14 +81,14 @@ const changeActivityView = () => {
     }
   } else if (state.sky === 'sunny') {
     if (state.temp >= 70) {
-      address = 'images/IMG_3412.jpg';
+      address = 'assets/IMG_3412.jpg';
       alt = 'kayaking';
-    } else if (state.temp >= 50) {
+    } else if (state.temp >= 40) {
       address =
         'https://1.bp.blogspot.com/-59_nvImHVnM/XkZdUFSPVeI/AAAAAAABXWQ/Vbu2acjd6dwZjOoQIhRGeYjKPY2EtUCewCNcBGAsYHQ/s180-c/yagai_kyoushitsu_casual_walk.png';
       alt = 'hiking';
     } else {
-      address = 'images/IMG_8031.JPG';
+      address = 'assets/IMG_8031.JPG';
       alt = 'fireplace hog';
     }
   }
@@ -131,7 +131,8 @@ const controlLocation = (e) => {
   setLocation();
 };
 
-const resetLocation = (e) => {
+const resetLocation = () => {
+  document.getElementById('location-input').value = '';
   state.location = 'Hometown';
   setLocation();
 };
@@ -141,12 +142,17 @@ const setLocation = () => {
   locationText.textContent = state.location;
 };
 
+const tempControlInput = (e) => {
+  state.temp = e.target.value;
+};
+
 const registerHandler = () => {
   // temp
   const tempBtns = document.querySelectorAll('.temp-btn');
   tempBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => controlTemp(e));
   });
+
   // sky
   const skyCondition = document.getElementById('sky-condition');
   skyCondition.addEventListener('change', (e) => {
@@ -161,7 +167,7 @@ const registerHandler = () => {
   });
   submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    // controlLocation();
+    resetLocation();
   });
 };
 
