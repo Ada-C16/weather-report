@@ -9,10 +9,41 @@ body {
     margin: 2rem;
 }
 
-.main__header {
+.main__header, #tempValue {
     color:goldenrod;
     grid-column: span 3;
-    display: flex;
+    display: grid;
     align-items: center;
     margin: 2rem auto 3rem 0;
+}
+
+.temperature__section, .look__outside {
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: peru;
+}
+
+#tempValue {
+    font-size: 150px;
+}
+
+#seasonView, #landscape {
+    font-size: 60px;
+}
+
+
+.spring {
+    background-color: rgb(111, 179, 235);
+}
+
+.summer {
+    background-color: rgb(221, 255, 255);
+}
+
+.autumn {
+    background-color: lightblue;
+}
+
+.winter {
+    background-color: lightsteelblue;
 }

@@ -1,1 +1,53 @@
-console.log('included');
+const state = {
+  tempCount: 50,
+  clicked: false,
+};
+
+const increaseTempCount = () => {
+  const tempCountContainer = document.getElementById('tempValue');
+  state.tempCount += 1;
+  tempCountContainer.textContent = state.tempCount;
+};
+
+const decreaseTempCount = () => {
+  const tempCountContainer = document.getElementById('tempValue');
+  state.tempCount -= 1;
+  tempCountContainer.textContent = state.tempCount;
+};
+
+const updateSeason = () => {
+  const inputSeason = document.getElementById('seasonSelect').value;
+  const seasonContainer = document.getElementById('season');
+  let season = '';
+  let seasonColor = '';
+  if (inputSeason === 'Spring') {
+    season = '🌸 🌧🌼🍃 🌤 🌸🌼🌧 🌧🍃';
+    seasonColor = 'spring';
+  } else if (inputSeason === 'Summer') {
+    season = '🕊 🌻 🌼 🦋🍃 🌞 🌼🍃🌻 🐞';
+    seasonColor = 'summer';
+  } else if (inputSeason === 'Autumn') {
+    season = '🍂🍁 🍂🍂 🍁🍂 🍂  🍁🍂🍂';
+    seasonColor = 'autumn';
+  } else if (inputSeason === 'Winter') {
+    season = '❄️🌨💨 🌨❄️💨🌨❄️❄️💨🌨';
+    seasonColor = 'winter';
+  }
+  seasonContainer.textContent = season;
+  const outsideContent = document.getElementById('outsideView');
+  outsideContent.classList = `look__outside ${seasonColor}`;
+};
+
+const registerEventHandlers = () => {
+  const increase = document.getElementById('clickIncrease');
+  increase.addEventListener('click', increaseTempCount);
+
+  const decrease = document.getElementById('clickDecrease');
+  decrease.addEventListener('click', decreaseTempCount);
+
+  updateSeason();
+  const seasonSelect = document.getElementById('seasonSelect');
+  seasonSelect.addEventListener('change', updateSeason);
+};
+
+document.addEventListener('DOMContentLoaded', registerEventHandlers);
