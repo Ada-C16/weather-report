@@ -154,11 +154,15 @@ input {
     height: 50px;
     font-size: 25px;
     margin-top: 10px;
+    color: black;
+    background: transparent;
+    border: solid 2px black;
 }
 
 #reset:hover {
-    color: black;
-    background: ghostwhite;
+    color: white;
+    background: transparent;
+    border: solid 2px white;
 }
 
 .degree{
