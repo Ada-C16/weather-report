@@ -5,8 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet">
 </head>
 <body>
+    <header class="header_class">
+        <h1 id="main_header">Fabulous Weather Report Dashboard</h1>
+        <span class="header_subline"> For the green and happy </span>
+            <span > 🌲 </span>
+            <span id="header_cityName" class="header_cityName"> Oregon</span>
+            <span > 🌲 </span>
+    </header>
     
+    <section class="temperature_box">
+        <h2>Temperature(℉)</h2>
+        <div class="temperature_content">
+            <div class="temperature_btn">
+                <p id="increaseTemp">➕</p>
+                <p id="decreaseTemp">➖</p>
+            </div>
+            <span id="tempVal_id" class="tempValue"> 70</span>
+        </div>
+        
+    </section>
+    <section class="sky_box">
+        <h2>Sky</h2>
+        <select id="sky_selection">
+            <option>Sunny</option>
+            <option>Cloudy</option>
+            <option>Rainy</option>
+            <option>Snowy</option>
+        </select>
+    </section>
+    <section class="city_box">
+        <h2>City Name</h2>
+        <input type="text" value="Oregon" id="city_name_input">
+        <button id="city_name_reset" class="city_name_reset_button">Back To Oregon</button>
+    </section>
+    <section class="garden_box">
+        <h2 id="garden_title">Lovely Garden</h2>
+        <div id="garden_content" class="garden_content_sunny">
+            <div id="garden_sky">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</div>
+            <div id="garden_empty">              </div>
+            <div id="garden_ground">🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃</div>
+        </div>
+    </section>
+    <script src="src/index.js"></script>
 </body>
 </html>
