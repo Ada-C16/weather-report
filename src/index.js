@@ -1,6 +1,7 @@
 const state = {
   temp: 70,
   sky: '',
+  location: 'Hometown',
 };
 
 const controlTemp = (e) => {
@@ -125,11 +126,19 @@ const changeSkyView = () => {
   viewBg.style.backgroundColor = color;
 };
 
-const controlLocation = () => {
+const controlLocation = (e) => {
+  state.location = e.target.value;
+  setLocation();
+};
+
+const resetLocation = (e) => {
+  state.location = 'Hometown';
+  setLocation();
+};
+
+const setLocation = () => {
   const locationText = document.getElementById('location');
-  const locationInput = document.getElementById('location-input');
-  locationText.textContent = locationInput.value;
-  locationInput.value = '';
+  locationText.textContent = state.location;
 };
 
 const registerHandler = () => {
@@ -144,10 +153,15 @@ const registerHandler = () => {
     controlSky(e);
   });
   // location
+  const locationInput = document.getElementById('location-input');
   const submitBtn = document.querySelector('.submit');
+
+  locationInput.addEventListener('keyup', (e) => {
+    controlLocation(e);
+  });
   submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    controlLocation();
+    // controlLocation();
   });
 };
 
@@ -157,4 +171,5 @@ document.addEventListener('DOMContentLoaded', () => {
   changeActivityView();
   registerHandler();
   changeTempColor();
+  setLocation();
 });
