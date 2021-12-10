@@ -11,20 +11,20 @@
 </head>
 <body class="container">
     <section class="heading">
-        <h1>Weather Report For</h1>
-        <h2 id= "cityDisplay">New York</h2>
+        <h1><i class="bi bi-cloud"></i>Weather Report For<i class="bi bi-cloud"></i></h1>
+        <h2 id= "city-display">New York</h2>
     </section>
 
-    <section class="tempDefault border border-dark">
-        <h2 class= "tempHeading">Temperature <i class="bi bi-thermometer"></i></h2>
-        <h2 id= "currentTemp">60°F</h2>
+    <section class="temp-default border border-dark">
+        <h2 class= "label">Temperature <i class="bi bi-thermometer"></i></h2>
+        <h2 id= "current-temp">60°F</h2>
         <button id= "decrease">-</button>
         <button id= "increase">+</button>
     </section>
 
-    <section class="skyLevel border border-primary">
-        <h2>Sky <i class="bi bi-sun"></i></h2>
-        <select class= "skyChoice" name="skyChoice">
+    <section class="sky-level border border-primary">
+        <h2 class= "label">Sky <i class="bi bi-sun"></i></h2>
+        <select class= "sky-choice" name="skyChoice">
             <option value="sunny">Sunny</option>
             <option value="cloudy">Cloudy</option>
             <option value="rainy">Rainy</option>
@@ -33,18 +33,18 @@
         <p id= "sky">☁️☀️☁️☀️☁️☀️☁️☀️☁️☀️☁️</p>
     </section>
 
-    <section class="citySelect border border-success">
-        <h2>Location <i class="bi bi-search"></i></h2>
+    <section class="city-select border border-success">
+        <h2 class= "label">Location <i class="bi bi-search"></i></h2>
         <label for="city">City</label>
-        <form id = "cityForm">
+        <form id = "city-form">
         <input value= "New York" name="city">
-        <button id= "resetCity">Reset</button>
+        <button id= "reset-city">Reset</button>
         </form>
     </section>
 
-    <section class="weatherLandscape border border-warning">
-        <h2>Weather Landscape</h2>
-        <p id= "landscape">🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃</p>
+    <section class="weather-landscape border border-warning">
+        <h2 class= "label">Weather Landscape</h2>
+        <p id= "landscape">🌾🪨🍁🍃🪨🍃🍂🍃💨🍁🍃🍂🏠💨🌲</p>
     </section>
     <script type="text/javascript "src="src/index.js"></script>
 </body>
