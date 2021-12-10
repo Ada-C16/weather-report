@@ -76,7 +76,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     border-color: #c792ea;
     border-style: solid;
@@ -84,19 +84,25 @@ body {
 
 #temperature-title {
     font-size: 25pt;
-    border-color: #c3e88d;
-    border-style: solid;
+    /* border-color: #c3e88d;
+    border-style: solid; */
 }
 
 #temperature-display {
-    border-color: #c3e88d;
-    border-style: solid;
-    font-size: 45pt;
-    font-;
+    /* border-color: #c3e88d;
+    border-style: solid; */
+    font-size: 55pt;
+    font-weight:bolder;
 }
 
 #landscape-block {
     background-image: url(/imgs/landscape-default.jpg);
     background-size: cover;
     background-position: bottom;
+}
+
+#sky-display {
+    background-image: url(/imgs/sky-sunny.jpg);
+    background-size: cover;
+    background-position: top;
 }
