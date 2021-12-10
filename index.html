@@ -1,12 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Report</title>
-</head>
-<body>
-    
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>weather-report</title>
+    <link href="styles/index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <main>
+    <header class ="title">
+        <h1>Weather Report</h1>
+        <h3>For the lovely city of</h3>
+        <h2 id="default-city">✨Seattle✨</h2>
+    </header>
+ 
+    <div id="widget">
+      <section class="temp-container">
+        <h3>Temperature</h3>  
+        <button id="tempUp">⬆️</button>
+        <button id="tempDown">⬇️</button>
+        <p id="temp"> 70</p>        
+      </section>
+
+    <section class="sky-container"> 
+    <h3>Sky</h3>   
+    <select name="sky" id="sky">
+        <option value="sunny">Sunny</option>
+        <option value="cloudy">Cloudy</option>
+        <option value="rainy">Rainy</option>
+        <option value="snowy">Snowy</option>
+      </select>
+    </section>    
+
+    <section class="city-container"> 
+        <h3>City Name</h3> 
+        <input type="text" id="city-name" name="name" required
+        minlength="4" maxlength="15" size="10">
+        <input type="reset" id ="reset" value="Reset">    
+        </section> 
+    </section>  
+    </div>      
+
+    <section class="garden-container"> 
+    <h3> Weather Garden</h3> 
+    <div class="weather-box">
+    <p id="weather">☁️ ☁️ ☁️ ☀️ ☁️ ☁️ ☁️</p>
+    <p id="landscape">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</p>
+    </div>   
+    </section>    
+
+    </main>
+    <script src="src/index.js"></script>
+  </body>
 </html>
