@@ -9,6 +9,12 @@ h1 {
   color: #eba487;
 }
 
+h2 {
+  text-align: center;
+  font-size: xx-large;
+  color: #eba487;
+}
+
 img {
   width: 500px;
   height: 500px;
@@ -20,8 +26,9 @@ img {
 }
 
 button,
-label {
-  margin-right: 40px;
+label,
+select {
+  margin-right: 50px;
 }
 
 .buttonWindow {
@@ -29,9 +36,10 @@ label {
   font-family: Bebas;
   font-size: 1.5rem;
   font-weight: bold;
-  padding-right: 10px;
+  /* padding-right: 10px; */
   color: #eba487;
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
 }
 
 /* Temperature Colors */
@@ -60,19 +68,3 @@ label {
 }
 
 /* Landscape Colors */
-
-.lightgreen {
-  color: rgb(93, 155, 174);
-}
-
-.lightblue {
-  color: lightblue;
-}
-
-.cadetblue {
-  color: cadetblue;
-}
-
-.lightgrey {
-  color: lightslategrey;
-}

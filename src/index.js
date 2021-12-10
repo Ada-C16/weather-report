@@ -20,11 +20,11 @@ const changePhoto = () => {
 
 
 // Temporary Temperature Counter
-let tempValue = 0;
+let tempValue = 30;
 
 const updateTemp = tempValue => {
     const tempCount = document.getElementById("tempCount");
-    tempCount.textContent = `Temperature: ${tempValue}`;
+    tempCount.textContent = `Temperature (Farenheit): ${tempValue}`;
     //update temp colors
     //update landscape
 };
@@ -60,32 +60,35 @@ const updateTempColor = (currentTemp) => {
 
 // Landscape Event Handler
 const updateLandscape = (currentTemp) => {
-    const landscapeContainer = document.getElementById("landscape");
-    let color = "lightgreen";
+    const landscapeContainer = document.body;
+    let backgroundColor = "rgb(93, 155, 174)";
     if (currentTemp >= 80) {
-        color = "lightblue";
+        backgroundColor = "skyblue";
     } else if (currentTemp >= 70) {
-        color = "cadetblue";
+        backgroundColor = "cadetblue";
     } else if (currentTemp >= 60) {
-        color = "slategrey";
+        backgroundColor = "slategrey";
     } else if (currentTemp >= 50) {
-        color = "lightgrey";
+        backgroundColor = "grey";
     }
-    landscapeContainer.classList = color;
+    landscapeContainer.style.backgroundColor = backgroundColor;
 }
 
 
 // CityName Event Handler
 const inputCityName = () => {
-
+    const cityInput = document.getElementById("cityNameSelect").value;
+    const cityHeader = document.getElementById("cityHeader");
+    cityHeader.textContent = cityInput;
 };
 
 
 // CityName Reset Button Handler
 const addResetBtn = () => {
-
+    const resetBtn = document.getElementById("cityNameSelect");
+    resetBtn.value = "Brooklyn";
+    inputCityName();
 };
-
 
 
 // Event Listeners
@@ -121,7 +124,13 @@ const registerEvents = () => {
     });
     
     const cityNameSelect = document.getElementById("cityNameSelect");
-    cityNameSelect.addEventListener("input", ____);
+    cityNameSelect.addEventListener("input", inputCityName);
+
+
+    // Reset Button
+    const resetBtn = document.getElementById("cityNameReset");
+    resetBtn.addEventListener("click", addResetBtn);
+
 };
 
 document.addEventListener("DOMContentLoaded", registerEvents);
