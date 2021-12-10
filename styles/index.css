@@ -1,3 +1,36 @@
-h1 {
-    color: red;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend+Exa:wght@200;300;400;800;900&display=swap');
+
+body {
+    background-image: url('/papers.co-ag84-google-lollipop-march-mountain-background-29-wallpaper.jpg');
+    font-family: 'Bebas Neue', cursive;
+    background-repeat: no-repeat;
+    background-color: #F5CAC3;
+    height: 100%;
+}
+
+div.overlay {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    opacity: 0.3;
+    display: none;
+}
+
+
+main.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start
+}
+
+section {
+    border: red solid 1px;
+}
+
+h1,
+h2 {
+    color: #4E6A63;
+    padding:  0.5em;
 }

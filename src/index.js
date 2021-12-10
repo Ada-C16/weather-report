@@ -26,10 +26,36 @@ function decreaseTemp() {
     });
 }
 
+function changeLandscape() {
+    
+}
 
 // OUTSIDE CONDITION
 // When user selects an outdoor condition from the dropdown menu
     // --> Will "change" the sky
+function changeSky() {
+    const selectSky = document.getElementById('sky-menu');
+    const sunnyOption = document.getElementById('sunny').text;
+    const cloudyOption = document.getElementById('cloudy').text;
+    const rainyOption = document.getElementById('rainy').text;
+    const divOverlay = document.querySelector('.overlay');
+    selectSky.addEventListener('change', (event) => {
+        if (selectSky.options[selectSky.selectedIndex].text === sunnyOption) {
+            divOverlay.style.display = 'block';
+            divOverlay.style.background = '#FFC300'
+        } else if (selectSky.options[selectSky.selectedIndex].text ===cloudyOption) {
+            divOverlay.style.display = 'block';
+            divOverlay.style.background = '#7393B3';
+        } else if (selectSky.options[selectSky.selectedIndex].text === rainyOption) {
+            divOverlay.style.display = 'block';
+            divOverlay.style.background ='#000'
+        } else {
+            divOverlay.style.display = 'none';
+        }
+    })
+
+
+}
 
 // LOCATION
 // When a user types a city in the input
@@ -45,10 +71,11 @@ function modifyCity() {
 
     const cityButton = document.getElementById('city-button');
     cityButton.addEventListener('click', (event) => {
-        h1.textContent = 'Bay Area';
+        h1.textContent = 'Yay Area';
     });
 }
 
 document.addEventListener("DOMContentLoaded", modifyCity);
 document.addEventListener("DOMContentLoaded", increaseTemp);
 document.addEventListener("DOMContentLoaded", decreaseTemp);
+document.addEventListener("DOMContentLoaded", changeSky);
