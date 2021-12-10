@@ -5,8 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet">
 </head>
 <body>
-    
+    <section id="container">
+      <header>
+        <h1 id='page-title'>Weather Report - 🌟 Sharjah 🌟</h1>
+        <h5 id="sub-header">Should you leave your house today? Or nah? 🤔</h5>
+      </header>
+      <section>
+        <article id="temp">
+            <h3>Temperature (°C)</h3>
+            <p id='temp_const'> 19 </p>
+            <button id="lower_temp"> &#x2796; </button>
+            <button id="higher_temp"> &#x2795; </button>
+        </article>
+      </section>
+
+      <section>
+        <article>
+            <h3>Sky</h3>
+            <label for="sky">How does the sky look?
+
+            <select name="sky" id="sky">
+              <option value="sunny">Sunny</option>
+              <option value="cloudy">Cloudy</option>
+              <option value="rainy">Rainy</option>
+              <option value="snowy">Snowy</option>
+            </select> 
+            </label>
+        </article>
+        <div class="result"></div>
+        <article>
+            <h3>City Name</h3>
+            <label for="city">Type and Press Enter:</label>
+            <input type="text" id="city" name="city" required minlength="4" maxlength="12" size="14">
+            <div><button id='resetButton'>Reset</button></div>
+            <div id="city_result"></div>
+        </article>
+      </section>
+      <footer>
+        <p>Designed by Mariama</p>
+      </footer>
+    </section>
+    <script src="src/index.js"></script>
 </body>
 </html>
