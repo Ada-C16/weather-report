@@ -69,7 +69,23 @@ const submitInput = () => {
   document.querySelector("#inputFormContents").textContent = `Welcome, ${guestName} :) Here's the weather for lovely ${location}!`
 }
 
+const changeSky = (currentSelection) => {
+  let emojis = ''
 
+  if (currentSelection == "sunny") {
+    emojis = "☀️ 😎 ☀️";
+  } else if (currentSelection == "cloudy") {
+    emojis = "☁️ ☁️ ☁️";
+  } else if (currentSelection == "rainy") {
+    emojis = "🌧 💧 🌦";
+  } else if (currentSelection == "snowy") {
+    emojis = "🌨 ❄️ 🌨";
+  } else {
+    emojis = "🐻";
+  }
+
+  document.querySelector("#h1Header").textContent = `${emojis} MyWeather ${emojis}`;
+}
 
 const registerEventHandlers = (event) => {
   const tempButtonUp = document.querySelector("#plusButton");
@@ -100,6 +116,12 @@ const registerEventHandlers = (event) => {
 
   const submitInputButton = document.querySelector("#inputButton");
   submitInputButton.addEventListener("click", submitInput);
+
+  const skySelectDropdown = document.querySelector("#sky");
+  skySelectDropdown.addEventListener("change", function(){
+    let currentSelection = skySelectDropdown.value
+    changeSky(currentSelection)
+  })
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
