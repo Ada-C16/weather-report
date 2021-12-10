@@ -11,35 +11,45 @@
     <title>Rhyannon's Weather Report</title>
 </head>
 <body>
-    <header class="header">
-        <h1>Weather Report</h1>
-        <span>
-            City:
-            <span id="header-city-name" class="header-city-name"></span>
-        </span>
-    </header>
-    <div class="temperature">
-        <div class="degree-section">
-        <p class="temperature-degree">34</p>
-        <span>ºF</span>
-    </div>
-        <button id="increase-temperature" type="button">▲</button>
-        <button id="decrease-temperature" type="button">▽</button>
-    </div>
-    <section class="sky-section">
-        <h2>Sky</h2>
-        <select id="sky-select">
-            <option style="background-image:url(male.png);">Cloudy</option>
-            <option>Rainy</option>
-            <option>Snowy</option>
-            <option>Sunny</option>
-        </select>
-    </section>
-    <section class="city-name-section">
-        <h2>city name</h2>
-        <input id="city-name-input" type="text" value="Salt Lake City">
-        <button id="city-name-reset" class="city-name-reset-button">reset</button>
-    </section>
+    <body>
+        <header class="header__header">
+            <h1>Weather Report</h1>
+            <span>For the lovely city of 
+                <span id="headerCityName" class="header__city-name"></span></span>
+        </header>
+        <section class="temperature__section">
+            <h2>Temperature</h2>
+            <div class="temperature__content">
+                <div class="temperature__controls">
+                    <span id="increaseTempControl">⬆️</span>
+                    <span id="decreaseTempControl">⬇️</span>
+                </div>
+                <span id="tempValue"></span>
+            </div>
+        </section>
+        <section class="sky__section">
+            <h2>Sky</h2>
+            <select id="skySelect">
+                <option>Sunny</option>
+                <option>Cloudy</option>
+                <option>Rainy</option>
+                <option>Snowy</option>
+            </select>
+        </section>
+    
+        <section class="city-name__section">
+            <h2>City Name</h2>
+            <input type="text" id="cityNameInput" value="Seattle" />
+            <button id="cityNameReset" class="city-name__reset-btn">Reset</button>
+        </section>
+    
+        <section class="garden__section">
+            <h2>Weather Garden</h2>
+            <div id="gardenContent" class="garden__content">
+                <div id="sky"></div>
+                <div id="landscape"></div>
+            </div>
+        </section>
     <script src="../src/index.js"></script>
 </body>
 </html>

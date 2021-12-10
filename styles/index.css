@@ -7,9 +7,6 @@
 body {
     height: 100vh;
     display: flex;
-    /* grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-gap: 1rem; */
     margin: 2rem;
     justify-content: center;
     flex-direction: column;
@@ -78,7 +75,6 @@ h1 {
 .degree-section h2 {
     font-size: 40px;
 }
-
 
 #decrease-temperature {
     height: 5vh;
