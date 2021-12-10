@@ -60,7 +60,6 @@ const changeSky = () => {
     gardenContent.classList = skypic;
 };
 
-
 const changePlants = () => {
     // get value from temp
     // can be found in tempValue variable
