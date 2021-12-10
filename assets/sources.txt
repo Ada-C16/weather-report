@@ -1,0 +1,14 @@
+List of sources for the assets included in this project:
+
+Plain Sky GIF: https://giphy.com/gifs/animation-art-l1J9IQ6b9EtsW9QFG
+Hot Chocolate Gif: https://giphy.com/gifs/studiosoriginals-winter-cold-l3vR6JC7NZZgTpmWQ
+Cloudy GIF: https://giphy.com/gifs/cloudy-alice-socal-alicesocal-Ke7i5t6QDmDSO82Uga
+Rainy GIF: https://giphy.com/gifs/happy-rain-weather-3og0IOUWB5AZoP6la0
+Sun GIF: https://giphy.com/gifs/processing-openprocessing-o7R0zQ62m8Nk4
+
+
+Frost Landscape: https://www.istockphoto.com/photo/green-grass-in-hoarfrost-gm455245057-30565400
+Fall Landscape: https://www.istockphoto.com/photo/fall-leaves-in-idyllic-landscape-gm1004007610-271207347
+Desert Landscape: https://www.istockphoto.com/photo/saguaros-cactus-forest-in-sonoran-desert-gm1201116257-344315275
+Spring Landscape: https://www.istockphoto.com/photo/clouds-over-texas-bluebonnets-gm1126947067-296864472
+Summer Landscape: https://www.istockphoto.com/photo/sunset-over-huge-sunflower-field-gm1147285020-309408367
