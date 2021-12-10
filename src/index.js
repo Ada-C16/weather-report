@@ -21,8 +21,6 @@ function down() {
 }
 
 const temperatureMinMax = () => {
-    var tempy=  document.getElementById("temperature").textContent;
-
     if(temperature>134){
         document.getElementById("temperature").textContent = parseInt(-89);
     }
@@ -96,9 +94,19 @@ const changeCity = () =>{
 }
 
 const resetCity = () =>{
-
     document.getElementById("cityGreeting").textContent ="Beautiful city of Nuevo San Juan Parangaricutiro!"; 
     document.getElementById("cityName").value = "";
+}
+
+const resetEverything = () =>{
+
+    document.getElementById("temperature").value = parseInt(35);
+    document.getElementById("temperature").style.color = "teal";
+    document.getElementById("sky-landscape").style.backgroundImage = "linear-gradient(180deg, LightSeaGreen, DodgerBlue)"
+    document.getElementById("earth-landscape").style.backgroundImage = "linear-gradient(180deg, #093824, green)";
+    earth.textContent =  "🌸🌿🌼 🌷🌻🌿 ☘️🌱 🌻🌷";
+    sky.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+    resetCity();
 }
 
 window.onload = function(){
@@ -116,5 +124,8 @@ window.onload = function(){
 
     var reset_city_name = document.getElementById("reset_city_name");
     reset_city_name.onclick = resetCity;
+
+    var reset_everything = document.getElementById("reset_everything");
+    reset_everything.onclick = resetEverything;
 }
 
