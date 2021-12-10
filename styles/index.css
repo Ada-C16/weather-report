@@ -4,7 +4,7 @@
     /* border-color: coral; */
     background-color: #292D3E;
     border-radius: 20px;
-    padding: 0px 0px 0px 30px;
+    padding: 0px 30px 0px 30px;
 }
 
 .container {
@@ -59,6 +59,34 @@ body {
     grid-row: 3/4;
 }
 
+#city-input-block-inner{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#city-input {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #A6ACCD;
+    color: #292D3E;
+    font-size: 14pt;
+}
+
+/* #reset-button {
+    
+} */
+
+#city-reset {
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 12pt;
+    color: #292D3E;
+    background-color: #676E95;
+}
+
 #temperature-block {
     grid-column: 2/3;
     grid-row: 2/4;
@@ -84,7 +112,7 @@ body {
 }
 
 
-.inner-card-container{
+.temp-card-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
