@@ -79,15 +79,22 @@ const changePlants = () => {
 
     plantContainer.textContent = plants;
     const gardenContent = document.getElementById("plants");
-    gardenContent.classList = plants
+    gardenContent.classList = plants;
 
 }
 
 const updateCityName = () => {
-    const cityInput = document.getElementById("city-name").value
-    const headerCity = document.getElementById("headerCityName")
+    const cityInput = document.getElementById("city-name").value;
+    const headerCity = document.getElementById("headerCityName");
 
-    headerCity.textContent = cityInput
+    headerCity.textContent = cityInput;
+}
+
+const resetCityName = () => {
+    const cityInput = document.getElementById("city-name");
+    
+    cityInput.value = "Seattle";
+    updateCityName()
 }
 
 const registerEventHandlers = () => {
@@ -108,7 +115,8 @@ const registerEventHandlers = () => {
     const cityInput = document.getElementById("city-name")
     cityInput.addEventListener("input", updateCityName)
 
-
+    const resetBtn = document.getElementById('reset')
+    resetBtn.addEventListener("click", resetCityName)
     
 }
 
