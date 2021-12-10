@@ -1,95 +1,155 @@
 * {
+    box-sizing: border-box;
     margin: 10px;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
-    display: flex;
-    margin: 2rem;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(rgb(47,150,163), rgb(48,16,143));
-    font-family: 'Major Mono Display', monospace;
-    color: white;
 
+body {
+    background: linear-gradient(rgb(47,150,163), rgb(48,16,143));
+    color: rgb(47,150,163);
+    display: grid;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 18px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 1rem;
+    margin: 2rem;
 }
 
 h1 {
-    font-size: 90px;
-    font-weight: lighter;
+    color: white;
 }
 
-.city-name-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
+.header__header {
     align-items: center;
+    color: white;
+    display: flex;
+    grid-column: span 3;
+    margin: 2rem auto 3rem 0;
 }
 
-
-.sky-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header__header > h1 {
+    font-size: 3em;
+    margin-right: 2rem;
 }
 
-.location, 
-.temperature {
-    height: 30vh;
-    width: 50%;
+.header__city-name {
+    font-size: 2rem;
+    font-style: oblique;
+}
+
+.header__city-name::before,
+.header__city-name::after {
+    content: " ◎ ";
+}
+
+.temperature__section,
+.sky__section,
+.city-name__section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.temperature__section {
+    grid-row: 2;
+}
+
+.sky__section {
+    grid-row: 3;
+}
+
+.city-name__section {
+    grid-row: 4;
+}
+
+.garden__section {
+    align-self: center;
+    grid-row: 2 / span 3;
+    grid-column: 2;
+    text-align: center;
+}
+
+.temperature__content {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    align-items: center;
-
-}
-
-.temperature-degree {
-    font-size: 400px;
-    padding: 0;
-    margin: 20;
-}
-
-.temperature{
-    flex-direction: row-reverse;
-}
-
-.degree-section {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-.degree-section span {
-    margin: 10px;
-    font-size: 40px;
-}
-
-.degree-section h2 {
-    font-size: 40px;
-}
-
-#decrease-temperature {
-    height: 5vh;
-    width: 50%;
-    padding: 10px;
-    margin: 2.5px;
-}
-
-#increase-temperature {
-    height: 5vh;
-    width: 50%;
-    padding: 10px;
-    margin: 2.5px;
-}
-
-#header-city-name {
     justify-content: center;
+}
+
+#tempValue {
+    font-size: 9rem;
+    margin-left: 1.5rem;
+}
+
+.temperature__controls {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.garden__section > h2 {
+    color: white;
+}
+
+.garden__content {
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+    justify-content: space-between;
+    min-height: 200px;
+    max-width: fit-content;
+    margin: auto;
+    padding: 2rem;
+}
+
+.city-name__reset-btn {
+    background-color: #1655cc;
+    border: 0;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Major Mono Display', monospace;
+    padding: 1rem;
+}
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: gold;
+}
+
+.yellow-green {
+    color: yellowgreen;
+}
+
+.green {
+    color: green;
+}
+
+.teal {
+    color: teal;
+}
+
+.cloudy {
+    background-color: lightgrey;
+}
+
+.sunny {
+    background-color: rgb(221, 255, 255);
+}
+
+.rainy {
+    background-color: lightblue;
+}
+
+.snowy {
+    background-color: lightsteelblue;
 }

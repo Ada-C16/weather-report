@@ -1,21 +1,22 @@
-let tempValue = 71;
+let tempValue = 34;
 
+// select sky -> local landscape functionality
 const updateSky = () => {
   const inputSky = document.getElementById('skySelect').value;
   const skyContainer = document.getElementById('sky');
   let sky = '';
   let skyColor = '';
-  if (inputSky === 'Cloudy') {
-    sky = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
+  if (inputSky === 'Stormy Weather') {
+    sky = '☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️';
     skyColor = 'cloudy';
-  } else if (inputSky === 'Sunny') {
-    sky = '☁️     ☁️   ☁️ ☀️ ☁️  ☁️';
+  } else if (inputSky === 'Walking on Sunshine') {
+    sky = '☁️     ☁️   ☁️ ☀️ ☁️  ☁️   ☁️   ☁️  ☁️     ☁️☁️☁️   ☁️☁️';
     skyColor = 'sunny';
-  } else if (inputSky === 'Rainy') {
-    sky = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
+  } else if (inputSky === 'Singing in the Rain') {
+    sky = '💧🌧🌈🌈⛈🌧🌧💧⛈🌧🌦💧🌧🌧⛈💧🌧🌧⛈💧🌧🌧';
     skyColor = 'rainy';
-  } else if (inputSky === 'Snowy') {
-    sky = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
+  } else if (inputSky === 'Winter Wonderland') {
+    sky = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨🌨❄️❄️🌨🌨🌨❄️❄️🌨';
     skyColor = 'snowy';
   }
   skyContainer.textContent = sky;
@@ -23,6 +24,7 @@ const updateSky = () => {
   gardenContent.classList = `garden__content ${skyColor}`;
 };
 
+// your city functionality
 const updateCityName = () => {
   const inputName = document.getElementById('cityNameInput').value;
   const headerCityName = document.getElementById('headerCityName');
@@ -31,10 +33,11 @@ const updateCityName = () => {
 
 const resetCityName = () => {
   const cityNameInput = document.getElementById('cityNameInput');
-  cityNameInput.value = 'Seattle';
+  cityNameInput.value = 'Salt Lake City, UT';
   updateCityName();
 };
 
+// change color of temperature as values change
 const updateTempStyles = (currentTemp) => {
   const tempValueContainer = document.getElementById('tempValue');
   let color = 'teal';
@@ -50,19 +53,21 @@ const updateTempStyles = (currentTemp) => {
   tempValueContainer.classList = color;
 };
 
+// local garden emojis
 const updateGarden = (currentTemp) => {
   const landscapeContainer = document.getElementById('landscape');
-  let landscape = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+  let landscape = '🌲🌲🍁🌲🌲🍁🌲🌲🍁🌲🌲🍁🌲🌲🍁🌲🌲⛄️🌲🌲';
   if (currentTemp >= 80) {
-    landscape = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
+    landscape = '🏜_🌵🌵__🐍_🦂_🌵🌵__🐍_🌵🌵_🦂🌵🌵__🌵';
   } else if (currentTemp >= 70) {
-    landscape = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+    landscape = '🌿🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷🌸🌿🌼_🌱🌷🌻🌿';
   } else if (currentTemp >= 60) {
-    landscape = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
+    landscape = '🛤_🌾🌾_🍃_🪨___🌾🌾🌾_🍃___🌾🌾_🌾🌾_';
   }
   landscapeContainer.textContent = landscape;
 };
 
+// temperature functionality
 const updateTemp = (tempValue) => {
   const tempValueContainer = document.getElementById('tempValue');
   tempValueContainer.textContent = tempValue;
@@ -80,6 +85,7 @@ const decreaseTemp = () => {
   updateTemp(tempValue);
 };
 
+// talk to the DOM
 const registerEventHandlers = () => {
   updateTemp(tempValue);
 

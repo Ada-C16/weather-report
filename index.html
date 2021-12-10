@@ -14,37 +14,37 @@
     <body>
         <header class="header__header">
             <h1>Weather Report</h1>
-            <span>For the lovely city of 
+            <span>For City: 
                 <span id="headerCityName" class="header__city-name"></span></span>
         </header>
         <section class="temperature__section">
-            <h2>Temperature</h2>
+            <h2>Temperature ºF</h2>
             <div class="temperature__content">
                 <div class="temperature__controls">
-                    <span id="increaseTempControl">⬆️</span>
-                    <span id="decreaseTempControl">⬇️</span>
+                    <span id="increaseTempControl">△</span>
+                    <span id="decreaseTempControl">▽</span>
                 </div>
                 <span id="tempValue"></span>
             </div>
         </section>
         <section class="sky__section">
-            <h2>Sky</h2>
+            <h2>Select Sky</h2>
             <select id="skySelect">
-                <option>Sunny</option>
-                <option>Cloudy</option>
-                <option>Rainy</option>
-                <option>Snowy</option>
+                <option>Singing in the Rain</option>
+                <option>Stormy Weather</option>
+                <option>Walking on Sunshine</option>
+                <option>Winter Wonderland</option>
             </select>
         </section>
     
         <section class="city-name__section">
-            <h2>City Name</h2>
-            <input type="text" id="cityNameInput" value="Seattle" />
+            <h2>Your City</h2>
+            <input type="text" id="cityNameInput" value="Salt Lake City, UT"/>
             <button id="cityNameReset" class="city-name__reset-btn">Reset</button>
         </section>
     
         <section class="garden__section">
-            <h2>Weather Garden</h2>
+            <h2>Local Landscape</h2>
             <div id="gardenContent" class="garden__content">
                 <div id="sky"></div>
                 <div id="landscape"></div>
