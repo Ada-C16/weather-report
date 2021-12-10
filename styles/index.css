@@ -1,5 +1,6 @@
 body {
-    background-color: rgb(255, 235, 239);
+    color: brgb(46, 46, 46);
+    background-color: rgb(216, 218, 251);
     text-align: center;
     background-size: 480px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -20,10 +21,21 @@ h1 {
     margin-right: 20px;
 }
 
+#sky-img-1 {
+    margin-right: 190px;
+    margin-bottom: 60px;
+    width: 90px;
+}
+
+#sky-img-2 {
+    width: 80px;
+    margin-top: 15px;
+    margin-right: 40px;
+}
 .container {
     display: grid;
     grid-template-columns: 0.5fr 0.2fr 0.5fr 0.2fr 0.5fr;
-    grid-template-rows: 0.1fr 0.1fr 1.0fr 0.3fr 1.5fr
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.33fr 1.54fr
 }
 
 .heading {
@@ -59,7 +71,7 @@ h1 {
 }
 
 .weather-landscape{
-    background-color: floralwhite;
+    background-color: white;
     grid-column: 2 / 5;
     grid-row: 5 / 6;
 }
@@ -77,11 +89,11 @@ h1 {
 }
 
 #veryHotTemp {
-    background-color: rgb(255, 158, 158);
+    background-color: rgb(250, 176, 176);
 }
 
 #hotTemp {
-    background-color: rgb(252, 189, 137);
+    background-color: rgb(255, 204, 162);
 }
 
 #sky {
@@ -91,5 +103,5 @@ h1 {
 
 #landscape {
     font-size: 30px;
-    margin-top: 150px;
+    margin-top: 30px;
 }
