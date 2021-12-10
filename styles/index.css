@@ -1,0 +1,88 @@
+body, html {
+    margin: 0;
+}
+
+.header__header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(221, 225, 231, 0.671);
+    height: 110px;
+}
+
+.header__section {
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header__section h1 {
+    font-size: 45px;
+    font-family:sans-serif;
+}
+
+#city {
+    text-align: right;
+}
+
+.data__section {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(221, 225, 231, 0.671);
+    justify-content: space-around;
+}
+
+.data__section section {
+    background-color: rgba(55, 126, 192, 0.712);
+    margin: 30px;
+    height: 100px;
+    width: 275px;
+    text-align: center;
+}
+
+.weather__garden {
+    height: calc(100vh - 260px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sky {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: x-large;
+    font-family: sans-serif;
+}
+
+.sky div {
+    font-size: 75px;
+}
+
+#garden {
+    width: 100%;
+    text-align: center;
+    font-size: 75px;
+}
+
+.data__temp {
+    user-select: none;
+}
+
+.data__temp h2 {
+    margin-bottom: 3px;
+}
+
+.arrow {
+    font-size: x-large;
+}
+
+#temp {
+    font-size: xx-large;
+}
