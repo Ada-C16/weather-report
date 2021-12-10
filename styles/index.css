@@ -9,7 +9,7 @@ body {
     margin: 2rem;
 }
 
-.main__header, #tempValue {
+.main__header {
     color:goldenrod;
     grid-column: span 3;
     display: grid;

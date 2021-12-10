@@ -7,12 +7,18 @@ const increaseTempCount = () => {
   const tempCountContainer = document.getElementById('tempValue');
   state.tempCount += 1;
   tempCountContainer.textContent = state.tempCount;
+
+  updateTempColor(state.tempCount);
+  updateLandscape(state.tempCount);
 };
 
 const decreaseTempCount = () => {
   const tempCountContainer = document.getElementById('tempValue');
   state.tempCount -= 1;
   tempCountContainer.textContent = state.tempCount;
+
+  updateTempColor(state.tempCount);
+  updateLandscape(state.tempCount);
 };
 
 const updateTempColor = (temperature) => {
@@ -28,6 +34,23 @@ const updateTempColor = (temperature) => {
     color = 'green';
   }
   tempCountContainer.classList = color;
+};
+
+const updateLandscape = (temperature) => {
+  const tempCountContainer = document.getElementById('tempValue');
+  const landscapeContainer = document.getElementById('landscape');
+  let landscape = '🌲🌲🌲🏠🌲🌲🏠🌲🌲🏠🌲';
+  if (temperature >= 80) {
+    landscape = '🌵🐍🦂🌵🌵🐍🏜🦂🌵🐍🌵';
+  } else if (temperature >= 70) {
+    landscape = '🌸🌿🌷🌻🌼🌷🌿☘️🌱🌻🌷';
+  } else if (temperature >= 60) {
+    landscape = '🌾🌾🍃🍃🪨🛤🌾🌾🍃🌾🍃';
+  } else if (temperature >= 50) {
+    landscape = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️';
+  }
+
+  landscapeContainer.textContent = landscape;
 };
 
 const updateSeason = () => {
@@ -54,8 +77,8 @@ const updateSeason = () => {
 };
 
 const registerEventHandlers = () => {
-  const temperature = document.getElementsByClassName('orange');
-  temperature.addEventListener('click', updateTempColor);
+  // const temperature = document.getElementsByClassName('orange');
+  // temperature.addEventListener('click', updateTempColor);
 
   const increase = document.getElementById('clickIncrease');
   increase.addEventListener('click', increaseTempCount);
