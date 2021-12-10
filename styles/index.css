@@ -25,7 +25,22 @@ body {
     grid-column: 1/2;
     grid-row: 1/2;
     background-color: transparent;
-    padding: 0px;
+    /* border: solid;
+    border-color: cadetblue; */
+    /* justify-content:stretch; */
+    display: flex;
+    height: 100%;
+}
+
+#title-text {
+    font-size: 30pt;
+    font-style: italic;
+    text-align: left;
+    color: #292D3E;
+    /* border-color: coral;
+    border-style: solid; */
+    /* display: inline-block; */
+    align-self: flex-end;
 }
 
 #sky-display {
@@ -68,12 +83,6 @@ body {
     font-style: italic;
 }
 
-#title-text {
-    font-size: 30pt;
-    font-style: italic;
-    text-align: left;
-    color: #292D3E;
-}
 
 .inner-card-container{
     display: flex;
@@ -117,7 +126,7 @@ button {
 }
 
 #city-display {
-    font-size: 18pt;
+    font-size: 20pt;
     font-style: normal;
     font-weight: bolder;
     color: #eeffff;
