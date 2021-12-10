@@ -1,0 +1,87 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #9ba6bb;
+  letter-spacing: 0.14em;
+}
+
+h1 {
+  color: white;
+  border: 8px solid white;
+  padding: 16px 12px;
+  width: 100%;
+  display: inline-block;
+  border-radius: 34px;
+  background-image: linear-gradient(rgb(164, 169, 182), rgb(153, 170, 189));
+}
+
+img {
+  width: 100%;
+  height: 200px;
+}
+
+p {
+  font-style: italic;
+}
+
+#card {
+  background: rgb(246, 247, 248);
+  border-radius: 2rem;
+  box-shadow: -2px -2px 4px 0px #ffffff,
+    50px 50px 50px 0px rgba(66, 62, 62, 0.25);
+  padding: 2rem 2rem;
+}
+
+#cooler-button {
+  background-color: #062781;
+  border: rgb(201, 199, 199) 4px solid;
+  border-radius: 3px;
+  color: white;
+  padding: 5px 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#garden-image {
+  font-size: x-large;
+}
+
+#header-title {
+  width: 900px;
+}
+
+#reset-button {
+  background-color: #e0dfdf;
+  border: rgb(201, 199, 199) 2px solid;
+  border-radius: 3px;
+  color: #000000;
+  padding: 5px 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#sky-image {
+  font-size: x-large;
+}
+
+#temp-value {
+  font-size: 3rem;
+  font-weight: bold;
+  color: blue;
+}
+
+#warmer-button {
+  background-color: #810606;
+  border: rgb(201, 199, 199) 4px solid;
+  border-radius: 4px;
+  color: white;
+  padding: 5px 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  gap: 3rem;
+  justify-content: space-evenly;
+  padding-top: 100px;
+}

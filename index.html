@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles/index.css" rel="stylesheet" type="text/css" />
     <title>Weather Report</title>
-</head>
-<body>
-    
-</body>
+  </head>
+
+  <body>
+    <header>
+      <img src="assets/snowflake.png" alt="">
+    </header>
+
+    <!-- CONTAINER -->
+    <div class="container">
+      <section id="headertitle">
+        <h1>Weather Forecast for <span id="header-City-Name"></span></h1>
+      </section>
+
+    <!-- TEMP CONTAINER  -->
+      <div id="card" class="temp-container">
+        <section id="temp">
+          <h2>Today's Temp</h2>
+          <p>Click button to change temperature.</p> 
+            <button id="warmer-button">
+              <span>Warmer</span> 
+            <button id="cooler-button">
+              <span> Colder </span>
+        </section>
+        <span id="temp-value">42</span>
+      </div>
+
+    <!-- LANDSCAPE CONTAINER -->
+      <div id="card" >
+        <h2>The Weather Landscape</h2> 
+          <div id="sky"> 
+            <p id="sky-image"></p>
+          </div> 
+          <div id="garden">
+            <p id="garden-image"></p> 
+         </div>
+      </div>
+
+    <!-- CITY CONTAINER -->
+      <div id="card" class="city-container">
+        <h2>Enter a City</h2>
+        <input type="text" id="cityNameInputField" value="Denver"/>
+        <button id="reset-button"><span >Reset</span> 
+      </div>
+
+    <!-- SKY SELECTION CONTAINER -->
+      <div id="card">
+        <h2>Select a Sky</h2>
+        <p>Use the drop-down menu to select the atmosphere.</p>
+        <select id="dropdown-sky">
+          <option value="Snowy">Powder Day</option>
+          <option value="Cloudy">Cloudy</option>
+          <option value="Rainy">Rainy</option>
+          <option value="Sunny">Sunny</option>
+        </select>
+      </div>
+      
+    </div>
+    <script src="src/index.js"></script>
+  </body>
 </html>
