@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet">
 </head>
+
 <body>
-    
+    <header>
+        <h1>Weather Report</h1> <span>For the city of </span> <span id="headerCityName">Seattle</span>
+    </header>
+    <div class="wrapper">
+        <div class="box temp">
+            <h4>Temperature</h4>
+            <div id="tempControl">
+                <p id="tempValue">71</p>
+                <span class="clickable" id="tempUp">⬆️</span>
+                <span class="clickable" id="tempDown">⬇️</span>
+            </div>
+        </div>
+        <div class="box garden">
+            <h4>Weather Garden</h4>
+            <p id="skyEmoji"></p>
+            <p id="landscapeEmoji"></p>
+
+
+        </div>
+        <div class="box sky">
+            <h4>
+                Sky
+            </h4>
+            <select id="skySelector">
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="rainy">Rainy</option>
+                <option value="snowy">Snowy</option>
+            </select>
+        </div>
+        <div class="box city">
+            <h4>City Name</h4>
+            <input type="text" id="cityNameInput" value="Seattle">
+            <button id="cityNameResetButton">
+                Reset
+            </button>
+        </div>
+
+    </div>
+
+    <script src="src/index.js"></script>
 </body>
+
 </html>
