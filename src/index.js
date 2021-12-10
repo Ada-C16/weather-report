@@ -58,7 +58,7 @@ const displayCity = () => {
 
 const removeCity = () => {
   console.log('test');
-  document.getElementById('city-title').textContent = '';
+  document.getElementById('city-title').textContent = 'City';
   return false;
 };
 
