@@ -1,6 +1,7 @@
 const state = {
     temperature: 72,
-    sky: 'sunny'
+    sky: 'sunny',
+    city: 'Benicia, CA'
 };
 
 // increase temp event handler
@@ -65,7 +66,22 @@ const changeSky = () => {
         document.querySelector('#sky-display').style.backgroundImage = "url(/imgs/sky-snowy.jpg)";
     }
     console.log ("Sky is set to:", state.sky);
-};
+}
+
+// change city
+const changeCity = () => {
+    let currentCity = document.querySelector('#city-input');
+    state.city = currentCity.value;
+    let cityDisplay = document.querySelector('#city-display');
+    cityDisplay.textContent = `${state.city}`;
+}
+
+// reset city
+const resetCity = () => {
+    document.querySelector('#city-input').value = 'Benicia, CA';
+    state.city = 'Benicia, CA';
+    document.querySelector('#city-display').textContent = `${state.city}`;
+}
 
 const registerEventHandlers = (event) => {
     //increase temp
@@ -83,6 +99,12 @@ const registerEventHandlers = (event) => {
     //change sky
     const skySelector = document.querySelector('#sky-selector');
     skySelector.addEventListener("change", changeSky);
+    //change city
+    const cityInput = document.querySelector('#city-input');
+    cityInput.addEventListener("input", changeCity);
+    //reset city
+    const resetCityButton = document.querySelector('#city-reset');
+    resetCityButton.addEventListener("click", resetCity);
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
