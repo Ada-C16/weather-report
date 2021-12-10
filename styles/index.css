@@ -2,10 +2,9 @@
 
 body {
     background-image: url('/papers.co-ag84-google-lollipop-march-mountain-background-29-wallpaper.jpg');
-    font-family: 'Bebas Neue', cursive;
-    background-repeat: no-repeat;
+    font-family: 'Bebas Neue', sans-serif;
     background-color: #F5CAC3;
-    height: 100%;
+
 }
 
 div.overlay {
@@ -18,19 +17,25 @@ div.overlay {
     display: none;
 }
 
+div.landscape {
+    display: none;
+}
 
 main.container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start
-}
+    justify-content: flex-start;
 
-section {
-    border: red solid 1px;
 }
 
 h1,
 h2 {
     color: #4E6A63;
     padding:  0.5em;
+
+}
+
+span {
+    font-size: 2em;
+
 }

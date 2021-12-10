@@ -8,9 +8,8 @@
 const state = {
     tempDegrees: parseInt(document.getElementById('temperature').textContent)
 }
-
+let tempSpan = document.getElementById('temperature');
 function increaseTemp() {
-    let tempSpan = document.getElementById('temperature');
     const upButton = document.getElementById('up');
     upButton.addEventListener('click', (event) => {
         state.tempDegrees += 1;
@@ -18,7 +17,6 @@ function increaseTemp() {
     });
 }
 function decreaseTemp() {
-    let tempSpan = document.getElementById('temperature');
     const downButton = document.getElementById('down');
     downButton.addEventListener('click', (event) => {
         state.tempDegrees -= 1;
@@ -27,7 +25,23 @@ function decreaseTemp() {
 }
 
 function changeLandscape() {
-    
+    const divLandscape = document.querySelector('.landscape');
+    const imgLandscape = document.querySelector('img.landscape');
+    tempSpan.addEventListener('DOMSubtreeModified', (event) => {
+        if (tempSpan.textContent >= 65 && tempSpan.textContent <= 75) {
+            imgLandscape.src = '/pngaaa.com-2360662.png';
+            divLandscape.style.display = 'block';
+        } else if (tempSpan.textContent >= 74) {
+            imgLandscape.src = '/pngwing.com.png';
+            divLandscape.style.display = 'block';
+        } else if (tempSpan.textContent <= 60) {
+            imgLandscape.src = '/clipart588097.png';
+            divLandscape.style.display = 'block';
+        } else {
+            divLandscape.style.display = 'none';
+        }
+    })
+
 }
 
 // OUTSIDE CONDITION
@@ -79,3 +93,4 @@ document.addEventListener("DOMContentLoaded", modifyCity);
 document.addEventListener("DOMContentLoaded", increaseTemp);
 document.addEventListener("DOMContentLoaded", decreaseTemp);
 document.addEventListener("DOMContentLoaded", changeSky);
+document.addEventListener("DOMContentLoaded", changeLandscape);
