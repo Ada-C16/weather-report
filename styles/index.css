@@ -133,6 +133,10 @@ button {
     cursor:pointer;
     }
 
+#increaseTemp, #decreaseTemp {
+    font-weight: 700;
+}
+
 #TempBox, input{
     width:100%;
     height:60px;
