@@ -7,6 +7,7 @@ header {
     display: block;
     margin: auto auto;
     text-align: center;
+    font-size: 2vw;
     width: 20%;
     height: 30%;
     line-height: 175%;
@@ -25,13 +26,8 @@ p {
     display: flex;
     justify-content:space-evenly;
     margin: auto auto; 
-    padding: 20px;
-    /* background-color: red; */
+    padding: 3vw;
 }
-
-/* #weather-display {
-    background-color: yellow;
-} */
 
 #adjustable {
     display: flex;
@@ -91,7 +87,7 @@ p {
 }
 
 #up, #down {
-    font-size: 4em;
+    font-size: 5em;
 }
 
 .button {
