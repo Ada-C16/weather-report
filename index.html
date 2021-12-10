@@ -5,8 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link rel="stylesheet" href="styles/index.css"/>
 </head>
 <body>
-    
+    <main class="main-container">
+        <header>
+            <h1>Weather Report From the City of Your Choice</h1>
+            <h4>Currently showing the weather in:</h4>
+            <p id="city-header">Catalina Island</p>
+        </header>
+        <section class="temp-container">
+            <h3>Temperature</h3>
+            <div class="temp-controls">
+                <h4>Increase or Decrease the Temperature:</h4>
+                <span class="orange" id="temp-display">70</span>
+                <div>
+                <button id="increase-temp">Increase</button>
+                <button id="decrease-temp">Decrease</button>
+                </div>
+            </div>
+        </section>
+        <section class="garden-container">
+            <h2>Weather Garden</h2>
+            <div id="garden-container">
+                <div id="sky-garden">☀️ ☀️ ☀️ ☀️ ☀️ ☀️ ☀️</div>
+                <div id="landscape">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</div>
+            </div>
+        </section>
+        <section class="sky-container">
+            <h3>Sky</h3>
+            <h4>Choose the Sky Conditions:</h4>
+            <select id="sky-dropdown">
+                <option>Sunny</option>
+                <option>Cloudy</option>
+                <option>Rainy</option>
+                <option>Snowy</option>
+            </select>
+        </section>
+        <section class="city-name-container">
+            <h3>Change the City Name</h3>
+            <h4>Type in the name of a city:</h4>
+            <input type="text" id="city-input" value="Catalina Island"/>
+        </section>
+        <section class="reset">
+            <h3>Reset City:</h3>
+        <button id="city-reset">Reset</button>
+        </section>
+    </main>
+    <script src="src/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,118 @@
+.red{
+    color: red;
+}
+
+.orange{
+    color: orange;
+}
+
+.yellow{
+    color:yellow;
+}
+
+.green{
+    color:green;
+}
+
+.teal{
+    color:teal;
+}
+
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template: 25% 55% auto / 1fr 2fr 1fr;
+}
+  
+header {
+    background-color: #cf83cc;
+    grid-column: auto / span 3;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    padding: 15px;
+}
+
+#city-header{
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+h4 {
+    font-size: 19px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+button {
+    font-size: 16px;  
+}
+
+.temp-container {
+    text-align: center;
+    background-color: #91d0f5;
+    grid-row: auto / span 2;
+    font-size: large;
+    padding-top: 100px;
+    padding-left: 10px;
+}
+
+#temp-display{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sky-container {
+    background-color:cornflowerblue;
+    text-align: left;
+    font-size: large;
+    padding-top: 100px;
+    padding-left: 13px;
+}
+
+select {
+    font-size: 18px;
+}
+  
+.garden-container {
+    text-align: center;
+    background-color: #67b19d;
+    padding-top: 20px;
+    font-size: 25px;
+}
+
+#sky-garden {
+    padding-top: 20px;
+    padding-bottom: 130px;
+    font-size: 45px;  
+}
+
+#landscape {
+    font-size: 35px;
+}
+
+.city-name-container {
+    background-color: #e8ecae;
+    text-align: center;
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-bottom: 30px;
+}
+
+#city-input {
+    font-size: 17px;
+}
+
+.reset {
+    background-color: #f59055;
+    padding-top: 7px;
+    padding-left: 15px;
+}
+
+
+
+
