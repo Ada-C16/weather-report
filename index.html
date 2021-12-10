@@ -7,50 +7,46 @@
     <title>Weather Report</title>
     <link href="styles/index.css" rel="stylesheet" type="text/css"/>
 </head>
-<body>
-    <section class="titleBlock">
-        <h1>
-            What is your weather like today?
-        </h1>
-    </section>
 
-    <section class="skyBlock">
-        <h1>
-            What does your sky look like?
-        </h1>
-        <label for="skyOptions">Pick a Sky:</label>
-        <select id="skyDropMenu">
-            <option>Snowy</option>
-            <option>Cloudy</option>
-            <option>Rainy</option>
-            <option>Sunny</option>
-        </select>
-    </section>
-
-    <section class="landscapeBlock">
-        <h1>
-            Welcome to ...
-        </h1>
-        <section id="cityInput">
-            
-        </section>
-    </section>
+<body class="grid-1">
+    <header class="titleBlock">
+        <h1>Weather Report</h1>
+        <h2>What is your weather like today?</h2>
+    </header>
 
     <section class="tempBlock">
         <h1>Temperature</h1>
         <section class="tempDisplays">
-            <h2 class="tempTitleText">Fahrenheit</h2>
             <section>
                 <button id="plusButton">+</button>
                 <section class="temp">
-                    <h3 id="tempContainer">32</h3>
+                    <h3 id="tempContainer">32°F</h3>
                 </section>
                 <button id="minusButton">-</button>
             </section>
         </section>
+    </section>
 
+    <section id="landscape">
+        <h1>Landscape</h1>
     </section>
+
+    <section class="inputBlock">
+        <h1>Inputs</h1>
+        <h2>City Name</h2>
+        <label for="cityName">Enter a City Name:<input placeholder="Chicago" city="city"/></label>
+        <button type="reset" value="Reset">Reset</button>
+        <h2>Sky</h2>
+        <label id="skyOptions">Pick a Sky:</label>
+        <select id="skyDropMenu">
+            <option value="1">Snowy</option>
+            <option value="2">Cloudy</option>
+            <option value="3">Rainy</option>
+            <option value="4">Sunny</option>
     </section>
+
+
+
     <script src="src/index.js"></script>
 </body>
 </html>

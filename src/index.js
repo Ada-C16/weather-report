@@ -11,8 +11,7 @@ const state = {
 // Fahrenheit***
 const updateTemp = () => {
   const tempElement = document.querySelector('#tempContainer');
-  tempElement.textContent = `${state.temp}`;
-  // colorLandscapeChange();
+  tempElement.textContent = `${state.temp}°F`;
 };
 
 // Make a function to run when event occurs (behavior).
@@ -33,16 +32,47 @@ const decreaseTemp = () => {
   updateTemp();
 };
 
-// **************************************************************
-// Temperature Changing Number Text Color and Landscape Behavior
-// **************************************************************
+// **********************************************
+// Temperature Changing Number Text Color
+// **********************************************
 
-// const colorLandscapeChange = () => {
-//   if (state.temp <= 40) {
-//     color = #a4fbe3;
-//   };
-//   document.querySelector("#tempContainer").getElementsByClassName.color = color;
-// };
+const colorChange = () => {
+  if (state.temp > 79) {
+    document.querySelector('#tempContainer').style.color = '#dd0a35';
+  } else if (state.temp > 69) {
+    document.querySelector('#tempContainer').style.color = '#f87d42';
+  } else if (state.temp > 59) {
+    document.querySelector('#tempContainer').style.color = '#ffce3e';
+  } else if (state.temp > 49) {
+    document.querySelector('#tempContainer').style.color = '#b9e937';
+  } else {
+    document.querySelector('#tempContainer').style.color = '#bae8e8';
+  }
+};
+
+// **********************************************
+// Temperature Changing Landscape
+// **********************************************
+
+const landscapeChange = () => {
+  if (state.temp > 79) {
+    document.querySelector('#landscape').style.backgroundImage =
+      "url('images/summer.png')";
+  } else if (state.temp > 69) {
+    document.querySelector('#landscape').style.backgroundImage =
+      "url('images/spring.png')";
+  } else if (state.temp > 59) {
+    document.querySelector('#landscape').style.backgroundImage =
+      "url('images/autumn.png')";
+  } else {
+    document.querySelector('#landscape').style.backgroundImage =
+      "url('images/winter.png')";
+  }
+};
+
+{
+  /* <a href='https://dryicons.com/free-icons/seasons'> Icon by Dryicons </a> */
+}
 
 // **********************************************
 // Sky Selecting Behavior
@@ -53,12 +83,18 @@ const decreaseTemp = () => {
 // **********************************************
 
 // Selecting the HTML element the event will occur on.
-const registerEventHandlers = () => {
+function registerEventHandlers() {
   const plusButton = document.querySelector('#plusButton');
   plusButton.addEventListener('click', increaseTemp);
   const minusButton = document.querySelector('#minusButton');
   minusButton.addEventListener('click', decreaseTemp);
-};
+
+  plusButton.addEventListener('click', colorChange);
+  minusButton.addEventListener('click', colorChange);
+
+  plusButton.addEventListener('click', landscapeChange);
+  minusButton.addEventListener('click', landscapeChange);
+}
 
 // registers our event handlers in response to the event that fires when the DOM has loaded completely (DOMContentLoaded).
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
