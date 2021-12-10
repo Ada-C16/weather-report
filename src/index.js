@@ -1,8 +1,6 @@
-// display a temp variable on the page
-// make up button clickable and increase the temp
-// make down button clickable and decrease the temp
 // change the scene depending on the sky
-// make an input city name display on the page
+// make a reset city name button
+// add a "landscape" element
 
 const state = {
   clickCount: 50,
@@ -29,12 +27,21 @@ const displayCity = () => {
   return false;
 };
 
+const removeCity = () => {
+  console.log('test');
+  document.getElementById('city-title').textContent = '';
+  return false;
+};
+
 const registerEventHandlers = () => {
   const tempUp = document.getElementById('up');
   const tempDown = document.getElementById('down');
   const cityPopulate = document.getElementById('submit');
+  const cityRemove = document.getElementById('reset');
   tempUp.addEventListener('click', increaseClickCount);
   tempDown.addEventListener('click', decreaseClickCount);
+  cityPopulate.addEventListener('click', displayCity);
+  cityRemove.addEventListener('click', removeCity);
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
