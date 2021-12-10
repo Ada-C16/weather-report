@@ -16,9 +16,9 @@ h2 {
 }
 
 img {
-  width: 500px;
-  height: 500px;
-  border-radius: 100px;
+  width: 450px;
+  height: 450px;
+  border-radius: 75px;
   object-fit: cover;
   margin-left: auto;
   margin-right: auto;
@@ -40,6 +40,7 @@ select {
   color: #eba487;
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 
 /* Temperature Colors */

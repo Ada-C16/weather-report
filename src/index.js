@@ -18,15 +18,12 @@ const changePhoto = () => {
 };
 
 
-
 // Temporary Temperature Counter
 let tempValue = 30;
 
 const updateTemp = tempValue => {
     const tempCount = document.getElementById("tempCount");
     tempCount.textContent = `Temperature (Farenheit): ${tempValue}`;
-    //update temp colors
-    //update landscape
 };
 
 // Temperature Increase Event Handler
@@ -58,7 +55,7 @@ const updateTempColor = (currentTemp) => {
     tempContainer.classList = color;
 };
 
-// Landscape Event Handler
+// Landscape Event Handler/Updating Background Colors
 const updateLandscape = (currentTemp) => {
     const landscapeContainer = document.body;
     let backgroundColor = "rgb(93, 155, 174)";
@@ -79,7 +76,7 @@ const updateLandscape = (currentTemp) => {
 const inputCityName = () => {
     const cityInput = document.getElementById("cityNameSelect").value;
     const cityHeader = document.getElementById("cityHeader");
-    cityHeader.textContent = cityInput;
+    cityHeader.textContent = `City: ${cityInput}`;
 };
 
 
