@@ -31,7 +31,7 @@ header {
     text-align: center;
     font-size: large;
     font-weight: bold;
-    padding: 10px;
+    padding: 15px;
 }
 
 #city-header{
@@ -71,11 +71,11 @@ button {
     text-align: left;
     font-size: large;
     padding-top: 100px;
-    padding-left: 15px;
+    padding-left: 13px;
 }
 
 select {
-    font-size: 30px;
+    font-size: 18px;
 }
   
 .garden-container {
@@ -87,7 +87,7 @@ select {
 
 #sky-garden {
     padding-top: 20px;
-    padding-bottom: 115px;
+    padding-bottom: 130px;
     font-size: 45px;  
 }
 
@@ -98,9 +98,9 @@ select {
 .city-name-container {
     background-color: #e8ecae;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 7px;
     padding-left: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 #city-input {
@@ -109,7 +109,7 @@ select {
 
 .reset {
     background-color: #f59055;
-    padding-top: 10px;
+    padding-top: 7px;
     padding-left: 15px;
 }
 
