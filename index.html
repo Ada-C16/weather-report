@@ -7,29 +7,29 @@
     <title>Weather Report</title>
     <link href="styles/index.css" rel="stylesheet" type="text/css"/>
     <link id="vibe" href="styles/vibe2.css" rel="stylesheet" type="text/css"/>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fuzzy+Bubbles:wght@700&family=Gwendolyn:wght@700&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital@1&family=Fuzzy+Bubbles:wght@700&family=Gwendolyn:wght@700&family=Londrina+Shadow&family=Readex+Pro&display=swap" rel="stylesheet">
 <body>
+    <main class = "container">
     <header>
-        <h1>☀️ My Weather Report ⛈ </h1>
+        <h1>☀️ MyWEATHER ⛈ </h1>
     </header>
-    <section>
-        <h2>Input your location and vibes to receive your personalized weather report</h2>
+    <section id="instructions">
+        <h2 id="inputFormContents">Input your name and location for a weather report made just for you!</h2>
     </section>
-    <section>
-        <!-- Series of inputs/buttons -->
+    <section id = "inputForm">
         <h3>Tell me a lil about yourself plz🧞</h3>
-        <form>
+        <form id="inputForm">
             <label for="fname">Your first name:</label>
             <input type="text" id="fname" name="fname"><br><br>
             <label for="location">Location:</label>
             <input type="text" id="location" name="location"><br><br>
         </form>
+        <button id="inputButton">Submit!</button>
     </section>
-    <section>
+    <section id = "temp-section">
         <h3>🔥 What's the temp, babes? ❄️</h3>
         <h2 id="temperature">68℉</h2>
         <button id="plusButton">➕</button>
@@ -42,8 +42,8 @@
     </section>
     <section id="landscapeContainer">
     </section>
-    <section>
-        <select name="sky" id="skySelect">
+    <section id="skySelect">
+        <select name="sky">
             <option value="">Select a sky</option>
             <option value="sunny">Sunny</option>
             <option value="cloudy">Cloudy</option>
@@ -51,17 +51,13 @@
             <option value="snowy">Snowy</option>
         </select>
     </section>
-    <section>
-        <form id="submitButton">
-            <input type="button" value="LET'S GET IT!👌🏾"><br><br>
-        </form>
     <footer>
         <button id="left">👈🏼</button>
         <p id="vibeName"></p>
         <button id="right">👉🏼</button>
         <p>✨Change your aesthetic✨</p>
     </footer>
-    </section>
+    </main>
     <script src="src/index.js">
     </script>
 </body>

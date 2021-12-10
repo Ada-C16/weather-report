@@ -63,6 +63,14 @@ const changeTempFontColor = () => {
   document.getElementById("landscapeContainer").textContent = landscape;
 }
 
+const submitInput = () => {
+  let guestName = document.getElementById("fname").value;
+  let location = document.getElementById("location").value;
+  document.querySelector("#inputFormContents").textContent = `Welcome, ${guestName} :) Here's the weather for lovely ${location}!`
+}
+
+
+
 const registerEventHandlers = (event) => {
   const tempButtonUp = document.querySelector("#plusButton");
   tempButtonUp.addEventListener("click", function(){changeTemp('up')});
@@ -89,6 +97,9 @@ const registerEventHandlers = (event) => {
   vibeChangerRight.addEventListener("click", function(){
     swapStyleSheet('right')
   })
+
+  const submitInputButton = document.querySelector("#inputButton");
+  submitInputButton.addEventListener("click", submitInput);
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);

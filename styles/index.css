@@ -1,10 +1,60 @@
-#temperature {
-    background-color: whitesmoke;
+.container {
+    width: 95%;
+    margin: auto;
+    height: 80vh;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+}
+
+header {
+    grid-column: span 4;
+    grid-row: 1;
+    text-align: center;
+    font-size: x-large;
+}
+
+#instructions {
+    grid-column: span 4;
+    grid-row: 2;
+    font-size: small;
+    text-align: center;
+}
+
+#skySelect {
+    grid-column: 4;
+    grid-row: 3;
+    background-color: pink;
+}
+
+#inputForm {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+}
+
+#temp-section {
+    grid-column: 3;
+    grid-row: 3;
+    background-color: yellow;
 }
 
 #landscapeContainer {
     background-color: wheat;
+    grid-column: 2 / span 2;
+    grid-row: 4;
 }
+
+footer {
+    grid-column: span 4;
+    grid-row: 5;
+    text-align: center;
+    background-color: blue;
+}
+
+#temperature {  
+    background-color: whitesmoke;
+}
+
+
 /* celsius/fahrenheit slider */
 /* Hide default HTML checkbox */
 .switch input {
