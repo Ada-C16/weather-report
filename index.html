@@ -9,29 +9,23 @@
 </head>
 <body>
     <h1>Weather Report</h1>
-    <span class="cityName">Terre Haute</span>
+    <p class="cityInfo">for <span id="cityName">Terre Haute</span></p>
     <section class="box" id="cityNameBox">
         <h2 id="changeCity">Change City</h2>
         <input type="text" value = "Terre Haute">
         <button>Reset</button> 
     </section>
-    <section class="picture" id="tempLandscape">
-        <img id="tempPic" src="assets/60-79.jpg" alt="Purple flowers growing our of dried leaves">
-    </section>
-    <section class="picture" id="skyPicture">
-    </section>
+    <img class="picture" id="tempPic" src="assets/60-79.jpg" alt="Purple flowers growing our of dried leaves">
+    <img class="picture" id="skyPic" src="assets/sunny.jpg" alt="Sun shinning through trees with orange, green, and yellow foliage">
     <section class="box" id="tempBox">
         <h2 id="tempHeading">Temperature</h2>
-        <span id="tempDisplay">
-            <text id="temp">75</text>
-            <text>&#8457;</text>
-        </span>
-        <span class="changeTemp" id="increaseTemp">&#8593;</span>
-        <span class="changeTemp" id="decreaseTemp">&#8595;</span>
+        <p id="tempDisplay"><span id="temp">75</span>&#8457;</p>
+        <button class="changeTemp" id="increaseTemp">&#8593;</button>
+        <button class="changeTemp" id="decreaseTemp">&#8595;</button>
     </section>
     <section class="box" id="skyBox">
         <h2>Sky</h2>
-        <select>
+        <select id="skySelect">
             <option>Sunny</option>
             <option>Cloudy</option>
             <option>Rainy</option>

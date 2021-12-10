@@ -61,12 +61,40 @@ const changeTempLandscape = (temp) => {
   }
 };
 
+const changeSky = () => {
+  const skySelected = document.getElementById('skySelect').value;
+  const skyPic = document.getElementById('skyPic');
+  if (skySelected === 'Sunny') {
+    skyPic.src = 'assets/sunny.jpg';
+    skyPic.alt =
+      'Sun shinning through trees with orange, green, and yellow foliage';
+  } else if (skySelected === 'Cloudy') {
+    skyPic.src = 'assets/cloudy.jpg';
+    skyPic.alt = 'Tree-covered mountains with cloudy sky';
+  } else if (skySelected === 'Rainy') {
+    skyPic.src = 'assets/rainy.jpg';
+    skyPic.alt =
+      'View from under a rain-covered open green umbrella with cats and dogs looking onto a city street with cars driving in the rain';
+  } else if (skySelected === 'Snowy') {
+    skyPic.src = 'assets/snowy.jpg';
+    skyPic.alt =
+      'View from snow-covered deck of bare trees and evergreen trees covered in snow with a white sky';
+  } else if (skySelected === 'Firenado') {
+    skyPic.src = 'assets/firenado.jpg';
+    skyPic.alt =
+      'Galahad, a grey cat, looking very alarmed with a snaggletooth';
+  }
+};
+
 const registerEventHandlers = () => {
   const increaseTempClick = document.getElementById('increaseTemp');
   increaseTempClick.addEventListener('click', increaseTemp);
 
   const decreaseTempClick = document.getElementById('decreaseTemp');
   decreaseTempClick.addEventListener('click', decreaseTemp);
+
+  const selectSky = document.getElementById('skySelect');
+  selectSky.addEventListener('change', changeSky);
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
