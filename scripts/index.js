@@ -1,27 +1,6 @@
 const state = {
-  temp: 68,
+  temp: 71,
 };
-
-const tempElement = document.getElementById('temp');
-
-const tempEmojiHolder = document.querySelector('#temp-emoji-holder');
-
-const tempUp = document.createElement('button');
-tempUp.id = 'temp-up';
-tempUp.textContent = '⬆️';
-tempEmojiHolder.appendChild(tempUp);
-
-const tempDown = document.createElement('button');
-tempDown.id = 'temp-down';
-tempDown.textContent = '⬇️';
-tempEmojiHolder.appendChild(tempDown);
-tempElement.appendChild(tempEmojiHolder);
-
-const tempNum = document.createElement('p');
-tempNum.textContent = state.temp;
-tempNum.id = 'temp-text';
-tempElement.appendChild(tempNum);
-
 // ADD TEMP FUNCTIONALITY
 
 // ADD
@@ -40,16 +19,23 @@ const downTempFunc = () => {
 
 // WEATHER GARDEN
 const changeFlowerGarden = document.getElementById('garden-flowers');
+const tempText = document.getElementById('temp-text');
 
 const changeFlowers = () => {
-  if (state.temp < 59) {
+  if (state.temp < 49) {
+    tempText.style.color = 'teal';
+  } else if (state.temp < 59) {
     changeFlowerGarden.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+    tempText.style.color = 'green';
   } else if (state.temp <= 69) {
     changeFlowerGarden.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
+    tempText.style.color = 'gold';
   } else if (state.temp <= 79) {
     changeFlowerGarden.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+    tempText.style.color = 'orange';
   } else {
     changeFlowerGarden.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
+    tempText.style.color = 'red';
   }
 };
 
