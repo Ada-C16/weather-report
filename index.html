@@ -13,10 +13,11 @@ commit 5 - final commit
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link rel='stylesheet' href='/styles/index.css'>
 </head>
 <body>
     <main>
-        <h1>[City] Weather</h1>
+        <h1 id='h1'>Bay Area</h1>
         <section>
             <h2>Temperature</h2>
             <button class='increase'>Up</button>
@@ -35,9 +36,10 @@ commit 5 - final commit
         </section>
         <section>
             <h2>Location</h2>
-            <input type='text' placeholder='Rep your city'></input>
+            <input type='text' placeholder='Rep your city' id='city'></input>
             <button>Reset</button>
         </section>
     </main>
+    <script src='/src/index.js'></script>
 </body>
 </html>
