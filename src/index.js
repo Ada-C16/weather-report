@@ -19,7 +19,7 @@ const changePhoto = () => {
 
 
 // Temporary Temperature Counter
-let tempValue = 30;
+let tempValue = 40;
 
 const updateTemp = tempValue => {
     const tempCount = document.getElementById("tempCount");
@@ -60,13 +60,13 @@ const updateLandscape = (currentTemp) => {
     const landscapeContainer = document.body;
     let backgroundColor = "rgb(93, 155, 174)";
     if (currentTemp >= 80) {
-        backgroundColor = "skyblue";
+        backgroundColor = "deepskyblue";
     } else if (currentTemp >= 70) {
-        backgroundColor = "cadetblue";
+        backgroundColor = "darkturquoise";
     } else if (currentTemp >= 60) {
-        backgroundColor = "slategrey";
+        backgroundColor = "darkcyan";
     } else if (currentTemp >= 50) {
-        backgroundColor = "grey";
+        backgroundColor = "darkslategrey";
     }
     landscapeContainer.style.backgroundColor = backgroundColor;
 }
@@ -98,6 +98,7 @@ const registerEvents = () => {
         tempIncrease(); 
         updateTempColor(tempValue);
         updateLandscape(tempValue);
+        updateHeaders(tempValue);
     });
 
     const decreaseButton = document.getElementById("clickButtonDe");
@@ -106,6 +107,7 @@ const registerEvents = () => {
         tempDecrease();
         updateTempColor(tempValue);
         updateLandscape(tempValue);
+        updateHeaders(tempValue);
     });
 
     const skySelect = document.getElementById("skySelect");

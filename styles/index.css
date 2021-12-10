@@ -16,8 +16,8 @@ h2 {
 }
 
 img {
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 500px;
   border-radius: 75px;
   object-fit: cover;
   margin-left: auto;
@@ -34,12 +34,11 @@ select {
 .buttonWindow {
   text-align: center;
   font-family: Bebas;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: bold;
-  /* padding-right: 10px; */
   color: #eba487;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-top: 30px;
 }
 
@@ -67,5 +66,3 @@ select {
 .salmon {
   color: #eba487;
 }
-
-/* Landscape Colors */
