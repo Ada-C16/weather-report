@@ -157,6 +157,7 @@ input {
     color: black;
     background: transparent;
     border: solid 2px black;
+    transition: 0.3s
 }
 
 #reset:hover {
