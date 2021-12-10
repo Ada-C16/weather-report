@@ -46,6 +46,39 @@ const resetCity = () => {
     updateCity();
 };
 
+const updateSky = () => {
+    const skyOption = document.getElementById("sky-options").value;
+    const skyContainer = document.getElementById("sky");
+    let sky = "";
+    if (skyOption === "sunny") {
+        sky = "☁️ ☁️ ☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
+    } else if (skyOption === "cloudy") {
+        sky = "☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️";
+    } else if (skyOption === "rainy") {
+        sky = "🌧🌧🌦🌧🌧🌧🌧🌧🌧🌧🌧";
+    } else if (skyOption === "snowy") {
+        sky = "🌨❄️🌨❄️🌨❄️🌨❄️🌨❄️🌨";
+    }
+    skyContainer.textContent = sky;
+};
+
+const updateLandscape = (currentTemp) => {
+    const landscapeContainer = document.getElementById("landscape");
+    let landscape = "";
+    if (currentTemp >= 80) {
+        landscape = "🌵🐍🦂🌵🐍🦂🌵🏜🦂🌵🐍";
+    } else if (currentTemp >= 70) {
+        landscape = "🌸🌿🌼🐛🌷🌻☘️🐞🌱🌻🌷";
+    } else if (currentTemp >= 60) {
+        landscape = "🌾🌾🪨🍃🛤🌾🌾💨🌾⛅️🍃";
+    } else if (currentTemp >= 50){
+        landscape = "🍂🍁🍁🍂🍁🍂🎃🍁🍂🧣🍂"
+    } else if (currentTemp < 50){
+        landscape = "🌲❄️🌲☃️⛄️🌲🌲⛄️🌲🐻‍❄️🌲"
+    }
+    landscapeContainer.textContent = landscape;
+};
+
 const registerEventHandlers = () => {
     const increaseTempButton = document.getElementById("increase-temp");
     increaseTempButton.addEventListener("click", increaseTemp);
@@ -58,6 +91,10 @@ const registerEventHandlers = () => {
 
     const resetCityButton = document.getElementById("reset");
     resetCityButton.addEventListener("click", resetCity);
+
+    const skyOption = document.getElementById("sky-options");
+    skyOption.addEventListener("change", updateSky);
+
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);

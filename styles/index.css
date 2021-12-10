@@ -111,6 +111,18 @@ input {
     text-align: center;
 }
 
+.weather-section h1 {
+    font-weight: bolder;
+    color: #3a413d;
+    font-size: 40px;
+}
+
+#sky,
+#landscape {
+    font-size: 3em;
+    line-height: 100px;
+}
+
 .red {
     color: red;
 }
