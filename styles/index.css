@@ -157,7 +157,7 @@ input {
     color: black;
     background: transparent;
     border: solid 2px black;
-    transition: 0.3s
+    transition: 0.2s
 }
 
 #reset:hover {
@@ -235,6 +235,7 @@ input {
     border-radius: 5px;
     margin-top: 10px;
     padding-left: .5rem;
+    
 }
 
 input:focus, select:focus {

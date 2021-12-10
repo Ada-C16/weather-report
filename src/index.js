@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 const tempBox = document.getElementById("TempBox");
 let tempValue=  Number(tempBox.textContent);
