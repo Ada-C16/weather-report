@@ -23,7 +23,7 @@ const decreaseClickCount = () => {
 const displayCity = () => {
   console.log('test');
   document.getElementById('city-title').textContent =
-    document.getElementById('user').value;
+    document.getElementById('city-name').value;
   return false;
 };
 
