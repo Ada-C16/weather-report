@@ -4,9 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet">
 </head>
 <body>
     
+    <section id="titleGreeting">
+        <h1>Weather Report  </h1>
+        <h2> for the happy town of </h2>
+        <span id ="headerCityName"> Chewandswallow</span>
+    </section>
+    <section id="changeCityName">
+        <h1> Change City Name</h1>
+        <button id="Reset">Reset</button>
+        <input id="inputCityName" value="Your City Name" />
+    </section>
+    <section id="tempAdjuster" class="blue">
+        <h1> Adjust Thermostat</h1>
+        <button id="arrowUp">Increase⏫</button>
+        <button id="arrowDown">Decrease⏬</button>
+        <span id="tempNum"> </span>
+    </section>
+    
+    <section id ="skySection">
+        <h1> Change the Sky</h1>
+        <div class="pickerWindow">
+        
+        <select id = "skySelect">
+            <option>Sunny with a fall of fruit</option>
+            <option>Cloudy with a chance of meatballs</option>
+            <option>Raining cats and dogs</option>
+            <option>Snowy with a spread of sweets</option>
+    
+        </select>
+    </section>
+
+    <section id="landscape">
+        <h1> Landscape</h1>
+        <p id="skyGarden"> ☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️</p>
+        <p id="emojiGarden">🍒🍒🍏🍏 🥬🍒🍒🫐🫐🍊🍊🥬🥒🥒</p>
+    </section>
+    
+
+    </div>
+    <script src="src/index.js"></script>    
 </body>
 </html>
