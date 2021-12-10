@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Report</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../styles/index.css"/>
+    <title>Rhyannon's Weather Report</title>
 </head>
 <body>
+    <body>
+        <header class="header__header">
+            <h1>Weather Report</h1>
+            <span>For City: 
+                <span id="headerCityName" class="header__city-name"></span></span>
+        </header>
+        <section class="temperature__section">
+            <h2>Temperature ºF</h2>
+            <div class="temperature__content">
+                <div class="temperature__controls">
+                    <span id="increaseTempControl">△</span>
+                    <span id="decreaseTempControl">▽</span>
+                </div>
+                <span id="tempValue"></span>
+            </div>
+        </section>
+        <section class="sky__section">
+            <h2>Select Sky</h2>
+            <select id="skySelect">
+                <option>Singing in the Rain</option>
+                <option>Stormy Weather</option>
+                <option>Walking on Sunshine</option>
+                <option>Winter Wonderland</option>
+            </select>
+        </section>
     
+        <section class="city-name__section">
+            <h2>Your City</h2>
+            <input type="text" id="cityNameInput" value="Salt Lake City, UT"/>
+            <button id="cityNameReset" class="city-name__reset-btn">Reset</button>
+        </section>
+    
+        <section class="garden__section">
+            <h2>Local Landscape</h2>
+            <div id="gardenContent" class="garden__content">
+                <div id="sky"></div>
+                <div id="landscape"></div>
+            </div>
+        </section>
+    <script src="../src/index.js"></script>
 </body>
 </html>
