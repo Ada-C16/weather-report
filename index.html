@@ -5,8 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet">
+    <script src="src/index.js"></script>
 </head>
 <body>
+
+    <header class="main__header">
+        <h1>My Ideal Weather Report Dashboard</h1>
+        <span> For the wonderful city of 
+            <span id="headerCityName" class="header__city--name">
+                🍂
+                Goldsboro
+                🍂
+            </span>
+        </span>
+    </header>
     
+    <main>
+        <section class="temperature__section">
+            <h2>Temperature (F)</h2>
+        
+            <div class="temperature__content">
+                <div class="temp__controls">
+                    <span id="tempValue" class="gold">56</span>
+                    <h3>Temperature Controls</h3>
+                    <button id="clickIncrease">➕</button>
+                    <button id="clickDecrease">➖</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="landscape__section">
+            <h2>A Look Outside</h2>
+            <div id="lookOutside" class="landscape__content">
+                <div id="sky">🍂🍁_🍂___🍂🍂_🍁🍂_🍂__🍁🍂🍂__🍁🍂</div>
+                <div id="ground">🌲🍁🍂🍂🌲🌲🏠🌲🍁🍂🌲🏠🌲🍂🌲🏠🌲</div>
+            </div>
+
+        </section>
+    </main>
 </body>
 </html>
+
