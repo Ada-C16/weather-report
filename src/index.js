@@ -6,11 +6,39 @@ const state = {
   clickCount: 50,
 };
 
+const colors = (clicks, text) => {
+  if (clicks < 50) {
+    text.style.color = 'blue';
+  } else if (clicks < 59) {
+    text.style.color = 'green';
+  } else if (clicks < 69) {
+    text.style.color = 'yellow';
+  } else if (clicks < 79) {
+    text.style.color = 'pink';
+  } else {
+    text.style.color = 'pink';
+  }
+};
+
+const landscape = (clicks, container) => {
+  if (clicks < 59) {
+    container.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+  } else if (clicks < 69) {
+    container.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
+  } else if (clicks < 79) {
+    container.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+  } else {
+    container.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
+  }
+};
 const increaseClickCount = () => {
   const displayTemp = document.getElementById('temp');
+  const landscapeDisplay = document.getElementById('landscape-scene');
   state.clickCount += 1;
   displayTemp.textContent = state.clickCount;
   console.log('up');
+  colors(state.clickCount, displayTemp);
+  landscape(state.clickCount, landscapeDisplay);
 };
 
 const decreaseClickCount = () => {
@@ -18,6 +46,7 @@ const decreaseClickCount = () => {
   state.clickCount -= 1;
   displayTemp.textContent = state.clickCount;
   console.log('down');
+  colors(state.clickCount, displayTemp);
 };
 
 const displayCity = () => {
