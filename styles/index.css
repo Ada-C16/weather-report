@@ -74,6 +74,23 @@ body#page {
     border-radius: 10px;
 }
 
+.tempDisplays {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "fDegContainer" "cDegContainer";
+    grid-gap: 30px;
+}
+
+.tempDisplays > .fDegContainer {
+    grid-area: fDegContainer;
+}
+
+.tempDisplays > .cDegContainer {
+    grid-area: cDegContainer;
+}
+
 select {
     margin-bottom: 10px;
     margin-top: 10px;

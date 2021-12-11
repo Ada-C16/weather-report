@@ -110,6 +110,24 @@ const resetCityName = () => {
 };
 
 // **********************************************
+// Optional Enhancements
+// **********************************************
+// TODO: work on the optional enhancements and deploy to github.
+
+// Convert F to C and C to F
+const cToF = (celsius) => {
+  const cTemp = celsius;
+  const fTemp = (cTemp * 9) / 5 + 32;
+  return fTemp;
+};
+
+const fToC = (fahrenheit) => {
+  const fTemp = fahrenheit;
+  const cTemp = ((fTemp - 32) * 5) / 9;
+  return cTemp;
+};
+
+// **********************************************
 // Registering the Event Handlers
 // **********************************************
 
