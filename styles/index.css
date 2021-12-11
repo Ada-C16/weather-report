@@ -1,6 +1,7 @@
 .container > div {
     background: #eee;
     padding: 1em;
+    border-radius: 10px;
 }
 
 .container > div:nth-child(odd) {
@@ -25,21 +26,25 @@
     grid-row: 2/4;
 } */
 
-.box3{
+#box3{
     grid-row: 2;
     gap: 8em;
 }
 
-.box4{
+#box4{
     grid-row: 3;
 }
 
-.box5{
+#box5{
     grid-row: 4;
 }
 
-.box6{
+#box6{
     grid-row: 2/4;
     margin-top: 100px;
     height:100px;
+}
+
+.input-boxes {
+    background-color: aqua;
 }
