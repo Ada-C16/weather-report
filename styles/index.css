@@ -1,0 +1,25 @@
+body{
+    background-color: antiquewhite;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.evenly-spaced {
+    justify-content: space-evenly;
+}
+
+.h-center {
+    justify-content: center;
+}
+
+.v-center {
+    align-items: center;
+}

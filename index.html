@@ -5,8 +5,112 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href ="styles/index.css" rel = "stylesheet">
 </head>
 <body>
-    
+    <header class="column v-center">
+        <h1>Today's Weather</h1>
+        <h2>In the city of Los Angeles</h2>
+    </header>
+
+    <section id="mainBoxes" class="row evenly-spaced">
+
+        <div class="inputBoxes column">
+            <h3>Temperature</h3>
+                <div class="row evenly-spaced">
+                    <div id="temperatureButtons" class="column">
+                        <button id="upButton">⬆</button>
+                        <button id="downButton">⬇</button>
+                    </div>
+                    <div id="temperature" class="row v-center"> 75 </div>
+                </div>
+        </div>
+
+
+        </div>
+            <div class="inputBoxes column">
+                <h3>Sky</h3>
+                <div class="row evenly-spaced">
+                    <form>
+                        <label>Sky</label>
+                        <select name="sky" id="skyForm">
+                            <option value="sunny">Sunny</option>
+                            <option value="cloudy">Cloudy</option>
+                            <option value="rainy">Rainy</option>
+                            <option value="snowy">Snowy</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+
+        <div class="inputBoxes column">
+            <h3>City</h3>
+                <div class="row evenly-spaced">
+                    <form action="">
+                        <label>City:</label><br>
+                        <input type="text" id="cityForm" name="cityForm" value="La La Land"><br>
+                        <input type="submit" value="Submit">
+                        <input type="reset">
+                    </form>
+                    
+
+                    
+                </div>
+
+
+        </div>
+
+
+    </section>
+
+    <section id="gardenSection" class="row evenly-spaced">
+        
+        <div id="theGarden" class="column v-center">
+            <h3>It's Looking Like</h3>
+                <div class="row v-center">
+                    <div class="column">
+                        <pre>
+                    |       |        |       | |
+                    ' |   |   |     '  |      '      
+                                 |           |     | 
+                    '     |  _,..--I--..,_ |         
+                      / _.-`` _,-`   `-,_ ``-._ \ lt.
+                        `-,_,_,.,_   _,.,_._,-`      
+                   |  | '   '     `Y` __ '     '     
+                     '|        ,-. I /  \       |  | 
+                    |    |    /   )I \  /     '   |  
+                   '  '      /   / I_.""._           
+                   |  |    ,l  .'..`      `.   ' |  |
+                    |     / | /   \        l         
+                         /, '"  .  \      ||   |   | 
+                    |  ' ||      |"|      ||   |     
+                   '     ||      | |      ||       | 
+                   |     \|      | '.____,'/  |  |   
+                      |   |      |  |    |F   '    | 
+                    | '   |      |  | |\ |     ' |   
+                          |      |  | || |      |    
+                   |  |   |      |  | || |    |    | 
+                          |      |  | || |      |    
+                    ' |   '.____,'  \_||_/   |    |  
+                            |/\|    [_][_]      |    
+                   """"""""""""""""""""""""""""""""""
+                        </pre>
+                    </div>
+                </div>
+                <div class="column">
+                    "Life isn’t about waiting for the storm to pass…It’s learning to dance in the rain"
+                </div>
+        </div>
+
+
+
+    </section>
+
+
+    <script src="src/index.js" ></script>
 </body>
 </html>
