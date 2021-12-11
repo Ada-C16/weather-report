@@ -1,0 +1,114 @@
+/* https://www.csscolorpalettes.com/palettes/898 - main color palette */
+
+body#page {
+    background: #8ca3e6;
+    color: #2cb978;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+        "header header header header"
+        "inputs landAndSky landAndSky landAndSky"
+        "inputs landAndSky landAndSky landAndSky"
+        "inputs landAndSky landAndSky landAndSky"
+        "inputs landAndSky landAndSky landAndSky";
+    grid-gap: 20px;
+}
+
+#page > header {
+    display: grid;
+    justify-items: center;
+    grid-area: header;
+    background: #c8efed;
+    border: 4px solid #ffffc2;
+    border-radius: 10px;
+}
+
+#page > .landAndSky {
+    grid-area: landAndSky;
+    background: #c8e7ed;
+    border: 4px solid #ffffc2;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 10px;
+}
+
+#page > #inputs {
+    grid-area: inputs;
+}
+
+.inputTitle {
+    display: grid;
+    justify-items: center;
+    background: #c8efed;
+    border: 4px solid #ffffc2;
+    border-radius: 10px;
+}
+
+.inputCityBlock{
+    display: grid;
+    justify-items: center;
+    grid-area: inputCityBlock;
+    background: #c8efed;
+    border: 4px solid #ffffc2;
+    border-radius: 10px;
+}
+
+.skyBlock{
+    display: grid;
+    justify-items: center;
+    grid-area: skyBlock;
+    background: #c8efed;
+    border: 4px solid #ffffc2;
+    border-radius: 10px;
+}
+
+.tempBlock {
+    display: grid;
+    justify-items: center;
+    background: #c8efed;
+    border: 4px solid #ffffc2;
+    border-radius: 10px;
+}
+
+.tempDisplays {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "fDegContainer" "cDegContainer";
+    grid-gap: 30px;
+}
+
+.tempDisplays > .fDegContainer {
+    grid-area: fDegContainer;
+}
+
+.tempDisplays > .cDegContainer {
+    grid-area: cDegContainer;
+}
+
+select {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    outline: 0;
+    background: #ffffc2;
+    color: #2cb978;
+    border: 1px solid #8ca3e6;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+button {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    outline: 0;
+    background: #ffffc2;
+    color: #2cb978;
+    border: 1px solid #8ca3e6;
+    padding: 4px;
+    border-radius: 10px;
+}
