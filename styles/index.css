@@ -27,6 +27,14 @@
     text-shadow: 5px 5px 8px white;
  
 }
+h4{
+    color:rgb(32, 108, 158);
+    font-size: 3rem;
+    padding:0.3rem;
+    align-content:center;
+    
+
+}
 .headersText{
     color: white;
     font-size: 2rem;
@@ -158,26 +166,9 @@ p {
 }
 .item{
     margin-left:20%;
-    float:left;
-    
+    float:left; 
 }
-/* .rainyMode{
-    display: flex;
-    margin-left: 15%;
-    width: 5.5em;
-    height: 5em;
-    padding: 2rem;
-    text-align:center;
-    font-size: 5rem;
-    clear: both;
-    background-color: blue;
-    background-image: url(../assets/landscapes/rainy.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-content: center;
-    border-top: 3px solid #424242;
-    box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
-} */
+
 .sunnyMode{
     display: flex;
     /* vertical-align: baseline;
@@ -186,7 +177,7 @@ p {
     width: 5.5em;
     height: 5em;
     padding-left: 3rem;
-    padding-top: 2em;
+    padding-top: 0.8rem;
     text-align:center;
     font-size: 5rem;
     clear: both;
@@ -197,51 +188,7 @@ p {
     border-top: 3px solid #424242;
     box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
 }
-/* .sunnyMode::before{
-    background-image: url(../assets/landscapes/sunny.jpeg);
-    background-repeat: no-repeat;
 
-    background-size: cover;
-    opacity: 0.5;
-} */
-  
-/* .snowyMode{
-    display: flex;
-    margin-left: 15%;
-    width: 5.5em;
-    height: 5em;
-    padding: 2rem;
-    text-align:center;
-    font-size: 5rem;
-    clear: both;
-    background-image: url(../assets/landscapes/snow.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-content: center;
-    border-top: 3px solid #424242;
-    box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
-} */
-/* .cloudyMode{
-    display: flex;
-    margin-left: 15%;
-    width: 5.5em;
-    height: 5em;
-    padding: 2rem;
-    text-align:center;
-    font-size: 5rem;
-    clear: both;
-    background-image: url(../assets/landscapes/cloudy.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-content: center;
-    border-top: 3px solid #424242;
-    box-shadow: 2px 2px 5px 2px rgba(66, 66, 66, 0.6);
-} */
-/* #landScape{
-    background-image: url(../assets/landscapes/sunny.jpeg);
-    background-repeat: no-repeat;
-    background-size: 7rem;
-} */
 #temp-adjust{
     font-size: 3rem;
     /* white-space:pre-wrap; */
@@ -259,9 +206,4 @@ p {
 
 
   
-/*apply hover effect to button tag*/
-  
-/* button:hover {
-    background-color: yellow;
-    color: grey;
-} */
+
