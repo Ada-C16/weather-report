@@ -119,6 +119,10 @@ button {
     border: 0;
 }
 
+#city-input:hover {
+    background-color: #cccfe4;
+}
+
 #city-reset {
     padding: 10px;
     border-radius: 10px;
