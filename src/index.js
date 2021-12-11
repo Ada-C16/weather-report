@@ -8,7 +8,7 @@ const renderTemp = (event) => {
   const sky = document.querySelector('#sky-garden');
   tempInt.textContent = state.defaultTemp;
   landscape.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
-  sky.textContent = '🌈 🌈🌈 🌈🌈🌈 🌈 🌈🌈';
+  sky.textContent = '🌈 ✨🌈🌈 🌈✨🌈🌈 🌈 ✨🌈🌈';
 };
 
 const increaseTemp = (event) => {
@@ -54,7 +54,7 @@ const changeSky = (event) => {
   } else if (skySelector === 'rainy') {
     skyGarden.textContent = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
   } else {
-    skyGarden.textContent = '🌈 🌈🌈 🌈🌈🌈 🌈 🌈🌈';
+    skyGarden.textContent = '🌈 ✨🌈🌈 🌈✨🌈🌈 🌈 ✨🌈🌈';
   }
 };
 
