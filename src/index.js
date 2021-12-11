@@ -6,15 +6,12 @@ const state = {
   currentTemperature: 82,
 };
 
-const temperature = document.querySelector('#temperature');
-const currentLandscape = document.querySelector('#currentLandscape');
-
-const increaseTemperature = (event) => {
-  console.log('in Temperature:', event);
+const increaseTemperature = () => {
   state.currentTemperature += 1;
   // const temperature = document.querySelector('#temperature');
   temperature.textContent = `${state.currentTemperature}`;
   temperatureColorControl();
+  landscapePictureControl();
   // if (state.currentTemperature <= 49) {
   //   currentLandscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
   //   temperature.className = `teal`;
@@ -33,10 +30,10 @@ const increaseTemperature = (event) => {
   // }
 };
 
-const decreaseTemperature = (event) => {
-  console.log('in Temperature:', event);
+const decreaseTemperature = () => {
   state.currentTemperature -= 1;
   temperatureColorControl();
+  landscapePictureControl();
 
   // const temperature = document.querySelector('#temperature');
   temperature.textContent = `${state.currentTemperature}`;
@@ -61,20 +58,28 @@ const decreaseTemperature = (event) => {
 const temperatureColorControl = () => {
   const temperature = document.querySelector('#temperature');
   if (state.currentTemperature <= 49) {
-    currentLandscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
-    return (temperature.className = `teal`);
+    temperature.className = `teal`;
   } else if (state.currentTemperature <= 59) {
+    temperature.className = `green`;
+  } else if (state.currentTemperature <= 69) {
+    temperature.className = `yellow`;
+  } else if (state.currentTemperature <= 79) {
+    temperature.className = `orange`;
+  } else {
+    temperature.className = `red`;
+  }
+};
+
+const landscapePictureControl = () => {
+  const currentLandscape = document.querySelector('#currentLandscape');
+  if (state.currentTemperature <= 59) {
     currentLandscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
-    return (temperature.className = `green`);
   } else if (state.currentTemperature <= 69) {
     currentLandscape.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
-    return (temperature.className = `yellow`);
   } else if (state.currentTemperature <= 79) {
     currentLandscape.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
-    return (temperature.className = `orange`);
   } else {
     currentLandscape.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
-    return (temperature.className = `red`);
   }
 };
 
