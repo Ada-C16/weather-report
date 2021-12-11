@@ -11,8 +11,8 @@
 <body id="page">
     <header class="titleBlock">
         <h1>Weather Report</h1>
-        <h2>What is your weather like today?</h2>
-        <h2>Welcome to </h2>
+        <h2>What is your weather like today in ...</h2>
+        <h2 id="displayCityInput">City Name</h2>
     </header>
 
     <section id="inputs">
@@ -21,37 +21,40 @@
         <section class="inputCityBlock">
             <h2>City Name</h2>
             <form>
-                <label for="cityName">Enter a City Name:<input type="text" id="inputCity" placeholder="Chicago"/></label>
+                <label for="cityName">Enter a City Name:<input type="text" id="inputCity" placeholder="..."/></label>
                 <button type="reset" id="resetButton">Reset</button>
-            </form>
+            </form> 
         </section>
 
         <section class="skyBlock">
             <h2>Sky</h2>
-            <label id="skyOptions">Pick a Sky:</label>
-            <select id="skyDropMenu">
-                <option id="snowy">Snowy</option>
-                <option id="cloudy">Cloudy</option>
-                <option id="rainy">Rainy</option>
-                <option id="sunny">Sunny</option>
-            </select>
+            <form>
+                <label>Pick a Sky:</label>
+                <select id="skyOption" >
+                    <option>--Select--</option>
+                    <option>Snowy</option>
+                    <option>Cloudy</option>
+                    <option>Rainy</option>
+                    <option>Sunny</option>
+                </select>
+            </form>
         </section>
 
         <section class="tempBlock">
             <h2>Temperature</h2>
             <section class="tempDisplays">
                 <section>
-                    <button id="plusButton">+</button>
+                    <button id="plusButton">▲</button>
                     <section class="temp">
                         <h3 id="tempContainer">32°F</h3>
                     </section>
-                    <button id="minusButton">-</button>
+                    <button id="minusButton">▼</button>
                 </section>
             </section>
         </section>
     </section>
 
-    <section class="cityScape">
+    <section class="landAndSky">
         <section id="sky">
             <h1>Sky</h1>
         </section>

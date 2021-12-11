@@ -74,6 +74,41 @@ const landscapeChange = () => {
 // Sky Selecting Behavior
 // **********************************************
 
+const skyChange = () => {
+  let presentSky = document.querySelector('#skyOption');
+  state.sky = presentSky.value;
+  if (state.sky == 'Cloudy') {
+    document.querySelector('#sky').style.backgroundImage =
+      "url('images/cloudy.png')";
+  } else if (state.sky == 'Rainy') {
+    document.querySelector('#sky').style.backgroundImage =
+      "url('images/rainy.png')";
+  } else if (state.sky == 'Sunny') {
+    document.querySelector('#sky').style.backgroundImage =
+      "url('images/sunny.png')";
+  } else {
+    document.querySelector('#sky').style.backgroundImage =
+      "url('images/snowy.png')";
+  }
+};
+
+// **********************************************
+// Input City Name and Reset City Name
+// **********************************************
+
+const inputCityName = () => {
+  let city = document.querySelector('#inputCity');
+  state.city = city.value;
+  let displayCityInput = document.querySelector('#displayCityInput');
+  displayCityInput.textContent = `${state.city}`;
+};
+
+const resetCityName = () => {
+  document.querySelector('#inputCity');
+  state.city = 'City Name';
+  document.querySelector('#displayCityInput').textContent = `${state.city}`;
+};
+
 // **********************************************
 // Registering the Event Handlers
 // **********************************************
@@ -90,12 +125,16 @@ function registerEventHandlers() {
 
   plusButton.addEventListener('click', landscapeChange);
   minusButton.addEventListener('click', landscapeChange);
+
+  const skyOption = document.querySelector('#skyOption');
+  skyOption.addEventListener('change', skyChange);
+
+  const cityDisplay = document.querySelector('#inputCity');
+  cityDisplay.addEventListener('input', inputCityName);
+
+  const resetButton = document.querySelector('#resetButton');
+  resetButton.addEventListener('click', resetCityName);
 }
 
 // registers our event handlers in response to the event that fires when the DOM has loaded completely (DOMContentLoaded).
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
-
-// can also pass in an annonymous function instead of a named on in the eventListener.
-// tempElement.addEventListener('click', () => {
-//   tempElement.textContent = 'Hi';
-// });
