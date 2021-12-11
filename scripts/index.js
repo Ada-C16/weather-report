@@ -1,18 +1,20 @@
-let myTemp = 75;
-let myCity = 'Seattle, WA';
+const initialTemp = 75;
+const initialCity = 'Seattle, WA';
+const initialSky = "sun";
+
+let myTemp = initialTemp;
+let myCity = initialCity;
 
 
 /*Things that happen when the page loads*/
 window.addEventListener('load', function (){
-
     //let's set up the initial values for the page
-
     //display the labels
     setTemperature(0);
     document.getElementById("city").value = myCity;
     setCity(myCity);
 
-    //make the buttons and other form elementsw do something
+    //make the buttons and other form elements do something
     //by binding an action to the function
     document.getElementById("reduceTemp").onclick = function() {
         setTemperature(-1);
@@ -24,7 +26,6 @@ window.addEventListener('load', function (){
         setCity();
     };      
     document.getElementById("sky").onchange = () => {
-        console.log(this.event);
         changeSky();
     };     
     document.getElementById("temperature_small").onfocus = () => {
@@ -33,29 +34,38 @@ window.addEventListener('load', function (){
     document.getElementById("temperature_small").onblur = () =>{
         document.getElementById("temperature_small").value = myTemp;
     }    
-    
-    document.getElementById("temperature_small").onkeyup = function (){
+
+    document.getElementById("temperature_small").onkeyup = () =>{
         let varInput = (document.getElementById("temperature_small").value).replace(String.fromCharCode(176), '');
-        console.log('varInput is: ' + varInput);
         if (isNaN(varInput)){
             alert('We only accept numbers.')
             document.getElementById("temperature_small").value = myTemp;
-        }else{
-            theChange = varInput - myTemp;
+            varInput = (document.getElementById("temperature_small").value).replace(String.fromCharCode(176), '');
         }
+        
+        theChange = varInput - myTemp;
         setTemperature(theChange);
-    }   
+    } 
+    
+    document.getElementById("resetEverything").onclick = () => {
+        tempDiff = initialTemp - myTemp;
+        setTemperature(tempDiff);
+        document.getElementById("city").value = initialCity;
+        setCity();
+        document.getElementById("sky").value = initialSky;
+        changeSky();
+    };    
+
 });
 
 const setTemperature = (tempChange) => {
     //reset the myTemp global variable
     myTemp = (myTemp + tempChange);
-    //make a pretty label
+    //make a pretty label by adding the symbol for degrees
     let myTempLabel =  myTemp + String.fromCharCode(176);
     //update the display elements for temp
     document.getElementById("temperature_big").innerHTML = myTempLabel;
     document.getElementById("temperature_small").value = myTempLabel.replace(String.fromCharCode(176), '');
-
     //do some conditional changes to the page based on the temp
     if (myTemp >= 80){
         if (myTemp > 150){
@@ -71,9 +81,10 @@ const setTemperature = (tempChange) => {
         document.getElementById('landscape-image').src = './assets/landscapes/spring.png';
     }else if ((myTemp >= 50)&&(myTemp < 60)){
         setMainTextColor('green');
-        document.getElementById('landscape-image').src = './assets/landscapes/winter.png';
+        document.getElementById('landscape-image').src = './assets/landscapes/spring.png';
     }else{
         setMainTextColor('teal');
+        document.getElementById('landscape-image').src = './assets/landscapes/winter.png';
     }
 }
 
@@ -84,7 +95,7 @@ const setMainTextColor = (theColor) => {
 }
 
 const setCity = () => {
-    myCity = document.getElementById("city").value;
+    let myCity = document.getElementById("city").value;
     document.getElementById("cityname").innerHTML = myCity
 }
 
@@ -99,7 +110,6 @@ const changeSky = () => {
     console.log(" changing backgroundImage to: url(./assets/skies/" + selectedSky + ".jpg)")
     theMainDiv.style.backgroundImage = "url('./assets/skies/" + selectedSky + ".jpg')";
     //now change the fonts so you can see them
-
     fontsWhite = ['snow', 'rainy', 'cloudy'];
     console.log('the selected sky is at index for fontsWhite at:' + fontsWhite.indexOf(selectedSky));
     if (fontsWhite.indexOf(selectedSky) !== -1){       
@@ -107,7 +117,7 @@ const changeSky = () => {
     }else{
         fontColor = "black";
     }
-       //now loop through the elements and update their css
+    //now loop through the elements and update their css
     for (let i=0, len=fontsToChange.length; i<len; i++) {
         fontsToChange[i].style.textShadow = '5px 5px 2px ' + fontColor;
     }  
