@@ -9,26 +9,12 @@ h1 {
     color: #e510f5;
     font-family: 'Londrina Shadow', cursive;
     letter-spacing: 0.2rem;
-    font-size: 80px;
 }
 
-#inputFormBox {
-    background-color: pink;
-    border-radius: 10%;
-    box-shadow: 5px 5px 10px thistle;
-}
-
-#temp-section {
+#temp-section, #inputFormBox {
     border-color: pink;
     border-style: solid;
     border-width: thick;
     border-radius: 10%;
     box-shadow: 5px 5px 10px thistle;
-}
-
-#temperature {
-    background-color: whitesmoke;
-    width: min-content;
-    text-align: center;
-    margin: auto;
 }

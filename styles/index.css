@@ -3,7 +3,7 @@
     margin: auto;
     height: 80vh;
     display: grid;
-    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+    grid-template: 1fr 1fr 1fr 15% 1fr / 1fr 1fr 1fr;
 }
 
 header {
@@ -11,6 +11,10 @@ header {
     grid-row: 1;
     text-align: center;
     font-size: x-large;
+}
+
+h1 {
+    font-size: 60px;
 }
 
 #instructions {
@@ -28,6 +32,10 @@ header {
     grid-row: 1;
 }
 
+#sky, h2, h3, p, label, footerMsg {
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    text-align: center;
+}
 #inputFormBox {
     background-color: whitesmoke;
     width: 300px;
@@ -46,25 +54,37 @@ header {
 }
 
 #landscapeContainer {
-    background-color: wheat;
-    grid-column: 3 / span 2;
+    grid-column: span 3;
     grid-row: 4;
-}
-
-footer {
-    grid-column: span 4;
-    grid-row: 5;
+    padding: 3%;
+    margin: 10px;
+    width: auto;
+    font-size: 40px;
     text-align: center;
-    background-color: blue;
+    height: auto;
 }
 
 #temperature {  
     font-family: 'Londrina Shadow', cursive;
     color: #FEC106;
     background-color: inherit;
-    font-size: xx-large;
+    font-size: 40px;
+    margin: auto;
 }
 
+footer {
+    grid-column: 2;
+    grid-row: 5;
+    text-align: center; 
+    padding: 5px;
+
+}
+
+#footerMsg {
+    font-size: 13px;
+    color: purple;
+    font-style:italic;
+}
 
 /* celsius/fahrenheit slider */
 /* Hide default HTML checkbox */

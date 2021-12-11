@@ -27,19 +27,15 @@ const changeTemp = (direction) => {
 }
 
 
-const swapStyleSheet = (direction) => {
-  if (direction === 'left') {
-    if (vibe.sheet > 1) {
-      vibe.sheet -= 1;
-    }
-  } else if (direction === 'right') {
-    if (vibe.sheet <3) {
+const swapStyleSheet = (event) => {
+
+  if (vibe.sheet === 1 || vibe.sheet === 2) {
       vibe.sheet += 1;
-    }
+  } else if (vibe.sheet === 3) {
+      vibe.sheet = 1;
   }
 
   document.getElementById("vibe").setAttribute("href", `styles/vibe${vibe.sheet}.css`)
-  document.getElementById("vibeName").textContent=`Vibe #${vibe.sheet}`
 }
 
 const changeTempFontColor = () => {
@@ -104,15 +100,8 @@ const registerEventHandlers = (event) => {
     changeTemp("");
   })
 
-  const vibeChangerLeft = document.querySelector("#left");
-  vibeChangerLeft.addEventListener("click", function(){
-    swapStyleSheet('left')
-  })
-
-  const vibeChangerRight = document.querySelector("#right");
-  vibeChangerRight.addEventListener("click", function(){
-    swapStyleSheet('right')
-  })
+  const vibeChangeButton = document.querySelector("#footerMsg");
+  vibeChangeButton.addEventListener("click", swapStyleSheet);
 
   const submitInputButton = document.querySelector("#inputButton");
   submitInputButton.addEventListener("click", submitInput);

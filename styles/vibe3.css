@@ -8,3 +8,10 @@ h1 {
     font-family: 'Bebas Neue', cursive;
 }
 
+#temp-section, #inputFormBox {
+    border-color: silver;
+    border-style: solid;
+    border-width: thick;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px whitesmoke;
+}

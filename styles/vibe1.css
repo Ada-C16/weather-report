@@ -6,10 +6,9 @@ body{
 
 h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: xx-large;
 }
 
-#temp-section {
+#temp-section, #inputFormBox {
     border-color: grey;
     border-style: solid;
     border-width: thick;
