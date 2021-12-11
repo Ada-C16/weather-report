@@ -1,11 +1,17 @@
 console.log("gettinghere")
 ////DO WITHIN REGISTER EVENT HANDLER FUNCTION
-const plus_button = document.getElementById("plus-button");
-plus_button.addEventListener ("click", increment);
-const minus_button = document.getElementById("minus-button");
-minus_button.addEventListener ("click", decrement);
-// const dropdown = document.getElementById("dropbtn");
-// dropdown.addEventListener ("change", display_sky);
+
+//Listener - Plus Button
+const plusButton = document.getElementById("plusButton");
+plusButton.addEventListener ("click", increment);
+
+//Listener - Minus Button
+const minusButton = document.getElementById("minusButton");
+minusButton.addEventListener ("click", decrement);
+
+//Listener - Drop Down
+const skySelection = document.getElementById("skySelection");
+skySelection.addEventListener ("change", display_sky);
 
 ///"WHEN DOM CONTENT IS LOADED"
 
@@ -14,9 +20,9 @@ document.getElementById("counting").innerText = data;
 
 //creation of increment function
 function increment() {
-data = data + 1;
-document.getElementById("counting").innerText = data;
-display_ground();
+    data = data + 1;
+    document.getElementById("counting").innerText = data;
+    display_ground();
 }
 //creation of decrement function
 function decrement() {
@@ -60,16 +66,17 @@ function display_sky() {
     rainy = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
     snowy = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
 
-    if (dropdown.value = "sunny") {
-        document.getElementById("sky").textContent = sunny; 
+    if (skySelection.value === "Sunny") {
+        document.getElementById("sky").textContent = sunny;
     }
-    else if (dropdown.value = "rainy") {
+
+    if (skySelection.value === "Rainy") {
         document.getElementById("sky").textContent = rainy;
     }
-    else if (dropdown.value = "cloudy") {
+    if (skySelection.value === "Cloudy") {
         document.getElementById("sky").textContent = cloudy;
     }
-    else {
+    if (skySelection.value === "Snowy") {
         document.getElementById("sky").textContent = snowy;
     }
 }
