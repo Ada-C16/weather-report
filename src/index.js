@@ -44,44 +44,41 @@ const changeImage = () =>{
     }else if(state.temperature <= 59){
         newImage.innerHTML="🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
     }
-    if (displayImageElement.childElementCount >= 1){
+    if (displayImageElement.children.length >= 1){
         displayImageElement.replaceChildren(newImage);
     }else{
-        displayImageElement.appendChild(newImage);
-        
+        displayImageElement.appendChild(newImage); 
     }
 
     }
 
-    const getSelectedWeather = () =>{
-        const showSelectedWeather = document.querySelector("#sky").value;
-        console.log(showSelectedWeather)
-        const displayWeather = document.querySelector("#displayWeather");
-        const newWeather = document.createElement("span");
-        if(showSelectedWeather==="sunny"){
-            newWeather.innerHTML ="☁️ ☁️ ☁️ ☀️ ☁️ ☁️"
-        }else if(showSelectedWeather === "cloudy"){
-            newWeather.innerHTML="☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️"  
-        }else if(showSelectedWeather === "rainy" ){
-            newWeather.innerHTML="🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧"
-    
-        }else if(showSelectedWeather==="snowy"){
-            newWeather.innerHTML="🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
-        }
-        if (displayWeather.children.length >=1){
-            displayWeather.replaceChildren(newWeather);
-            console.log("first")
-        }else{
-            displayWeather.appendChild(newWeather);
-            console.log("second")
-        } 
+const getSelectedWeather = () =>{
+    const showSelectedWeather = document.querySelector("#sky").value;
+    console.log(showSelectedWeather)
+    const displayWeather = document.querySelector("#displayWeather");
+    const newWeather = document.createElement("span");
+    if(showSelectedWeather === "sunny"){
+        newWeather.innerHTML = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
+    }else if(showSelectedWeather === "cloudy"){
+        newWeather.innerHTML = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";  
+    }else if(showSelectedWeather === "rainy" ){
+        newWeather.innerHTML = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+
+    }else if(showSelectedWeather==="snowy"){
+        newWeather.innerHTML = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
     }
+    if (displayWeather.children.length >= 1){
+        displayWeather.replaceChildren(newWeather);
+    }else{
+        displayWeather.appendChild(newWeather);
+    } 
+}
 
 
 const increaseTemperatureReading = () =>{
     state.temperature += 1;
     changeColor();
-    changeImage()
+    changeImage();
     temperatureReadingElement.textContent = `Temprature: ${state.temperature}`;
 };
 
@@ -92,15 +89,15 @@ const reduceTemperatureReading = () =>{
     temperatureReadingElement.textContent = `Temprature: ${state.temperature}`;
 };
 const registerEventHandlers = (event) => {
-    const addTemperatureButton =document.getElementById("addTemperatureButton");
-    const reduceTemperatureButton =document.getElementById("reduceTemperatureButton");
-    const citySelected=document.querySelector("#city");
-    const addResetButton = document.getElementById("addResetButton")
-    const addWeatherSelection = document.getElementById("sky")
+    const addTemperatureButton = document.getElementById("addTemperatureButton");
+    const reduceTemperatureButton = document.getElementById("reduceTemperatureButton");
+    const citySelected = document.querySelector("#city");
+    const addResetButton = document.getElementById("addResetButton");
+    const addWeatherSelection = document.getElementById("sky");
     addTemperatureButton.addEventListener("click",increaseTemperatureReading);
     reduceTemperatureButton.addEventListener("click",reduceTemperatureReading);
-    citySelected.addEventListener("input",getSelectedCity)
-    addResetButton.addEventListener("click",addReset)
-    addWeatherSelection.addEventListener("change",getSelectedWeather)
+    citySelected.addEventListener("input",getSelectedCity);
+    addResetButton.addEventListener("click",addReset);
+    addWeatherSelection.addEventListener("change",getSelectedWeather);
 };
 document.addEventListener("DOMContentLoaded", registerEventHandlers);

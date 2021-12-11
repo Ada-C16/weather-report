@@ -3,23 +3,37 @@ body {
 }
 
 .box-block {
-    height:60vh;
+    height:70vh;
     padding-top: 100px;
     width:50%; 
     display:grid;
-    grid-template-columns:20% 70%;
-    /* grid-template-rows:30% 50%; */
-    grid-gap:100px;
+    grid-template-columns: 20% 25% 55%;
+    grid-template-rows:30% 10% 30% auto;
+    grid-gap:10px;
 }
 
 .features{
     height:100px;
-    width: 200px;
+    /* width: 200px; */
     background-color: aliceblue;
     text-align: center;
     align-self: start;
     
+    
 }
+#gardenContainer {
+    grid-column: span 3;
+    background-color:azure;
+    height: 140px;
+}
+#weather{
+    grid-column: span 3;
+    background-color:cornflowerblue;
+    text-align: center;
+
+}
+
+
 /* button{
     display: block;
 
