@@ -5,8 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet">
 </head>
-<body>
-    
+<body >
+    <main id="mainCover">
+        <header class="col-12 " >
+            <div >
+                <h1 id="headers">Weather Report </h1>
+                    <p id="lovelyCity"class="col-12 center_columns headersText">For the lovely city of 
+                    <span id="cityLog" style="font-size: 2em;">  </span></p>
+            </div>
+        </header>
+        <div class="">
+            <div class="col-4 " style="width:500px;">
+                <select id="selectSky" class="box ">
+                    <option value="0">Today the Sky is:</option>
+                    <option value="sunny">Sunny</option>
+                    <option value="rainy">Rainy</option>
+                    <option value="cloudy">Cloudy</option>
+                    <option value="snow">Snowy</option>
+                </select>
+            </div>
+        </div >
+        <section >
+            <div class="col-3 city-input "><label style="color:gray">City:</label>
+                <input  type="text" placeholder="Enter a City" name="name" id="inputCity" required minlength="4" maxlength="15" size="20">
+                <button id="clearButton" onclick="document.getElementById('inputCity').value = ''">clear</button>
+            </div>
+            
+        </section>    
+        <section class= "container"   > 
+            <div class="item sunnyMode formatBoxes" id="tempDisplay" >
+                <h4>Temperature<br>
+                <button id="tempAdjustUp" class="changeTempButton"  onclick="increment()"> 🔼  </button>
+                <span id="currentTemp" class="tempText">&deg; </span>
+                <button id="tempAdjustLow" class="changeTempButton" onclick="decrement()"> 🔽 </button>
+                </h4>
+            </div>
+            </div>
+            <div class="item garden formatBoxes">
+                <span >Weather Garden 
+                    <p id="sky" ></p>
+                    <h5 id="land"></h5>
+                </span>
+            </div>  
+        </section>
+        <section>
+            
+        </section>
+        <div>
+            <footer class="col-12" id="footer">
+                <div class="footer-text"><h2> ✨ Eunice Gonzalez Regis 2021✨</h2></div>
+            </footer>
+        </div>
+    </main >
+    <script src="src/index.js" type="text/javascript"></script>
 </body>
+
 </html>
