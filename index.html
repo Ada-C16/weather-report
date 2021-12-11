@@ -11,7 +11,7 @@
 <body>
     <header> 
         <h1 id="weather-header">Weather Report</h1>
-        <h2 id="city-header">For the city of <span id="city">city</span></h2>
+        <h2 id="city-header">For the city of <span id="city">...</span></h2>
     </header>
     <section class="temperature">
         <h1>Temperature</h1>
@@ -21,14 +21,21 @@
     </section>
     <section class="sky">
         <h1>Sky</h1>
-        <div id="sky-drop-down"></div>
+        <select id="sky-drop-down">
+            <option value="">What's your sky like?</option>
+            <option value="sunny">Sunny</option>
+            <option value="cloudy">Cloudy</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowy">Snowy</option>
+            <option value="gay">Gay</option>
+        </select>
     </section>
     <section class="city-name">
         <h1>City Name</h1>
-        <div id="city-text-box"></div>
+        <input type="text" id="city-text-box">
         <button id="city-reset-button">Change City</button>
     </section>
-    <section class="weather-garden">
+    <section id="weather-garden">
         <h1>Weather Garden</h1>
         <div id="sky-garden"></div>
         <div id="landscape-garden"></div>

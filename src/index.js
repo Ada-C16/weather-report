@@ -5,26 +5,27 @@ const state = {
 const renderTemp = (event) => {
   const tempInt = document.querySelector('#number');
   const landscape = document.querySelector('#landscape-garden');
+  const sky = document.querySelector('#sky-garden');
   tempInt.textContent = state.defaultTemp;
   landscape.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+  sky.textContent = '🌈 🌈🌈 🌈🌈🌈 🌈 🌈🌈';
 };
 
 const increaseTemp = (event) => {
   state.defaultTemp += 1;
   renderTemp();
-  changeTempColor();
+  changeTempColorAndLandscape();
 };
 
 const decreaseTemp = (event) => {
   state.defaultTemp -= 1;
   renderTemp();
-  changeTempColor();
+  changeTempColorAndLandscape();
 };
 
-const changeTempColor = (event) => {
+const changeTempColorAndLandscape = (event) => {
   const temp = document.querySelector('#temp-number');
   const landscape = document.querySelector('#landscape-garden');
-  console.log('hieeeeee');
   if (state.defaultTemp >= 80) {
     temp.className = 'red';
     landscape.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
@@ -43,12 +44,36 @@ const changeTempColor = (event) => {
   }
 };
 
+const changeSky = (event) => {
+  const skyGarden = document.querySelector('#sky-garden');
+  const skySelector = document.querySelector('#sky-drop-down').value;
+  if (skySelector === 'sunny') {
+    skyGarden.textContent = '☀️ ☀️ ☁️ ☀️ ☁️ ☀️';
+  } else if (skySelector === 'cloudy') {
+    skyGarden.textContent = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
+  } else if (skySelector === 'rainy') {
+    skyGarden.textContent = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
+  } else {
+    skyGarden.textContent = '🌈 🌈🌈 🌈🌈🌈 🌈 🌈🌈';
+  }
+};
+
+const changeCity = (event) => {
+  const cityInput = document.querySelector('#city-text-box').value;
+  const cityHeader = document.querySelector('#city');
+  cityHeader.textContent = cityInput;
+};
+
 const registerEventHandlers = (event) => {
   renderTemp();
   const upTempButton = document.querySelector('#up-button');
-  upTempButton.addEventListener('click', increaseTemp);
   const downTempButton = document.querySelector('#down-button');
+  const sky = document.querySelector('#sky-drop-down');
+  const resetCityButton = document.querySelector('#city-reset-button');
+  upTempButton.addEventListener('click', increaseTemp);
   downTempButton.addEventListener('click', decreaseTemp);
+  sky.addEventListener('change', changeSky);
+  resetCityButton.addEventListener('click', changeCity);
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
