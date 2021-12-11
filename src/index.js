@@ -3,7 +3,7 @@
 //Temperature control
 
 const state = {
-  currentTemperature: 64,
+  currentTemperature: 82,
 };
 
 const temperature = document.querySelector('#temperature');
@@ -14,45 +14,67 @@ const increaseTemperature = (event) => {
   state.currentTemperature += 1;
   // const temperature = document.querySelector('#temperature');
   temperature.textContent = `${state.currentTemperature}`;
-  if (state.currentTemperature <= 49) {
-    currentLandscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
-    temperature.className = `teal`;
-  } else if (state.currentTemperature <= 59) {
-    currentLandscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
-    temperature.className = `green`;
-  } else if (state.currentTemperature <= 69) {
-    currentLandscape.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
-    temperature.className = `yellow`;
-  } else if (state.currentTemperature <= 79) {
-    currentLandscape.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
-    temperature.className = `orange`;
-  } else {
-    currentLandscape.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
-    temperature.className = `red`;
-  }
+  temperatureColorControl();
+  // if (state.currentTemperature <= 49) {
+  //   currentLandscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+  //   temperature.className = `teal`;
+  // } else if (state.currentTemperature <= 59) {
+  //   currentLandscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+  //   temperature.className = `green`;
+  // } else if (state.currentTemperature <= 69) {
+  //   currentLandscape.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
+  //   temperature.className = `yellow`;
+  // } else if (state.currentTemperature <= 79) {
+  //   currentLandscape.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+  //   temperature.className = `orange`;
+  // } else {
+  //   currentLandscape.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
+  //   temperature.className = `red`;
+  // }
 };
 
 const decreaseTemperature = (event) => {
   console.log('in Temperature:', event);
   state.currentTemperature -= 1;
+  temperatureColorControl();
 
   // const temperature = document.querySelector('#temperature');
   temperature.textContent = `${state.currentTemperature}`;
+  // if (state.currentTemperature <= 49) {
+  //   currentLandscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+  //   temperature.className = `teal`;
+  // } else if (state.currentTemperature <= 59) {
+  //   currentLandscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+  //   temperature.className = `green`;
+  // } else if (state.currentTemperature <= 69) {
+  //   currentLandscape.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
+  //   temperature.className = `yellow`;
+  // } else if (state.currentTemperature <= 79) {
+  //   currentLandscape.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+  //   temperature.className = `orange`;
+  // } else {
+  //   currentLandscape.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
+  //   temperature.className = `red`;
+  // }
+};
+
+const temperatureColorControl = () => {
+  const temperature = document.querySelector('#temperature');
   if (state.currentTemperature <= 49) {
     currentLandscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
-    temperature.className = `teal`;
+    return (temperature.className = `teal`);
   } else if (state.currentTemperature <= 59) {
     currentLandscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
-    temperature.className = `green`;
+    return (temperature.className = `green`);
   } else if (state.currentTemperature <= 69) {
     currentLandscape.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
-    temperature.className = `yellow`;
+    return (temperature.className = `yellow`);
   } else if (state.currentTemperature <= 79) {
     currentLandscape.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
-    temperature.className = `orange`;
+    return (temperature.className = `orange`);
   } else {
     currentLandscape.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
-    temperature.className = `red`;
+    return (temperature.className = `red`);
   }
 };
 
