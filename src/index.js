@@ -69,7 +69,16 @@ const niceDayMouseleaveEffect = (event) => {
     console.log("mouseover?");
 };
 
+//change location in title
+const changeLocationTitle = (event) => {
+    const result = document.getElementById("locationTitle");
+    result.textContent = `${event.target.value}`;
+};
 
+// Change clouds in skyZone section
+// const changeCloudAnimation = (event) => {
+//     const clouds = document.getElementById()
+// }
 
 // add live video
 const replaceWithLiveSantaMonica = (event) => {
@@ -81,6 +90,7 @@ const replaceWithLiveSantaMonica = (event) => {
 
 // Register all events
 const registerEventHandlers = () => {
+
     const hotButton = document.getElementById("hotterButton");
     hotButton.addEventListener("click", increaseTemp);
 
@@ -101,6 +111,15 @@ const registerEventHandlers = () => {
     const niceDayMouseoverBox = document.getElementById("niceDayButton");
     niceDayMouseoverBox.addEventListener("mouseenter", niceDayMouseoverEffect);
     niceDayMouseoverBox.addEventListener("mouseleave", niceDayMouseleaveEffect);
+
+    // Change the location title at the top of the page
+    const selectLocation = document.querySelector('.locations');
+    selectLocation.addEventListener('change', changeLocationTitle);
+    // selectLocation.addEventListener('change', (event) => {
+    //     const result = document.getElementById("locationTitle");
+    //     result.textContent = `${event.target.value}`;
+    // });
+
 
     // add live video
     const viewLiveSantaMonicaButton = document.getElementById("viewLiveButton");
