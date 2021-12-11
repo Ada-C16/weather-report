@@ -1,0 +1,69 @@
+body {
+    background-color: rgba(153, 205, 50, 0.616);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    margin: 2rem;
+}
+
+.main__header {
+    color:goldenrod;
+    grid-column: span 3;
+    display: grid;
+    align-items: center;
+    margin: 2rem auto 3rem 0;
+}
+
+.temperature__section, .look__outside {
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: peru;
+}
+
+#tempValue {
+    font-size: 150px;
+}
+
+#seasonView, #landscape {
+    font-size: 60px;
+}
+
+
+.spring {
+    background-color: rgb(111, 179, 235);
+}
+
+.summer {
+    background-color: rgb(221, 255, 255);
+}
+
+.autumn {
+    background-color: lightblue;
+}
+
+.winter {
+    background-color: lightsteelblue;
+}
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: gold;
+}
+
+.green {
+    color: green;
+}
+
+.teal {
+    color: teal;
+}

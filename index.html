@@ -5,8 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet">
+    <script src="src/index.js"></script>
 </head>
 <body>
+
+    <header class="main__header">
+        <h1>My Seasonal Weather Report</h1>
+        <span> for the wonderful city of 
+            <span id="headerCityName" class="header__city--name">
+                Goldsboro
+            </span>
+        </span>
+    </header>
     
+    <main>
+        <section class="temperature__section">
+            <h2>Temperature (F):</h2>
+            
+            <div class="temperature__content">
+                <div class="temp__controls">
+                    <span id="tempValue" class="teal">50</span>
+                    <h3>Temperature Controls</h3>
+                    <button id="clickIncrease">➕</button>
+                    <button id="clickDecrease">➖</button>
+                </div>
+            </div>
+        </section>
+        
+        <h2>Current or Favorite Location</h2>
+        <section class="city-name__section">
+            <input type="text" id="cityNameInput" value="Goldsboro">
+            <button id="cityNameReset" class="city-name__reset-btn">Reset</button>
+        </section>
+    </main>
+    <main>
+        <h2>A Look Outside</h2>
+        <section id="outsideView" class="look__outside spring">
+            <div id="seasonView" class="season__content">
+                <div id="season">🍂🍁 🍂🍂🍂 🍁🍂 🍂  🍁🍂</div>
+            </div>
+            <div id="landscapeView" class="landscape__content">
+                <div id="landscape">🌲🌲🌲🏠🌲🌲🏠🌲🌲🏠🌲</div>
+            </div>
+        </section>
+            <select id="seasonSelect">
+                <option>Spring</option>
+                <option>Summer</option>
+                <option>Autumn</option>
+                <option>Winter</option>
+            </select>
+    </main>
 </body>
 </html>
+
