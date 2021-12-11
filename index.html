@@ -5,8 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet"/>
 </head>
 <body>
-    
+    <section class= "main_header">
+        <h1>Weather Report</h1>
+        <h3>For the wonderful city:
+            <span id="headerCity" class="header_city"></span
+        ></h3>
+    </section>
+    <section class= "temperature">
+        <h2>Temperature</h2>
+        <div class= "temp_content">
+            <span id= "increaseTemp">⬆️</span>
+            <span id= "decreaseTemp">⬇️</span>
+            <span id= "tempFarenheit">70</span>
+        </div>
+    </section>
+    <section class= "sky">
+        <h2>Sky</h2>
+        <select id="skyOptions">
+            <option>Sunny</option>
+            <option>Cloudy</option>
+            <option>Rainy</option>
+            <option>Snowy</option>
+        </select>
+    </section>
+    <section class="city_name">
+        <h2>City Name</h2>
+        <input type="text" id="cityInput" value="Philadelphia"/>
+        <button id="cityReset">Reset</button>
+    </section>
+    <section class="outside">
+        <h2>A Look Outside</h2>
+        <div id="outsideContent" class="outside_content">
+            <span id="sky">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</span>
+            <span id="ground">🌵🏜🐍🦂🏜🌵🦂🌵🐍🐍🏜🦂</span>
+        </div>
+    </section>
+    <script src="src/index.js"></script>
 </body>
 </html>
