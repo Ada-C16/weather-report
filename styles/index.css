@@ -1,13 +1,3 @@
-/* Background blue: #324DF7
-Sunny sky background: #D6FFFF
-Cloudy sky background: #C9C9C9
-Rainy sky background: #9FCFE0
-Snowy sky background: #A1B6D6
-Very cold number color: #256D6C
-Cold number color: #1F7001
-Cool number color: #F4D10A
-Warm number color: #F0940A
-Hot number color: #EA0009 */
 .grid {
     background-color: #324DF7;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -114,21 +104,14 @@ select {
     padding: 2px 5px;
 }
 
-/* Dropdown Content (Hidden by Default) */
+
 .dropdown-content {
     display: inline-block;
     text-align: center;
-    background-color: lightskyblue;
     z-index: 1;
     margin-left: auto;
     margin-right: auto;
 }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
 
 #city-div {
     display: inline;
@@ -141,7 +124,3 @@ select {
     display: inline;
     text-align: center;;
 }
-/* 
-#city-reset {
-
-} */

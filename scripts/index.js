@@ -52,7 +52,7 @@ const changeClouds = () => {
     gardenClouds.textContent = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
   } else if (skySelectValue === 'Rainy') {
     gardenClouds.textContent = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
-  } else {
+  } else if (skySelectValue === 'Snowy') {
     gardenClouds.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
   }
 };
