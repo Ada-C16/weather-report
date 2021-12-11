@@ -2,11 +2,13 @@ const state = {
   temp: 68
 };
 
-let isFahrenheit = true
+let isFahrenheit = true;
 
 const vibe = {
   sheet: 2
 }
+
+let isReset = false;
 
 const changeTemp = (direction) => {
   if (direction === 'up') {
@@ -60,9 +62,23 @@ const changeTempFontColor = () => {
 }
 
 const submitInput = () => {
-  let guestName = document.getElementById("fname").value;
-  let location = document.getElementById("location").value;
-  document.querySelector("#inputFormContents").textContent = `Welcome, ${guestName} :) Here's the weather for lovely ${location}!`
+  
+  const subheaderText = document.querySelector("#inputFormContents");
+  const inputButton = document.querySelector("#inputButton");
+  
+  if (isReset) {
+    subheaderText.textContent = "Input your name and location for a weather report made just for you!";
+    document.getElementById("fname").value = "";
+    document.getElementById("location").value = "";
+    inputButton.textContent = "Submit"
+    isReset = false;
+  } else {
+    let guestName = document.getElementById("fname").value;
+    let location = document.getElementById("location").value;
+    subheaderText.textContent = `Welcome, ${guestName} :) Here's the weather for lovely ${location}!`;
+    inputButton.textContent = "Reset";
+    isReset = true;
+  }
 }
 
 const changeSky = (currentSelection) => {
