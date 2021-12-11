@@ -1,4 +1,4 @@
-// ***** select the HTML element the even will occur on ****
+// ***** select the HTML element for the event will occur on ****
 // ***** make a function to run when it occurs *****
 
 const state = {
@@ -18,12 +18,18 @@ const updateTempStyles = (temp) => {
   } else if (temp >= 50) {
     color = 'green';
   }
+  // overright all the class string or todo: tempArrow.classList.remove(color)
   tempArrow.className = '';
+  // adding a new class name
   tempArrow.classList.add(color);
   // console.log(tempArrow);
 };
 
 const updateImages = (temp) => {
+  //img attribute in HTML is an attribute on the DOM object
+  //HTML is instruction for what DOM element to create and how to connect them together.
+  //HTML tag is a DOM object
+  //HTML attribute is a DOM attribute
   const layoutImage = document.getElementById('layout-image');
   let image = 'assets/images/layout_snow1.png';
   if (temp >= 80) {
@@ -39,20 +45,24 @@ const updateImages = (temp) => {
 };
 
 const updateTemp = (temp) => {
+  //div
+  state.temp = temp; //
   const tempContainer = document.getElementById('temp-number');
-  tempContainer.textContent = temp;
+  tempContainer.textContent = state.temp; //temp
   updateTempStyles(state.temp);
   updateImages(state.temp);
 };
 
 const increaseTemp = () => {
-  state.temp += 1;
-  updateTemp(state.temp);
+  // state.temp += 1;
+  // updateTemp(state.temp);
+  updateTemp(state.temp + 1);
 };
 
 const decreaseTemp = () => {
-  state.temp -= 1;
-  updateTemp(state.temp);
+  // state.temp -= 1;
+  // updateTemp(state.temp);
+  updateTemp(state.temp - 1);
 };
 
 // change sky image when select different sky option
@@ -75,7 +85,9 @@ const updateSky = () => {
 
 // change image when city name change
 const updateCityImage = () => {
+  //value of input tag
   const city = document.getElementById('cityNameInput').value;
+  //img tag
   const cityImage = document.getElementById('cityImage');
   let image = 'assets/images/city_clipart4.jpeg';
   if (city == 'Tacoma') {
@@ -97,8 +109,11 @@ const updateCityImage = () => {
 
 // change city name and invoking updateCityImage to change city image
 const updateCityName = () => {
+  //input tag for city name
   const inputName = document.getElementById('cityNameInput').value;
+  //span tag for Seattle text
   const cityName = document.getElementById('cityName');
+  //the input value when the user typed, will appears on span tag
   cityName.textContent = inputName;
   updateCityImage();
 };
@@ -110,7 +125,7 @@ const resetCityName = () => {
   updateCityName();
 };
 
-// ******** register that function as an 'event listening' ********
+// ******** register the functions as 'event listener' ********
 const registerEventHandlers = () => {
   updateTemp(state.temp);
   const tempDecrease = document.getElementById('decreaseArrow');
@@ -134,7 +149,7 @@ const registerEventHandlers = () => {
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
 
-// set date of the week
+// set day of the week
 let day;
 switch (new Date().getDay()) {
   case 0:
