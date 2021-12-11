@@ -70,6 +70,13 @@ const selectSky = (event) => {
     currentSky.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
   }
 };
+
+// CITY NAME BOX
+const selectCity = (event) => {
+  const cityName = document.querySelector('#currentCity');
+  cityName.textContent = event.target.value;
+};
+
 const registerEventHandlers = (event) => {
   const increaseTempButton = document.querySelector('#increaseTempButton');
   increaseTempButton.addEventListener('click', increaseTemperature);
@@ -77,6 +84,8 @@ const registerEventHandlers = (event) => {
   decreaseTempButton.addEventListener('click', decreaseTemperature);
   const skySelection = document.querySelector('#sky');
   skySelection.addEventListener('change', selectSky);
+  const enterCityName = document.querySelector('#cityName');
+  enterCityName.addEventListener('input', selectCity);
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
