@@ -60,11 +60,19 @@ button img {
     font-weight: normal;
 }
 
+#defaultMessage {
+    font-size: 56px;
+    text-align: center;
+    padding-top: 50px;
+    padding-right: 80px;
+}
+
 .display { 
     grid-area: 1 / 2 / 5 / 3;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 250px;
 }
 
 form {
@@ -153,11 +161,18 @@ label {
      padding-bottom: 14px;
 }
 
-#landscape {
-    font-size: 56px;
-    text-align: center;
-    margin: 0;
+#land-hot,
+#land-warm,
+#land-cool,
+#land-cold {
+    display: flex;
+    justify-content: center;
+    width: 484px;
+    height: 253px;
+    padding-right: 125px;
+    display: none;
 }
+
 option {
     text-align: center;
 }
@@ -191,11 +206,6 @@ p {
     font-size: 36px;
 }
 
-#skyState {
-    font-size: 56px;
-    text-align: left;
-}
-
 #skies {
     background: rgba(203, 174, 128, 0.85);
     border-radius: 2px;
@@ -215,13 +225,13 @@ p {
     height: 253px;
 }
 
+
 .sky-picture {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     height: 253px;
     width: 500px;
-    padding-top: 150px;
-    padding-right: 125px;
 }
 
 .title { 
