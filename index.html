@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/index.css" rel="stylesheet" />
     <title>Weather Report</title>
 </head>
 
 <body>
+    <div id="layout">
     <h1 id="heading">Weather Report</h1>
     <h2 id="city-title">City</h2>
     <div id="temp-box">
@@ -25,6 +27,7 @@
             <button id="reset">Reset</button>
             <!-- <input type="reset" id="reset" value="reset"></input> -->
         <!-- </form> -->
+    </div> 
     <div id="sky-selector">
         <label for="sky">Choose the weather:</label>
         <select name="sky" id="sky">
@@ -34,13 +37,15 @@
             <option value="snowy">Cloudy</option>
         </select>
     </div>
-
-    <div id="sky-scene">
-        ☁️ ☁️ ☁️ ☀️ ☁️ ☁️☁️ ☁️ ☁️ ☀️ 
+    <div id="art">
+        <div id="sky-scene">
+            ☁️ ☁️ ☁️ ☀️ ☁️ ☁️☁️ ☁️ ☁️ ☀️ 
+        </div>
+        <div id="landscape-scene">
+            🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂
+        </div>
     </div>
-    <div id="landscape-scene">
-        🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂
-    </div>
+</div>
     <script src="src/index.js" type="text/javascript"></script>
 </body>
 </html>
