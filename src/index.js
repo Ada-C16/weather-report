@@ -7,12 +7,29 @@ const state = {
 };
 
 const temperature = document.querySelector('#temperature');
+const currentLandscape = document.querySelector('#currentLandscape');
 
 const increaseTemperature = (event) => {
   console.log('in Temperature:', event);
   state.currentTemperature += 1;
   // const temperature = document.querySelector('#temperature');
   temperature.textContent = `${state.currentTemperature}`;
+  if (state.currentTemperature <= 49) {
+    currentLandscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+    temperature.className = `teal`;
+  } else if (state.currentTemperature <= 59) {
+    currentLandscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+    temperature.className = `green`;
+  } else if (state.currentTemperature <= 69) {
+    currentLandscape.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
+    temperature.className = `yellow`;
+  } else if (state.currentTemperature <= 79) {
+    currentLandscape.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+    temperature.className = `orange`;
+  } else {
+    currentLandscape.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
+    temperature.className = `red`;
+  }
 };
 
 const decreaseTemperature = (event) => {
@@ -21,19 +38,23 @@ const decreaseTemperature = (event) => {
 
   // const temperature = document.querySelector('#temperature');
   temperature.textContent = `${state.currentTemperature}`;
+  if (state.currentTemperature <= 49) {
+    currentLandscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+    temperature.className = `teal`;
+  } else if (state.currentTemperature <= 59) {
+    currentLandscape.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+    temperature.className = `green`;
+  } else if (state.currentTemperature <= 69) {
+    currentLandscape.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
+    temperature.className = `yellow`;
+  } else if (state.currentTemperature <= 79) {
+    currentLandscape.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+    temperature.className = `orange`;
+  } else {
+    currentLandscape.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
+    temperature.className = `red`;
+  }
 };
-
-// if (state.currentTemperature <= 49) {
-//   temperature.className = 'teal';
-// } else if (state.currentTemperature <= 59) {
-//   temperature.className = 'green';
-// } else if (state.currentTemperature <= 69) {
-//   temperature.className = 'yellow';
-// } else if (state.currentTemperature <= 79) {
-//   temperature.className = 'orange';
-// } else {
-//   temperature.className = 'red';
-// }
 
 // SKY BOX
 const selectSky = (event) => {

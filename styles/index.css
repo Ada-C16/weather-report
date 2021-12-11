@@ -1,8 +1,14 @@
+body {
+    background-color: blue;
+}
+
+
 .container > div {
     background: #eee;
     padding: 1em;
     border-radius: 10px;
 }
+
 
 .container > div:nth-child(odd) {
     background: #ddd;
@@ -54,4 +60,20 @@
 
 .teal {
     color: teal;
+}
+
+.green {
+    color:green;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.orange {
+    color: orange;
+}
+
+.red {
+    color:red;
 }
