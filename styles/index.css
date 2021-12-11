@@ -1,0 +1,112 @@
+
+
+body{
+    
+    
+    /* background-image: linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74% ); */
+    /* background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #ffffff 74%); */
+    font-family:  serif; 
+    color: green;
+    /* align-self: middle; */
+    font-family:  sans-serif;
+    /* display: flex; */
+    padding: 0;
+    border: none; 
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    
+    
+
+}
+
+
+
+.fiyah{
+
+    font-size: 5em;
+
+}
+.h1 {
+
+    color: grey;
+    text-align: middle;
+    font-family:  sans-serif;
+    display: flex;
+    padding: 0;
+    border: none;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    justify-content: center;
+    
+}
+
+.City-Container,
+.Sky-Container,
+.Temp-Container
+
+{
+    width: 300px;
+    height: 200px;
+    border: 1px solid #c3c3c3;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Big-Container{
+    width: 1300px;
+    height: 200px;
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-content: center;
+    
+}
+
+.smallContainer{
+    width: 1000px;
+    height: 500px; 
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center
+}
+
+.gardenContainer
+{
+    width: 300px;
+    height: 200px;
+    align-self:center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #c3c3c3;
+    
+}
+
+.skyDropMenu{
+
+    width: 70px;
+    height: 35px;
+    align-self: flex-end;
+    
+
+}
+#cityNameAndBtn{
+
+    /* width: 20px;
+    height: 35px; */
+    align-self: flex-end;
+    /* margin-right:80px; */
+
+}
+/* #cityReset{
+
+    align-self: flex-start;
+    margin-right: 80px;
+} */
