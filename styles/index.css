@@ -10,8 +10,36 @@
 .container {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-auto-rows: minmax(100px, auto);
-    grid-gap: 1em;
-    margin: 50px;
+    /* grid-auto-rows: minmax(100px, auto); */
+    
+    column-gap: 4em;
+    row-gap: 1em;
+    margin: 100px;
+    
+}
+
+/* .box1{
+    grid-row: 2/4;
+} */
+/* .box2{
+    grid-row: 2/4;
+} */
+
+.box3{
+    grid-row: 2;
+    gap: 8em;
+}
+
+.box4{
+    grid-row: 3;
+}
+
+.box5{
+    grid-row: 4;
+}
+
+.box6{
+    grid-row: 2/4;
     margin-top: 100px;
+    height:100px;
 }
