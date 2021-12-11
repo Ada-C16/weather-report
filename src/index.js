@@ -76,6 +76,18 @@ const updateSeason = () => {
   outsideContent.classList = `look__outside ${seasonColor}`;
 };
 
+const updateCityName = () => {
+  const inputName = document.getElementById('cityNameInput').value;
+  const headerCityName = document.getElementById('headerCityName');
+  headerCityName.textContent = inputName;
+};
+
+const resetCityName = () => {
+  const cityNameInput = document.getElementById('cityNameInput');
+  cityNameInput.value = 'Goldsboro';
+  updateCityName();
+};
+
 const registerEventHandlers = () => {
   // const temperature = document.getElementsByClassName('orange');
   // temperature.addEventListener('click', updateTempColor);
@@ -89,6 +101,13 @@ const registerEventHandlers = () => {
   updateSeason();
   const seasonSelect = document.getElementById('seasonSelect');
   seasonSelect.addEventListener('change', updateSeason);
+
+  updateCityName();
+  const cityNameInput = document.getElementById('cityNameInput');
+  cityNameInput.addEventListener('input', updateCityName);
+
+  const cityNameResetBtn = document.getElementById('cityNameReset');
+  cityNameResetBtn.addEventListener('click', resetCityName);
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);
