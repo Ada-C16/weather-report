@@ -1,11 +1,12 @@
 body {
     background-color: #324DF7;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 button {
     border-radius: 10px;
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
     background-color: #0000FF;
     color: #FFFFFF;
 }
@@ -18,7 +19,7 @@ header {
 }
 
 input {
-    margin: 10px;
+    margin: 30px;
 }
 
 main {
@@ -26,11 +27,13 @@ main {
     grid-template-columns: 2fr 4fr;
 }
 
-/* section {
-    background-color: #FFFFFF;
+section { 
     margin: 20px;
     border-radius: 10px;
-} */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 section h2 {
     margin: 20px;
@@ -40,10 +43,14 @@ select {
     margin: 30px;
 }
 
-
 #sky-background {
     background-color: #C9C9C9;
     border-radius: 10px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 280px;
 }
 
 #sky-background div {
@@ -52,8 +59,13 @@ select {
 
 #temp {
     color: #F0940A;
-    margin-left: 50px;
-    font-size: 40px;
+    margin: 30px;
+    font-size: 50px;
+}
+
+#weather-container {
+    margin: 20%;
+    width: fit-content;
 }
 
 #weather-garden {
@@ -65,4 +77,6 @@ select {
     background-color: #FFFFFF;
     margin: 20px;
     border-radius: 10px;
+    height: fit-content;
+    width: fit-content;
 }
