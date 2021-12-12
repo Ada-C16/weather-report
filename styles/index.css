@@ -1,45 +1,47 @@
-.header {
+.background {
     background-color: #7128a2;
-    text-align: center;
-    font-size: large;
     display: grid;
     vertical-align: middle;
-    align-content:center;
-    grid-gap: 20px;
+    align-content: center;
     list-style-type: none;
-}
-
-.weather-garden-box {
-    display:grid;
-    width: 800px;
-    height: 400px;
-    vertical-align: middle;
-    align-content:center;
-    background-color: #b88fd3;
     grid-gap:20px;
-    list-style-type: none;
 }
 
-.day-box {
-    width: 100px;
+.city-name-box {
+    width: 600px;
     height: 200px;
-    vertical-align: middle;
-    background-color: #815d99;
-    list-style-type: none;
-}
-
-.current-temp-box {
-    width: 800px;
-    height: 200px;
+    align-content: center;
     vertical-align: middle;
     background-color:  #b88fd3;
     list-style-type: none;
 }
 
-.week-grid-container {
+.current-temp-box {
+    width: 600px;
+    height: 200px;
     display: grid;
+    align-content: center;
+    vertical-align: middle;
+    background-color:  #b88fd3;
     list-style-type: none;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.choose-sky-box {
+    width: 600px;
+    height: 200px;
+    align-content: center;
+    vertical-align: middle;
+    background-color:  #b88fd3;
+    list-style-type: none;
+}
+
+.weather-garden-box {
+    width: 600px;
+    height: 250px;
+    align-content: center;
+    vertical-align: middle;
+    background-color:  #b88fd3;
+    list-style-type: none;
 }
 
 .big-text{
@@ -48,24 +50,11 @@
     color: rgb(80, 9, 94)
 }
 
-.background {
-    background-color: #7128a2;
-    display: grid;
-    flex-direction: column;
-    flex-wrap: wrap;
-    vertical-align: middle;
-    align-content: center;
-    list-style-type: none;
-    grid-gap:20px;
-}
-
-/* XXXX */
 
 /*apply css properties to body tag*/
   
 body {
     position: absolute;
-    left: 0%;
     text-align: center;
 }
 
@@ -82,9 +71,9 @@ body {
 /*apply css properties to button tag*/
 
 button {
-    width: 90px;
-    height: 60px;
-    font-size: 30px;
+    width: 60px;
+    height: 30px;
+    font-size: 20px;
     background-color: rgb(80, 9, 94);
     color: honeydew;
 }
@@ -112,47 +101,6 @@ h1 {
 
 }
 
-/* Dropdown Button */
-/* .dropbtn {
-        background-color: rgb(80, 9, 94);
-        color: #ddd;;
-        padding: 12px;
-        font-size: 36px;
-        border: none;
-    } */
-    
-/* The container <div> - needed to position the dropdown content */
-/* .dropdown {
-    position: relative;
-    display: inline-block;
-}
-    */
-/* Dropdown Content (Hidden by Default) */
-/* .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-    */
-/* Links inside the dropdown */
-/* .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-} */
-
-/* Change color of dropdown links on hover */
-/* .dropdown-content a:hover {background-color: #ddd;} */
-
-/* Show the dropdown menu on hover */
-/* .dropdown:hover .dropdown-content {display: block;} */
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-/* .dropdown:hover .dropbtn {background-color: rgb(184, 49, 94)} */
 
 #weather-garden-display {
     align-content: center;
@@ -165,12 +113,3 @@ select {
     font-size: .9rem;
     padding: 2px 5px;
 }
-
-/* .dropdown-content {
-    display: inline-block;
-    text-align: center;
-    background-color: lightskyblue;
-    z-index: 1;
-    margin-left: auto;
-    margin-right: auto;
-} */

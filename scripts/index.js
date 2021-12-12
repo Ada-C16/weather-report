@@ -42,19 +42,19 @@ function display_ground() {
      
     if (data >= 80) {
         document.getElementById("ground").textContent = spring;
-        count.style.color = "pink"
+        count.style.color = "red"
     }
     else if (70 <= data && data <=79) {
         document.getElementById("ground").textContent = summer;
-        count.style.color = "green"
+        count.style.color = "pink"
     }
     else if (60 <= data && data <= 69) {
         document.getElementById("ground").textContent = fall;
-        count.style.color = "teal"
+        count.style.color = "purple"
     }
     else {
         document.getElementById("ground").textContent = winter;
-        count.style.color = "purple"
+        count.style.color = "blue"
     }
 }
 
@@ -81,3 +81,8 @@ function display_sky() {
     }
 }
 
+  // ###----MIGRATE
+function displayname() {
+    document.getElementById("demo").innerHTML = 
+    document.getElementById("namehere").value;
+}
