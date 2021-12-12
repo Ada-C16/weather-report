@@ -1,3 +1,8 @@
+body{
+    text-align: center;
+}
+
+/* Main Grid */
 .container{
     background-color: #293251;
     margin:0;
@@ -17,10 +22,12 @@
 
 }
 
+/* Basic Layout Sections */
+
 header{
     grid-area: header;
     background-color:lightblue;
-
+    padding-top: 1%;
 }
 footer{
     grid-area: footer;
@@ -31,6 +38,7 @@ main{
     background-color:whitesmoke;
 }
 
+/* Temp, Sky, City boxes with grid settings and temporary colors for error checking */
 section:nth-of-type(1){
     grid-area: temp_box;
     background-color: cornflowerblue;
@@ -45,13 +53,15 @@ section:nth-of-type(3){
     background-color: darkseagreen;
 }
 
-
+/* Side boxes */
 #temperature-container, #sky-box, #city-box{
     display: flexbox;
     text-align: center;
     background-color: whitesmoke;
     padding: 2em;
     border-radius: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
 }
 #weather{
     display: grid;
@@ -59,7 +69,10 @@ section:nth-of-type(3){
     padding: 2em;
     border-radius: 1em;
     grid-gap: .5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
 }
+/* Sky and Land in the Weather Garden*/
 #skyscape{
     border-radius: 1em;
     display: flex;
@@ -94,7 +107,7 @@ section:nth-of-type(3){
     color: red;
 }
 
-/* sky */
+/* sky colors*/
 .sunny{
     background-color: lightcyan;
 }
@@ -109,7 +122,7 @@ section:nth-of-type(3){
 }
 
 
-/* earth */
+/* land colors */
 .ice{
     background-color: powderblue;
 }
@@ -124,6 +137,58 @@ section:nth-of-type(3){
 }
 
 
+/* Text Styles */
+
+.main-heading{
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    text-shadow: 2px 2px white;
+    line-height: 1.8; 
+}
+
+.second-heading{
+    font-size: medium;
+    font-family: fantasy;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 5px 5px 5px cadetblue;
+    line-height: 1.8; 
+    
+}
+
+#city-name{
+    font-size: large;
+    font-family: fantasy;
+    font-style: italic;
+    font-weight: bolder;
+    line-height: 2;
+}
+
+/* Buttons */
+
+#up-button, #down-button{
+    background-color:#d9cfcc; /* Green */
+    border-radius: 1em;
+    color: white;
+    padding: 10px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#reset{
+    background-color:#d9cfcc; /* Green */
+    border-radius: 1em;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* Attemot at responsive design */
 /* @media only screen and (max-width:550px){
     .container{
         grid-template-columns: 1fr;

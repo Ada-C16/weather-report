@@ -1,64 +1,3 @@
-//Increase/Decrease
-
-// let count = 0;
-// document.getElementById("degrees").textContent = count;
-// let degreeNum = document.querySelector("#degrees");
-
-// let upButton = document.getElementById("up-button");
-// let downButton = document.getElementById("down-button");
-
-//let's try to use state
-
-// upButton.addEventListener('click', () => {
-//     count = count + 1;
-//     color(count);
-//     document.getElementById("degrees").textContent = count;
-// });
-
-// downButton.addEventListener('click', () => {
-//     count = count - 1;
-//     color(count);
-//     document.getElementById("degrees").textContent = count;
-// });
-
-// function color(count){
-//     if(count <= 49){
-//         degreeNum.className = "freezing";
-//     }
-//     else if(count <= 59){
-//         degreeNum.className = "cold";
-//     }
-//     else if(count <= 69){
-//         degreeNum.className = "warm";
-//     }
-//     else if(count <= 79){
-//         degreeNum.className = "hot";
-//     }
-//     else{
-//         degreeNum.className = "scorching";
-//     }
-// }
-
-
-//make and change landscapes
-
-// function landscape(count){
-//     if count <= 32{
-//         document.getElementById("surprise").innerHTML="<img src='images/aftersurprise.png' />";
-//     }
-//     else if count <= 32{
-//         document.getElementById("surprise").innerHTML="<img src='images/aftersurprise.png' />";
-//     }
-//     else if count <= 32{
-//         document.getElementById("surprise").innerHTML="<img src='images/aftersurprise.png' />";
-//     }
-//     else if count <= 32{
-//         document.getElementById("surprise").innerHTML="<img src='images/aftersurprise.png' />";
-//     }
-// };
-
-
-
 //state
 const state = {
     temp: 0,
@@ -118,7 +57,6 @@ const wipe = (event) =>{
 }
 
 //Event handler 
-
 const registerEventHandlers = (event) => {
     const upButton = document.getElementById("up-button");
     const downButton = document.getElementById("down-button");
@@ -189,7 +127,7 @@ function landscape(){
 
 //-------- dropdown related functions ---------//
 
-function skyscape(){}
+//function skyscape(){}
 
 //-------- input related functions ---------//
 
