@@ -11,6 +11,11 @@
     
     <main id = "weather-title">
         <h1>  Min's Weather Report </h1>
+        <span>
+            "For the hottest city of "
+            <span id= "hottestCityName" class = "myCityIsBetter"></span>
+        
+        </span>
     </main>
     <section class = " Big-Container " >
 
@@ -21,8 +26,8 @@
                     <h1>Temperature</h1>
                     <span id="tempvalue" class="fiyah">50</span>
                     <div id = tempButtons>
-                        <span id= "increasebuttons"> ➕</span>
-                        <span id = "decreasebuttons">➖</span>
+                        <button id= "increasebuttons">+</button>
+                        <button id = "decreasebuttons">-</button>
                     </div>
                 
                 </div>
@@ -41,18 +46,18 @@
                 <h1>City</h1>
                 <div id = cityNameAndBtn>
                     <input type ="text" id ="cityNameInputBox" value = "Miami">
-                    <resetButton id="cityReset" class = "cityNameResetButton">Reset</resetButton>
+                    <input type = "reset"  value = "Reset"></input>
                 </div>
             </div> 
 
     </section >
-
-    <section class="smallContainer">
+        
+    <section class="smallContainer"> 
+            
             <div class= "gardenContainer">
-                <h2 id=gardenText>Garden</h2>
+                <h2 id=gardenText></h2>
             </div>
     </section>
-    <script src="src/index.js"></script>
+    <script async src="src/index.js"></script>
 </body>
 </html>
-

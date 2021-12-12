@@ -6,15 +6,12 @@ body{
     /* background-image: linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74% ); */
     /* background-color: #000000;
     background-image: linear-gradient(315deg, #000000 0%, #ffffff 74%); */
+    background-image: url("/multisplash.jpg");
     font-family:  serif; 
-    color: green;
+    color: plum;
     /* align-self: middle; */
-    font-family:  sans-serif;
-    /* display: flex; */
-    padding: 0;
-    border: none; 
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
+    font-family:  ui-monospace;
+    
     
     
 
@@ -25,20 +22,15 @@ body{
 .fiyah{
 
     font-size: 5em;
+    margin-left: 0.2cm;
+    
 
 }
-.h1 {
-
-    color: grey;
-    text-align: middle;
-    font-family:  sans-serif;
-    display: flex;
-    padding: 0;
-    border: none;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    justify-content: center;
+.Temperature{
     
+    margin-left: 0.2cm;
+    align-content: right;
+
 }
 
 .City-Container,
@@ -48,10 +40,10 @@ body{
 {
     width: 300px;
     height: 200px;
-    border: 1px solid #c3c3c3;
+    border: 7px solid black;
     display: flex;
     flex-direction: row;
-    background-color: white;
+    background-color: clear;
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
@@ -60,7 +52,7 @@ body{
 .Big-Container{
     width: 1300px;
     height: 200px;
-    border: 0;
+    border: 3rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
@@ -75,17 +67,20 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-content: center
+    align-content: center;
+    
 }
 
 .gardenContainer
 {
-    width: 300px;
-    height: 200px;
+    width: 480px;
+    height: 270px;
     align-self:center;
-    margin-left: auto;
+    margin-left: 40%;
     margin-right: auto;
-    border: 1px solid #c3c3c3;
+    border: 10px solid black;
+    background-color: white;
+    background-image: url(/upintheclouds.webp);
     
 }
 
@@ -94,19 +89,30 @@ body{
     width: 70px;
     height: 35px;
     align-self: flex-end;
+    color: plum;
+    font-weight: bold;
     
 
 }
 #cityNameAndBtn{
 
-    /* width: 20px;
-    height: 35px; */
+    
     align-self: flex-end;
-    /* margin-right:80px; */
+    
+    
 
 }
-/* #cityReset{
+#increasebuttons,#decreasebuttons{
 
-    align-self: flex-start;
-    margin-right: 80px;
-} */
+    font-size: 2.0em;
+    width: 70px;
+    height: 35px;
+    align-self: flex-end;
+    color:plum;
+    margin-left: 0.2cm;
+}
+
+.gardenText{
+    width: 200px;
+    height: 150px;
+}
