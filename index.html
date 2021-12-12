@@ -4,9 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
     <title>Weather Report</title>
 </head>
-<body>
-    
+<body class="container">
+<!-- weather heading -->
+    <header>
+        <div class="main-heading">Weather Report</div> 
+        <div class="second-heading">For the lovely city of</div>
+        <div id="city-name"></div>
+    </header>
+<!-- weather garden -->
+    <main id="weather">Weather Garden
+        <!-- <section id="weather-garden-container"> -->
+        <div id="skyscape"></div>
+        <div id="landscape"></div>
+        <!-- </section> -->
+        </div>
+
+    </main>
+<!-- temperature -->   
+    <section id="temperature-container">
+        <p id="temperature-title">Temperature</p>
+        <button id="down-button">⬇️</button>
+        <span id="degrees">click for temperature!</span>
+        <span></span>
+        <button id="up-button">⬆️</button>
+    </section>
+<!-- sky -->  
+    <section id="sky-box">
+        <div class="sky-title">
+            <p>Sky</p>
+        </div>
+        <select name="dropdown" id="dropdown">
+            <option value="">Select One</option>
+            <option value="sunny">Sunny</option>
+            <option value="cloudy">Cloudy</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowy">Snowy</option>
+        </select>
+    </section>
+<!-- city -->  
+    <section id="city-box">
+        <div class="city-title">
+            <p>City</p>
+        </div>
+        <input placeholder="Enter a city" id="city-input"/>
+        <button id="reset">Reset</button>
+    </section>
+
+<!-- weather ending -->  
+    <footer></footer>
+
+    <script src="src/index.js"></script>
 </body>
 </html>

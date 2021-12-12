@@ -1,0 +1,227 @@
+body{
+    text-align: center;
+}
+
+/* Main Grid */
+.container{
+    background-color: #293251;
+    margin:0;
+    display: grid;
+    height: 100vh;
+    /* width:auto;
+    height: auto; */
+    grid-template-columns: 3fr 7fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-areas: 
+        "header header header"
+        "temp_box display display"
+        "sky_box display display"
+        "city_box display display"
+        "footer footer footer";
+    grid-gap: .5rem;
+
+}
+
+/* Basic Layout Sections */
+
+header{
+    grid-area: header;
+    background-color:lightblue;
+    padding-top: 1%;
+}
+footer{
+    grid-area: footer;
+    background-color:steelblue;
+}
+main{
+    grid-area: display;
+    background-color:whitesmoke;
+}
+
+/* Temp, Sky, City boxes with grid settings and temporary colors for error checking */
+section:nth-of-type(1){
+    grid-area: temp_box;
+    background-color: cornflowerblue;
+    place-self: center stretch;
+}
+section:nth-of-type(2){
+    grid-area: sky_box;
+    background-color: darkcyan
+}
+section:nth-of-type(3){
+    grid-area: city_box;
+    background-color: darkseagreen;
+}
+
+/* Side boxes */
+#temperature-container, #sky-box, #city-box{
+    display: flexbox;
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 2em;
+    border-radius: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+}
+#weather{
+    display: grid;
+    text-align: center; 
+    padding: 2em;
+    border-radius: 1em;
+    grid-gap: .5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+}
+/* Sky and Land in the Weather Garden*/
+#skyscape{
+    border-radius: 1em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+#landscape{
+    border-radius: 1em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* temperatures */
+.freezing{
+    color: blue;
+}
+.really-cold{
+    color: lightblue;
+}
+.cold{
+    color: green;
+}
+.warm{
+    color: yellow;
+}
+.hot{
+    color: orange;
+}
+.scorching{
+    color: red;
+}
+
+/* sky colors*/
+.sunny{
+    background-color: lightcyan;
+}
+.cloudy{
+    background-color: silver;
+}
+.rainy{
+    background-color:lightsteelblue;
+}
+.snowy{
+    background-color:white;
+}
+
+
+/* land colors */
+.ice{
+    background-color: powderblue;
+}
+.soil{
+    background-color: tan;
+}
+.leaves{
+    background-color: peru;
+}
+.ocean{
+    background-color: steelblue;
+}
+
+
+/* Text Styles */
+
+.main-heading{
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    text-shadow: 2px 2px white;
+    line-height: 1.8; 
+}
+
+.second-heading{
+    font-size: medium;
+    font-family: fantasy;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 5px 5px 5px cadetblue;
+    line-height: 1.8; 
+    
+}
+
+#city-name{
+    font-size: large;
+    font-family: fantasy;
+    font-style: italic;
+    font-weight: bolder;
+    line-height: 2;
+}
+
+/* Buttons */
+
+#up-button, #down-button{
+    background-color:#d9cfcc; /* Green */
+    border-radius: 1em;
+    color: white;
+    padding: 10px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#reset{
+    background-color:#d9cfcc; /* Green */
+    border-radius: 1em;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* Attemot at responsive design */
+/* @media only screen and (max-width:550px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr .2fr .2fr .2fr .1fr .1fr;
+        grid-template-areas:
+            "header"
+            "temp-box"
+            "sky-box"
+            "city-box"
+            "display"
+            "footer";
+
+    }
+} */
+
+/*
+.container{
+
+    /* display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-areas: 
+        "header header header header"
+        "main main . div"
+        "footer footer footer footer"; */
+
+    /*//////////////////*/
+        /* display: grid;
+    grid-template-columns: [first] 40% [second] 60% [last];
+    grid-template-rows: [row1-start] 25% [row1-end] 400px [row2-end] auto; */
+    /*//////////////////*/
+
+    /* grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+    grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
+} */
+
