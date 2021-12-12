@@ -23,7 +23,7 @@ body > section > h1 {
 
 #body-grid-container {
     display: grid;
-    grid-template: 1fr / 1fr 2fr;
+    grid-template: 1fr 2fr / 1fr;
     justify-content: center;
     padding-left: 2em;
 }
