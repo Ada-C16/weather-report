@@ -47,13 +47,13 @@ const skyDisplayer = (event) => {
 
 const tempChecker = (temp, tempDisplay) => {
     const landscapeDisplay = document.getElementById('landscape-display');
-    if (temp > 90) {
+    if (temp > 80) {
         tempDisplay.style.color = 'red';
         landscapeDisplay.textContent = state.landscapeDisplay['Hot'];
-    } else if ((temp <= 90) && (temp > 65)) {
+    } else if ((temp <= 80) && (temp > 60)) {
         tempDisplay.style.color = 'orange';
         landscapeDisplay.textContent = state.landscapeDisplay['Warm'];
-    } else if ((temp >= 45) && (temp <= 65)) {
+    } else if ((temp >= 45) && (temp <= 60)) {
         tempDisplay.style.color = 'black';
         landscapeDisplay.textContent = state.landscapeDisplay['Meh'];
     } else if ((temp > 32) && (temp < 45)) {
