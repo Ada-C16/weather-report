@@ -9,19 +9,20 @@
 </head>
 <body>
     <main class="container">
-        <section class="title">
-            <h1> Today's darn report</h>
-        </section>
+        <div class="title">
+            <h1> Today's darn report</h1>
+        </div>
         <section class="city-name">
+            <h3>City name</h3>
             <p id="city"> for the city of:</p>
         </section>
         <section class="input-container">
             <div class = "temp">
                 <div class = "up-down">
-                    <button id ="up"><img src= "assets/chevron-up.png"></button>
-                    <button id="down"><img src= "assets/chevron-down.png"></button>
+                    <button id ="up"><img src= "assets/chevron-up.png" alt="button up"></button>
+                    <button id="down"><img src= "assets/chevron-down.png" alt="button down"></button>
                 </div>
-                    <h2 id="degrees"></h>
+                    <h2 id="degrees">Degrees</h2>
             </div>
             <div class = "sky">
                     <label class="label-sky">Sky:</label>
@@ -34,31 +35,33 @@
             </div>
             <div class = "input-city">
                 <form>
-                    <label for="fname">Enter city:</label>
+                    <label for="input">Enter city:</label>
                     <br>
                     <input type="text" id="input" name="input">
                 </form>
             </div>
         </section>
         <section class="refresh">
+            <h4>Change city button</h4>
             <button id="button-refresh"> change the city</button> 
         </section>
         <section class="display">
+            <h5> Display section</h5>
             <p id="defaultMessage"></p>
             <div class="sky-picture">
-                <img id="sky-sunny" src="assets/sky-sunny.png"/>
-                <img id="sky-rainy" src="assets/sky-rainy.png"/>
-                <img id="sky-snowy" src="assets/sky-snowy.png"/>
-                <img id="sky-cloudy" src="assets/sky-cloudy.png"/>
+                <img id="sky-sunny" src="assets/sky-sunny.png" alt = "sunny"/>
+                <img id="sky-rainy" src="assets/sky-rainy.png" alt = "rainy"/>
+                <img id="sky-snowy" src="assets/sky-snowy.png" alt = "snowy"/>
+                <img id="sky-cloudy" src="assets/sky-cloudy.png" alt = "cloudy"/>
             <div id = "landscape">
-                <img id="land-hot" src="assets/landscape-hot.png"/>
-                <img id="land-warm" src="assets/landscape-warm.png"/>
-                <img id="land-cool" src="assets/landscape-cool.png"/>
-                <img id="land-cold" src="assets/landscape-cold.png"/>
+                <img id="land-hot" src="assets/landscape-hot.png" alt = "hot"/>
+                <img id="land-warm" src="assets/landscape-warm.png" alt = "warm"/>
+                <img id="land-cool" src="assets/landscape-cool.png" alt = "cool"/>
+                <img id="land-cold" src="assets/landscape-cold.png" alt = "cold"/>
             </div>
             </div>
         </section>
     </main>
-    <script src="src/index.js" type="text/javascript"></script>
+    <script src="src/index.js"></script>
 </body>
 </html>

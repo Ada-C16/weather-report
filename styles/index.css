@@ -114,6 +114,12 @@ h2 {
     font-weight: 200;
 }
 
+h3,
+h4,
+h5 {
+    display: none;
+}
+
 #input,input:focus, textarea:focus,select, select:focus{
     outline: none;
     border:none;
