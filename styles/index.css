@@ -47,6 +47,11 @@ body > section > h1 {
 
 /* Choice Boxes */
 
+#choice-box-container {
+    display: flex;
+
+}
+
 .choice-box {
     background-color: white;
     height: 200px;
