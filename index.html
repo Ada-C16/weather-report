@@ -10,15 +10,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <h1>HOWDY 🤠👉👉 I'M THE SHERIFF OF WEATHER</h1>
+    <h1>HOWDY 🤠👉👉</h1>
 
 
     <div class="topHalf">
         <div class="garden">
             <section id="weatherLandscape">
-                <p id="landscape">
+                <div id="landscape">
                     hi
-                </p>
+                </div>
             </section>
 
             <section id="weatherSky">
@@ -48,7 +48,7 @@
         <section class="sky">
             <label for="sky">Choose a sky:</label>
 
-            <select name="sky" id="sky">
+            <select name="sky" id="sky" onChange="changeSky(this)">
                 <option value="sunny">Sunny</option>
                 <option value="cloudy">Cloudy</option>
                 <option value="rainy">Rainy</option>
