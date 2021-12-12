@@ -1,14 +1,4 @@
-
-// const mainSection = document.querySelector("#weather-title");
-
-
-// const title = document.createElement("h1");
-
-// title.textContent = " Min's Weather Report";
-
-// mainSection.appendChild(title);
-// console.log(weatherTitle);
-// console.log(title);
+console.log("loaded")
 
 const state = {
     tempchange: 50 
@@ -22,30 +12,37 @@ const clickButtonUp = () => {
     console.log("clickly click click");
 
 }
+const clickButtonDown = () => {
+    state.tempchange -= 1; 
+    const decreaseButtonElement = document.getElementById('tempvalue');
+    decreaseButtonElement.textContent = `${state.tempchange}`; 
+    console.log("downbutton click")
 
 
-// const updateSky = () => {
-//     const inputSky = document.getElementById("skySelect").value;
-//     const skyContainer = document.getElementById("sky");
-//     let sky = "";
-//     let skyColor = "";
-//     if (inputSky === "Cloudy") {
-//         sky = url(/upintheclouds.webp);
-//         skyColor = "cloudy";
-//     } else if (inputSky === "Sunny") {
-//         sky = "☁️     ☁️   ☁️ ☀️ ☁️  ☁️";
-//         skyColor = "sunny";
-//     } else if (inputSky === "Rainy") {
-//         sky = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
-//         skyColor = "rainy";
-//     } else if (inputSky === "Snowy") {
-//         sky = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
-//         skyColor = "snowy";
-//     }
-//     skyContainer.textContent = sky;
-//     const gardenContent = document.getElementById("gardenContent");
-//     gardenContent.classList = `garden__content ${skyColor}`;
-// };
+}
+
+const changeSky = () => {
+    const inputSky = document.querySelector(".skyDropMenu").value
+
+    // let gardenGifs = "cloudy";
+    
+    // if (inputSky === "cloudy") {
+    //     gardenGifs = "cloudy"
+    
+    // } else if (inputSky === "sunny") {
+    //     gardenGifs = "sunny";
+    // } else if (inputSky === "rainy") {
+    //     gardenGifs = "rainy";
+    // } else if (inputSky === "snowy") {
+    //     gardenGifs = "snowy";
+    // }
+    
+    
+    const gardenContent = document.querySelector(".gardenContainer");
+    gardenContent.className = "gardenContainer"
+    gardenContent.classList.add(inputSky);
+}
+
 const updateTemp = tempValue => {
     const tempValueContainer = document.getElementById("tempvalue");
     tempValueContainer.textContent = tempValue;
@@ -72,10 +69,21 @@ const updateTempStyles = (currentTemp) => {
 
     //register the button, telling the website to listen for a click 
 const registerEventHandlers = () =>{
-    const increseButtonElement = document.getElementById('increseButton');
+    const increseButtonElement = document.getElementById('increaseButton');
     increseButtonElement.addEventListener("click", clickButtonUp)
-document.addEventListener("DOMContentLoaded", registerEventHandlers);
+    console.log("registerEventHandlers")
+
+    const decreaseButtonElement = document.getElementById('decreaseButton');
+    decreaseButtonElement.addEventListener("click", clickButtonDown)
+    console.log("registerTheseHands")
+
+    const inputSky = document.querySelector(".skyDropMenu");
+    inputSky.addEventListener("change",changeSky)
 }
+
+// document.addEventListener("DOMContentLoaded", registerEventHandlers);
+
+registerEventHandlers()
 
 
 
