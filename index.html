@@ -9,34 +9,38 @@
 </head>
 <body>
     <header id="city_name_header">
-        <h1 id="city_name">CITY NAME</h1>
+        <h1 id="city_name">My Favorite City 😌</h1>
         <h1 id="weather_report">Weather Report</h2>
     </header>
     <section id="weather_body">
-        <div id="sky_emojis">SKY emojis</div>
-        <div id="ground_emojis">GROUND emjois</div>
+        <div id="sky_emojis">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</div>
+        <div id="ground_emojis">🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃</div>
     </section>
     <section id="change_widgets">
         <section id="change_temp">
             <h4>Temp</h4>
-            <div id="temp_buttons">
-                <button id="raise_temp">UP arrow</button>
-                <button id="lower_temp">DWN arrow</button>
-            </div>
-            <div id="temp_display">TempNUM</div>   
+            <span id="temp_buttons">
+                <button id="raise_temp">🔼</button>
+                <button id="lower_temp">🔽</button>
+            </span>
+            <span id="temp_display"></span>   
         </section>
         <section id="change_sky">
             <h4>Sky</h4>
-            <!--  - "html select change event" is a reasonable Internet search to start.
-    - This feature requires you to research how do you get the _value_ of the `<select>` element. -->
-            <select id="sky_dropdown">dropdown menu</select>
+            <select id="sky_dropdown">
+                <option id="dropdown_sunny" value="sunny">Sunny</option>
+                <option id="dropdown_cloudy" value="cloudy">Cloudy</option>
+                <option id="dropdown_rainy" value="rainy">Rainy</option>
+                <option id="dropdown_snowy" value="snowy">Snowy</option>
+            </select>
         </section>
         <section id="change_city">
             <h4>City</h4>
-            <input id="user_input">user input</input>
-            <button>Reset</button>
+            <input type="text" id="user_input" placeholder="City Name" oninput="updateCity()"></input>
+            <button id="reset">Reset</button>
         </section>
     </section>
     <script src="src/index.js" type="text/javascript"></script>
+    <footer>coded by Khandice Schuhmann &hearts;</footer>
 </body>
 </html>
