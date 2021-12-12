@@ -1,0 +1,69 @@
+#inputSection {
+    display: flex;
+    flex-direction: row;
+}
+
+#currentSection {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+#locationInput, #temperatureInput, #weatherMenu {
+    padding: 20px;
+    background-color:rgb(145, 170, 232)
+}
+body {
+    background-color: cornflowerblue;
+}
+
+#cityName {
+    font-size: 35px;
+    font-style: italic;
+}
+
+#tempValue {
+    font-size: 35px;
+    margin-top: -10px;
+}
+
+#landscapeContent {
+    border-radius: 25px;
+    padding: 20px;
+    width: 300px;
+    height: 150x;
+}
+.cloudy {
+    background-color: gray;
+}
+
+.sunny {
+    background-color: yellow;
+}
+
+.rainy {
+    background-color: rgb(37, 37, 222);
+}
+
+.snowy {
+    background-color: whitesmoke;
+}
+
+.orange {
+    color: orange;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+}
+
+.teal {
+    color: rgb(34, 78, 189);
+}

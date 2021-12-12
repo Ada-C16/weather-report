@@ -5,8 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link rel="stylesheet" href="styles/index.css">
 </head>
+
 <body>
+    <header>
+        <h2>What's up with the weather in...?</h2>
+    </header>
+    <section id="inputSection">
+        <section id="locationInput">
+            <h4>where you at?</h4>
+            <input id="cityNameInput" type="text" value="Seattle">
+            <button id="resetCityName">Reset City</button>
+        </section>
+
+        <section id="temperatureInput">
+            <h4>whats the temp?</h4>
+            <button id="tempUp">up</button>
+            <button id="tempDown">down</button>
+        </section>
+
+        <section id="weatherMenu">
+            <h4>what's the sky like?</h4>
+            <select id="skyInput">
+                <option value="Empty"></option>
+                <option value="Sunny">Sunny</option>
+                <option value="Cloudy">Cloudy</option>
+                <option value="Rainy">Rainy</option>
+                <option value="Snowy">Snowy</option>
+            </select>
+        </section>
+    </section>
+    <section id="currentSection">
+        <section id="cityContainer">
+            <h3>Weather Report for the city of...</h3>
+            <div><span id="cityName">Seattle</span>
+            </div>
+            <h3 id="currentTemp">Current Temp</h3>
+            <h3 id="tempValue" class="orange">71 °F</h3>
+        </section>
+
+        <section id="landscapeContainer">
+            <h2>out in the wild</h2>
+            <div id="landscapeContent" class="weather_content sunny">
+                <div id="sky">
+                    🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧
+                </div>
+                <div id="landscape">
+                    🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2021 | Jesse Pope</p>
+    </footer>
+
+    <script src="src/index.js">
+    </script>
     
 </body>
 </html>
