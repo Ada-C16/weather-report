@@ -117,10 +117,11 @@ input {
 
 @media (max-width: 750px) {
     #body-grid-container {
-        display: flex;
-        flex-direction: column;
         padding-left: 50px;
         justify-content: center;
+    }
+    #choice-box-container {
+        flex-direction: column;
     }
 }
 
