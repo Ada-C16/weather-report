@@ -7,32 +7,43 @@ x temp up element (clickable)
 x temp down element (clickable)
 x landscape display
 x sky type. dropdown element <select>
-- sky display 
-- city name display
-- rename city element with <input type = "text">
-- reset city name element(clickable)*/
+x sky display 
+x city name display
+x rename city element with <input type = "text">
+x reset city name element(clickable)
+- change color temperature */
 
 //DOM: How we manipulate websites
 //Nodes: Tags or elements inside the DOM
 
 //Defining the base temperature by creating the state object
 const state = {
-    temperature: 40
+    temperature: 40,
 };
 console.log(state)
 
-//Changing the closet
+//Changing the closet emoji
 const temperature = () => {
     const closet = document.querySelector('#emojicloset')
-    if (state.temperature <= 30) {
-        closet.textContent = '🧣🧤'; //winter clothes;
-    } else if (31 <= state.temperature && state.temperature <= 55) {
-        closet.textContent = '🧥'; //fall clothes
-    } else if (56 <= state.temperature && state.temperature <= 70) {
-        closet.textContent = '👗' //spring clothes
+    const colorClasses = ['fifties', 'sixties', 'seventies', 'eighties'];
+    const basetemp = document.querySelector('#base-temp')
+    for  (let colorclass of colorClasses) {
+        basetemp.classList.remove(colorclass);
+    }
+    if (state.temperature <= 59) {
+        basetemp.classList.add('fifties');
+        closet.textContent = '🧣🧤'; 
+    } else if (60 <= state.temperature && state.temperature <= 69) {
+        basetemp.classList.add('sixties');
+        closet.textContent = '🧥'; 
+    } else if (70 <= state.temperature && state.temperature <= 79) {
+        basetemp.classList.add('seventies');
+        closet.textContent = '👗' 
     } else {
-        closet.textContent = '🕶👙' //summer clothes
-    }}
+        basetemp.classList.add('eighties');
+        closet.textContent = '🕶👙' 
+    }
+};
 
 //Changing Temperature
 const upTemperature = () => {
@@ -45,34 +56,35 @@ const upTemperature = () => {
     const tempUptemp = document.querySelector('#temperature')
     const clothes = document.getElementById('clothes')
     temperature()
-}
+};
 const downTemperature = () => {
     const tempDown = document.getElementById('base-temp');
     state.temperature -= 1;
     //Returns every element in the Node
     tempDown.textContent = `${state.temperature}`;
     //This line is selecting the temperature id
-    const tempDowntemp = document.querySelector('#temperature')
-    const clothes = document.getElementById('clothes')
     temperature()
-}
-////Defining the base sky by creating the state object
-const skyState = {
-    sky: 1
 };
-console.log(skyState)
-
+//Changing sky emoji
 const sky = () => {
-    const skyMenu = document.querySelector('#emojisky')
-    if (skyState.sky === 'snowy') {
-        skyMenu.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨"'; //winter clothes;
-    } else if (skyState.sky == 'Sunny') {
-        skyMenu.textContent = 'sun'; //fall clothes
-    } else if (skyState.sky  = 'cloudy') {
-        skyMenu.textContent = 'cloud' //spring clothes
-    } else {
-        skyMenu.textContent = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧'; 
-    }}
+    const emojiSky = document.querySelector('#emojiSky')
+    const skyValue = document.querySelector('#sky').value;
+    if (skyValue === 'snowy') {
+        emojiSky.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨'; 
+    } else if (skyValue === 'sunny') {
+        emojiSky.textContent = '🌞☀️☀️☀️☀️☀️☀️☀️☀️🌞'; 
+    } else if (skyValue === 'cloudy') {
+        emojiSky.textContent = '☁️☁️☁️☁️☁️🌤☁️☁️☁️☁️☁️' 
+    } else if (skyValue === 'rainy') {
+        emojiSky.textContent = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧'; 
+    }};
+
+const resetCity = () => {
+    const city = document.getElementById('city-span');
+    const input = document.querySelector('#city-name').value;
+    city.textContent = input;
+    // input.value = 'ciudad';
+};
 
 //Register Events
 const registerEventhandlers = () => {
@@ -83,7 +95,10 @@ const registerEventhandlers = () => {
     TemperatureCold.addEventListener('click', downTemperature)
 
     const skyPresentation = document.getElementById('sky');
-    skyPresentation.addEventListener('onclick', sky)
+    skyPresentation.addEventListener('change', sky)
+
+    const resetButton = document.getElementById('reset');
+    resetButton.addEventListener('click', resetCity)
 };
 document.addEventListener("DOMContentLoaded", registerEventhandlers);
 
