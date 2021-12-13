@@ -26,7 +26,7 @@ const resetCityName = function () {
 
 const temperatureValue = document.getElementById('temperature-value');
 const decrementButton = document.getElementById('decrement');
-const increaseButton = document.getElementById('increase');
+const increaseButton = document.getElementById('increment');
 // const displayLandscape = document.getElementById('display-landscape');
 
 const stateTemp = { value: 0 };
@@ -60,6 +60,7 @@ const changeColorAndLand = (value) => {
 };
 
 const changeTemperature = function (event) {
+  console.log(event);
   changeColorAndLand(stateTemp.value);
   if (event.target.id === 'increment') {
     stateTemp.value++;
@@ -124,15 +125,15 @@ const snowyDisplay = (left, middle, right) => {
   right.className = 'snowy';
 };
 
-// Events REGISTERED
+// Events
 
 const registeredEventsListeners = function () {
   resetButton.addEventListener('click', resetCityName);
 
   cityInput.addEventListener('input', updateCityValue);
 
-  [decrementButton, increaseButton].forEach(() =>
-    addEventListener('click', changeTemperature)
+  [decrementButton, increaseButton].forEach((button) =>
+    button.addEventListener('click', changeTemperature)
   );
 
   sky.addEventListener('change', changeSky);
