@@ -141,9 +141,14 @@ const reset = (event) => {
     inputField.value = "";
     const locationSelector = document.getElementById('locations');
     locationSelector.options = "SoCal";
-    const liveDisplay = document.getElementById("live");
-    liveDisplay.style.visibility = hidden;
-    liveDisplay.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/acx4ZL7DYaM?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    const endLiveButton = document.getElementById("endLiveButton");
+    endLiveButton.style.visibility="hidden";
+}
+
+//reset live background
+const resetLiveBackground = (event) =>{
+    const liveViewContainer = document.getElementById("live");
+    liveViewContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/OWbI6WtlI-k?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>`;
 }
 
 //change live video feed
@@ -222,7 +227,9 @@ const registerEventHandlers = () => {
 
     // reset everything
     const resetButton = document.getElementById("resetButton");
-    resetButton.addEventListener('click', reset)
+    resetButton.addEventListener('click', reset);
+    resetButton.addEventListener('click', turnOffLiveView);
+    resetButton.addEventListener('click', resetLiveBackground)
 };
 
 // DOM listener
