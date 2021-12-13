@@ -84,3 +84,11 @@ body{
 #viewLiveButton{
     margin: 10px;
 }
+
+#live{
+    visibility: hidden;
+}
+
+#viewLiveButton{
+    visibility: visible;
+}

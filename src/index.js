@@ -103,7 +103,6 @@ const changeCloudAnimation = (event) => {
 const changeLandmarkAnimation = (event) => {
     const landmarks = document.getElementById("landmark");
     const locationPicked = `${event.target.value}`;
-    console.log(`something ${event.target.value}`);
     if (locationPicked == 'Muscle Beach🏋️'){
         landmarks.innerHTML = `<img src="./assets/muscle_beach.gif" id="muscle_beach">`;
     } else if (locationPicked == 'Disneyland🎢'){
@@ -116,12 +115,15 @@ const changeLandmarkAnimation = (event) => {
 }
 
 // add live video
-const replaceWithLiveSantaMonica = (event) => {
-    const landscapeContainer = document.getElementById("landscapeDisplay");
-    landscapeContainer.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/OWbI6WtlI-k?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-    
-    // hmm remember to change the text of the viewLivebutton
+const replaceWithLiveVideo = (event) => {
+    const liveViewContainer = document.getElementById("live");
+    liveViewContainer.style.visibility="visible";
 };
+
+// update live button text
+// const changeLiveButtonText = () =>{
+//     cons
+// }
 
 // reset everything
 const reset = (event) => {
@@ -140,6 +142,24 @@ const reset = (event) => {
     inputField.value = "";
     const locationSelector = document.getElementById('locations');
     locationSelector.options = "SoCal";
+    const liveDisplay = document.getElementById("live");
+    liveDisplay.style.visibility = hidden;
+    liveDisplay.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/acx4ZL7DYaM?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+}
+
+//change live video feed
+const changeLiveVideoFeed = (event) => {
+    const liveDisplay = document.getElementById("live");
+    locationPicked = event.target.value;
+    const liveButton = document.getElementById("viewLiveButton");
+    liveButton.style.visibilit=hidden;
+    if (locationPicked == 'Muscle Beach🏋️'){
+        liveDisplay.innerHTML = ` <iframe width="560" height="315" src="https://www.youtube.com/embed/acx4ZL7DYaM?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    } else if (locationPicked == 'Disneyland🎢'){
+        liveDisplay.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/zOfBhttA3Dk?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    } else if (locationPicked == 'LAX🛫'){
+        liveDisplay.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/t0GrpAgdBFI?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    }
 }
 
 // Register all events
@@ -170,6 +190,7 @@ const registerEventHandlers = () => {
     const selectLocation = document.querySelector('.locations');
     selectLocation.addEventListener('change', changeLocationTitle);
     selectLocation.addEventListener('change', changeLandmarkAnimation)
+    selectLocation.addEventListener('change', changeLiveVideoFeed);
 
     // Change the location title at the top of the page after user enters custom location name.
     const enterLocationName = document.getElementById("nameThisPlaceText");
@@ -181,7 +202,8 @@ const registerEventHandlers = () => {
 
     // add live video
     const viewLiveSantaMonicaButton = document.getElementById("viewLiveButton");
-    viewLiveSantaMonicaButton.addEventListener("click", replaceWithLiveSantaMonica);
+    viewLiveButton.addEventListener("click", replaceWithLiveVideo);
+    // viewLiveButton.addEventListener("click", changeLiveButtonText);
 
     // reset everything
     const resetButton = document.getElementById("resetButton");
