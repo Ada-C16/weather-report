@@ -11,6 +11,10 @@ button {
     color: #FFFFFF;
 }
 
+h1 {
+    margin-left: 20px;
+}
+
 header {
     display: flex;
     align-items: baseline;

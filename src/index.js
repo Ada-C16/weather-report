@@ -100,10 +100,6 @@ const decrementTemp = () => {
   };
 };
 
-increaseTemp.addEventListener('click', incrementTemp);
-decreaseTemp.addEventListener('click', decrementTemp);
-convertButton.addEventListener('click', convertTemp);
-
 // WAVE 3
 
 const sky = document.getElementById('sky');
@@ -126,8 +122,6 @@ const updateSky = () => {
   }
 };
 
-skySelect.addEventListener('change', updateSky);
-
 // WAVE 4
 
 const city = document.getElementById('city-name');
@@ -137,8 +131,6 @@ const changeCity = () => {
   city.textContent = '✨' + cityInput.value + '✨';
 };
 
-cityInput.addEventListener('keyup', changeCity);
-
 // WAVE 5
 
 const resetButton = document.getElementById('reset-city');
@@ -147,4 +139,23 @@ const resetCity = () => {
   city.textContent = '✨Seattle✨';
 };
 
-resetButton.addEventListener('click', resetCity);
+// REGISTER EVENT LISTENERS
+
+const registerEventHandlers = () => {
+  
+  increaseTemp.addEventListener('click', incrementTemp);
+
+  decreaseTemp.addEventListener('click', decrementTemp);
+
+  convertButton.addEventListener('click', convertTemp);
+
+  skySelect.addEventListener('change', updateSky);
+
+  cityInput.addEventListener('keyup', changeCity);
+
+  resetButton.addEventListener('click', resetCity);
+
+};
+
+
+document.addEventListener("DOMContentLoaded", registerEventHandlers)
