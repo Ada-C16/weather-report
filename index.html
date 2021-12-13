@@ -17,10 +17,10 @@
         <input type="text" id="nameThisPlaceText" name="nameOfPlace" placeholder="Name this place...">
         or 
         <select name="locations" class="locations">
-            <optgroup label="SoCal Locations" id="soCalLocations">
+            <!-- <optgroup label="SoCal Locations" id="soCalLocations"> -->
                 <option id="first_option" value="" disabled selected hidden>choose a location...</option>
-                <option value="Muscle Beach🏋️ ">Muscle Beach</option>
-                <option value="Disneyland🎢 ">Disneyland</option>
+                <option id="musclebeach" value="Muscle Beach🏋️">Muscle Beach</option>
+                <option value="Disneyland🎢">Disneyland</option>
                 <option id="lax" value="LAX🛫">LAX</option>
             <!-- </optgroup> -->
         </select>
@@ -53,9 +53,6 @@
                 <img src="assets/left_palm.gif" id="left_palm">
                 <img src="assets/AngelyneNFT.gif" id="angelyne">
                 <img src="assets/right_palms.gif" id="left_palm">
-                <!-- <img src="assets/muscle_beach.gif" id="muscle_beach"> -->
-                <!-- <img src="assets/lax_plane.png" id="lax_plane"> -->
-                <!-- <img src="assets/mickey.gif" id="mickey"> -->
             </section>
             <section id="cloud">
 
@@ -63,7 +60,6 @@
 
         </section>
     </section>
-
 
     <button id="viewLiveButton">View LIVE!</button>
     <br>
@@ -88,7 +84,7 @@
 
     <!-- reset  -->
     <section id="reset">
-        <button id="resetButton">RESET</button>
+        <input type="button" id="resetButton" value="RESET"> 
     </section>
 
     <script src="src/index.js"></script>
