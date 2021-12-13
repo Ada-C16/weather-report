@@ -19,12 +19,29 @@
                 <section>
                     <p class="temperature-text">Temperature</p>
                 </section>
+                <div id="temp-emoji-holder">
+                    <button id = "temp-up">⬆️</button>
+                    <button id = "temp-down">⬇️</button>
+                </div>
             </li>
             <li id="sky" class="details">
                 <p class="text">Sky</p>
+                <select id="skies" class="dropdown-content">
+                    <option>--Your Sky--</option>
+                    <option>Sunny</option>
+                    <option>Cloudy</option>
+                    <option>Rainy</option>
+                    <option>Snowy</option>
+                </select>
             </li>
             <li id="city" class="details">
                 <p class="text">City Name</p>
+                <div id = "city-div">
+                    <input type="text" id="city-input">
+                </div>
+                <div id = "city-div">
+                    <button id = "city-reset">RESET</button>
+                </div>
             </li>
         </ul>
     </nav>
