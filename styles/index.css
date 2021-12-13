@@ -1,0 +1,134 @@
+@font-face {
+  font-family: firaCodeRegular;
+  src: url(../assets/FiraCode-Regular.ttf);
+}
+
+:root {
+  --bg-color: #282a36;
+  --secondary-bg-color: #44475a;
+  --txt-color: #f8f8f2;
+  --h1-color: #ff79c6;
+  --h2-color: #50fa7b;
+  --hot-temp: #ff5555;
+  --warm-temp: #ffb86c;
+  --mid-temp: #f1fa8c;
+  --cool-temp: #50fa7b;
+  --cold-temp: #8be9fd;
+  --btn-txt-color: #bd93f9;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  font-family: firaCodeRegular, monospace;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  color: var(--h1-color);
+  font-size: 3em;
+}
+
+h2 {
+  color: var(--h2-color);
+  font-size: 2.5em;
+  margin: 0.1em auto;
+}
+
+p,
+label,
+select,
+input,
+button {
+  font-size: 1.5em;
+}
+
+label {
+  display: block;
+  margin-bottom: 1%;
+}
+
+input {
+  width: 40%;
+}
+
+button,
+select,
+input {
+  color: var(--btn-txt-color);
+  background-color: var(--bg-color);
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 0.75em;
+  font-family: inherit;
+}
+
+button:hover {
+  cursor: pointer;
+  color: var(--bg-color);
+  background-color: var(--btn-txt-color);
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.controls,
+.garden {
+  background-color: var(--secondary-bg-color);
+  border-radius: 1em;
+  margin: 1em auto;
+  padding: 1%;
+}
+
+.controls {
+  width: 30%;
+  min-width: 290px;
+}
+
+.garden {
+  width: 60%;
+  min-width: fit-content;
+}
+
+.garden p {
+  font-size: 2em;
+  white-space: nowrap;
+}
+
+.hot {
+  color: var(--hot-temp);
+}
+
+.warm {
+  color: var(--warm-temp);
+}
+
+.mid {
+  color: var(--mid-temp);
+}
+
+.cool {
+  color: var(--cool-temp);
+}
+
+.cold {
+  color: var(--cold-temp);
+}
+
+#current-temp {
+  font-size: 2em;
+  margin: 0;
+}
