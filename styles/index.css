@@ -92,3 +92,7 @@ body{
 #viewLiveButton{
     visibility: visible;
 }
+
+#endLiveButton{
+    visibility: hidden;
+}

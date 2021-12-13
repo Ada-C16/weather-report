@@ -114,16 +114,15 @@ const changeLandmarkAnimation = (event) => {
     }
 }
 
-// add live video
-const replaceWithLiveVideo = (event) => {
+// turn on live video
+const turnOnLiveVideo = (event) => {
     const liveViewContainer = document.getElementById("live");
     liveViewContainer.style.visibility="visible";
+    const endLiveButton = document.getElementById("endLiveButton");
+    endLiveButton.style.visibility="visible";
+    const viewLiveButton = document.getElementById("viewLiveButton");
+    viewLiveButton.style.visibility="hidden";
 };
-
-// update live button text
-// const changeLiveButtonText = () =>{
-//     cons
-// }
 
 // reset everything
 const reset = (event) => {
@@ -152,7 +151,7 @@ const changeLiveVideoFeed = (event) => {
     const liveDisplay = document.getElementById("live");
     locationPicked = event.target.value;
     const liveButton = document.getElementById("viewLiveButton");
-    liveButton.style.visibilit=hidden;
+    // liveButton.style.visibilit=hidden;
     if (locationPicked == 'Muscle Beach🏋️'){
         liveDisplay.innerHTML = ` <iframe width="560" height="315" src="https://www.youtube.com/embed/acx4ZL7DYaM?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
     } else if (locationPicked == 'Disneyland🎢'){
@@ -160,6 +159,18 @@ const changeLiveVideoFeed = (event) => {
     } else if (locationPicked == 'LAX🛫'){
         liveDisplay.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/t0GrpAgdBFI?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
     }
+}
+
+//turn off live view
+const turnOffLiveView = (event) => {
+    const liveViewContainer = document.getElementById("live");
+    liveViewContainer.style.visibility="hidden";
+    //make view live button visible
+    const viewLiveButton = document.getElementById("viewLiveButton");
+    viewLiveButton.style.visibility="visible";
+    //hide end live button
+    const endLiveButton = document.getElementById("endLiveButton");
+    endLiveButton.style.visibility="hidden";
 }
 
 // Register all events
@@ -200,10 +211,14 @@ const registerEventHandlers = () => {
     const selectWeather = document.querySelector('.skys');
     selectWeather.addEventListener('change', changeCloudAnimation);
 
-    // add live video
-    const viewLiveSantaMonicaButton = document.getElementById("viewLiveButton");
-    viewLiveButton.addEventListener("click", replaceWithLiveVideo);
+    // turn live view video
+    const liveViewButtonContainer = document.getElementById("viewLiveButton");
+    liveViewButtonContainer.addEventListener("click", turnOnLiveVideo);
     // viewLiveButton.addEventListener("click", changeLiveButtonText);
+
+    //turn off live view video
+    const turnOffLiveViewContainer = document.getElementById("endLiveButton");
+    turnOffLiveViewContainer.addEventListener("click", turnOffLiveView)
 
     // reset everything
     const resetButton = document.getElementById("resetButton");
