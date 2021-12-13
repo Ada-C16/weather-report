@@ -10,21 +10,35 @@
 <body>
     <main> 
         <header > El Clima </header>
+        <p id="displayCity">Para la hermosa ciudad de </p>
         <aside>
             <section class="box" id="temperature">
-                <h3 >Choose your outfit</h3> 
-                <button class="itsHot">It's getting hot in herrrrre</button>
-                <button class="itsCold">Sweather Weather</button>
+                <h3>La temperatura</h3> 
+                <p id="base-temp">40</p>
+                <button id="itsHot">It's getting hot in herrrrre</button>
+                <button id="itsCold">Baby it's cold outside</button>
             </section>
             <section class="box">
-                <h3 >Where in the world?</h3>
+                <h3>Ciudad</h3>
+                <label for="name">Ciudad:</label>
+                <input type="text" id="name" name="name" required
+                    minlength="4" maxlength="8" size="10">
             </section>
             <section class="box">
-                <h3 >Hope this Dog improves your day</h3>
+                <h3>El Cielo</h3>
+                <label for="sky">Change the sky:</label>
+                <select name="sky" id="sky">
+                    <option >Cloudy</option>
+                    <option >Sunny</option>
+                    <option >Rainy</option>
+                    <option >Snowy</option>
+                </select>
             </section>
         </aside>
         <section id="closet">
-            <h3 >The Closet</h3>
+            <h3 >El Closet</h3>
+            <p id="emojisky"> ☁️ ☁️ ☁️ ☁️ ☁️ </p>
+            <p id="emojicloset">  🧍🏽  </p>
         </section>
         
     </main>
