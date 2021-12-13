@@ -48,12 +48,6 @@ const createTempListeners = () => {
 };
 
 const createGroundListener = () => {
-  //   | Temperature (F) | Landscape                         |
-  // | --------------- | --------------------------------- |
-  // | 80+             | `"🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"`       |
-  // | 70-79           | `"🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷"`      |
-  // | 60-69           | `"🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃"`        |
-  // | 45-59      | `"🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲"` |
   console.log(document.getElementById('temp_display').innerHTML);
   document.getElementById('temp_display').addEventListener('DOMSubtreeModified', function () {
     if (document.getElementById('temp_display').innerHTML <= 44) {
