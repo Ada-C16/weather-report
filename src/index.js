@@ -1,5 +1,6 @@
 const state = {
   tempGauge: 70,
+  cityName: "Seattle"
 };
 
 const updateTempState = () => {
@@ -67,6 +68,12 @@ const changeSky = (event) => {
   };
 };
 
+const inputCity = (event) => {
+  const inputCityElement = document.querySelector("#input");
+  const cityHeader = document.querySelector("#header-span")
+  cityHeader.textContent = inputCityElement.value;
+}
+
 const registerEventHandlers = (event) => {
   console.log('in the registerEventHandlers', event);
   const upButton = document.querySelector('#upButton');
@@ -75,6 +82,8 @@ const registerEventHandlers = (event) => {
   downButton.addEventListener('click', tempDown);
   const skyElement = document.querySelector("#sky-select");
   skyElement.addEventListener('change', changeSky);
+  const inputCityElement = document.querySelector("#input");
+  inputCityElement.addEventListener('change', inputCity)
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);

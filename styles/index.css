@@ -64,7 +64,6 @@ header {
     list-style-type: none;
     background-color: transparent;
     display: flex;
-    flex-direction: column;
 }
 
 li:nth-child(3) {
