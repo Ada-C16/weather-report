@@ -4,9 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/index.css" rel="stylesheet" type="text/css"/>
     <title>Weather Report</title>
 </head>
 <body>
+    <main class="container">
+        <section id="box1">
+           <h1>Weather Report</h1>
+           <p>For the lovely city of <span id="currentCity">✨My Hometown✨</span></p>
+        </section>
+        
+        <section class="box3" class="input-boxes">
+            <h3>Temperature</h3> 
+            <section>
+                <button id="increaseTempButton">⬆️</button>
+                <button id="decreaseTempButton">⬇️</button>
+            </section>
+            <div>
+                <span id="temperature" class="red">82</span>
+            </div>
+        </section>
+        <section id="box4">
+            <h3>Sky</h3>
+            <select id="sky">
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="rainy">Rainy</option>
+                <option value="snowy">Snowy</option>
+            </select>
+        </section>
+        <section id="box5">
+            <h3>City Name</h3>
+            <label for="name">City Name:</label>
+              <input type="text" id="cityName" />
+            <button id="resetButton">Reset</button> 
+        </section>
+        <section id="box6">
+            <section id="currentLandscape">🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂</section>
+            <h3>Weather Garden</h3> 
+            <section id="currentSky">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</section>
+        </section>
+    </main> 
+    <script src="src/index.js" ></script>
     
 </body>
 </html>
