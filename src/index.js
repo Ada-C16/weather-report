@@ -31,94 +31,6 @@ state.tempBox.classList.add(state.initTempColorClass);
 state.tempBox.textContent = `${state.temp} °F`;
 
 
-// console.log(state.tempBox.textContent)
-
-
-// this function is responsible for changing two things in one function...
-
-// const tempStyle = () => {
-//     // console.log('running tempStyle')
-//     temp = state.temp;
-//     tempBox = state.tempBox;
-//     const landscape = document.getElementById('landscape')
-    
-//     tempBox.removeAttribute('class');
-
-//     if (temp >=80) {
-//         tempBox.classList.add('eighty-degrees');
-//         landscape.textContent = state.landscapes_map['80+']
-//     } else if (temp >= 70) {
-//         tempBox.classList.add('seventy-degrees');
-//         landscape.textContent = state.landscapes_map['70+']
-//     } else if (temp >= 60) {
-//         state.tempBox.classList.add('sixty-degrees');
-//         landscape.textContent = state.landscapes_map['60+']
-//     } else if (temp >= 50) {
-//         state.tempBox.classList.add('fifty-degrees');
-//         landscape.textContent = state.landscapes_map['50+']
-//     } else {
-//         tempBox.classList.add('forty-degrees');
-//         landscape.textContent = state.landscapes_map['40+']
-//     }
-// }
-
-// HELPER FUNCTIONS?
-
-
-// HOW CAN I ELIMINATE THESE REPEATED CONDITIONALS
-// const setTempColor = () => {
-
-//     state.tempBox.removeAttribute('class');
-
-//     if (state.temp >=80) {
-//         state.tempBox.classList.add('eighty-degrees');
-//     } else if (state.temp >= 70) {
-//         state.tempBox.classList.add('seventy-degrees');
-//     } else if (state.temp >= 60) {
-//         state.tempBox.classList.add('sixty-degrees');
-//     } else if (state.temp >= 50) {
-//         state.tempBox.classList.add('fifty-degrees');
-//     } else {
-//         state.tempBox.classList.add('forty-degrees');
-//     }
-// }
-
-// const setTempLandscape = () => {
-    
-//     const landscape = document.getElementById('landscape')
-
-//     if (state.temp >=80) {
-//         landscape.textContent = state.landscapes_map['80+']
-//     } else if (state.temp >= 70) {
-//         landscape.textContent = state.landscapes_map['70+']
-//     } else if (state.temp >= 60) {
-//         landscape.textContent = state.landscapes_map['60+']
-//     } else if (state.temp >= 50) {
-//         landscape.textContent = state.landscapes_map['50+']
-//     } else {
-//         landscape.textContent = state.landscapes_map['40+']
-//     }
-// }
-
-// const setTempColor = () => {
-
-//     state.tempBox.removeAttribute('class');
-
-//     state.tempBox.classList.add();
-//     // if (state.temp >=80) {
-//     //     state.tempBox.classList.add('eighty-degrees');
-//     // } else if (state.temp >= 70) {
-//     //     state.tempBox.classList.add('seventy-degrees');
-//     // } else if (state.temp >= 60) {
-//     //     state.tempBox.classList.add('sixty-degrees');
-//     // } else if (state.temp >= 50) {
-//     //     state.tempBox.classList.add('fifty-degrees');
-//     // } else {
-//     //     state.tempBox.classList.add('forty-degrees');
-//     // }
-// }
-
-
 // MAYBE THIS IS BAD BECAUSE I'M RESTYLING EVERY SINGLE TIME TEMP CHANGES
 
 // HELPER FUNCTIONS
@@ -234,3 +146,95 @@ if (document.readyState !== 'loading') {
 } else {
     document.addEventListener('DOMContentLoaded', registerEventHandlers);
 }
+
+
+
+
+
+
+
+
+
+// this function is responsible for changing two things in one function...
+
+// const tempStyle = () => {
+//     // console.log('running tempStyle')
+//     temp = state.temp;
+//     tempBox = state.tempBox;
+//     const landscape = document.getElementById('landscape')
+    
+//     tempBox.removeAttribute('class');
+
+//     if (temp >=80) {
+//         tempBox.classList.add('eighty-degrees');
+//         landscape.textContent = state.landscapes_map['80+']
+//     } else if (temp >= 70) {
+//         tempBox.classList.add('seventy-degrees');
+//         landscape.textContent = state.landscapes_map['70+']
+//     } else if (temp >= 60) {
+//         state.tempBox.classList.add('sixty-degrees');
+//         landscape.textContent = state.landscapes_map['60+']
+//     } else if (temp >= 50) {
+//         state.tempBox.classList.add('fifty-degrees');
+//         landscape.textContent = state.landscapes_map['50+']
+//     } else {
+//         tempBox.classList.add('forty-degrees');
+//         landscape.textContent = state.landscapes_map['40+']
+//     }
+// }
+
+// HELPER FUNCTIONS?
+
+
+// HOW CAN I ELIMINATE THESE REPEATED CONDITIONALS
+// const setTempColor = () => {
+
+//     state.tempBox.removeAttribute('class');
+
+//     if (state.temp >=80) {
+//         state.tempBox.classList.add('eighty-degrees');
+//     } else if (state.temp >= 70) {
+//         state.tempBox.classList.add('seventy-degrees');
+//     } else if (state.temp >= 60) {
+//         state.tempBox.classList.add('sixty-degrees');
+//     } else if (state.temp >= 50) {
+//         state.tempBox.classList.add('fifty-degrees');
+//     } else {
+//         state.tempBox.classList.add('forty-degrees');
+//     }
+// }
+
+// const setTempLandscape = () => {
+    
+//     const landscape = document.getElementById('landscape')
+
+//     if (state.temp >=80) {
+//         landscape.textContent = state.landscapes_map['80+']
+//     } else if (state.temp >= 70) {
+//         landscape.textContent = state.landscapes_map['70+']
+//     } else if (state.temp >= 60) {
+//         landscape.textContent = state.landscapes_map['60+']
+//     } else if (state.temp >= 50) {
+//         landscape.textContent = state.landscapes_map['50+']
+//     } else {
+//         landscape.textContent = state.landscapes_map['40+']
+//     }
+// }
+
+// const setTempColor = () => {
+
+//     state.tempBox.removeAttribute('class');
+
+//     state.tempBox.classList.add();
+//     // if (state.temp >=80) {
+//     //     state.tempBox.classList.add('eighty-degrees');
+//     // } else if (state.temp >= 70) {
+//     //     state.tempBox.classList.add('seventy-degrees');
+//     // } else if (state.temp >= 60) {
+//     //     state.tempBox.classList.add('sixty-degrees');
+//     // } else if (state.temp >= 50) {
+//     //     state.tempBox.classList.add('fifty-degrees');
+//     // } else {
+//     //     state.tempBox.classList.add('forty-degrees');
+//     // }
+// }
