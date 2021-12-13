@@ -104,6 +104,13 @@ const selectCity = (event) => {
   cityName.textContent = event.target.value;
 };
 
+const resetCity = (event) => {
+  const currentCityName = document.querySelector('#currentCity');
+  const cityName = document.querySelector('#cityName');
+  currentCityName.textContent = 'My Hometown';
+  cityName.value = '';
+};
+
 const registerEventHandlers = (event) => {
   const increaseTempButton = document.querySelector('#increaseTempButton');
   increaseTempButton.addEventListener('click', increaseTemperature);
@@ -113,6 +120,8 @@ const registerEventHandlers = (event) => {
   skySelection.addEventListener('change', selectSky);
   const enterCityName = document.querySelector('#cityName');
   enterCityName.addEventListener('input', selectCity);
+  const resetCityName = document.querySelector('#resetButton');
+  resetCityName.addEventListener('click', resetCity);
 };
 
 document.addEventListener('DOMContentLoaded', registerEventHandlers);

@@ -44,7 +44,7 @@ body {
 #box3{
     grid-row: 2;
     gap: 8em;
-    background-color: papayawhip;
+    background-color: darkblue;
 }
 
 #box4{
@@ -59,6 +59,7 @@ body {
 
 #box6{
     grid-row: 2/4;
+    grid-column: 2/4;
     margin-top: 100px;
     height:100px;
     background-color: papayawhip;
@@ -90,5 +91,7 @@ body {
 .red {
     color:red;
 }
+
+
 
 
