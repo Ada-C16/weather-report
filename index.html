@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
     <title>Weather Report</title>
 </head>
 <body>
-    
+    <main style="background-color:rgb(10, 45, 80)" id="background-color"> 
+        <header > El Clima </header>
+        <h2 id="display-city">Para la hermosa ciudad de ✨<span id="city-span">Seattle</span>✨</h2>
+        <aside>
+            <section class="box" id="temperature">
+                <h3>La temperatura</h3> 
+                <p id="base-temp">40</p>
+                <button id="itsHot">It's getting hot in herrre</button>
+                <button id="itsCold">Baby it's cold outside</button>
+            </section>
+            <section class="box">
+                <h3>Ciudad</h3>
+                <div>   
+                    <input type="text" id="city-name" placeholder="Seattle">
+                    <button id="reset">Reset</button>
+                </div>
+            </section>
+            <section class="box">
+                <h3>El Cielo</h3>
+                <label for="sky">Change the sky:</label>
+                <select name="sky" id="sky">
+                    <option value='cloudy'>Cloudy</option>
+                    <option value="sunny">Sunny</option>
+                    <option value='rainy'>Rainy</option>
+                    <option value='snowy'>Snowy</option>
+                </select>
+            </section>
+        </aside>
+        <section id="closet">
+            <h3 >El Closet</h3>
+            <p id="emojiSky"> ☁️ ☁️ ☁️ ☁️ ☁️ </p>
+            <p id="emojicloset">  🧍🏽  </p>
+        </section>
+        
+    </main>
+    <script src="src/index.js"></script>
 </body>
 </html>
