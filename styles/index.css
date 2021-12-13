@@ -65,12 +65,17 @@ h1 {
     margin: 4rem;
     margin-top: 0ch;
     text-align: center;
+    font-size: auto;
     background-color: #D3E0DC;
 }
 
 #cityone {
     grid-column:  2;
     grid-row: 1;
+}
+
+#currentcity {
+    font-size: 3rem;
 }
 
 #citytwo {
