@@ -21,7 +21,7 @@ const tempchanger = (temp) => {
 // Sky change function
 const skyChanger = (sky) => {
   if (sky === "sunny") {
-    return "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
+    return "☀️";
   } else if (sky === "cloudy") {
     return "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
   } else if (sky === "rainy") {
@@ -32,9 +32,10 @@ const skyChanger = (sky) => {
 }
 
 
+
 // Up Temp
 const uptemp = (event) => {
-    state.tempCount += 5;
+    state.tempCount += 1;
     const temp = document.querySelector("#tempCount")
     const div = document.getElementById("tempCount")
     tempData = tempchanger(state.tempCount)
