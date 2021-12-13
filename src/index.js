@@ -6,12 +6,14 @@ const state = {
 
 const getSelectedCity = () =>{
         const showCityTyped = document.querySelector("#city").value;
-        const cityName =document.querySelector("#lovelyCity");
-        cityName.textContent = event.target.value
+        const cityName = document.querySelector("#lovelyCity");
+        cityName.textContent = event.target.value 
 }
 
 const addReset = () =>{
     let input = document.querySelector("#city");
+    const cityName= document.querySelector("#lovelyCity")
+    cityName.textContent="Seatte"
     input.value = ""
 
 }
