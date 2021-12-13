@@ -5,8 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="../styles/index.css" rel="stylesheet">
 </head>
-<body>
+<body class = background>
+
+    <header class = city-name-box>
+        <h1>In the Lovely City of.. </h1>
+        <br><input type= text id="namehere" onchange="displayname()"><br>
+     
+        <p class = big-text id="demo"></p>
+    </header>
+
+    <header class = current-temp-box>
+        <h1>..the Current Temperature Is..
+            <div class="container">
+                <button id = "minusButton">-</button>
+                <h2 id="counting"></h2>
+                <button id = "plusButton">+</button>
+            </div>
+        </h1>
+    </header>
+
+    <header class = choose-sky-box>
+       <h1>..the Sky Is..</h1>
+            
+        <select id="skySelection" class="dropdown-content">
+            <option>--Please choose an option--</option>
+            <option>Sunny</option>
+            <option>Cloudy</option>
+            <option>Rainy</option>
+            <option>Snowy</option>
+        </select>
+
+    </header>
+
+    <header class = weather-garden-box>
+        <h1>..and the Garden Looks like This:
+            <ul id=weather-garden-display>
+                <li id = "sky">(select sky)</li>
+                <li id ="ground">(adjust temperature)</li>
+            </ul>
+        </h1>
+    </header>
+
+    <script type= "text/javascript" src = "scripts/index.js"></script>
+
     
 </body>
 </html>

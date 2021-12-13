@@ -1,0 +1,115 @@
+.background {
+    background-color: #7128a2;
+    display: grid;
+    vertical-align: middle;
+    align-content: center;
+    list-style-type: none;
+    grid-gap:20px;
+}
+
+.city-name-box {
+    width: 600px;
+    height: 200px;
+    align-content: center;
+    vertical-align: middle;
+    background-color:  #b88fd3;
+    list-style-type: none;
+}
+
+.current-temp-box {
+    width: 600px;
+    height: 200px;
+    display: grid;
+    align-content: center;
+    vertical-align: middle;
+    background-color:  #b88fd3;
+    list-style-type: none;
+}
+
+.choose-sky-box {
+    width: 600px;
+    height: 200px;
+    align-content: center;
+    vertical-align: middle;
+    background-color:  #b88fd3;
+    list-style-type: none;
+}
+
+.weather-garden-box {
+    width: 600px;
+    height: 250px;
+    align-content: center;
+    vertical-align: middle;
+    background-color:  #b88fd3;
+    list-style-type: none;
+}
+
+.big-text{
+    font-size:xx-large;
+    font-weight: bold;
+    color: rgb(80, 9, 94)
+}
+
+
+/*apply css properties to body tag*/
+  
+body {
+    position: absolute;
+    text-align: center;
+}
+
+/*apply css properties to container class*/
+
+.container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    text-align: center;
+}
+
+/*apply css properties to button tag*/
+
+button {
+    width: 60px;
+    height: 30px;
+    font-size: 20px;
+    background-color: rgb(80, 9, 94);
+    color: honeydew;
+}
+
+/*apply hover effect to button tag*/
+
+button:hover {
+    background-color: rgb(184, 49, 94);
+    color:  rgb(80, 9, 94);
+}
+
+/*apply css properties to h2 tag*/
+
+h2 {
+    color: rgb(80, 9, 94);
+    margin: 0 50px;
+    font-size: 45px;
+}
+/*apply css properties to h1 tag*/
+
+h1 {
+    font-size: 35px;
+    color:  rgb(80, 9, 94);
+    text-align: center;
+
+}
+
+
+#weather-garden-display {
+    align-content: center;
+    list-style: none;
+    padding:0;
+}
+
+  /* ### Standard Dropdown ### */
+select {
+    font-size: .9rem;
+    padding: 2px 5px;
+}
