@@ -3,7 +3,7 @@ body {
 }
 
 
-.container > div {
+.container > section {
     background: #eee;
     padding: 1em;
     border-radius: 10px;

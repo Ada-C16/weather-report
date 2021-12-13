@@ -8,42 +8,42 @@
     <title>Weather Report</title>
 </head>
 <body>
-    <div class="container">
-        <div id="box1">
-           <h1> 1 Weather Report</h1>
-        </div>
-        <div id="box2">
-            <p> 2 For the lovely city of <span id="currentCity">✨My Hometown✨</span></p>
-        </div>
-        <div id="box3" class="input-boxes">
+    <main class="container">
+        <section id="box1">
+           <h1>Weather Report</h1>
+        </section>
+        <section id="box2">
+            <p>For the lovely city of <span id="currentCity">✨My Hometown✨</span></p>
+        </section>
+        <section id="box3" class="input-boxes">
             <h3>3 Temperature</h3> 
             <section>
                 <button id="increaseTempButton">⬆️</button>
                 <button id="decreaseTempButton">⬇️</button>
             </section>
             <section id="temperature" class="red">82</section>
-        </div>
-        <div id="box4">
-            <h3>4 Sky .</h3>
+        </section>
+        <section id="box4">
+            <h3>Sky</h3>
             <select id="sky">
                 <option value="sunny">Sunny</option>
                 <option value="cloudy">Cloudy</option>
                 <option value="rainy">Rainy</option>
                 <option value="snowy">Snowy</option>
             </select>
-        </div>
-        <div id="box5">
-            <h3>5 City Name</h3>
+        </section>
+        <section id="box5">
+            <h3>City Name</h3>
             <label for="name">City Name:</label>
               <input type="text" id="cityName" />
             <button id="resetButton">Reset</button> 
-        </div>
-        <div id="box6">
+        </section>
+        <section id="box6">
             <section id="currentLandscape"></section>
-            <h3>6 Weather Garden.</h3> 
+            <h3>Weather Garden</h3> 
             <section id="currentSky"></section>
-        </div>
-    </div> 
+        </section>
+    </main> 
     <script src="src/index.js" ></script>
     
 </body>
