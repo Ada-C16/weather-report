@@ -13,9 +13,17 @@ body {
     grid-gap:10px;
 }
 
+#displayFeature{
+    padding-top:60px
+}
+
+#displayWeather{
+    padding-top:10px;
+}
+
+
 .features{
     height:100px;
-    /* width: 200px; */
     background-color: aliceblue;
     text-align: center;
     align-self: start;
@@ -26,7 +34,7 @@ body {
 
 #gardenContainer {
     grid-column: span 3;
-    background-color:azure;
+    background-color:darkcyan;
     height: 140px;
 }
 #weather{
@@ -41,11 +49,7 @@ em {
     font-size: 0.6em;
 }
 
-.display-garden {
-    height:200px;
-    width: 800px;
-    grid-row: span 1;
-}
+
 .burning{
     background-color:red;
 }
