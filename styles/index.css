@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Bevan&family=Cinzel+Decorative:wght@700&family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan&family=Cinzel+Decorative:wght@700&family=Goudy+Bookletter+1911&family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan&family=Bungee+Shade&family=Cinzel+Decorative:wght@700&family=Galada&family=Goudy+Bookletter+1911&family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan&family=Bungee+Shade&family=Cinzel+Decorative:wght@700&family=Galada&family=Goudy+Bookletter+1911&family=Knewave&family=Pompiere&display=swap');
+
+/* Arrows */
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+  /* Text Styles */
+
+  #cityNameDisplay {
+    color:mediumvioletred;
+    font-weight: 900;
+  }
+
+  .title {
+    font-family: 'Cinzel Decorative', cursive;
+    color: white;
+    font-size: 2.1em;
+  }
+
+  #subtitle {
+    font-family: 'Goudy Bookletter 1911', serif;
+    color: rgb(55, 46, 46);
+    font-size: 1.5em;
+  }
+
+  .item-titles {
+    font-family: 'Galada', cursive;
+    color:rgb(85, 71, 71);
+    font-size: 1.7em;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  .footer {
+    text-align: center;
+    font-family: 'Pompiere', cursive;
+    font-weight: bold;
+  }
+
+  body {
+    background-color: #f6f0c4;
+    background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);
+  }
+
+  /* Layout */ 
+
+  .content-wrapper {
+    margin: 5px;
+  }
+
+  .temp-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    padding: 20px;
+    margin: 5px;
+  }
+
+  .item-wrapper {
+    position: relative;
+    text-align: center;
+    outline: .5px solid grey;
+    padding: 5px;
+    margin: 5px 15px;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  #weatherGardenContainer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    width: 60%;
+    border-radius: 10%;
+    margin: 5px auto;
+  }
+
+  #skyEmojis {
+    margin-bottom: 40px;
+    font-size: 1.5em;
+  }
+
+  #landscape {
+    margin-top: 10px;
+    font-size: 1.5em;
+  }
+
+  #temperatureDegree {
+    font-size: 2em;
+    margin-bottom: 0 auto;
+  }
+
+
