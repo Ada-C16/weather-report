@@ -65,17 +65,70 @@
     grid: flex;
 }
 
-.temp-text {
+.temperature-text {
     display: inline;
-    color:#F0940A;
+    color:#e315cb;
+    margin:0;
     font-size: 24pt;
-}
-
-.garden-display {
-    background-color: lightskyblue;
-    border-radius: 10px;
+    text-align: center;
+   
 }
 
 .temp-changes {
     margin: 0;
 }
+
+#temperature-buttons {
+    text-align: center;
+    font-size: x-large;
+}
+
+select {
+    font-size: .9rem;
+    padding: 2px 5px;
+}
+
+#city-div {
+    display: inline;
+    text-align: center;;
+}
+
+#cityInput {
+    display: block;
+    font-size: 18pt;
+    display: inline;
+    text-align: center;
+}
+
+#cityReset {
+    color: blue;
+}
+.dropdown-content {
+    display: inline-block;
+    text-align: center;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gardenDisplay {
+    background-color: lightskyblue;
+    border-radius: 10px;
+    height: 40%;
+    width: 60%;
+    font-size: x-large;
+}
+
+#clouds{
+
+    list-style-type: none;
+    font-size: xx-large;
+}
+
+#flowers{
+
+    list-style-type: none;
+    font-size: xx-large;
+}
+
+
