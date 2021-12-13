@@ -1,0 +1,79 @@
+body {
+    background-color:cornflowerblue;
+    padding-left: 20px;
+}
+
+.box-block {
+    height:70vh;
+    padding-top: 100px;
+    width:50%; 
+    display:grid;
+    grid-template-columns: 30% 35% 45%;
+    grid-template-rows:30% 10% 30% auto;
+    grid-gap:10px;
+}
+
+#displayFeature{
+    padding-top:60px
+}
+
+#displayWeather{
+    padding-top:10px;
+}
+
+
+.features{
+    height:100px;
+    background-color: aliceblue;
+    text-align: center;
+    align-self: start;
+        
+}
+
+
+
+#gardenContainer {
+    grid-column: span 3;
+    background-color:darkcyan;
+    height: 140px;
+}
+#weather{
+    grid-column: span 3;
+    background-color:cornflowerblue;
+    font-size:1.5em;
+    text-align: center;
+
+}
+
+em {
+    font-size: 0.6em;
+}
+
+
+.burning{
+    background-color:red;
+}
+
+.worning{
+    background-color:orange;
+}
+.sunny{
+    background-color:yellow;
+}
+.cold{
+    background-color:aqua;
+}
+.freezing{
+    background-color:teal;
+    
+}
+#lovelyCity{
+    color:green; 
+    font-size: 1em; 
+}
+
+
+
+
+
+
