@@ -1,17 +1,77 @@
-header, #weather_body, #change_temp, #change_sky, #change_city{
-    border: solid red;
+body {
+    background-color: rgba(141, 187, 235, 0.742);
 }
+header, #weather_body, #change_temp, #change_sky, #change_city{
+    background-color: rgba(99, 165, 235, 0.81);
+    color: white;
+    font-family: 'Abril Fatface', cursive;
+}
+/* background-color: rgba(94, 169, 94, 0.742) */
+
 
 #city_name_header {
     display: flex;
-
+    justify-content: space-between;
+    margin: 50px 475px;
+    border-radius: 50px;
+    padding: 0px 15px;
+    font-size: smaller;
 }
 
-#weather_body, #city_name_header{
-    margin: 50px 150px;
+#weather_body {
+    margin: 35px 175px;
+    border-radius: 5px;
+    font-size: 5em;
+    text-align: center;
 }
 
+#weather_body div {
+    padding: 50px 0px;
+}
 #change_widgets {
+    display: flex;
+    margin: 35px 250px;
+    justify-content: space-between;
+}
+
+#change_temp, #change_sky, #change_city {
+    border-radius: 50%;
+    text-align: center;
+    width: 200px;
+    height: 175px;
+    font-size: 25px;
+    
+}
+
+#temp_buttons, #temp_display{
     display: grid;
-    margin: 50px 150px;
+    grid-template-columns: 1fr 1fr;
+}
+
+#lower_temp {
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+#temp_display {
+    grid-column-start: 2;
+    grid-row: 1 / span 2;
+}
+
+#temp_buttons button {
+    width: 20px;
+    border: none;
+}
+
+#sky_dropdown {
+    width: 150px;
+}
+
+#reset {
+    border-radius: 5px;
+    font-family: 'Abril Fatface', cursive;
+}
+
+footer{
+    text-align: center;
 }
