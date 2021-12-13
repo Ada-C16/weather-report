@@ -40,6 +40,7 @@ body{
 #cloud{
     display: flex;
     flex-direction: column;
+    justify-content:space-between;
     align-items: center;
     position:absolute;
     opacity: .6;
@@ -48,9 +49,38 @@ body{
 #sunny_cloud, #stormy_cloud{
     margin-left: auto;
     margin-right: auto;
+    /* margin-top: 25px; */
+    height:300px
 }
 
 #windy_cloud {
-    width: 100%; 
+    height:300px;
+    width: 570px; 
 }
 
+#tempZone {
+    border-style: dotted;
+    border-width: thin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 1px;
+    padding-bottom:10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+}
+
+#tempButtons{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+#skys{
+    margin: 10px;
+}
+
+#viewLiveButton{
+    margin: 10px;
+}

@@ -43,11 +43,11 @@ const coldMouseoverEffect = (event) => {
     console.log("mouseover?");
 };
 
-const niceDayMouseoverEffect = (event) => {
-    const niceDayMouseoverEffect = document.getElementById("niceDayButton");
-    niceDayMouseoverEffect.style.backgroundColor = "lightgoldenrodyellow";
-    console.log("mouseover?");
-};
+// const niceDayMouseoverEffect = (event) => {
+//     const niceDayMouseoverEffect = document.getElementById("niceDayButton");
+//     niceDayMouseoverEffect.style.backgroundColor = "lightgoldenrodyellow";
+//     console.log("mouseover?");
+// };
 
 const hotMouseleaveEffect = (event) => {
     const hotMouseoverEffect = document.getElementById("hotterButton");
@@ -73,12 +73,31 @@ const niceDayMouseleaveEffect = (event) => {
 const changeLocationTitle = (event) => {
     const result = document.getElementById("locationTitle");
     result.textContent = `${event.target.value}`;
+    const inputField = document.getElementById("nameThisPlaceText")
+    inputField.value = ""
 };
 
+// Name this place input is filled out by user
+const addCustomPlaceName = (event) => {
+    const result = document.getElementById("locationTitle");
+    const inputZone = document.getElementById("nameThisPlaceText");
+    result.textContent = inputZone.value;;
+}
+
 // Change clouds in skyZone section
-// const changeCloudAnimation = (event) => {
-//     const clouds = document.getElementById()
-// }
+const changeCloudAnimation = (event) => {
+    const clouds = document.getElementById("cloud");
+    const weatherpicked = `${event.target.value}`;
+    if (weatherpicked == 'sunny'){
+        clouds.innerHTML = `<img src="assets/sunny_cloud.gif" alt="white cloud with smiling face softly bobs a bit" id="sunny_cloud"></img>`
+    } else if (weatherpicked == 'cloudy'){
+        clouds.innerHTML = `<img src="assets/stormy_cloud.gif" alt="dark grey and blue cloud with devious facial expression rains down water and lightning" id="stormy_cloud">`
+    } else if (weatherpicked == 'windy'){
+        clouds.innerHTML = `<img src="assets/windy_cloud.gif" alt="white cloud with smiling face softly bobs a bit" id="windy_cloud">`
+    } else if (weatherpicked == 'clearsky'){
+        clouds.textContent = ""
+    }
+}
 
 // add live video
 const replaceWithLiveSantaMonica = (event) => {
@@ -97,8 +116,8 @@ const registerEventHandlers = () => {
     const coldButton = document.getElementById("colderButton");
     coldButton.addEventListener("click", decreaseTemp);
 
-    const niceDayButton = document.getElementById("niceDayButton");
-    niceDayButton.addEventListener("click", niceDayTemp);
+    // const niceDayButton = document.getElementById("niceDayButton");
+    // niceDayButton.addEventListener("click", niceDayTemp);
 
     const hotMouseoverBox = document.getElementById("hotterButton");
     hotMouseoverBox.addEventListener("mouseenter", hotMouseoverEffect);
@@ -108,18 +127,21 @@ const registerEventHandlers = () => {
     coldMouseoverBox.addEventListener("mouseenter", coldMouseoverEffect);
     coldMouseoverBox.addEventListener("mouseleave", coldMouseleaveEffect);
 
-    const niceDayMouseoverBox = document.getElementById("niceDayButton");
-    niceDayMouseoverBox.addEventListener("mouseenter", niceDayMouseoverEffect);
-    niceDayMouseoverBox.addEventListener("mouseleave", niceDayMouseleaveEffect);
+    // const niceDayMouseoverBox = document.getElementById("niceDayButton");
+    // niceDayMouseoverBox.addEventListener("mouseenter", niceDayMouseoverEffect);
+    // niceDayMouseoverBox.addEventListener("mouseleave", niceDayMouseleaveEffect);
 
-    // Change the location title at the top of the page
+    // Change the location title at the top of the page after user selects a location
     const selectLocation = document.querySelector('.locations');
     selectLocation.addEventListener('change', changeLocationTitle);
-    // selectLocation.addEventListener('change', (event) => {
-    //     const result = document.getElementById("locationTitle");
-    //     result.textContent = `${event.target.value}`;
-    // });
 
+    // Change the location title at the top of the page after user enters custom location name.
+    const enterLocationName = document.getElementById("nameThisPlaceText");
+    enterLocationName.addEventListener('input', addCustomPlaceName);
+
+    // Change the cloud animation when selects type of weather
+    const selectWeather = document.querySelector('.skys');
+    selectWeather.addEventListener('change', changeCloudAnimation);
 
     // add live video
     const viewLiveSantaMonicaButton = document.getElementById("viewLiveButton");

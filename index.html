@@ -13,9 +13,12 @@
     </section>
 
     <section id="locationsZone">
+
+        <input type="text" id="nameThisPlaceText" name="nameOfPlace" placeholder="Name this place...">
+        or 
         <select name="locations" class="locations">
             <optgroup label="SoCal Locations" id="soCalLocations">
-                <option id="first_option" value="" disabled selected hidden>select a location...</option>
+                <option id="first_option" value="" disabled selected hidden>choose a location...</option>
                 <option value="Muscle Beach🏋️ ">Muscle Beach</option>
                 <option value="Disneyland🎢 ">Disneyland</option>
                 <option id="lax" value="LAX🛫">LAX</option>
@@ -24,18 +27,22 @@
     </section>
 <!-- add some CSS here so the buttons look cool! -->
     <section id="tempZone">
-        <h2>temperature: <span id="degrees">72</span></h2>
-        <button id="colderButton">colder</button>
-        <button id="niceDayButton">nice day</button>
-        <button id="hotterButton">hotter</button>
+        <h2 id="temperature">It's <span id="degrees">72</span>° today</h2>
+        <section id="tempButtons">
+            <button id="colderButton">colder</button>
+    
+            <button id="hotterButton">hotter</button>
+        </section>
     </section>
 
     <section id="skysZone">
-        <select name="skys" id="skys">
+        <select name="skys" id="skys" class="skys">
             <optgroup label="Glorious Skies">
+                <option id="first_option" value="" disabled selected hidden>choose the weather...</option>
                 <option id="sunny">sunny</option>
-                <option id="stormy">cloudy</option>
+                <option id="stormy">stormy</option>
                 <option id="windy">windy</option>
+                <option id="clearsky">clear sky</option>
             </optgroup>
         </select>
     </section>
@@ -51,9 +58,7 @@
                 <!-- <img src="assets/mickey.gif" id="mickey"> -->
             </section>
             <section id="cloud">
-                <!-- <img src="assets/sunny_cloud.gif" alt="white cloud with smiling face softly bobs a bit" id="sunny_cloud"> -->
-                <img src="assets/stormy_cloud.gif" alt="dark grey and blue cloud with devious facial expression rains down water and lightning" id="stormy_cloud">
-                <!-- <img src="assets/windy_cloud.gif" alt="white cloud with smiling face softly bobs a bit" id="windy_cloud"> -->
+
             </section>
 
         </section>
@@ -80,6 +85,12 @@
     
         <iframe width="560" height="315" src="https://www.youtube.com/embed/xXV3sz92k8w?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section> -->
+
+    <!-- reset  -->
+    <section id="reset">
+        <button id="resetButton">RESET</button>
+    </section>
+
     <script src="src/index.js"></script>
 </body>
 </html>
