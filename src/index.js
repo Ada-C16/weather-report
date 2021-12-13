@@ -52,11 +52,15 @@ const createGroundListener = () => {
   // | --------------- | --------------------------------- |
   // | 80+             | `"🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"`       |
   // | 70-79           | `"🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷"`      |
-  // | 45-69           | `"🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃"`        |
-  // | 44 or below     | `"🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲"` |
+  // | 60-69           | `"🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃"`        |
+  // | 45-59      | `"🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲"` |
   console.log(document.getElementById('temp_display').innerHTML);
   document.getElementById('temp_display').addEventListener('DOMSubtreeModified', function () {
     if (document.getElementById('temp_display').innerHTML <= 44) {
+      console.log('inside cold condition');
+      document.getElementById('ground_emojis').innerHTML =
+        '🌲🎄🦭🦭🌲⛄️🌲🐻‍❄️⛄️🗻🐧🌲🎄';
+    }else if (document.getElementById('temp_display').innerHTML <= 59) {
       console.log('inside cold condition');
       document.getElementById('ground_emojis').innerHTML =
         '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
@@ -71,9 +75,6 @@ const createGroundListener = () => {
       console.log('inside hot condition');
       document.getElementById('ground_emojis').innerHTML = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
     } 
-    
-    
-    
   });
 };
 
