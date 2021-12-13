@@ -51,22 +51,17 @@ const createGroundListener = () => {
   console.log(document.getElementById('temp_display').innerHTML);
   document.getElementById('temp_display').addEventListener('DOMSubtreeModified', function () {
     if (document.getElementById('temp_display').innerHTML <= 44) {
-      console.log('inside cold condition');
       document.getElementById('ground_emojis').innerHTML =
         '🌲🎄🦭🦭🌲⛄️🌲🐻‍❄️⛄️🗻🐧🌲🎄';
     }else if (document.getElementById('temp_display').innerHTML <= 59) {
-      console.log('inside cold condition');
       document.getElementById('ground_emojis').innerHTML =
         '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
     } else if (document.getElementById('temp_display').innerHTML <= 69) {
-      console.log('inside cool condition');
       document.getElementById('ground_emojis').innerHTML =
         '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
     } else if (document.getElementById('temp_display').innerHTML <= 79) {
-      console.log('inside warm condition');
       document.getElementById('ground_emojis').innerHTML = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
     }else if (document.getElementById('temp_display').innerHTML >= 80) {
-      console.log('inside hot condition');
       document.getElementById('ground_emojis').innerHTML = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
     } 
   });
