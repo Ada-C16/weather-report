@@ -6,8 +6,6 @@ header, #weather_body, #change_temp, #change_sky, #change_city{
     color: white;
     font-family: 'Abril Fatface', cursive;
 }
-/* background-color: rgba(94, 169, 94, 0.742) */
-
 
 #city_name_header {
     display: flex;
@@ -43,24 +41,37 @@ header, #weather_body, #change_temp, #change_sky, #change_city{
     
 }
 
-#temp_buttons, #temp_display{
+#change_temp{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
 }
 
-#lower_temp {
+#change_temp h4 {
+    grid-row-start: 1;
+    grid-column: 1 / span 2;
+}
+/* #lower_temp {
     grid-row-start: 2;
     grid-column-start: 1;
 }
 
 #temp_display {
     grid-column-start: 2;
+    grid-column-end: 3;
     grid-row: 1 / span 2;
+    
+} */
+
+#temp_buttons {
+    margin: -20px;
 }
 
 #temp_buttons button {
     width: 20px;
     border: none;
+    display: block;
+    align-self: end;
 }
 
 #sky_dropdown {
