@@ -1,0 +1,100 @@
+/* Body grid */
+body {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    display: grid;
+    grid-template-rows: 150px 650px;
+    grid-template-columns: minmax(200px, 4fr);
+    grid-template-areas: "header header"
+                        "main    main";
+}
+
+/* inner grid */
+.wrapper {
+    display: grid;
+    justify-content: center;
+    padding-top: 2em;
+    column-gap: 50px;
+    row-gap: 50px;
+    grid-template-rows: 200px 250px ;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-areas: "Temp Sky City"
+                         ". Weather  ."
+                        
+}
+
+header {
+    grid-area: header;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid grey;
+    justify-content: space-evenly;
+    text-align: center;
+    }
+
+#cityName{
+    text-decoration: underline;
+    text-decoration-color: burlywood;
+    font-size: 20px
+
+}
+main{
+    grid-area: main;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+/* Temperature styling  */
+.Temp {
+    grid-area: Temp;
+    background-color: #e0dbd3;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: rgb(251, 191, 14);
+    
+}
+
+.temp {
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+}
+
+/* Weather Styling */
+.Weather {
+    grid-area: Weather;
+    background-color: #e0dbd3;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: rgb(14, 227, 251);
+}
+
+/* Sky styling */
+.Sky {
+    grid-area: Sky;
+    background-color: #e0dbd3;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: rgb(251, 191, 14); 
+    
+}
+
+/* City styling */
+.City {
+    grid-area: City;
+    background-color: #e0dbd3;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: rgb(251, 191, 14);
+}
+
+

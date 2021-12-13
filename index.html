@@ -5,8 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet">
 </head>
-<body>
-    
-</body>
+  <body>
+      <header>
+          <h1 class="cover_name">Weather report</h1>
+          <section>
+              <p>For the lovely city of</p>
+              <p id="cityName">Seattle </p>
+          </section>
+      </header>
+      <main class="main">
+        <div class="wrapper">
+          <section class="Temp">
+              <h1 class="temperature">Temperature</h1>
+              <div>
+                  <button id="tempUp">⬆️</button>
+              </div>
+              <div>
+                  <button id="tempDown">⬇️</button>
+              </div>
+              <div class="temp">
+                  <p id="tempCount">0</p>
+              </div>
+          </section>
+
+          <section class="Sky">
+            <h2 class="Skytittle">Sky</h2>
+            <label for="skyoption">Choose a sky:</label>
+            <select id="skyOptions">
+              <option value="sunny">Sunny</option>
+              <option value="cloudy">Cloudy</option>
+              <option value="rainy">Rainy</option>
+              <option value="snowy">Snowy</option>
+            </select>
+          </section>
+
+          <section class=City>
+            <h3 class="city_name">City Name</h3>
+            <label for="name">Add new city:</label>
+            <input type="text" id="name" name="name" required
+              minlength="1" maxlength="20" size="10">
+            <div id=resetButton>
+              <button>Reset</button>
+            </div>
+          </section>
+
+          <section class="Weather">
+            <h4 class="weather_garden">Weather Garden</h4>
+
+            <div>
+              <p id="skyEmoji">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</p>
+            </div>
+
+            <div>
+              <p id="wetherEmoji">🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲</p>
+            </div>
+
+          </section>
+
+          <script src="src/index.js"></script>
+        </div>
+      </main>
+  </body>
 </html>
+
+<!-- <body>
+    <section id="lightthemecontrol">
+    <main>
+      <h1>🍣 Welcome to my Suhshi Fan Site 🍣</h1>
+      <p>Here is where I post sushi recipes</p>
+
+      <section>
+        <button id="addCrabButton">Add Sushi</button>
+      </section>
+
+      <section id="crabContainer">
+        <h2 id="crabCount">Sushi Count: 0</h2>
+
+      </section>
+
+      <section>
+        <button id="adddarkbutton">Change to Dark</button>
+      </section>
+
+
+      <section id="darkbuttoncont">
+        <h3 id="Darktext">Dark Theme</h3>
+
+      </section>
+    </main>
+    </section>
+    <script src="src/index.js"></script>
+  </body>
+</html> -->
