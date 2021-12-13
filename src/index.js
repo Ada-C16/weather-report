@@ -6,7 +6,11 @@ const selectSky = function() {
     const getInput = skyOption.options[skyOption.selectedIndex].value;
     const skyContainer = document.getElementById("sky");
     
-    if (getInput === "Sunny") {
+    if (getInput === "Surfing") {
+        sky = '☁️☁️☁️ ☁️ ☁️ ☀️ ☁️ ☁️☁️☁️'
+    } else if (getInput === "MEOW!") {
+        sky = '😸😺😽🙀😾😿😼😻😹'
+    } else if (getInput === "Sunny") {
         sky = '☁️☁️☁️ ☁️ ☁️ ☀️ ☁️ ☁️☁️☁️'
     } else if (getInput === "Cloudy") {
         sky = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️'
@@ -37,7 +41,10 @@ const updateTemp = function(tempValue) {
     const landscapeContainer = document.getElementById("landscape")
     // console.log(tempValueContainer)
     tempValueContainer.textContent = tempValue
-    if (tempValue >= 80) {
+    if (tempValue >= 90) {
+        tempValueContainer.style.color = 'red'
+        landscapeContainer.textContent = '🌊🌊🐬🌊🐳🌊🐋🌊🌊_🏄🏻‍♀️🌊'
+    } else if (tempValue >= 80) {
         tempValueContainer.style.color = 'red'
         landscapeContainer.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂'
     } else if (tempValue >= 70) {
