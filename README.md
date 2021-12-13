@@ -218,3 +218,4 @@ For the best user experience, the text input element's value should be set to th
 ## Optional Enhancements
 
 [Click here to visit a page of optional enhancements to inspire you.](ada-project-docs/optional-enhancements.md)
+# weather-report-site
