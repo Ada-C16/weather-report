@@ -4,87 +4,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/index.css" rel="stylesheet">
     <title>Biome-Mania</title>
 </head>
 <body>
   <header>
     <h1>
-      Biome-Mania
-      <span id="tagline">
-        Weather or not!
-      </span>
+      <span class="sillyfont">(BiomeMania)</span>
+      <div id="tagline">
+        Weather or Not
+      </div>
     </h1>
   </header>
-  <section class="controls" id="temp_controls">
-    <h2>
-      Temperature
-    </h2>
-    <section class="control_content id="tempt_content">
-      <span id="temp_chart">
+  <section class="grid">
+    <section class="controls" id="tempcontrols">
+      <h2>
+        Temperature
+      </h2>
+      <section class="controlcontent" id="tempcontent">
+        <span id="tempchart">
 
-      </span>
-      <span id="temp_value">
-
-      </span>
-      <span class="button" id="temp_increase">
-        # up
-      </span>
-      <span id="tempdecrease" class="button">
-        # down
-      </span>
-    </section>
-
-  </section>
-  <section class="controls" id="weathercontrols">
-    <h2>
-      Weather
-    </h2>
-    <section class="controlcontent id="weathercontent">
-      <span class="arrow" id="weather_left">
-        # left
-      </span>
-      <img href=""> </img>
-      <span class="arrow" id="weather_right">
-        # right
-      </span>
-    </section>
-  </section>
-  <section class="controls" id="ecocontrols">
-    <h2>
-      Ecosystem
-    </h2>
-    <h3>
-      <span id="ecodescription">
-
-      </span>
-    </h3>
-
-  </section>
-  <section class="cityside">
-    <section class="city">
-      <h3 id="cityonename"></h3>
-      <span class="button" id="cityoneresetname">
-        # (X)
-      </span>
-      <section class="environment" id="cityoneenvironment">
-        <div class="sky" id="cityonesky">
-        </div>
-        <div class="weather" id="cityoneweather">
-        </div>
-        <div class="plants" id="cityoneplants">
-        </div>
-        <div class="animals" id="cityoneanimals">
-        </div>
-      </section>
-      <h4>
-        <span class="button" id="cityoneresetenvironment">
         </span>
-        reset
-      </h4>
+        <span id="tempvalue">
+
+        </span>
+        <span class="button" id="tempincrease">
+          ⬆️
+        </span>
+        <span id="tempdecrease" class="button">
+          ⬇️
+        </span>
+      </section>
 
     </section>
+    <section class="controls" id="weathercontrols">
+      <h2>
+        Weather
+      </h2>
+      <section class="controlcontent id="weathercontent">
+        <span class="arrow" id="weatherleft">
+          ⬅️
+        </span>
+        <span id="weatherdisplay">
+        </span>
+        <span class="arrow" id="weatherright">
+          ➡️
+        </span>
+      </section>
+    </section>
+    <section class="controls" id="ecocontrols">
+      <h2>
+        Ecosystem
+      </h2>
+      <h3>
+        <span id="ecodescription">
 
+        </span>
+      </h3>
+
+    </section>
+    <section class="cityside">
+      <section class="city" id="cityone">
+        <span id="cityonename"></span>
+        <span class="citybutton" id="cityoneresetname">
+          🔄
+        </span>
+        <section class="environment" id="cityoneenvironment">
+          <div class="sky" id="cityonesky">
+          </div>
+          <div class="weather" id="cityoneweather">
+          </div>
+          <div class="animals" id="cityoneanimals">
+          </div>
+          <div class="plants" id="cityoneplants">
+          </div>
+        </section>
+        <div class="cityreset">
+          <span class="citybutton" id="cityoneresetenvironment">
+            🔄
+          </span>
+          reset
+        </div>
+
+      </section>
+
+
+      <section class="city" id="citytwo">
+        <span id="citytwoname"></span>
+        <span class="citybutton" id="citytworesetname">
+          🔄
+        </span>
+        <section class="environment" id="citytwoenvironment">
+          <div class="sky" id="citytwosky">
+          </div>
+          <div class="weather" id="citytwoweather">
+          </div>
+          <div class="animals" id="citytwoanimals">
+          </div>
+          <div class="plants" id="citytwoplants">
+          </div>
+        </section>
+        <div class="cityreset">
+          <span class="citybutton" id="citytworesetenvironment">
+            🔄
+          </span>
+          reset
+        </div>
+
+      </section>
+
+      <section class="city" id="citythree">
+        <span id="citythreename"></span>
+        <span class="citybutton" id="citythreeresetname">
+          🔄
+        </span>
+        <section class="environment" id="citythreeenvironment">
+          <div class="sky" id="citythreesky">
+          </div>
+          <div class="weather" id="citythreeweather">
+          </div>
+          <div class="animals" id="citythreeanimals">
+          </div>
+          <div class="plants" id="citythreeplants">
+          </div>
+        </section>
+        <div class="cityreset">
+          <span class="citybutton" id="citythreeresetenvironment">
+            🔄
+          </span>
+          reset
+        </div>
+
+      </section>
+
+
+    </section>
   </section>
+  <script src="scripts/index.js"></script>
 
 </body>
 </html>
