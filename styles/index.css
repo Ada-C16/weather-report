@@ -24,7 +24,6 @@ body {
     margin: 4rem;
 
     align-content: center;
-    border: 1px black dashed;
     width: 100%;
     text-align: center;
     border-radius: 8px;
@@ -67,6 +66,7 @@ h1 {
     text-align: center;
     font-size: auto;
     background-color: #D3E0DC;
+    border-radius: 42px;
 }
 
 #cityone {
