@@ -52,10 +52,10 @@ const oneReset = function () {
   tempMemory[0] = 72;
   weatherMemory[0] = '☀️';
 
-  envSkyAll[citySelected].textContent = `${sky[citySelected]}`;
-  envWeatherAll[citySelected].textContent = `${weather[citySelected]}`;
-  envPlantsAll[citySelected].textContent = `${plants[citySelected]}`;
-  envAnimalsAll[citySelected].textContent = `${animals[citySelected]}`;
+  envSkyAll[citySelected].textContent = `${sky[0]}`;
+  envWeatherAll[citySelected].textContent = `${weather[0]}`;
+  envPlantsAll[citySelected].textContent = `${plants[0]}`;
+  envAnimalsAll[citySelected].textContent = `${animals[0]}`;
   document.querySelector('#tempvalue').textContent = String(
     tempMemory[citySelected]
   );
@@ -70,10 +70,10 @@ const twoReset = function () {
   citySelected = 1;
   tempMemory[1] = 72;
   weatherMemory[1] = '☀️';
-  envSkyAll[citySelected].textContent = `${sky[citySelected]}`;
-  envWeatherAll[citySelected].textContent = `${weather[citySelected]}`;
-  envPlantsAll[citySelected].textContent = `${plants[citySelected]}`;
-  envAnimalsAll[citySelected].textContent = `${animals[citySelected]}`;
+  envSkyAll[citySelected].textContent = `${sky[0]}`;
+  envWeatherAll[citySelected].textContent = `${weather[0]}`;
+  envPlantsAll[citySelected].textContent = `${plants[0]}`;
+  envAnimalsAll[citySelected].textContent = `${animals[0]}`;
   document.querySelector('#tempvalue').textContent = String(
     tempMemory[citySelected]
   );
@@ -88,10 +88,10 @@ const threeReset = function () {
   citySelected = 2;
   tempMemory[2] = 72;
   weatherMemory[2] = '☀️';
-  envSkyAll[citySelected].textContent = `${sky[citySelected]}`;
-  envWeatherAll[citySelected].textContent = `${weather[citySelected]}`;
-  envPlantsAll[citySelected].textContent = `${plants[citySelected]}`;
-  envAnimalsAll[citySelected].textContent = `${animals[citySelected]}`;
+  envSkyAll[citySelected].textContent = `${sky[0]}`;
+  envWeatherAll[citySelected].textContent = `${weather[0]}`;
+  envPlantsAll[citySelected].textContent = `${plants[0]}`;
+  envAnimalsAll[citySelected].textContent = `${animals[0]}`;
   document.querySelector('#tempvalue').textContent = String(
     tempMemory[citySelected]
   );
