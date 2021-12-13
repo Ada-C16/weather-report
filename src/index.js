@@ -31,9 +31,6 @@ const createSkyListener = () => {
 
 };
 
-
-
-
 const createTempListeners = () => {
   const upArrow = document.querySelector("#raise_temp");
   const downArrow = document.querySelector('#lower_temp');
@@ -48,11 +45,9 @@ const createTempListeners = () => {
 };
 
 const createGroundListener = () => {
-  console.log(document.getElementById('temp_display').innerHTML);
   document.getElementById('temp_display').addEventListener('DOMSubtreeModified', function () {
     if (document.getElementById('temp_display').innerHTML <= 44) {
-      document.getElementById('ground_emojis').innerHTML =
-        '🌲🎄🦭🦭🌲⛄️🌲🐻‍❄️⛄️🗻🐧🌲🎄';
+      document.getElementById('ground_emojis').innerHTML = '🌲🎄🦭🦭🌲⛄️🌲🐻‍❄️⛄️🗻🐧🌲🎄';
     }else if (document.getElementById('temp_display').innerHTML <= 59) {
       document.getElementById('ground_emojis').innerHTML =
         '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
@@ -66,6 +61,7 @@ const createGroundListener = () => {
     } 
   });
 };
+
 
 const registerEventHandlers = () => {
   createSkyListener();
