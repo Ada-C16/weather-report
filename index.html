@@ -5,8 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href = "styles/index.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    
+    <section id ="headers">
+         <div id ="weather-header"><span class='bigger'>Weather Report</span> &nbsp;&nbsp; 
+            <span class="small">For the lovely city of </span> ✨<span class="dynamic">city</span>✨</div>
+         <!-- <div id ="lovely-city"> For the lovely city of</div>
+         <div id ="header-city">here change the city dynamically</div> -->
+    </section>
+<section id ="whole-body">
+    <section id ="three-boxes">
+    <div id="temp">
+            
+        <label for="temps">Temperature</p>
+    <section id="button-tempvalue">
+        <section id="buttons">
+        <button id="up-arrow">⬆️</button>
+        <button id ="down-arrow">⬇️</button>
+        </section>
+    <h2 id="temp-value"></h2>
+  </section>
+    </div>
+        <div id="sky">
+            <label for ="skies">Sky</label><br>
+        <select id="sky-options">
+            <option value="sunny">Sunny</option>
+            <option value="cloudy">Cloudy</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowy">Snowy</option>
+          </select>
+        </div>
+       
+        <div id="city-name">
+            <label for="city">City Name</label>
+            <input type="text" id = "city">
+            <input type="reset" id="reset">
+        </div>
+  
+    </section>
+    <section id="landscape">
+      <h3 id="weather-garden-title">Weather Garden</h3>
+      <div id="emojis-container">
+        <div id="sky-emoji"><p>I will display the sky</p></div>
+        <div id="plant-emoji"><p>I will display seasonal creatures</p></div>
+      </div>
+
+    </section>
+
+
+
+</section>
+    <!-- <button name="button" id="selectbutton">Select </button>
+   
+     <input id="number" type="number"> -->
+     <footer id"footer">©ByRoza</footer>
+   <script src="src/index.js"></script>
 </body>
 </html>

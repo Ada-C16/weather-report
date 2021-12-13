@@ -1,0 +1,153 @@
+body {
+    background-color: #324DF7;
+}
+
+#selectbutton
+{
+cursor:pointer;
+}
+
+#headers {
+    color: white;
+}
+.bigger {
+    font-size:1.5em;
+}
+ .small {
+    font-size: 75%;
+}
+
+.dynamic {
+    font-style: italic;
+    font-size: 1em;
+    
+}
+#headers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top : 30px;
+
+}
+#whole-body {
+    display: flex;
+    flex-wrap: column;
+    flex-direction: row;
+    justify-content: space-evenly; 
+}
+
+#landscape{
+    width: 30vw;
+    height: 30vh;
+    /* border:violet 2px solid; */
+    margin-top: 100px;;
+    padding: 20px;
+}
+#weather-garden-title{
+  
+   color: white; 
+}
+
+#emojis-container{
+border-radius: 10px;
+border: 1px solid beige;
+/* border:hidden; */
+
+}
+
+p {
+    color: white;
+}
+#sky-emoji{
+padding: 20px;
+margin-bottom: 40px;
+}
+#plant-emoji{
+padding:20px;
+}
+#three-boxes {
+    display : flex;
+    flex-direction: column;
+    align-content:center;
+    width: 30vw;
+    justify-content: space-between;
+    justify-self: center;
+    justify-items: center;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+#temp, #sky, #city-name {
+    height:20vh;
+    width:30vw;
+    background-color: white;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    border-radius: 7px;
+    padding: 15px;
+}
+
+#sky-options {
+    margin-top: 15px;
+    margin-left: -3px;
+
+}
+
+#city {
+    margin-top:15px;
+}
+#buttons {
+    display: flex;
+    flex-direction:column;
+}
+#up-arrow, #down-arrow{
+    width:2vw;
+    background-color: Transparent;
+    border: none; 
+    cursor:pointer; 
+}
+#button-tempvalue {
+    display:flex;    
+}
+
+#temp-value{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.red {
+    color: red;
+}
+.orange, .special {
+    color:orange;
+}
+.yellow {
+    color:#F4D10A;
+}
+.green {
+    color: green;
+}
+.teal {
+    color: #256D6C;
+}
+.sunny-color {
+   background-color: #D6FFFF;
+}
+.cloudy-color{
+    background-color: #C9C9C9;
+}
+.rainy-color {
+   background-color:  #9FCFE0;
+}
+.snowy-color {
+   background-color: #A1B6D6;
+}
+.footer {
+    position:fixed;
+    margin-bottom:0;
+    margin-right:0;
+}
+
+
+
