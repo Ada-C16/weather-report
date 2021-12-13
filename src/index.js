@@ -45,16 +45,19 @@ const changeTempColorAndLandscape = (event) => {
 };
 
 const changeSky = (event) => {
-  const skyGarden = document.querySelector('#sky-garden');
-  const skySelector = document.querySelector('#sky-drop-down').value;
-  if (skySelector === 'sunny') {
-    skyGarden.textContent = '☀️ ☀️ ☁️ ☀️ ☁️ ☀️';
-  } else if (skySelector === 'cloudy') {
-    skyGarden.textContent = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
-  } else if (skySelector === 'rainy') {
-    skyGarden.textContent = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
+  const skyGardenElement = document.querySelector('#sky-garden');
+  const selectedSkyValue = document.querySelector('#sky-drop-down').value;
+  console.log(selectedSkyValue);
+  if (selectedSkyValue === 'sunny') {
+    skyGardenElement.textContent = '☀️ ☀️ ☁️ ☀️ ☁️ ☀️';
+  } else if (selectedSkyValue === 'cloudy') {
+    skyGardenElement.textContent = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
+  } else if (selectedSkyValue === 'rainy') {
+    skyGardenElement.textContent = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
+  } else if (selectedSkyValue === 'snowy') {
+    skyGardenElement.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
   } else {
-    skyGarden.textContent = '🌈 ✨🌈🌈 🌈✨🌈🌈 🌈 ✨🌈🌈';
+    skyGardenElement.textContent = '🌈 ✨🌈🌈 🌈✨🌈🌈 🌈 ✨🌈🌈';
   }
 };
 
