@@ -1,0 +1,155 @@
+
+
+body{
+    
+    
+    
+    font-family:  ui-monospace;
+    background-image: url("/ada-project-docs/assets/kaleidoscope.jpg");
+    background-image: url("/ada-project-docs/assets/pinkstoredisplay.jpg");
+    color: plum;
+    
+    
+}
+
+
+.plum{
+
+    font-size: 5em;
+    margin-left: 0.2cm;
+    
+
+}
+.Temperature{
+    
+    margin-left: 0.2cm;
+    align-content: right;
+
+}
+
+.City-Container,
+.Sky-Container,
+.Temp-Container
+
+{
+    width: 300px;
+    height: 200px;
+    border: 7px solid black;
+    display: flex;
+    flex-direction: row;
+    background-color: clear;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgba(102, 255, 0, 0.116); 
+}
+
+.Big-Container{
+    width: 1300px;
+    height: 200px;
+    border: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-content: center;
+    
+}
+
+.smallContainer{
+    width: 1000px;
+    height: 430px; 
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: auto;
+    
+}
+
+.gardenContainer
+{
+    width: 480px;
+    height: 265px;
+    align-self:center; 
+    margin-left: 40%;
+    margin-right: auto;  
+    border: 10px solid black;
+    background-color: white;
+    background-image:url(/ada-project-docs/assets/rihaan.gif);
+    margin-top: 10%;
+    
+}
+
+.cloudy{
+
+    background-image: url(/ada-project-docs/assets/upintheclouds.webp) ;
+}
+.rainy{
+
+    background-image: url(/ada-project-docs/assets/rihaan.gif);
+}
+.sunny{
+
+    background-image: url(/ada-project-docs/assets/BeyFireYellow.gif);
+}
+.snowy{
+
+    background-image: url(/ada-project-docs/assets/diamondhands.webp);
+    background-repeat: round;
+    
+}
+.landscape{
+
+    width: 480px;
+    height: 30px;
+    align-self: flex-end;
+    /* display: block; */
+    align-self:center;
+    margin-left: 30%;
+    font-size: larger;
+    /* background-image: linear-gradient(315deg, #000000 0%, #ffffff 74%); */
+    background-color:rgba(51, 255, 0, 0.24); 
+    border: 8.5px solid black;
+    
+
+}
+
+
+
+
+.skyDropMenu{
+
+    width: 70px;
+    height: 35px;
+    align-self: flex-end;
+    color: plum;
+    font-weight: bold;
+    
+
+}
+#cityNameAndBtn{
+
+    
+    align-self: flex-end;
+    
+    
+
+}
+#increasebuttons,#decreasebuttons{
+
+    font-size: 2.0em;
+    width: 70px;
+    height: 35px;
+    align-self: flex-end;
+    color:plum;
+    margin-left: 0.2cm;
+    
+}
+
+
+#hotCity{
+
+    margin-bottom: 50%;
+    font-size: medium; 
+}
