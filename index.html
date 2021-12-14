@@ -5,8 +5,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel ="stylesheet">
 </head>
 <body>
-    
+    <div class ='header' id ='pageTitle'>
+        <h1>Weather Report</h1>
+        <div class ='header' id='lovelyCity'>
+            <p>for the lovely city of</p>
+        </div>
+        <div class ='header' id='mutableSubHeader'>
+        </div>
+    </div>
+    <main class ='websiteBody'>
+        <section class ='mutableComponents'>
+            <div class = 'widget' id ='temperatureChanger'>
+                <div class = 'widget text' id ='Temperature Title'>
+                    <p>Temperature</p>
+                </div>
+                <div class ='arrowKeys'>
+                    <div id ='Upper Arrow'>
+                        <button id ='upArrow'>⬆️</button>
+                    </div>
+                    <div id ='Lower Arrow'>
+                        <button id ='downArrow'>⬇️</button>
+                    </div>
+                </div>
+                <div class ='widgetText' id = 'temperatureDisplay'>
+                </div>
+            </div>
+            <div class = 'widget' id ='skyChanger'>
+                <div class = 'widgetText' id='skyTitle'>
+                    <p>Sky</p>
+                </div>
+                <div class ='dropdownMenu'>
+                    <select name ="Select Weather" id ='dropdownButton'>
+                    <option value="sunny">Sunny</option>
+                    <option value="cloudy">Cloudy</option>
+                    <option value="rainy">Rainy</option>
+                    <option value="snowy">Snowy</option>
+                    </select>
+                </div>
+            </div>
+            <div class ='widget' id ='hometownChanger'>
+                <div class ='widget text' id = 'Hometown Title'>
+                    <p>City Name</p>
+                </div>
+                <form id="hometownForm">
+                    <label>City Input: <input type='text' id='cityInput'></label>
+                    <button type='submit' id='submitInput'>Submit</button>
+                </form>
+            </div>
+        </section>
+        <div class ='visualComponent'>
+            <div class='Immutable Title'>
+                <p>Weather Garden</p>
+            </div>
+            <div id='gardenBackground'>
+                <div class='display' id='topDisplay'>
+                </div>
+                <div class='display' id='bottomDisplay'>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src ="src/index.js" type="text/javascript"></script>
 </body>
 </html>
+
+<!-- Body
+Header
+    immutable sub header
+    mutable sub header
+Mutable Components
+    Temperature Changer
+        Arrow keys
+            Top Arrow
+            Bottom Arrow
+        Temperature Display
+    Sky Changer
+        Dropdown menu
+    Hometown Changer
+        Display text
+        Type field (links to mutable sub header)
+        Reset Button
+Visual Component
+    Immutable Title
+    Image
+        Top line display (mutable, links to sky changer)
+        Bottom line display (mutable, links to temperature)-->

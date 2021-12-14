@@ -1,0 +1,66 @@
+body {
+    background-color: rgb(62, 62, 177);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3em;
+}
+
+p {
+    font-size:1.2em;
+    color: lightblue;
+}
+
+.widget * {
+    background-color: rgb(110, 107, 107);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+#temperatureChanger {
+    padding: 15px;
+}
+
+.arrowKeys * {
+    display: inline;
+}
+
+#skyChanger {
+    padding: 15px;
+}
+
+#hometownChanger {
+    padding: 15px;
+}
+
+#gardenBackground {
+    background-color: green;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.display {
+    display: flex;
+    justify-content: space-around;
+    font-size: xx-large;
+}
+
+.header * {
+    display: inline-block;
+}
+
+.subHeader {
+    display: inline-block;
+}
