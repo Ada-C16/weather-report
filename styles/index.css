@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    background-color: rgb(112, 112, 112);
+    grid-template-areas:
+    "header header header"
+    "sidebar main main";
+}
+.sidebar {
+    grid-area: sidebar;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.header {
+    grid-area: header;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-text {
+    margin-top: .5rem;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+}
+h1 {
+    font-size: 3.5rem;
+    padding-right: 1rem;
+    font-weight: 400;
+    color: white;
+}
+
+h2 {
+    font-weight: 400;
+    color: white;
+}
+
+.main {
+    grid-area: main;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.box1 {
+    background-color: rgb(155, 155, 155);
+    height: 27vh;
+    border-radius: 2rem;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box2 {
+    background-color: rgb(190, 190, 190);
+    height: 27vh;
+    border-radius: 2rem;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.box3 {
+    background-color: rgb(105, 161, 124);
+    height: 22vh;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    
+}
+
+#weather-garden {
+    height: 60%;
+    width: 70%;
+    /* background-color: rgb(252, 252, 252); */
+    margin-right: 20px;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.weather-title {
+    font-size: 2rem;
+    color: black;
+}
+/* temp selector */
+.temp-select-text {
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.temp-selector{
+    height:120px;
+    width:80px;
+    position:relative;
+}
+button {
+    width:100%;
+    height:30px;
+    background-color:transparent;
+    border:none;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    }
+
+#increaseTemp, #decreaseTemp {
+    font-weight: 700;
+}
+
+#TempBox, input{
+    width:100%;
+    height:60px;
+    border:none;
+    font-size:44px;
+    margin-left: .3rem;
+    padding-left: .5rem;
+    }
+
+input {
+    margin-top: 10px;
+    width: 90%;
+}
+
+#reset {
+    width: 30%;
+    height: 50px;
+    font-size: 25px;
+    margin-top: 10px;
+    color: black;
+    background: transparent;
+    border: solid 2px black;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+#reset:hover {
+    color: white;
+    background: transparent;
+    border: solid 2px white;
+}
+
+.degree{
+    color:#fff;
+    position:absolute;
+    top:30px;
+    right:7px;
+    font-size:24px;
+    }
+
+.red {
+    color: red;
+}
+    
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: gold;
+}
+    
+.yellow-green {
+    color: yellowgreen;
+}
+
+.green {
+    color: green;
+}
+
+.teal {
+    color: teal;
+}
+
+/* garden box */
+.all-garden {
+    font-size: 30px;
+}
+
+#plants {
+    margin-top: 190px;
+}
+
+.cloudy {
+    background-image: url(cloudy.jpeg);
+    background-size: cover;
+}
+
+.sunny {
+    background-image: url(sunny.jpeg);
+    background-size: cover;
+}
+.rainy {
+    background-image: url(rainy.jpeg);
+    background-size: cover;
+}
+
+.snowy {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.29),rgba(0, 0, 0, 0.0)), url(snowy.jpeg);
+    background-size: cover;
+}
+
+/* dropdown */
+#sky-select {
+    width: 7rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-left: .5rem;
+    
+}
+
+input:focus, select:focus {
+    box-shadow: none;
+    outline: none;
+    }
+
+/* city name */
+
+#city-name {
+    /* margin-top: 18%; */
+    background-color: #fff;
+    color: black; 
+    border-radius: 5px;
+}
+
+.enter-city {
+    margin-left: 5%;
+    font-size: 1.2rem;
+}
