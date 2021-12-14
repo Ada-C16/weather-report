@@ -21,6 +21,11 @@ p {
     flex-wrap: wrap;
 }
 
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
 #temperatureChanger {
     padding: 15px;
 }
@@ -37,8 +42,19 @@ p {
     padding: 15px;
 }
 
-.gardenBackground {
+#gardenBackground {
     background-color: green;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.display {
+    display: flex;
+    justify-content: space-around;
+    font-size: xx-large;
 }
 
 .header * {
@@ -47,48 +63,4 @@ p {
 
 .subHeader {
     display: inline-block;
-}
-
-.hide {
-    max-height: 0 !important;
-}
-
-.dropdown{
-	border: 0.1em solid black;
-	width: 10em;
-	margin-bottom: 1em;
-}
-
-.dropdown .title{
-	margin: .3em .3em .3em .3em;	
-	width: 100%;
-}
-
-.dropdown .title .weatherClass{
-	float: right;
-	margin-right: .7em;
-	transition: transform .3s;
-}
-
-.dropdown .menu{
-	transition: max-height .5s ease-out;
-	max-height: 20em;
-	overflow: hidden;
-}
-
-.dropdown .menu .option{
-	margin: .3em .3em .3em .3em;
-	margin-top: 0.3em;
-}
-
-.dropdown .menu .option:hover{
-	background: rgba(0,0,0,0.2);
-}
-
-.pointerCursor:hover{
-	cursor: pointer;
-}
-
-.rotate-90{
-	transform: rotate(90deg);
 }

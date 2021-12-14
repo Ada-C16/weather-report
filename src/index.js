@@ -2,11 +2,15 @@ const tempDisplay = document.getElementById("temperatureDisplay");
 const skyDisplay = document.getElementById("topDisplay");
 const groundDisplay = document.getElementById("bottomDisplay");
 const cityInput = document.getElementById("mutableSubHeader");
+const bgDisplay = document.getElementById("gardenBackground");
+
+//document.getElementById("myDiv").style.backgroundColor = "lightblue";
 
 tempDisplay.textContent = 70;
-skyDisplay.textContent = "☀️☀️☀️☀️☀️☀️☀️☀️☀️";
-groundDisplay.textContent ="🌱🌱🌱🌱🌱🌱🌱🌱";
-cityInput.textContent = "My Hometown"
+skyDisplay.textContent = "☀️ ☀️ ☀️ ☀️ ☀️ ☀️ ☀️ ☀️ ☀️";
+groundDisplay.textContent ="🌱 🌱 🌱 🌱 🌱 🌱 🌱 🌱";
+cityInput.textContent = "My Hometown";
+bgDisplay.style.backgroundColor = "orange";
 
 let temperature = 70;
 
@@ -35,15 +39,22 @@ const decreaseTemp = () => {
 }
 
 const mutableGround = (temperature) => {
-    groundDisplay.textContent = "🌱🌱🌱🌱🌱🌱🌱🌱";
+    groundDisplay.textContent = "🌱 🌱 🌱 🌱 🌱 🌱 🌱 🌱";
+    bgDisplay.style.backgroundColor = "orange";
     if (temperature > 80) {
-        groundDisplay.textContent = "🌵🌵🌵🌵🌵🌵🌵"
+        groundDisplay.textContent = "🌵 🌵 🌵 🌵 🌵 🌵 🌵";
+        bgDisplay.style.backgroundColor = "red";
     }
-    if (temperature < 60) {
-        groundDisplay.textContent = "💧💧💧💧💧💧💧"
+    if (temperature < 70) {
+        groundDisplay.textContent = "💧 💧 💧 💧 💧 💧 💧 💧 💧";
+        bgDisplay.style.backgroundColor = "yellow";
     }
-    if (temperature < 32) {
-        groundDisplay.textContent = "🏔️🏔️🏔️🏔️🏔️🏔️🏔️🏔️"
+    if (temperature < 60 ) {
+        bgDisplay.style.backgroundColor = "green";
+    }
+    if (temperature < 50) {
+        groundDisplay.textContent = "🏔️ 🏔️ 🏔️ 🏔️ 🏔️ 🏔️ 🏔️ 🏔️";
+        bgDisplay.style.backgroundColor = "teal"
     }
 }
 
@@ -52,16 +63,16 @@ const skyStateSelect = () => {
     let skyState = select.options[select.selectedIndex].value;
     let weatherDisplay = "Weather Display"
     if (skyState == "sunny") {
-        weatherDisplay = "☀️☀️☀️☀️☀️☀️☀️☀️☀️"
+        weatherDisplay = "☀️ ☀️ ☀️ ☀️ ☀️ ☀️ ☀️ ☀️ ☀️"
     };
     if (skyState == "cloudy") {
-        weatherDisplay ="☁️☁️☁️☁️☁️☁️☁️☁️☁️"
+        weatherDisplay ="☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️"
     };
     if (skyState == "snowy") {
-        weatherDisplay = "❄️❄️❄️❄️❄️❄️❄️❄️❄️"
+        weatherDisplay = "❄️ ❄️ ❄️ ❄️ ❄️ ❄️ ❄️ ❄️ ❄️"
     };
     if (skyState =="rainy") {
-        weatherDisplay = "🌧🌧🌧🌧🌧🌧🌧"
+        weatherDisplay = "🌧 🌧 🌧 🌧 🌧 🌧 🌧"
     }
     skyDisplay.textContent = weatherDisplay;
 }
@@ -72,3 +83,5 @@ const changeCityName = (submission) => {
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
+
+//consider making sky/grass a dictionary to pull the key from
