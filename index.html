@@ -4,9 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/index.css" rel="stylesheet"/>
     <title>Weather Report</title>
+
 </head>
-<body>
-    
+<body id="event-background">
+    <section id="header-box-container">
+        <h1>Weather Report</h1>
+        <h3>For the lovely city of ...<div id="city-name-display">Seattle!</div></h3>    
+    </section>
+    <section id="body-grid-container">
+        <section id="choice-box-container">
+            <section id="temperature-box" class="choice-box">
+                <h3>Temperature</h3>
+                <section id="temperature-button-container">
+                    <button id="temp-down-button">
+                        ❄️
+                    </button>
+                    <h1 id="temperature">
+                        50℉
+                    </h2>
+                    <button id="temp-up-button">
+                        🔥
+                    </button>
+                </section>
+            </section>
+            <section id="sky-box" class="choice-box">
+                <h3>Sky</h3>
+                <select>
+                    <option value="sunny">Sunny</option>
+                    <option value="cloudy">Cloudy</option>
+                    <option value="rainy">Rainy</option>
+                    <option value="snowy">Snowy</option>
+                </select>
+            </section>
+            <section id="city-box" class="choice-box">
+                <form>
+                    <label for="city-name"><h3>City Name:</h3></label>
+                    <input placeholder="Enter City Name" type="text" id="city-name" name="city-name"/>
+                </form>
+                <button id="reset-button">Reset</button>
+            </section>
+        </section>
+        <section id="weather-garden-grid">
+            <h3>Weather Garden</h3>
+            <section id="weather-garden-container">
+                <p id="weather-box" class="weather-garden">
+                    ☁️ ☁️ ☁️ ☀️ ☁️ ☁️
+                </p>
+                <p id="garden-box" class="weather-garden">
+                    🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲
+                </p>
+            </section>
+        </section>
+    </section>
+    <script src="src/index.js"></script>
 </body>
 </html>
