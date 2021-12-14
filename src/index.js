@@ -1,24 +1,22 @@
 let tempValue = 0;
 
-const updateWeather = () => {
-    const skyType = document.getElementById()
-}
-
 const incrementTemp = () => {
     tempValue += 1;
     const pancake = document.getElementById("temperatureValue");
     pancake.textContent = tempValue
+    updateTempColor(pancake.textContent);
 };
 
 const decrementTemp = () => {
     tempValue -= 1;
     const pancake = document.getElementById("temperatureValue");
     pancake.textContent = tempValue
+    updateTempColor(pancake.textContent);
 };
 
 const increase = () => {
     const incrementTempControl = document.getElementById("incrementTempControl");
-    incrementTempControl.addEventListener("click", incrementTemp);
+    incrementTempControl.addEventListener("click", incrementTemp,);
 }
 
 const decrease = () => {
@@ -99,11 +97,31 @@ document.addEventListener("DOMContentLoaded", snowyControl);
 document.addEventListener("DOMContentLoaded", stormyControl);
 
 
-const updateLocationName = () => {
-    const location= document.getElementById("locationDesc").value;
-    const locationName = document.getElementById("locationName");
-    locationName.textContent = location;
-};
+// const updateLocationName = () => {
+//     const location= document.getElementById("locationDesc").value;
+//     const locationName = document.getElementById("locationName");
+//     locationName.textContent = location;
+// };
+
+const updateTempColor = (currentTemp) => { 
+    const tempValueHolder = document.getElementById("temperatureValue");
+    let color = "red";
+    if (currentTemp >= 80){
+        color = "orange-red";
+    }else if (currentTemp >=70){
+        color = "orange";
+    }else if (currentTemp >= 30){
+        color = "yellow";
+    }else if (currentTemp >= 0){
+        color = "blue";
+    }else if (currentTemp >= -30){
+        color = "light-blue"
+    }
+    
+    let curr_class = tempValueHolder.classList.item(0);
+    tempValueHolder.classList.replace(curr_class,color);
+    
+}
 
 
 
@@ -115,12 +133,3 @@ const updateLocationName = () => {
 
 
 
-
-// const weatherList = {
-//     clear: { color1: '#7AE7C7', color2: '#72C1E1'},
-//     cloudy: { color1: '#F981BB', color2: '#7F7E84'},
-//     rain: { color1: '#504AC4', color2: '#59AED1'},
-//     snow: { color1: '#bfc9cf', color2: '#77BDE0'},
-// }
-
-// const weather = weatherList[weather.list[0].weather[0].main.toLowerCase()];

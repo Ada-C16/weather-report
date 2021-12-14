@@ -94,15 +94,15 @@ body{
     text-decoration: none;
     display: block;
 }
-  
+
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color:white;}
-  
+.dropdown-content a:hover {background-color:white;}
+
   /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
-  
+.dropdown:hover .dropdown-content {display: block;}
+
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: white;}
+.dropdown:hover .dropbtn {background-color: white;}
 .red {
     color: red;
 }
@@ -110,19 +110,30 @@ body{
 .orange {
     color: orange;
 }
-  
+
 .yellow {
     color: gold;
 }
-  
+
 .yellow-green {
     color: yellowgreen;
 }
-  
+
 .green {
     color: green;
 }
-  
+
+.orange-red{
+    color: orangered;
+}
+
+.blue{
+    color: blue;
+}
+
+.light-blue{
+    color: rgb(92, 92, 255)
+}
 
 #temperatureValue {
     font-size: 2.5rem;
