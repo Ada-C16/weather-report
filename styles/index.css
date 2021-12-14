@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: 'Permanent Marker', sans-serif;
+  padding: 3vw;
+}
+
+/* cant get rid of the dang line between background & top of radish video */
+#video {
+  position: fixed;
+  outline: 0px;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  overflow: hidden;
+}
+
+.title {
+  z-index: 2;
+  position: fixed;
+}
+
+#set-height {
+  display: flex;
+}
+
+section {
+  z-index: 1;
+  position: relative;
+  height: 1500px;
+  color: white;
+  height: 1500px;
+}
+
+.content {
+  position: sticky;
+  position: -webkit-sticky;
+  width: 100%;
+  top: 80vh;
+  animation-duration: 0.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+h1 {
+  font-size: 6vw;
+  font-family: 'Permanent Marker';
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+
+  display: inline-block;
+  /* padding: 10px 1px; */
+  margin: 0;
+
+  text-size-adjust: auto;
+}
+
+h2 {
+  color: rgb(255, 236, 27);
+  font-family: 'Permanent Marker';
+  font-size: 3vw;
+
+  /* padding: 10px 25px; */
+  margin: 0;
+}
+h3 {
+  font-size: 6vw;
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 0;
+}
+
+.button {
+  border: none;
+  background: none;
+
+  font-family: 'Permanent Marker';
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  font-size: 5vh;
+  margin: 1px 2px;
+  cursor: pointer;
+}
+
+.radish {
+  color: rgb(255, 0, 0);
+}
+.mint {
+  color: rgb(83, 165, 95);
+}
+.homebutton {
+  border-radius: 40px;
+  border: 2px solid #797979;
+  background: rgb(255, 255, 255);
+  padding: 10px 30px;
+  font-size: 2vh;
+  margin: 10px 2px;
+}
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 
+css for the name form feature
+
+.form {
+  width: 50%;
+  position: relative;
+  height: 50px;
+}
+
+.form input {
+  font-family: 'Permanent Marker';
+  width: 100%;
+  height: 100%;
+  color: red;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+
+.form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  font-size: 14px;
+} */
