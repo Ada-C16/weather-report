@@ -5,21 +5,32 @@ body{
     
     /* background-image: linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74% ); */
     /* background-color: #000000;
-    background-image: linear-gradient(315deg, #000000 0%, #ffffff 74%); */
-    background-image: url("/multisplash.jpg");
+    background-image: linear-gradient(315deg, #000000 0%, #ffffff 74%); 
+    
     font-family:  serif; 
-    color: plum;
+    
     /* align-self: middle; */
     font-family:  ui-monospace;
+    background-image: url("/kaleidoscope.jpg");
+    /* background-image: url("/pinkstoredisplay.jpg"); */
+    color: plum;
     
     
     
 
 }
 
+/* .color{
+
+    color:rgba(24, 17, 24, 0.836);
+    color: rgb(117, 87, 117);
+    color: rgb(175, 124, 175);
+    color: plum
+
+} */
 
 
-.fiyah{
+.plum{
 
     font-size: 5em;
     margin-left: 0.2cm;
@@ -47,6 +58,7 @@ body{
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
+    background-color:rgba(102, 255, 0, 0.116); 
 }
 
 .Big-Container{
@@ -62,7 +74,7 @@ body{
 
 .smallContainer{
     width: 1000px;
-    height: 500px; 
+    height: 430px; 
     border: 0;
     display: flex;
     flex-direction: column;
@@ -81,7 +93,7 @@ body{
     margin-right: auto;  
     border: 10px solid black;
     background-color: white;
-    
+    background-image:url(/rihaan.gif);
     margin-top: 10%;
     
 }
@@ -107,11 +119,15 @@ body{
 .landscape{
 
     width: 480px;
-    height: 70px;
+    height: 30px;
     align-self: flex-end;
     /* display: block; */
     align-self:center;
     margin-left: 30%;
+    font-size: larger;
+    /* background-image: linear-gradient(315deg, #000000 0%, #ffffff 74%); */
+    background-color:rgba(51, 255, 0, 0.24); 
+    border: 8.5px solid black;
     
 
 }
@@ -151,4 +167,9 @@ body{
 .gardenText{
     width: 200px;
     height: 150px;
+}
+#hotCity{
+
+    margin-bottom: 50%;
+    font-size: medium; 
 }

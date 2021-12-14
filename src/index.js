@@ -42,27 +42,68 @@ const changeSky = () => {
     gardenContent.className = "gardenContainer"
     gardenContent.classList.add(inputSky);
 }
+const changeCityName = () => {
+    
+    const cityNameInputEl= document.getElementById("cityNameInput").value; 
+    const headerCityEl = document.getElementById("CityName"); 
+    headerCityEl.textContent = cityNameInputEl;
+    console.log("citygirls")
+}
+const cityReset = () => {
 
-const updateTemp = tempValue => {
-    const tempValueContainer = document.getElementById("tempvalue");
-    tempValueContainer.textContent = tempValue;
-    updateTempStyles(tempValue);
-    updateGarden(tempValue);
+    const cityNameInput = document.getElementsById("cityNameInput");
+    cityNameInput.value = "Miami"; 
+    cityNameInput.value.classList.add(cityNameInput);
+    console.log("inthecitygirls")
+    changeCityName();
+    
+
+}; 
+
+const changeGardenTemp = () => {
+
+    const tempGardenvlue = document.getElementById("tempvalue");
+        let color = "blue"; 
+        if (currentTempNum >=80){
+            color = "rgba(24, 17, 24, 0.836)";
+        console.log("hotttttttttt")
+        }else if (currentTempNum >=70){
+            color = "rgb(117, 87, 117)";
+        }else if (currentTempNum >=60){
+            color = "rgb(175, 124, 175)";
+        }else if (currentTempNum >=50){
+            color = "black";
+        }
+        tempGardenvlue.classList = color; 
+
+
 }
 
-const updateTempStyles = (currentTemp) => {
-    const tempValueContainer = document.getElementById("tempvalue");
-    let color = "teal";
-    if ( currentTemp >= 80) {
-        color = "red";
-    } else if (currentTemp >= 70) {
-        color = "orange";
-    } else if (currentTemp >= 60) {
-        color = "yellow";
-    } else if (currentTemp >= 50) {
-        color = "green";
+const changeGarden = ()=> {
+
+    const landContainer = document.querySelector(".landscape")
+    let landscape = "🥶🧊💎🥶🧊💎🥶🧊💎🥶🧊💎🥶🧊💎🥶🧊💎🥶🧊💎🥶"; 
+    if (currentTempNum >=80){
+        landscape = "🥵🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🥵"; 
+    } else if (currentTempNum >=70){
+        landscape = "✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️"; 
+    }else if (currentTempNum >=60){
+        landscape = "🌧☔️🌂🌧☔️🌂🌧☔️🌂🌧☔️🌂🌧☔️🌂🌧☔️🌂🌧☔️🌂🌧☔️🌂🌧☔️🌂🌧☔️🌂🌧☔️🌂"; 
     }
-    tempValueContainer.classList = color;
+
+    landContainer.textContent = landscape
+
+
+}
+const changeTemp = tempvalue => {
+
+    const changeTempContainer = document.getElementById('tempvalue');
+    changeTempContainer.textContent = tempvalue; 
+    tempGardenvlue(tempvalue);
+    changeGarden(tempvalue);
+
+
+
 }
 
 
@@ -79,6 +120,14 @@ const registerEventHandlers = () =>{
 
     const inputSky = document.querySelector(".skyDropMenu");
     inputSky.addEventListener("change",changeSky)
+
+    changeCityName();
+    const cityNameInputEl= document.getElementById("cityNameInput"); 
+    cityNameInputEl.addEventListener("input", changeCityName)
+
+    const resetButton = document.getElementById("cityNameInput")
+    resetButton.addEventListener("click", changeCityName)
+
 }
 
 // document.addEventListener("DOMContentLoaded", registerEventHandlers);
