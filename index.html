@@ -5,8 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href = "styles/index.css" rel="stylesheet">
+
 </head>
 <body>
+    <script src="src/index.js"></script>
+    <div class="header">
+        <h1 class="heading">Weather in the beautiful city of:</h1>
+
+    </div>
     
+    </div>
+    <div class="pickerWindow">
+        <h1 class="heading">Sky</h1>
+        
+        <select id="landscape">
+            <option value="0">Pink</option>
+            <option value="1">Summer</option>
+            <option value="2">Hurricane</option>
+            <option value="3">Boba</option>
+            <option value="4">Cats</option>
+        </select>
+    </div>
+    <div class="pickerWindow">
+        <h1 class="heading">City Name </h1>
+        
+         
+            <label for="name">City Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            
+          
+        
+    </div>
+    <div class="pickerWindow">
+        <h1 class="heading">Temperature</h1>
+        <span id="incrementValue">⬆️</span>
+        <span id="decrementValue">⬇️</span>
+        <span id="tempValue"></span>
+        
+    </div>
+    <section class='Landscape'>
+        <h1 class="heading">Landscape</h1>
+        <p id = 'Garden'>🐱_🌴🦩🐱🌴__🦩🐱🌴__🦩🐱🌴🦩__🐱🌴🦩__🐱🌴🦩__🐱🌴</p>
+    </section>
 </body>
 </html>
