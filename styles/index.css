@@ -3,31 +3,14 @@
 body{
     
     
-    /* background-image: linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74% ); */
-    /* background-color: #000000;
-    background-image: linear-gradient(315deg, #000000 0%, #ffffff 74%); 
     
-    font-family:  serif; 
-    
-    /* align-self: middle; */
     font-family:  ui-monospace;
-    background-image: url("/kaleidoscope.jpg");
-    /* background-image: url("/pinkstoredisplay.jpg"); */
+    background-image: url("/ada-project-docs/assets/kaleidoscope.jpg");
+    background-image: url("/ada-project-docs/assets/pinkstoredisplay.jpg");
     color: plum;
     
     
-    
-
 }
-
-/* .color{
-
-    color:rgba(24, 17, 24, 0.836);
-    color: rgb(117, 87, 117);
-    color: rgb(175, 124, 175);
-    color: plum
-
-} */
 
 
 .plum{
@@ -93,26 +76,26 @@ body{
     margin-right: auto;  
     border: 10px solid black;
     background-color: white;
-    background-image:url(/rihaan.gif);
+    background-image:url(/ada-project-docs/assets/rihaan.gif);
     margin-top: 10%;
     
 }
 
 .cloudy{
 
-    background-image: url(/upintheclouds.webp) ;
+    background-image: url(/ada-project-docs/assets/upintheclouds.webp) ;
 }
 .rainy{
 
-    background-image: url(/rihaan.gif);
+    background-image: url(/ada-project-docs/assets/rihaan.gif);
 }
 .sunny{
 
-    background-image: url(/BeyFireYellow.gif);
+    background-image: url(/ada-project-docs/assets/BeyFireYellow.gif);
 }
 .snowy{
 
-    background-image: url(/diamondhands.webp);
+    background-image: url(/ada-project-docs/assets/diamondhands.webp);
     background-repeat: round;
     
 }
@@ -164,10 +147,7 @@ body{
     
 }
 
-.gardenText{
-    width: 200px;
-    height: 150px;
-}
+
 #hotCity{
 
     margin-bottom: 50%;

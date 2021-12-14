@@ -60,34 +60,34 @@ const cityReset = () => {
 
 }; 
 
-const changeGardenTemp = () => {
+const changeTempColor = () => {
 
-    const tempGardenvlue = document.getElementById("tempvalue");
+    const tempColor = document.getElementById("tempvalue");
         let color = "blue"; 
-        if (currentTempNum >=80){
+        if (state.tempchange >=80){
             color = "rgba(24, 17, 24, 0.836)";
         console.log("hotttttttttt")
-        }else if (currentTempNum >=70){
+        }else if (state.tempchange  >=70){
             color = "rgb(117, 87, 117)";
-        }else if (currentTempNum >=60){
+        }else if (state.tempchange  >=60){
             color = "rgb(175, 124, 175)";
-        }else if (currentTempNum >=50){
+        }else if (state.tempchange  >=50){
             color = "black";
         }
-        tempGardenvlue.classList = color; 
+        tempColor.classList = color; 
 
 
 }
 
 const changeGarden = ()=> {
 
-    const landContainer = document.querySelector(".landscape")
+    const landContainer = document.querySelector("#landscape")
     let landscape = "🥶🧊💎🥶🧊💎🥶🧊💎🥶🧊💎🥶🧊💎🥶🧊💎🥶🧊💎🥶"; 
-    if (currentTempNum >=80){
+    if (state.tempchange>=80){
         landscape = "🥵🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🥵"; 
-    } else if (currentTempNum >=70){
+    } else if (state.tempchange >=70){
         landscape = "✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️✌🏾✈️☁️"; 
-    }else if (currentTempNum >=60){
+    }else if (state.tempchange >=60){
         landscape = "🌧☔️🌂🌧☔️🌂🌧☔️🌂🌧☔️🌂🌧☔️🌂🌧☔️🌂🌧☔️🌂🌧☔️🌂🌧☔️🌂🌧☔️🌂🌧☔️🌂"; 
     }
 
