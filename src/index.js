@@ -5,22 +5,23 @@ const changeTemperature = (currentTemp) => {
     tempValue.textContent = currentTemp + ` °F`;
     let garden = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
     if (currentTemp >= 80) {
-        tempValue.className = 'red';
-        garden = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
-    } else if (currentTemp >= 70) {
-        tempValue.className = 'orange';
+        garden = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂'
+    } 
+    else if (currentTemp >= 70) {
       garden = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
-    } else if (currentTemp >= 60) {
-        tempValue.className = 'yellow';
+    } 
+    else if (currentTemp >= 60) {
       garden = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
     } else if (currentTemp >= 50) {
-        tempValue.className = 'green';
-      garden = '🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲';
-    } else if (currentTemp >= 40) {
-        tempValue.className = 'teal';
+      garden = '🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲'
+    } 
+    else if (currentTemp >= 40) {
       garden = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
     }
-    gardenDisplay.textContent = emojis;
+    
+    flowers.textContent = garden;
+
+    console.log(tempValue);
   };
  
   const increaseTemperature = () => {
