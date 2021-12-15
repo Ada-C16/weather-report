@@ -9,7 +9,8 @@
     <title>Weather Report</title>
     <form>Toggle Form<br>
         <label for='location'>Location:</label></form>
-        <input type="text" id='location' name='location'><br>
+        <input type="text" id='location' name='location' value='The Invisible Forest'>
+        <button id="resetLocation" onClick="resetLocation()">Reset Location</button><br>
         <label for='sky'>Sky:</label>
         <select id='sky' name='sky'>
             <option value="dry-rock">Dry Rock</option>
@@ -20,7 +21,7 @@
             <option value="hot-rock">Hot Rock</option>
         </select><br>
         <button onclick="increment()">+</button>
-        <input id=demoInput type=number>
+        <input id=tempInput type=number value="256">
         <button onclick="decrement()">-</button>
     </form>
 </head>
