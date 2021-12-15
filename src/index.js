@@ -3,12 +3,14 @@ const state = {
     location: "Seattle"
 };
 
-const registerEventHandlers = () => {
-    document.getElementById("increment-btn").addEventListener('click', tempHandler(1));
-    document.getElementById("decrement-btn").addEventListener('click', tempHandler(-1));
-};
+// const registerEventHandlers = () => {
+//     document.getElementById("increment-btn").addEventListener('click', tempHandler(1));
+//     document.getElementById("decrement-btn").addEventListener('click', tempHandler(-1));
+// };
 
-const tempHandler = (step) => {
+// document.addEventListener("DOMContentLoaded", registerEventHandlers);
+
+const tempButtonHandler = (step) => {
     const tempInput = document.getElementById("tempInput");
     const tempInt = parseInt(tempInput.textContent) + step;
     console.log(tempInt);
@@ -16,6 +18,14 @@ const tempHandler = (step) => {
     state.temp = tempInt;
     landscapeHandler()
 };
+
+const tempResetHandler = () => {
+    const tempInt = 75;
+    console.log(tempInt);
+    tempInput.textContent = String(tempInt);
+    state.temp = tempInt;
+    landscapeHandler()
+}
 
 const landscapeHandler = () => {
     const landscape = document.getElementById("landscapeOutput");
