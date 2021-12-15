@@ -1,0 +1,103 @@
+.container {
+    border: solid black;
+    display: grid;
+    gap: 15px;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: (2, 1fr);
+    grid-template-rows: (4, 1fr);
+    background-image: linear-gradient(to right, rgb(155, 241, 241) , rgb(206, 176, 245));
+}
+
+.header {
+    border: solid red;
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+.temp {
+    border: solid blue;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.sky {
+    border: solid blue;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.city {
+    border: solid blue;
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.garden {
+    border-radius: 15px;
+    padding: 20px;
+    border: solid green;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+h1 {
+    color: black;
+    font-size:24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    color: black;
+    font-size:16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+h3 {
+    color: black;
+    font-size:14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+
+}
+
+.temp,.sky,.city {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+button {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: vertical;
+}
+
+temperature {
+    display: grid;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.red {
+    color: red
+}
+
+.orange {
+    color: orange
+}
+
+.yellow {
+    color: yellow
+}
+
+.green {
+    color: green
+}
+
+.teal {
+    color: teal
+}
