@@ -5,25 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css">
-    <script src="src/index.js"></script>
+    <script src="src/index.js" type="text/javascript"></script>
     <title>Weather Report</title>
-    <form>Toggle Form<br>
-        <label for='location'>Location:</label></form>
-        <input type="text" id='location' name='location' value='The Invisible Forest'>
-        <button id="resetLocation" onClick="resetLocation()">Reset Location</button><br>
-        <label for='sky'>Sky:</label>
-        <select id='sky' name='sky'>
-            <option value="dry-rock">Dry Rock</option>
-            <option value="wet-rock">Wet Rock</option>
-            <option value="shady-rock">Shady Rock</option>
-            <option value="no-rock">No Rock</option>
-            <option value="white-rock">White Rock</option>
-            <option value="hot-rock">Hot Rock</option>
-        </select><br>
-        <button onclick="increment()">+</button>
-        <input id=tempInput type=number value="256">
-        <button onclick="decrement()">-</button>
-    </form>
+    <header id='reportHeader'>
+        Weather report for <span id='location'>the invisible forest</span>
+    </header>
+    <main>
+        <form id='weatherForm'>
+            <label htmlFor="tempInput">Temperature: </label>
+            <button id='increment-btn'>+</button>
+            <input type="number" id='tempInput' value="256">
+            <button id='decrement-btn'>-</button>
+            <br>
+            <label htmlFor="locationInput">Location: </label>
+            <input id='locationInput' value="the invisible forest">
+            <button id='resetLocation'>Reset location</button>
+            <br>
+            <label htmlFor="skyInput">Sky: </label>
+            <select id='skyInput'>
+                <option>Sunny</option>
+                <option>Cloudy</option>
+                <option>Rainy</option>
+                <option>Snowy</option>
+            </select>
+        </form>
+        <div id='gardenOutput'>
+            <div id='skyOutput'></div>
+            <div id='landscapeOutput'></div>
+        </div>
+    </main>
 </head>
 <body>
     
