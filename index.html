@@ -4,9 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Report</title>
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
+    <div class="title">
+        <!-- *WORKING ON ADDING NAME INPUT TO CHANGE GARDEN NAME*
+            <div class="form"> 
+            
+            <input type="text" name="name" id="test" autocomplete="off" required />
+            <label for="name" class="label-name">
+                <span class="content-name">name</span>
+            </label>
+        </div> -->
+        <script src="src/index.js"></script> 
+        <button type="button" class="button radish" id="radish" onclick="changeToRadish()">radish</button>
+        <button type="button" class="button mint"id="mint" onclick="changeToMint()">mint</button>
+        <br>
+        <button type="button" class="homebutton" id="homebutton" onclick="window.scrollTo(0, 0)">
+            <h1>mac's garden</h1>
+            <h2>_______(just add sunshine)</h2>
+        </button>
+            
+    </div>
     
-</body>
+    <div id="set-height"></div>
+    
+    
+    <video src="radish_med.mp4" id="video" tabindex="0", autobuffer preload></video>
+    <script>var 
+    frameNumber = 0, // start video at frame 0
+    playbackConst = 100, // lower nums = faster playback
+    setHeight = document.getElementById('set-height'); // get page height from video duration
+    vid = document.getElementById('video'); 
+    
+      // dynamically set the page height according to the video length
+    vid.addEventListener('loadedmetadata', function () {
+    setHeight.style.height = Math.floor(vid.duration) * playbackConst;});
+      // User requestAnimationFrame for smooth playback
+    function scrollPlay() {
+        let frameNumber = window.pageYOffset / playbackConst;
+        vid.currentTime = frameNumber;
+        window.requestAnimationFrame(scrollPlay);
+    }
+
+    window.requestAnimationFrame(scrollPlay);</script>
+
+</body> 
 </html>
