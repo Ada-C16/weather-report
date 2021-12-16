@@ -5,8 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link rel="stylesheet" href="./styles/index.css"/>
 </head>
-<body>
+<body class = "grid">
+    <header class=header>
+        <h1>Weather Report</h1>
+        <p id="name"> For the lovely city of ✨Madeup✨</p>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li id="temp" class="details">
+                <p class="text">Temperature</p>
+                    <p id="tempValue" class="temperature-text">34°F</p>
+                <div id="temperature-buttons">
+                    <button id = "tempUp">⬆️</button>
+                    <button id = "tempDown">⬇️</button>
+                </div>
+            </li>
+            <li id="sky" class="details">
+                <p class="text">Sky</p>
+                <select id="skies" class="dropdown-content">
+                    <option>--Your Sky--</option>
+                    <option>Sunny</option>
+                    <option>Cloudy</option>
+                    <option>Rainy</option>
+                    <option>Snowy</option>
+                </select>
+            </li>
+            <li id="city" class="details">
+                <p class="text">City Name</p>
+                <div id = "city-div">
+                    <input type="text" id="cityInput">
+                </div>
+                <div id = "city-div">
+                    <button id = "cityReset">RESET</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!-- <section id="temp"class="details"><span class="text">Temp</span></section>
+    <section id="sky"class="details"></section>
+    <section id="city"class="details"></section> -->
+
+    <main class="main">
+        <p id="display-title">Weather Garden</p>
+        <section id="display" class="garden-display">
+            <ul id="gardenDisplay">
+                <li id ="clouds">🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨</li>
+                <li id ="flowers">🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲</li>
+            </ul>
+        </section>
+    </main>
     
+    <footer>
+    </footer> 
+    <script src="src/index.js">
+    </script>  
+
 </body>
 </html>
