@@ -45,10 +45,12 @@ const increaseClickCount = () => {
 
 const decreaseClickCount = () => {
   const displayTemp = document.getElementById('temp');
+  const landscapeDisplay = document.getElementById('landscape-scene');
   state.clickCount -= 1;
   displayTemp.textContent = state.clickCount;
   console.log('down');
   colors(state.clickCount, displayTemp);
+  landscape(state.clickCount, landscapeDisplay);
 };
 
 const displayCity = () => {
