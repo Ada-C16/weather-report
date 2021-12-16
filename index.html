@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
     <title>Sabrina's Weather Report</title>
 </head>
 <body>
@@ -14,15 +14,17 @@
     <span class="header_city" id ="header_city_id">New York</span>
     </span></header>
     <section class="temperature_section">
-    <h2>Temperature</h2>
     <div class="temperature_body">
+        <!-- <section id ="tempContainer"> -->
+        <section>
+            <h2>Temperature:<span id="temperature_in_fahrenheit" class="temp_value">
+                38</h2>
+            </span>
         <div class="temperature_clickables">
             <button id="increase_temperature">⬆️</button>
             <button id="decrease_temperature">⬇️</button>
         </div>
-        <span id="temperature_in_fahrenheit" class="temp_value">
-            38 
-        </span>
+        </section>
     </div>
     </section>
     <section class="sky_section">

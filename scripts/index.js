@@ -1,79 +1,97 @@
 // changes the temperature by one degree
-
-function changeTemp(x) {
+function changeTempBy(x) {
   let el = document.getElementById('temperature_in_fahrenheit');
   let temp = el.innerText;
-
   temp = Number(temp) + x;
   temp = String(temp);
   el.innerText = temp;
 }
 
-btn = document.getElementById('increase_temperature');
-btn.onclick = () => changeTemp(1);
-btn = document.getElementById('decrease_temperature');
-btn.onclick = () => changeTemp(-1);
+// event listeners for increase and decrease buttons
 
-// ************//
-// changes the temperature number's text color by temp range
-function changeTempTextColor(currentTemp) {
-  let tempText = document.getElementById('temperature_in_fahrenheit');
-  let color = '';
+const increaseBtn = document.getElementById('increase_temperature');
+increaseBtn.addEventListener('click', () => {
+  changeTempBy(1);
+  updateTempTextColor();
+  changeLandscape();
+});
 
-  if (currentTemp >= 80) {
+const decreaseBtn = document.getElementById('decrease_temperature');
+decreaseBtn.addEventListener('click', () => {
+  changeTempBy(-1);
+  updateTempTextColor();
+  changeLandscape();
+});
+
+// changes the temperature number's text color or backgound by temp range
+
+function updateTempTextColor() {
+  const el = document.getElementById('temperature_in_fahrenheit');
+  const temp = Number(el.innerText);
+
+  let color;
+  if (temp >= 80) {
     color = 'red';
-  } else if (currentTemp >= 70) {
+  } else if (temp >= 70) {
     color = 'orange';
-  } else if (currentTemp >= 60) {
+  } else if (temp >= 60) {
     color = 'yellow';
-  } else if (currentTemp >= 50) {
+  } else if (temp >= 50) {
     color = 'green';
+  } else {
+    color = 'teal';
   }
-  tempText.classList = color;
+  el.style.color = color;
 }
 
-// ************//
-// temperature ranges changes landscapes
+// temperature range changes landscapes
 function changeLandscape() {
   let el = document.getElementById('temperature_in_fahrenheit');
   let currentTemp = el.innerText;
-  let landscapByTemp = documnet.getElementById('landscape');
-  let landscape = landscapByTemp.innerHTML;
 
+  let landscape;
   if (currentTemp >= 80) {
     landscape = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
   } else if (currentTemp >= 70) {
     landscape = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
   } else if (currentTemp >= 60) {
     landscape = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
-  } else if (currentTemp >= 50) {
+  } else {
     landscape = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
   }
-  return landscape;
+
+  const displayLandscape = document.getElementById('landscape');
+  displayLandscape.innerText = landscape;
 }
 
-// ************//
-//Selection changes sky
-function changeSky() {
-  let skySelection = document.getElementById('select_sky');
-  let skyDisplay = document.getElementById('sky');
-  let skyOutput = '';
-  if (skySelection === 'Sunny') {
-    skyOutput = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️';
-  } else if (skySelection === 'Cloudy') {
-    skyOutput = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
-  }
-  if (skySelection === 'Rainey') {
-    skyOutput = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
-  }
-  if (skySelection === 'Snowy') {
-    skyOutput = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
-  }
-  document.getElementById('sky').textContent = skyOutput;
-}
+// // ************//
+// //Selection changes sky
+// function changeSky() {
+//   let skySelection = document.getElementById('select_sky').selected;
+
+//   let skyOutput;
+//   if (skySelection === 'Sunny') {
+//     skyOutput = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️';
+//   } else if (skySelection === 'Cloudy') {
+//     skyOutput = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
+//   } else if (skySelection === 'Rainey') {
+//     skyOutput = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
+//   } else if (skySelection === 'Snowy') {
+//     skyOutput = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
+//   }
+
+//   let skyDisplay = document.getElementById('sky');
+//   skyDisplay.innerText = skyOutput;
+// }
+// // event listener for sky selection
+// const skySelection = document.getElementById('increase_temperature');
+// increaseBtn.addEventListener('click', () => {
+//   changeTempBy(1);
+//   updateTempTextColor();
+//   changeLandscape();
+// });
 
 // changes the header city name when the city is inputted
-
 let cityInput = document.querySelector('input');
 let newHeader = document.getElementById('header_city_id');
 
@@ -81,17 +99,13 @@ cityInput.oninput = function () {
   newHeader.innerHTML = cityInput.value;
 };
 
-// Resetting the city name input to default (NY)
-
+// Resets the city name input display value to default (NY)
 function resetButton() {
   let input = document.getElementById('cityNameInput');
-  // let header = document.getElementById('header_city_id');
   input.value = 'New York';
-  // header.value = 'New York';
 }
 
-// Resetting the city name header to default (NY)
-
+// Resets the city name header to default (NY)
 function resetHeaderCityToDefault() {
   let header = document.getElementById('header_city_id');
   header.textContent = 'New York';
