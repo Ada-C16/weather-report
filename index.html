@@ -5,8 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet" type="text/css">
 </head>
-<body>
-    
+<body class = "grid">
+    <header class=header>
+        <h1>Weather Report</h1>
+        <p id="city-header">Welcome to Okaytown!</p>
+    </header>
+    <nav class="nav">
+        <ul class="ul-container">
+            <li id="temp" class="temp-deets">
+                <h2 class="text">Temperature</h2>
+                <div id="temp-emoji-holder">
+                    <button id = "temp-up">⬆️</button>
+                    <button id = "temp-down">⬇️</button>
+                </div>
+                <p id="temp-text">71</p>
+            </li>
+            <li id="sky" class="deets">
+                <h2 class="text">Sky</h2>
+                    <select id="skySelection" class="dropdown-content">
+                        <option>--Please choose an option--</option>
+                        <option>Sunny</option>
+                        <option>Cloudy</option>
+                        <option>Rainy</option>
+                        <option>Snowy</option>
+                    </select>
+            </li>
+            <li id="city" class="deets">
+                <h2 class="text">City</h2>
+                <div id = "city-div">
+                    <input type="text" id="city-input">
+                </div>
+                <div id = "city-div">
+                    <button id = "city-reset">RESET</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <main class="main">
+        <h2>Weather Garden</h2>
+        <ul id="garden-display">
+            <li id ="garden-clouds">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</li>
+            <li id ="garden-flowers">🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃'</li>
+        </ul>
+    </main>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
