@@ -23,7 +23,7 @@ decreaseBtn.addEventListener('click', () => {
   changeLandscape();
 });
 
-// changes the temperature number's text color or backgound by temp range
+// changes the temperature number's text color or background by temp range
 
 function updateTempTextColor() {
   const el = document.getElementById('temperature_in_fahrenheit');
@@ -64,32 +64,26 @@ function changeLandscape() {
   displayLandscape.innerText = landscape;
 }
 
-// // ************//
-// //Selection changes sky
-// function changeSky() {
-//   let skySelection = document.getElementById('select_sky').selected;
+//Selection changes sky
+function changeSky() {
+  let skySelection = document.getElementById('select_sky').value;
 
-//   let skyOutput;
-//   if (skySelection === 'Sunny') {
-//     skyOutput = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️';
-//   } else if (skySelection === 'Cloudy') {
-//     skyOutput = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
-//   } else if (skySelection === 'Rainey') {
-//     skyOutput = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
-//   } else if (skySelection === 'Snowy') {
-//     skyOutput = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
-//   }
+  let skyOutput;
+  if (skySelection === 'sunny') {
+    skyOutput = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️';
+  } else if (skySelection === 'cloudy') {
+    skyOutput = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
+  } else if (skySelection === 'rainey') {
+    skyOutput = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
+  } else {
+    skyOutput = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
+  }
+  document.getElementById('sky').innerText = skyOutput;
+}
 
-//   let skyDisplay = document.getElementById('sky');
-//   skyDisplay.innerText = skyOutput;
-// }
-// // event listener for sky selection
-// const skySelection = document.getElementById('increase_temperature');
-// increaseBtn.addEventListener('click', () => {
-//   changeTempBy(1);
-//   updateTempTextColor();
-//   changeLandscape();
-// });
+// event listener for sky selection
+const skySelection = document.getElementById('select_sky');
+skySelection.onchange = changeSky;
 
 // changes the header city name when the city is inputted
 let cityInput = document.querySelector('input');
