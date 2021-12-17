@@ -1,0 +1,11 @@
+.red {color: red;}
+.orange {color: orange;}
+.yellow {color: yellow;}
+.green {color: green;}
+.teal {color: teal;}
+
+.temp_value {
+    color: aqua;
+    /* background-color: rgb(226, 43, 211); */
+    font-size: xx-large;
+} 
