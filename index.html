@@ -5,8 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link rel="stylesheet" href="styles/index.css">
 </head>
-<body>
+<body >
+
+    <header>
+        <h1 id="title">Weather Report</h1>
+        <h2>for the lovely city</h2>
+    </header>
     
+    <main class="parent-side-container">
+        <form class="temperature-side-container" action="#"> 
+            <span class="subtitle">Temperature</span><br><br>
+            <button id="decrement">⬇️</button>
+            <p id = "temperature-value"> 0 </p>
+            <button id ="increment">⬆️</button>
+        </form>
+
+        <form class ="sky-side-container" action="#">
+            <span class='subtitle'>Sky</span><br><br>
+            <select id="sky-type" name="sky">
+                <option value="select">select one</option>
+                <option value="Rainy">Rainy</option>
+                <option value="Sunny">Sunny</option>
+                <option value="Snowy">Snowy</option>
+                <option value="Cloudy">Cloudy</option>
+            </select>
+        </form>
+        
+        <form  class = "city-side-container" action="#">
+            <label for="city" class='subtitle'>City Name</label><br><br>
+            <input type="text" id="city" name="city" placeholder="type here">
+            <button id="reset-button" type="button">Reset</button>
+        </form>
+
+        <section class= "container-garden">
+            <h2> Weather Garden</h2>
+            <div class="display-garden  inner-grid-garden">
+                <p id="display-sky"  class ="inner-grid-sky"></p>
+                <p id="display-landscape"  class ="inner-grid-land"></p>
+            </div>
+        </section>     
+    </main> 
+    <footer><small>&copy; Copyright 2021 by Ana Singh. All rights reserved.</small></footer>
+    <script src="src/index.js"></script>
 </body>
 </html>
