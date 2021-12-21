@@ -16,6 +16,19 @@ counter.innerHTML = count;
 //     currentTemp++;
 // }
 
+class temperature extends React.component {
+    constructor(props) {
+        super(props)
+        this.state = 80
+    }
+    const increaseTemp => () {
+        this.state++;
+    }
+    render() {
+        <p>{this.state}</p>
+    }
+} 
+
 // function decreaseTemp() {
 //     temp.value = currentTemp
 //     currentTemp--;
