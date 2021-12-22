@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Report</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <header>
+    <h1 id="weatherHeader">Show Me The Weather</h1>
+    <h2 id="cityHeader">City: Brooklyn</h2>
+  </header>
+  <body id="landscape" id="container">
+    <img
+      src="assets/sky_photo.jpg"
+      alt="A photo of a cloudy sky"
+      id="skyViews"
+    />
+    <section class="buttonWindow">
+      <section id="tempContainer">
+        <label id="tempCount">Temperature (Farhenheit): 40</label>
+        <div>
+          <button id="clickButtonIn">⬆️</button>
+          <button id="clickButtonDe">⬇️</button>
+        </div>
+      </section>
+      <section class="accentColors">
+        <label for="skySelect">Select a Sky View</label>
+        <div>
+          <select name="sky" id="skySelect">
+            <option value="">Please choose an option</option>
+
+            <option value="sunny">Sunny</option>
+            <option value="cloudy">Cloudy</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowy">Snowy</option>
+          </select>
+        </div>
+      </section>
+      <section>
+          <label for="cityName">Change City</label>
+          <div>
+            <input type="text" id="cityNameSelect" />
+            <button id="cityNameReset">Reset</button>
+          </div>
+        </section>
+    </section>
+      <!-- Landscape Photos here -->
+
+    </section>
+    <section>
+    <div>
+      <!-- Emojis go here -->
+    </div>
+    </section>
+    <div>
+      <!-- City Element goes here -->
+    </section>
+    <script src="src/index.js"></script>
+  </body>
+  <footer class="footer">
+    <p>&copy; 2021 Tiffany Harper</p>
+  </footer>
 </html>
