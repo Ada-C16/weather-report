@@ -1,4 +1,9 @@
+//----------Sky ELEMENTS
 
+const changeSky = () => {
+  const skyImage = document.getElementById("skyChoice").value;
+  document.getElementById("skyContainer").innerHTML = skyImage;
+}
 
 //----------TEMPERATURE ELEMENTS
 //Temp Adjustment Features
@@ -10,16 +15,16 @@ const newTemp = document.createElement("span");
 
 //function to change the color & image based on tempState.tempCount
 const changeColorByTemp = () => {
-  if (tempState.tempCount >= 10) {
+  if (tempState.tempCount >= 32) {
     tempCount.style.color = "brown";
     newTemp.textContent = "🏜 🏜 🏜 🌵 🌵 🦂 🌵 🌵 🦂 🌵 🌵 🏜 🏜 🏜"
-  } else if (tempState.tempCount >= 8){
+  } else if (tempState.tempCount >= 24){
     tempCount.style.color = "orange";
     newTemp.textContent = "🌋 🌋 🌋 🏝 🏝  🛫 🏝 🏝 🛬  🏝 🏝 🌋 🌋 🌋"
-  } else if (tempState.tempCount >= 7){
+  } else if (tempState.tempCount >= 18){
     tempCount.style.color = "forestgreen";
     newTemp.textContent = "⛰ ⛰ ⛰ 🌳 🌳 🏡 🌳 🌳 🏡 🌳 🌳 ⛰ ⛰ ⛰"
-  } else if (tempState.tempCount >= 5){
+  } else if (tempState.tempCount >= 8){
     tempCount.style.color = "maroon";
     newTemp.textContent = "🏔 🏔 🏔 🌲 🌲 🏠 🌲 🌲 🏠 🌲 🌲 🏔 🏔 🏔 "
   } else if (tempState.tempCount >= 0) {
@@ -33,7 +38,7 @@ const changeColorByTemp = () => {
 
 const updateTempCount = () => {
   const tempCountElement = document.querySelector("#tempCount");
-  tempCountElement.textContent = `The Temperature is: ${tempState.tempCount} \xB0F`
+  tempCountElement.textContent = `The Temperature is: ${tempState.tempCount} \xB0C`
 };
 
 //Tempt goes up
@@ -61,4 +66,3 @@ const subTemp = () => {
 addTempButton.addEventListener('click', addTemp)
 subTempButton.addEventListener('click', subTemp)
 
-//----------SKY ELEMENTS
