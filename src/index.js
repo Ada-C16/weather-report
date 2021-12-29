@@ -1,5 +1,14 @@
-//----------Sky ELEMENTS
+//----------City ELEMENT
+function showInput() {
+  document.getElementById('display').innerHTML = 
+  document.getElementById("user_input").value;
+}
+const changeCity = () => {
+  const cityName = document.getElementById("city").onsubmit;
+  document.getElementById("cityContainer").innerHTML = "Today in " + cityName;
+}
 
+//----------Sky ELEMENT
 const changeSky = () => {
   const skyImage = document.getElementById("skyChoice").value;
   document.getElementById("skyContainer").innerHTML = skyImage;

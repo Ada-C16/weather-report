@@ -8,36 +8,41 @@
     <link href="./styles/index.css" rel="stylesheet"/> <!--link html to .css file-->
 </head>
 <body>
-    <h1 class="header"> ☀️🌧 ❄️ Weather Report ❄️ 🌧☀️ </h1>
-        
-    <section> 
-        <p> NEED USER TO INPUT CITY NAME HERE </p>
-    </section> 
-    <div id="cityContainer"></div>
+    <h1 class="header"> ☀️🌧 ❄️ Weather Report ❄️ 🌧☀️ </h1>   
+    <form>
+        <label><b>Enter City</b></label>
+        <input type="text" name="message" id="user_input">
+    </form>
+    <input type="submit" onclick="showInput();"><br/>
     
+
     <h2> The sky is...</h2>
     <section>   
         <select id="skyChoice" onChange="changeSky()">
-            <option value="❓ ❓ ❓ ❓ ❓"> Select A Sky </option>
-            <option value="🌨 ❄️ 🌨 ❄️ 🌨 "> Snowy </option>
-            <option value="🌧 💦 🌧 💦 🌧"> Rainy </option>
-            <option value="☁️ ☁️ ⛅️ ☁️ ☁️"> Cloudy </option>
-            <option value="🌈 ☁️ ☀️ ☁️ 🦅"> Sunny </option>
-            <option value="☄️ 🐉 ☀️ 🐉 ☄️"> Too Sunny </option>  
+            <option value="❗️ PENDING SKY DATA ❗️"> Select A Sky </option>
+            <option value="🌨 ❄️ 🌨 ❄️ 🌨 ❄️ 🌨 ❄️ 🌨 ❄️ 🌨 ❄️ 🌨 "> Snowy </option>
+            <option value="🌧 💦 🌧 💦 🌧 💦 🌧 💦 🌧 💦 🌧 💦 🌧"> Rainy </option>
+            <option value="☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ⛅️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️"> Cloudy </option>
+            <option value="✈️ ☁️ 🌈 ☁️ 🦅 ☁️ ☀️ ☁️ 🦅 ☁️ 🌈 ☁️ ✈️"> Sunny </option>
+            <option value="☄️ 🐉 ☄️ 🐉 ☄️ ☀️ ☀️ ☀️ ☄️ 🐉 ☄️ 🐉 ☄️"> Too Sunny </option>  
         </select>
     </section>
-    <p class="result" id="skyContainer"> </p>
     
-
-
+    
     <h2> The Weather is...</h2> 
     <section >  
         <button class="warmer" id="addTempButton"> It's Getting Warmer</button>
         <button class="colder" id="subTempButton"> It's Getting Cooler</button>
     </section> 
-    
-    <h3 id="tempCount"> ❗️ PENDING WEATHER DATA ❗️ </h3> 
-    <div class="result" id="tempContainer"></div>
+        
+    <label>Your City: </label>
+    <p><span id='display'></span></p>    
+    <div class="result padded" id="cityContainer"> ❗️ PENDING CITY DATA ❗️ </div>
+
+    <div class="result padded" id="skyContainer"> ❗️ PENDING SKY DATA ❗️ </div>
+
+    <div class="result padded" id="tempCount"> ❗️ PENDING WEATHER DATA ❗️ </div>
+    <div class="result padded" id="tempContainer"></div>
     
         
     <script src="src/index.js"></script>

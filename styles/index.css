@@ -17,7 +17,16 @@ button {
     justify-content: center;
 
 }
+
+input {
+    margin: 10px;
+}
 section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+div {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -35,6 +44,9 @@ section {
     color: whitesmoke
 }
 
-.result {
+.result{
     font-size: 40px;
+}
+.padded {
+    padding: 30px;
 }
