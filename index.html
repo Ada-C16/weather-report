@@ -5,8 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="./styles/index.css" rel="stylesheet"/> <!--link html to .css file-->
 </head>
 <body>
+    <h1 class="header"> ☀️🌧 ❄️ Weather Report ❄️ 🌧☀️ </h1>   
+    <form>
+        <label><b>Enter City</b></label>
+        <input type="text" id="cityName">
+    </form>
+    <input type="submit" onclick="cityChange();">
+    <input type = "button" value = "Reset" onClick = "resetCity()">
     
+
+    <h2> The sky is...</h2>
+    <section>   
+        <select id="skyChoice" onChange="changeSky()">
+            <option value="❗️ PENDING SKY DATA ❗️"> Select A Sky </option>
+            <option value="🌨 ❄️ 🌨 ❄️ 🌨 ❄️ 🌨 ❄️ 🌨 ❄️ 🌨 ❄️ 🌨 "> Snowy </option>
+            <option value="🌧 💦 🌧 💦 🌧 💦 🌧 💦 🌧 💦 🌧 💦 🌧"> Rainy </option>
+            <option value="☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ⛅️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️"> Cloudy </option>
+            <option value="✈️ ☁️ 🌈 ☁️ 🦅 ☁️ ☀️ ☁️ 🦅 ☁️ 🌈 ☁️ ✈️"> Sunny </option>
+            <option value="☄️ 🐉 ☄️ 🐉 ☄️ ☀️ ☀️ ☀️ ☄️ 🐉 ☄️ 🐉 ☄️"> Too Sunny </option>  
+        </select>
+    </section>
+    
+    
+    <h2> The Weather is...</h2> 
+    <section >  
+        <button class="warmer" id="addTempButton"> It's Getting Warmer</button>
+        <button class="colder" id="subTempButton"> It's Getting Cooler</button>
+    </section> 
+        
+    <label>Your City: </label>
+    <p><span class="result padded" id='display'></span></p>    
+    
+    <div class="result padded" id="skyContainer"> ❗️ PENDING SKY DATA ❗️ </div>
+
+    <div class="result padded" id="tempCount"> ❗️ PENDING WEATHER DATA ❗️ </div>
+    <div class="result padded" id="tempContainer"></div>
+    
+        
+    <script src="src/index.js"></script>
 </body>
 </html>
