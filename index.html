@@ -11,21 +11,20 @@
     <h1 class="header"> ☀️🌧 ❄️ Weather Report ❄️ 🌧☀️ </h1>
         
     <section> 
-        
+        <p> NEED USER TO INPUT CITY NAME HERE </p>
     </section> 
     
-    <h2> The Sky in</h2>
+    <h2> The Sky looks like...</h2>
     <div id="cityContainer"></div>
-    <section >   
-        <div class="dropdown">
-            <button onclick="skyOptions()" class="dropbtn">Dropdown</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="#"> ☄️ 🐉 ☀️ 🐉 ☄️</a>
-                <a href="#"> 🌈 ☁️ ☀️ ☁️ 🦅</a>
-                <a href="#"> ☁️ ☁️ ⛅️ ☁️ ☁️ </a>
-                <a href="#"> 🌧 💦 🌧 💦 🌧 </a>
-                <a href="#"> 🌨 ❄️ 🌨 ❄️ 🌨</a>
-            </div>
+    <section>   
+        <select class="result">
+            <option> Select A Sky </option>
+            <option> ☄️ 🐉 ☀️ 🐉 ☄️ </option>
+            <option> 🌈 ☁️ ☀️ ☁️ 🦅 </option>
+            <option> ☁️ ☁️ ⛅️ ☁️ ☁️ </option>
+            <option> 🌧 💦 🌧 💦 🌧 </option>
+            <option> 🌨 ❄️ 🌨 ❄️ 🌨 </option>
+        </select>
         </div>
     </section>
     
@@ -38,7 +37,7 @@
     <h3 id="tempCount"> ❗️ PENDING DATA ❗️ </h3> 
     <div id="weather-container"></div> 
     
-    <div id="tempContainer"></div>
+    <div class="result" id="tempContainer"></div>
     
         
     <script src="src/index.js"></script>
