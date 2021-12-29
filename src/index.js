@@ -1,11 +1,14 @@
 //----------City ELEMENT
-function showInput() {
-  document.getElementById('display').innerHTML = 
-  document.getElementById("user_input").value;
+const cityChange = () => {
+  document.getElementById('display').innerHTML = "Today in ... " +
+  document.getElementById("cityName").value;
 }
-const changeCity = () => {
-  const cityName = document.getElementById("city").onsubmit;
-  document.getElementById("cityContainer").innerHTML = "Today in " + cityName;
+
+// function resetData(){  
+//   document.getElementById("cityName").reset(); 
+// }
+const resetCity = () => {
+  document.getElementById('display').innerHTML = "Please Input City";
 }
 
 //----------Sky ELEMENT

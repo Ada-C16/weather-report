@@ -11,9 +11,10 @@
     <h1 class="header"> ☀️🌧 ❄️ Weather Report ❄️ 🌧☀️ </h1>   
     <form>
         <label><b>Enter City</b></label>
-        <input type="text" name="message" id="user_input">
+        <input type="text" id="cityName">
     </form>
-    <input type="submit" onclick="showInput();"><br/>
+    <input type="submit" onclick="cityChange();">
+    <input type = "button" value = "Reset" onClick = "resetCity()">
     
 
     <h2> The sky is...</h2>
@@ -36,9 +37,8 @@
     </section> 
         
     <label>Your City: </label>
-    <p><span id='display'></span></p>    
-    <div class="result padded" id="cityContainer"> ❗️ PENDING CITY DATA ❗️ </div>
-
+    <p><span class="result padded" id='display'></span></p>    
+    
     <div class="result padded" id="skyContainer"> ❗️ PENDING SKY DATA ❗️ </div>
 
     <div class="result padded" id="tempCount"> ❗️ PENDING WEATHER DATA ❗️ </div>
