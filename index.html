@@ -5,8 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="./styles/index.css" rel="stylesheet"/> <!--link html to .css file-->
 </head>
 <body>
+    <h1 class="header"> ☀️🌧 ❄️ Weather Report ❄️ 🌧☀️ </h1>
+        
+    <section> 
+        
+    </section> 
     
+    <h2> The Sky in</h2>
+    <div id="cityContainer"></div>
+    <section >   
+        <div class="dropdown">
+            <button onclick="skyOptions()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#"> ☄️ 🐉 ☀️ 🐉 ☄️</a>
+                <a href="#"> 🌈 ☁️ ☀️ ☁️ 🦅</a>
+                <a href="#"> ☁️ ☁️ ⛅️ ☁️ ☁️ </a>
+                <a href="#"> 🌧 💦 🌧 💦 🌧 </a>
+                <a href="#"> 🌨 ❄️ 🌨 ❄️ 🌨</a>
+            </div>
+        </div>
+    </section>
+    
+    
+    <h2> The Weather in {cityName} is...</h2> 
+    <section >  
+        <button class="warmer" id="addTempButton"> It's Getting Warmer</button>
+        <button class="colder" id="subTempButton"> It's Getting Cooler</button>
+    </section> 
+    <h3 id="tempCount"> ❗️ PENDING DATA ❗️ </h3> 
+    <div id="weather-container"></div> 
+    
+    <div id="tempContainer"></div>
+    
+        
+    <script src="src/index.js"></script>
 </body>
 </html>
