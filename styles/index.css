@@ -7,6 +7,10 @@ header {
     color: white;
 }
 
+p {
+    font-weight: bold;
+}
+
 section {
     background-color:white;
 }

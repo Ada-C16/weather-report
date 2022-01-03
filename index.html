@@ -8,25 +8,38 @@
     <link href="styles/index.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- page header -->
-    <header id="page-header">
-        <h1>Weather Report</h1>
-    </header>
-    <!-- city section -->
-    <section id="city-section">
-        <h1 class="section-heading">City</h1>
-    </section>
-    <!-- temperature section -->
-    <section id="temperature-section">
-        <h1 class="section-heading">Temperature</h1>
-    </section>
-    <!-- sky section -->
-    <section id="sky-section">
-        <h1 class="section-heading">Sky</h1>
-    </section>
-    <!-- landscape section -->
-    <section id="landscape-section">
-        <h1 class="section-heading">Weather Garden</h1>
-    </section>
+    <main>
+        <!-- page header -->
+        <header id="page-header">
+            <h1>Weather Report</h1>
+        </header>
+
+        <!-- city section -->
+        <section id="city-section">
+            <h1 class="section-heading">City</h1>
+        </section>
+
+        <!-- temperature section -->
+        <section id="temperature-section">
+            <h1 class="section-heading">Temperature</h1>
+            <button id="incTemp">🔼</button>
+            <button id="decTemp">🔽</button>
+            <h2 id="temp"></h2>
+        </section>
+
+        <!-- sky section -->
+        <section id="sky-section">
+            <h1 class="section-heading">Sky</h1>
+        </section>
+        
+        <!-- landscape section -->
+        <section id="landscape-section">
+            <h1 class="section-heading">Weather Garden</h1>
+            <section id="landscape-container">
+
+            </section>
+        </section>
+    </main>
+    <script src="src/index.js" type="text/javascript"></script>
 </body>
 </html>
