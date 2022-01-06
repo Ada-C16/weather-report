@@ -1,7 +1,11 @@
 body{
     background-color: antiquewhite;
 }
-
+.boxed{
+    border: 1px solid black ;
+    padding: 10px ;
+    border-radius: 10px;
+}
 .column {
     display: flex;
     flex-direction: column;
@@ -22,4 +26,7 @@ body{
 
 .v-center {
     align-items: center;
+}
+#gardenSection {
+    padding-top: 40px;
 }
