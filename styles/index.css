@@ -1,0 +1,32 @@
+body{
+    background-color: antiquewhite;
+}
+.boxed{
+    border: 1px solid black ;
+    padding: 10px ;
+    border-radius: 10px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.evenly-spaced {
+    justify-content: space-evenly;
+}
+
+.h-center {
+    justify-content: center;
+}
+
+.v-center {
+    align-items: center;
+}
+#gardenSection {
+    padding-top: 40px;
+}
