@@ -1,0 +1,175 @@
+h2 {
+    margin: 0 auto 2rem auto;
+    }
+    
+    body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 1rem;
+    
+    font-family: "Marker Felt", fantasy;
+    font-size: 18px;
+    background: linear-gradient(rgb(47, 163, 142), rgb(116, 48, 143));
+    margin: 2rem;
+    }
+    
+    .header_class {
+    color: white;
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    margin: 2rem auto 3rem 0;
+    }
+    
+    .header_class > h1 {
+    margin-right: 2rem;
+    font-size: 3em;
+    }
+    
+    .hdr_sl{
+    font-size:2rem;
+    }
+    
+    .header_cityName {
+    font-style: oblique;
+    font-size: 2.5rem;
+    }
+    
+    .temp_sq {
+    border-radius: 6px;
+    padding: 2rem;
+    background-color: white;    
+    grid-row: 2;
+    color: #3ee3b1;
+    }
+    
+    .cielo_sq {
+    border-radius: 6px;
+    padding: 2rem;
+    background-color: white; 
+    grid-row: 3;
+    color: #3ee3b1;
+    }
+    
+    .cit_sq {
+    border-radius: 6px;
+    padding: 2rem;
+    background-color: white; 
+    grid-row: 4;
+    color: #3ee3b1;
+    }
+    
+    .lj_sq {
+    grid-row: 2 / span 3;
+    grid-column: 2;
+    text-align: center;
+    align-self: center;
+    border-radius: 6px;
+    padding: 2rem;
+    background-color: white; 
+    grid-row: 2;
+    grid-column: 2;
+    }
+    
+    .temp_cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-content: center;
+    }
+    
+    .tempValue {
+    font-size: 3rem;
+    margin-left: 1.5rem;
+    padding-right: 1rem; 
+    margin-right: 1.5rem;
+    display: inline-block;
+    margin-top: 5%;
+    }
+    
+    .temperature_btn {
+    display: inline-block;
+    }
+    
+    #lj_name{
+    color:rgb(237, 131, 237);
+    display: block;
+    font-size: 1.5em;
+    }
+    
+    .lj_cont {
+    min-height: 200px;
+    max-width: fit-content;
+    margin: auto;
+    padding: 2rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    border-radius: 6px;
+    font-size: 2em;
+    }
+    
+    #lj_cielo{
+    font-size: 2rem;
+    }
+    #lj_fl{
+    margin-top: 4rem;
+    font-size: 2rem;
+    }
+    
+    
+    .city_name_reset_button {
+    border: 0;
+    background-color: #e89bde;
+    color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    font-family: "Marker Felt", sans-serif;
+    display: flex;
+    flex-direction: vertical;
+    margin-top: 1.5rem;
+    }
+    
+    
+    .red {
+    color: red;
+    }
+    
+    .orange {
+    color: orange;
+    }
+    
+    .yellow {
+    color: gold;
+    }
+    
+    .yellow-green {
+    color: yellowgreen;
+    }
+    
+    .green {
+    color: green;
+    }
+    
+    .teal {
+    color: teal;
+    }
+    
+    .cloudy {
+    background-color: rgba(211, 211, 211, 0.897);
+    }
+    
+    .sunny {
+    background-color: rgb(223, 252, 252);
+    }
+    
+    .rainy {
+    background-color: rgb(82, 198, 236);
+    }
+    
+    .snowy {
+    background-color: rgb(66, 140, 238);
+    }

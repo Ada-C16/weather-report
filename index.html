@@ -5,8 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet">
 </head>
 <body>
+    <header class="header_class">
+        <h1 id="main_header">Today's forecast is... </h1>
+        <span class="hdr_sl"> Escape to...</span>
+            <span> 💸 </span>
+            <span id="header_cityName" class="header_cityName"> Steel City</span>
+            <span> 💸 </span>
+    </header>
     
+    <section class="temp_sq">
+        <h2>Temp.(℉)</h2>
+        <div class="temp_cont">
+            <div class="temperature_btn">
+                <button id="increaseTemp">⬆</button>
+                <button id="decreaseTemp">⬇</button>
+            </div>
+            <span id="tempVal_id" class="tempValue"> 70</span>
+        </div>
+        
+    </section>
+    <section class="cielo_sq">
+        <h2>Sky's the limit!</h2>
+        <select id="sky_selection">
+            <option>Sunny</option>
+            <option>Cloudy</option>
+            <option>Rainy</option>
+            <option>Snowy</option>
+        </select>
+    </section>
+    <section class="cit_sq">
+        <h2>My City Is:</h2>
+        <input type="text" value="Steel City" id="city_name_input">
+        <button id="city_name_reset" class="city_name_reset_button">🎵Black and Yellow🎵</button>
+    </section>
+    <section class="lj_sq">
+        <h2 id="lj_name">Concrete Jungle</h2>
+        <div id="lj_cont" class="lj_content_sunny">
+            <div id="lj_cielo">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</div>
+            <div id="lj_empty">              </div>
+            <div id="lj_fl">🐸🌷🌈🌊👒🥕🌼🍓</div>
+        </div>
+    </section>
+    <script src="src/index.js"></script>
 </body>
 </html>
