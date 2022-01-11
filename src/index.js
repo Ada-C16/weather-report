@@ -1,0 +1,96 @@
+// change the scene depending on the sky
+// make a reset city name button
+// add a "landscape" element
+
+const state = {
+  clickCount: 50,
+};
+
+const colors = (clicks, text) => {
+  if (clicks < 50) {
+    text.style.color = 'blue';
+  } else if (clicks < 59) {
+    text.style.color = 'green';
+  } else if (clicks < 69) {
+    text.style.color = 'pink';
+  } else if (clicks < 79) {
+    text.style.color = 'orange';
+  } else {
+    text.style.color = 'red';
+  }
+};
+
+const landscape = (clicks, container) => {
+  if (clicks < 50) {
+    container.textContent = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+  } else if (clicks < 59) {
+    container.textContent = '🍁🍃🍂🍁🍃🍂🍁🍃🍂🍁🍃🦙';
+  } else if (clicks < 69) {
+    container.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
+  } else if (clicks < 79) {
+    container.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+  } else {
+    container.textContent = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
+  }
+};
+const increaseClickCount = () => {
+  const displayTemp = document.getElementById('temp');
+  const landscapeDisplay = document.getElementById('landscape-scene');
+  state.clickCount += 1;
+  displayTemp.textContent = state.clickCount;
+  console.log('up');
+  colors(state.clickCount, displayTemp);
+  landscape(state.clickCount, landscapeDisplay);
+};
+
+const decreaseClickCount = () => {
+  const displayTemp = document.getElementById('temp');
+  const landscapeDisplay = document.getElementById('landscape-scene');
+  state.clickCount -= 1;
+  displayTemp.textContent = state.clickCount;
+  console.log('down');
+  colors(state.clickCount, displayTemp);
+  landscape(state.clickCount, landscapeDisplay);
+};
+
+const displayCity = () => {
+  console.log('test');
+  document.getElementById('city-title').textContent =
+    document.getElementById('city-name').value;
+  return false;
+};
+
+const removeCity = () => {
+  console.log('test');
+  document.getElementById('city-title').textContent = 'City';
+  return false;
+};
+
+const skyChange = () => {
+  let skyDisplay = document.getElementById('sky-scene');
+  let currentSky = document.getElementById('sky').value;
+  if (currentSky === 'sunny') {
+    skyDisplay.textContent = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️☁️ ☁️ ☁️ ☀️ ☁️';
+  } else if (currentSky === 'rainy') {
+    skyDisplay.textContent = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧';
+  } else if (currentSky === 'snowy') {
+    skyDisplay.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨';
+  } else if (currentSky === 'cloudy') {
+    skyDisplay.textContent = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️';
+  }
+};
+
+const registerEventHandlers = () => {
+  const tempUp = document.getElementById('up');
+  const tempDown = document.getElementById('down');
+  const cityPopulate = document.getElementById('submit');
+  const cityRemove = document.getElementById('reset');
+  const skySelect = document.getElementById('sky');
+  tempUp.addEventListener('click', increaseClickCount);
+  tempDown.addEventListener('click', decreaseClickCount);
+  cityPopulate.addEventListener('click', displayCity);
+  cityRemove.addEventListener('click', removeCity);
+  sky.addEventListener('change', skyChange);
+};
+
+document.addEventListener('DOMContentLoaded', registerEventHandlers);
