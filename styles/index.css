@@ -36,7 +36,7 @@ h2 {
   
   .header__city-name::before,
   .header__city-name::after {
-    content: "✨";
+    content: "👋";
   }
   
   .temperature__section,

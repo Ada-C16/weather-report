@@ -50,14 +50,12 @@ const updateSky = () => {
         skyColor = "snowy";
     }
     skyContainer.textContent = sky;
-    // const gardenContent = document.getElementById("gardenContent");
-    // gardenContent.classList = `garden__content ${skyColor}`;
 };
 
 const updateScenery = (currentTemp) => {
     const sceneryContainer = document.getElementById("scenery");
     let scenery = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
-    if ( currentTemp >= 80) {
+    if (currentTemp >= 80) {
         scenery = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
     } else if (currentTemp >= 70) {
         scenery = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
@@ -104,20 +102,8 @@ const updateTemp = (tempFarenheit) => {
     updateSkyBackground(tempFarenheit);
     updateScenery(tempFarenheit);
 }
-// const increaseTemp = () => {
-//     tempValue += 1;
-//     updateTemp(tempValue);
-// };
 
-// const decreaseTemp = () => {
-//     tempValue -= 1;
-//     updateTemp(tempValue);
-// };
-
-// document.addEventListener("DOMcontentLoaded", updateTempIncrease);
-// document.addEventListener("DOMcontentLoaded", updateTempDecrease);
 const registerEventHandlers = () => {
-    // updateTemp(tempValue);
 
     const increaseTempControl = document.getElementById("increaseTemp");
     increaseTempControl.addEventListener("click", updateTempIncrease);
