@@ -1,3 +1,5 @@
+<!-- purely the layout, structure, ie main header, then city then temperature -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,16 +13,22 @@
     <section class="main_header">
         <h1>Weather Report</h1>
         <h3>For the wonderful city</h3>
+            <span id="headerCityName" class="header__city-name"></span>
     </section>
-    <section class="temperature">
+    <section class="city-name__section snowy">
+        <h2>City Name</h2>
+        <input type="text" id="cityNameInput" value="Denver" />
+        <button id="cityNameReset" class="city-name__reset-btn">Reset</button>
+    </section>
+    <section class="temperature__section">
         <h2>Temperature</h2>
-        <div class="temp_content">
+        <div class="temp_content" id="temperature_background">
             <span id="increaseTemp">⬆️</span>
             <span id="decreaseTemp">⬇️</span>
             <span id="tempFarenheit">70</span>
         </div>
     </section>
-    <section class="sky__section">
+    <section class="sky__section" id="sky_background">
         <h2>Sky</h2>
         <select id="skySelect">
             <option>Sunny</option>
@@ -38,7 +46,7 @@
     <section class="scenery">
         <h2>Scenery</h2>
         <div class="scenery_content">
-            <div id="landscape"></div>
+            <div id="scenery"></div>
         </div>
     </section>
     <script src="src/index.js"></script>
