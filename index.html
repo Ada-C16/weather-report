@@ -4,9 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Report</title>
+    <title>SoCal Weather Report</title>
+    <link rel="stylesheet" href="styles/index.css" />
 </head>
 <body>
+    <section id="titleZone">
+        <h1>☀️<span id="locationTitle">SoCal</span> Weather🌬 Report🌦</h1>
+    </section>
+
+    <section id="locationsZone">
+
+        <input type="text" id="nameThisPlaceText" name="nameOfPlace" placeholder="Name this place...">
+        or 
+        <select name="locations" class="locations">
+            <!-- <optgroup label="SoCal Locations" id="soCalLocations"> -->
+                <option id="first_option" value="" disabled selected hidden>choose a location...</option>
+                <option id="musclebeach" value="Muscle Beach🏋️">Muscle Beach</option>
+                <option value="Disneyland🎢">Disneyland</option>
+                <option id="lax" value="LAX🛫">LAX</option>
+            <!-- </optgroup> -->
+        </select>
+    </section>
+<!-- add some CSS here so the buttons look cool! -->
+    <section id="tempZone">
+        <h2 id="temperature">It's <span id="degrees">72</span>° today</h2>
+        <section id="tempButtons">
+            <button id="colderButton">colder</button>
     
+            <button id="hotterButton">hotter</button>
+        </section>
+    </section>
+
+    <section id="skysZone">
+        <select name="skys" id="skys" class="skys">
+            <optgroup label="Glorious Skies">
+                <option id="first_option" value="" disabled selected hidden>choose the weather...</option>
+                <option id="sunny">sunny</option>
+                <option id="stormy">stormy</option>
+                <option id="windy">windy</option>
+                <option id="clearsky">clear sky</option>
+            </optgroup>
+        </select>
+    </section>
+
+    <section id="landscapeZone">
+        <section id="landscapeDisplay">
+            <section id="landmark">
+                <img src="assets/left_palm.gif" id="left_palm">
+                <img src="assets/AngelyneNFT.gif" id="angelyne">
+                <img src="assets/right_palms.gif" id="left_palm">
+            </section>
+            <section id = "live">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/OWbI6WtlI-k?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+            <section id="cloud">
+            </section>
+
+        </section>
+    </section>
+
+    <button id="viewLiveButton">View LIVE!</button>
+    <button id="endLiveButton">End LIVE!</button>
+    <!-- reset  -->
+    <section id="reset">
+        <input type="button" id="resetButton" value="RESET"> 
+    </section>
+
+    <script src="src/index.js"></script>
 </body>
 </html>

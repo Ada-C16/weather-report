@@ -1,0 +1,98 @@
+body{
+    /* background: lightsteelblue; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#landscapeDisplay{
+    background: lightskyblue;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 325px;
+    width: 570px;
+    align-items: center;
+    font-size: xx-large;
+}
+#landmark{
+    position:absolute;
+}
+
+#lax_plane{
+    width: 500px;
+}
+
+#mickey{
+    height:250px;
+}
+
+#angelyne{
+    width:200px;
+}
+
+#muscle_beach{
+    height: 320px;
+}
+
+#cloud{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    position:absolute;
+    opacity: .6;
+}
+
+#sunny_cloud, #stormy_cloud{
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 25px; */
+    height:300px
+}
+
+#windy_cloud {
+    height:300px;
+    width: 570px; 
+}
+
+#tempZone {
+    border-style: dotted;
+    border-width: thin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 1px;
+    padding-bottom:10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+}
+
+#tempButtons{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+#skys{
+    margin: 10px;
+}
+
+#viewLiveButton{
+    margin: 10px;
+}
+
+#live{
+    visibility: hidden;
+}
+
+#viewLiveButton{
+    visibility: visible;
+}
+
+#endLiveButton{
+    visibility: hidden;
+}
