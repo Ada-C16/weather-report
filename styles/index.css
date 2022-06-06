@@ -10,7 +10,7 @@ header, #weather_body, #change_temp, #change_sky, #change_city{
 #city_name_header {
     display: flex;
     justify-content: center;
-    margin: 50px 575px;
+    margin: 50px 400px;
     border-radius: 50px;
     padding: 0px 15px;
     font-size: smaller;
