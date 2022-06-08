@@ -12,6 +12,13 @@ body {
     margin: 50px 400px;
     color: white;
 }
+#change_city {
+    margin: auto;
+    text-align: center;
+    border-radius: 35px;
+    width: 350px;
+    padding: 1.5%;
+}
 
 #weather_body {
     margin: 35px 175px;
@@ -29,12 +36,11 @@ body {
     justify-content: space-between;
 }
 
-#change_temp, #change_sky, #change_city {
-    border-radius: 50%;
+#change_temp, #change_sky {
     text-align: center;
-    width: 200px;
-    height: 175px;
-    font-size: 25px;
+    border-radius: 35px;
+    width: 350px;
+    padding: 1.5%;
     
 }
 
@@ -48,17 +54,6 @@ body {
     grid-row-start: 1;
     grid-column: 1 / span 2;
 }
-/* #lower_temp {
-    grid-row-start: 2;
-    grid-column-start: 1;
-}
-
-#temp_display {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row: 1 / span 2;
-    
-} */
 
 #temp_buttons {
     margin: -20px;
