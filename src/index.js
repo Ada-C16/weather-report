@@ -48,85 +48,75 @@ const createTempListeners = () => {
 
   upArrow.addEventListener('click', function () {
     tempNum.textContent = (parseInt(tempNum.textContent) + 1).toString() + " °F";
+    updateFromTemp(tempNum.textContent);
   });
   downArrow.addEventListener('click', function () {
     tempNum.textContent = (parseInt(tempNum.textContent) - 1).toString() + " °F";
+    updateFromTemp(tempNum.textContent);
   });
 };
 
-city_name_header;
-change_widgets;
-const createGroundListener = () => {
-  document
-    .getElementById('temp_display')
-    .addEventListener('DOMSubtreeModified', function () {
-      if (document.getElementById('temp_display').innerHTML <= 44) {
-        document.getElementById('ground_emojis').innerHTML =
-          '🌲🎄🦭🦭🌲⛄️🌲🐻‍❄️⛄️🗻🐧🌲🎄';
-        document.getElementById('weather_body').style.backgroundColor =
-          'rgba(157, 236, 237, 0.701)';
-        document.getElementById('city_name_header').style.backgroundColor =
-          'rgba(157, 236, 237, 0.701)';
-        document.getElementById('change_temp').style.backgroundColor =
-          'rgba(157, 236, 237, 0.701)';
-        document.getElementById('change_sky').style.backgroundColor =
-          'rgba(157, 236, 237, 0.701)';
-        document.getElementById('change_city').style.backgroundColor =
-          'rgba(157, 236, 237, 0.701)';
-      } else if (document.getElementById('temp_display').innerHTML <= 59) {
-        document.getElementById('ground_emojis').innerHTML =
-          '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
-        document.getElementById('weather_body').style.backgroundColor =
-          'rgba(99, 165, 235, 0.81)';
-        document.getElementById('city_name_header').style.backgroundColor =
-          'rgba(99, 165, 235, 0.81)';
-        document.getElementById('change_temp').style.backgroundColor =
-          'rgba(99, 165, 235, 0.81)';
-        document.getElementById('change_sky').style.backgroundColor =
-          'rgba(99, 165, 235, 0.81)';
-        document.getElementById('change_city').style.backgroundColor =
-          'rgba(99, 165, 235, 0.81)';
-      } else if (document.getElementById('temp_display').innerHTML <= 69) {
-        document.getElementById('ground_emojis').innerHTML =
-          '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
-        document.getElementById('weather_body').style.backgroundColor =
-          'rgba(70, 184, 70, 0.701)';
-        document.getElementById('city_name_header').style.backgroundColor =
-          'rgba(70, 184, 70, 0.701)';
-        document.getElementById('change_temp').style.backgroundColor =
-          'rgba(70, 184, 70, 0.701)';
-        document.getElementById('change_sky').style.backgroundColor =
-          'rgba(70, 184, 70, 0.701)';
-        document.getElementById('change_city').style.backgroundColor =
-          'rgba(70, 184, 70, 0.701)';
-      } else if (document.getElementById('temp_display').innerHTML <= 79) {
-        document.getElementById('ground_emojis').innerHTML =
-          '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
-        document.getElementById('weather_body').style.backgroundColor =
-          'rgba(255, 234, 0, 0.701)';
-        document.getElementById('city_name_header').style.backgroundColor =
-          'rgba(255, 234, 0, 0.701)';
-        document.getElementById('change_temp').style.backgroundColor =
-          'rgba(255, 234, 0, 0.701)';
-        document.getElementById('change_sky').style.backgroundColor =
-          'rgba(255, 234, 0, 0.701)';
-        document.getElementById('change_city').style.backgroundColor =
-          'rgba(255, 234, 0, 0.701)';
-      } else if (document.getElementById('temp_display').innerHTML >= 80) {
-        document.getElementById('ground_emojis').innerHTML =
-          '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
-        document.getElementById('weather_body').style.backgroundColor =
-          'rgba(247, 153, 12, 0.701)';
-        document.getElementById('city_name_header').style.backgroundColor =
-          'rgba(247, 153, 12, 0.701)';
-        document.getElementById('change_temp').style.backgroundColor =
-          'rgba(247, 153, 12, 0.701)';
-        document.getElementById('change_sky').style.backgroundColor =
-          'rgba(247, 153, 12, 0.701)';
-        document.getElementById('change_city').style.backgroundColor =
-          'rgba(247, 153, 12, 0.701)';
-      }
-    });
+
+const updateFromTemp = (updatedTemp) => {
+  currentTemp = parseInt(updatedTemp);
+    if (currentTemp <= 44) {
+      document.getElementById('ground_emojis').textContent =
+        '🌲🎄🦭🦭🌲⛄️🌲🐻‍❄️⛄️🗻🐧🌲🎄';
+      document.getElementById('weather_body').style.backgroundColor =
+        'rgba(157, 236, 237, 0.701)';
+      document.getElementById('change_temp').style.backgroundColor =
+        'rgba(157, 236, 237, 0.701)';
+      document.getElementById('change_sky').style.backgroundColor =
+        'rgba(157, 236, 237, 0.701)';
+      document.getElementById('change_city').style.backgroundColor =
+        'rgba(157, 236, 237, 0.701)';
+    } else if (currentTemp <= 59) {
+      document.getElementById('ground_emojis').textContent =
+        '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
+      document.getElementById('weather_body').style.backgroundColor =
+        'rgba(99, 165, 235, 0.81)';
+      document.getElementById('change_temp').style.backgroundColor =
+        'rgba(99, 165, 235, 0.81)';
+      document.getElementById('change_sky').style.backgroundColor =
+        'rgba(99, 165, 235, 0.81)';
+      document.getElementById('change_city').style.backgroundColor =
+        'rgba(99, 165, 235, 0.81)';
+    } else if (currentTemp <= 69) {
+      document.getElementById('ground_emojis').textContent =
+        '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
+      document.getElementById('weather_body').style.backgroundColor =
+        'rgba(70, 184, 70, 0.701)';
+      document.getElementById('change_temp').style.backgroundColor =
+        'rgba(70, 184, 70, 0.701)';
+      document.getElementById('change_sky').style.backgroundColor =
+        'rgba(70, 184, 70, 0.701)';
+      document.getElementById('change_city').style.backgroundColor =
+        'rgba(70, 184, 70, 0.701)';
+    } else if (currentTemp <= 79) {
+      document.getElementById('ground_emojis').textContent =
+        '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
+      document.getElementById('weather_body').style.backgroundColor =
+        'rgba(255, 234, 0, 0.701)';
+      document.getElementById('change_temp').style.backgroundColor =
+        'rgba(255, 234, 0, 0.701)';
+      document.getElementById('change_sky').style.backgroundColor =
+        'rgba(255, 234, 0, 0.701)';
+      document.getElementById('change_city').style.backgroundColor =
+        'rgba(255, 234, 0, 0.701)';
+    } else if (currentTemp >= 80) {
+      document.getElementById('ground_emojis').textContent =
+        '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
+      document.getElementById('weather_body').style.backgroundColor =
+        'rgba(247, 153, 12, 0.701)';
+      document.getElementById('city_name_header').style.backgroundColor =
+        'rgba(247, 153, 12, 0.701)';
+      document.getElementById('change_temp').style.backgroundColor =
+        'rgba(247, 153, 12, 0.701)';
+      document.getElementById('change_sky').style.backgroundColor =
+        'rgba(247, 153, 12, 0.701)';
+      document.getElementById('change_city').style.backgroundColor =
+        'rgba(247, 153, 12, 0.701)';
+    };
 };
 
 const registerEventHandlers = () => {

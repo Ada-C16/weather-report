@@ -21,21 +21,17 @@
         <input type="text" id="user_input" name="user_input" placeholder="Munich" value=""></input>
         <button id="reset">Reset</button>
     </section>
-    <section id="widget_box">
-        <section id="weather_body" class="widgetbox_child">
-            <div id="sky_emojis">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</div>
-            <div id="ground_emojis">🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲</div>
-        </section>
-        <section id="change_widgets" class="widgetbox_child">
-            <section id="change_temp" class="changewidget_child">
+    <section id="widget_wrapper">
+        <section id="change_widgets">
+            <section id="change_temp">
                 <h4>Temp</h4>
                 <span id="temp_buttons">
                     <button id="raise_temp">raise temp</button>
                     <button id="lower_temp">lower temp</button>
                 </span>
-                <span id="temp_display">55 <e id="degrees">&#176;F</e></span>   
+                <span id="temp_display">55 &#176;F</e></span>   
             </section>
-            <section id="change_sky" class="changewidget_child">
+            <section id="change_sky">
                 <h4>Sky</h4>
                 <select id="sky_dropdown">
                     <option id="dropdown_sunny" value="sunny">Sunny</option>
@@ -44,6 +40,11 @@
                     <option id="dropdown_snowy" value="snowy">Snowy</option>
                 </select>
             </section>
+        </section>
+        <section id="weather_body">
+            <div id="sky_emojis">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</div>
+            <div id="ground_emojis">🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲</div>
+        </section>
     </section>
     <script src="src/index.js" type="text/javascript"></script>
     <footer>coded by Khandice Schuhmann &hearts;</footer>
