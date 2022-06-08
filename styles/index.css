@@ -49,33 +49,40 @@ body {
     border-radius: 35px;
     width: 450px;
     margin: auto;
-    /* padding: 1.5%; */
+    padding: 1.5%;
     
 }
 
-/* 
-#change_temp{
+#temp_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    margin:  15px 40px;
 }
 
-#change_temp h4 {
-    grid-row-start: 1;
-    grid-column: 1 / span 2;
+#raise_temp {
+    grid-column: 1;
+    grid-row: 1;
+    width: 150px;
 }
 
-#temp_buttons {
-    margin: -20px;
+#lower_temp {
+    grid-column: 1;
+    grid-row: 2;
+    width: 150px;
 }
 
-#temp_buttons button {
-    width: 20px;
-    border: none;
-    display: block;
-    align-self: end;
+#temp_diplay {
+    grid-column: 2;
+    grid-row: 1 / 2;
+    font-size: 3em;
 }
-/*  */
+
+#change_sky {
+    height: 125px;
+}
+
+
 #sky_dropdown {
     width: 150px;
 } 
