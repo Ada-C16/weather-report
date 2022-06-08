@@ -13,7 +13,8 @@ const updateCityListener = () => {
 const createResetListener = () => {
   const resetButton = document.getElementById('reset');
   resetButton.addEventListener('click', function () {
-    document.getElementById('city_name').innerHTML = 'My Favorite City 😌';
+    document.getElementById('city_name').textContent = 'Munich';
+    document.querySelector('#user_input').value = ""
   });
 };
 
