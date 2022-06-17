@@ -4,9 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zandra Nguyen">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <h1><span id="cityName">Seattle</span> Weather Report</h1>
+    </header>
+        <main id="main-container">
+        <section id="temp-container" class="background">
+            <h2>Temperature</h2>
+            <img src="assets/images/temp_clipart.jpeg" alt="thermometer clipart" width="150px" height="150px">
+            <div id="temp-arrow">
+                <span id="decreaseArrow">◀</span>
+                <span id="increaseArrow">▶</span>
+            </div>
+            <div id="temp-number"></div>
+            <p><span id='date-time'></span></p>
+        </section>
+        <section id="sky-container" class="background">
+            <h2>Sky</h2>
+            <img id="skyImage" src="assets/images/sky_clipart3.png" alt="cloudy clipart" width="170px" height="170px">
+            <select id="selectSky">
+                <option value="cloudy">Cloudy</option>
+                <option value="sunny">Sunny</option>
+                <option value="rainy">Rainy</option>
+                <option value="snowy">Snowy</option>
+            </select>
+        </section>
+        <section id="city-container" class="background">
+            <h2>City</h2>
+            <img id="cityImage" src="assets/images/city_clipart.jpeg" alt="city clipart" width="170px" height="170px">
+            <input id="cityNameInput" class="input-margin"type="text" value="">
+            <button id="resetCityNameBtn" class="input-margin">reset</button>
+        </section>
+        <section id="layout-container" class="background">
+            <h2>Layout</h2>
+            <div id="layout-image-container"><img id="layout-image"src="assets/images/layout_sunny1.jpeg" height="170px" width="170px" alt="sunset"></div>
+        </section>
+
+    </main>
+	<footer>
+        <p>Copyright © 2021</p>
+    </footer>
+    <script src="src/index.js"></script>
 </body>
 </html>
