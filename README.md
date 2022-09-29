@@ -1,38 +1,30 @@
 # Weather Report
 
-## Skills Assessed
 
-- Structuring content in HTML
-- Applying styles with CSS
-- Using variables
-- Creating functions
-- Manipulating the DOM
-- Handling events
-- Using Git
-- Designing an intentional user experience
+## Description
 
-## Goal
+Interactive weather app that returns an illustration of a landscape based on user input.
 
-Our goal is to create a fun, small weather app that focuses on displaying the weather.
+Showcases Front-end expertise and strong sense of aesthetics.
 
-Instead of getting weather data from a data source, we will set the weather using user interaction.
-
-
-## JavaScript Requirements
+## Technologies
 
 This project was created with vanilla JavaScript
 
 
-## Wave 2: Increase and Decrease Temperature
-
 ### Features
 
 A numeric temperature is  displayed. This temperature can be in either Fahrenheit or Celsius degrees.
+Increase and Decrease Temperature
 
-1. An element that increases the temperature by one degree on click
-2. An element that decreases the temperature by one degree on click
+1.Button that increases the temperature by one degree on click
+2.Button that decreases the temperature by one degree on click
+3.Drop down menu that allows you to switch the icons on the weather display
+4.Allows user to switch the title based on user input
 
-#### Temperature Ranges Change Text Color
+---
+
+#### SPECIFICATIONS
 
 Depending on what temperature it is, either:
 
