@@ -1,4 +1,4 @@
-# Weather Report [Link](https://miffybruna.github.io/weatherReport/ "Weather Report")
+# Weather Report- [[Link]](https://miffybruna.github.io/weatherReport/ "Weather Report")
 ## Description
 
 Interactive weather app that returns an illustration of a landscape based on user input.
