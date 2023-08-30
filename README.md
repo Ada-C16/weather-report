@@ -16,8 +16,11 @@ A numeric temperature is  displayed. This temperature can be in either Fahrenhei
 Increase and Decrease Temperature
 
 1.Button that increases the temperature by one degree on click
+
 2.Button that decreases the temperature by one degree on click
+
 3.Drop down menu that allows you to switch the icons on the weather display
+
 4.Allows user to switch the title based on user input
 
 ---
