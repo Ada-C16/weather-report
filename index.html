@@ -5,8 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet" />
 </head>
-<body>
-    
+<body class="container">
+    <section id="title" class="card">
+        <h1 id="title-text" class="text">Weather Report</h1>
+    </section>
+    <section id="sky-display" class="card"></section>
+    <section id="city-block" class="card">
+        <h2 class="text">Coming to you live from</h2>
+        <p id="city-display" class="text">Benicia, CA</p>
+    </section>
+    <section id="city-input-block" class="card">
+        <section id= "city-input-block-inner">
+            <h2 class="text">Where ya at?</h2>
+            <input id="city-input" value="Benicia, CA">
+        </section>
+        <div id="reset-button">
+            <button id="city-reset">Reset</button>
+        </div>
+    </section>
+    <section id="temperature-block" class="card">
+        <h2 id="temperature-title" class="text">Temperature</h2>
+        <section id="temperature-interact" class="temp-card-container">
+            <button id="increase-temp" class="temp-button">
+                <img src="assets/up.png" height="30px" width="30px"/>
+            </button>
+            <p id="temperature-display" class="text">72°</p>
+            <button id="decrease-temp" class="temp-button">
+                <img src="assets/down.png" height="30px" width="30px"/>
+            </button>
+        </section>
+    </section>
+    <section id="sky-select-block" class="card">
+        <h2 class="text">Choose your sky:</h2>
+        <select id= "sky-selector" name="skies">
+            <option>Sunny</option>
+            <option>Cloudy</option>
+            <option>Rainy</option>
+            <option>Snowy</option>
+        </select>
+    </section>
+    <section id="landscape-block" class="card"></section>
+    <script src="src/index.js" type="text/javascript"></script>
 </body>
 </html>

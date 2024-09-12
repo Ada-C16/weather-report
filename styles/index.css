@@ -1,0 +1,231 @@
+
+body {
+    background-color: #A6ACCD;
+    padding: 10px 50px;
+}
+
+button {
+    padding: 2px;
+    background-color: #676E95;
+}
+
+.card {
+    /* border-style: solid; */
+    /* border-color: coral; */
+    background-color: #292D3E;
+    border-radius: 20px;
+    padding: 0px 30px 0px 30px;
+    /* box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2); */
+}
+
+.container {
+    display: grid;
+    grid-template: 2fr 2fr 3fr 2fr / 1fr 1fr 1fr;
+    /* align-content: space-around;
+    justify-content: space-between; */
+    row-gap: 20px;
+    column-gap: 50px; 
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    /* color: #eeffff; */
+    color: #676E95;
+    text-align: left;
+    font-style: italic;
+}
+
+
+/*------------------------------------------
+------------ Title Card --------------------
+------------------------------------------*/
+
+#title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: transparent;
+    /* border: solid;
+    border-color: cadetblue; */
+    /* justify-content:stretch; */
+    display: flex;
+    height: 100%;
+}
+
+#title-text {
+    font-size: 30pt;
+    font-style: italic;
+    text-align: left;
+    color: #292D3E;
+    /* border-color: coral;
+    border-style: solid; */
+    /* display: inline-block; */
+    align-self: flex-end;
+}
+
+/*------------------------------------------
+------------ Sky Image Card ----------------
+------------------------------------------*/
+
+#sky-display {
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+
+#sky-display {
+    background-image: url(/imgs/sky-sunny.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+/*------------------------------------------
+------------ City Text Card ----------------
+------------------------------------------*/
+
+#city-block {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding-left: 30px;
+}
+
+#city-display {
+    font-size: 20pt;
+    font-style: italic;
+    font-weight: bolder;
+    color: #dcdff0;
+}
+
+/*------------------------------------------
+------------ City Input Card ---------------
+------------------------------------------*/
+
+#city-input-block {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#city-input-block-inner{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#city-input {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #dcdff0;
+    color: #292D3E;
+    font-size: 14pt;
+    border: 0;
+}
+
+#city-input:hover {
+    background-color: #cccfe4;
+}
+
+#city-reset {
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 12pt;
+    color: #202331;
+    background-color: #676E95;
+    border: 0;
+}
+
+#city-reset:hover {
+    background-color: #82aaff;
+}
+
+#city-reset:active {
+    transform: translateY(2px);
+}
+
+/*------------------------------------------
+----------- Temperature Card ---------------
+------------------------------------------*/
+
+#temperature-block {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    padding: 0px 30px 0px 30px;
+}
+
+.temp-card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* border-color: #c792ea;
+    border-style: solid; */
+}
+
+/*#temperature-title {
+    font-size: 25pt;
+    border-color: #c3e88d;
+    border-style: solid;
+}*/
+
+.temp-button {
+    border: none;
+    background-color: transparent;
+}
+
+.temp-button:hover {
+    transform: scale(1.1);
+}
+
+.temp-button:active {
+    transform: translateY(2px);
+}
+
+#temperature-display {
+    /* border-color: #c3e88d;
+    border-style: solid; */
+    font-size: 55pt;
+    font-weight:bolder;
+    font-style: normal;
+    color: #f78c6c;
+}
+
+/*------------------------------------------
+------------ Sky Select Card ---------------
+------------------------------------------*/
+
+#sky-select-block {
+    grid-column: 3/4;
+    grid-row: 2/4;
+}
+
+#sky-selector {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    background-color: #dcdff0;
+    color: #292D3E;
+    font-size: 14pt;
+}
+
+/* #sky-selector:hover{
+
+} */
+
+/*------------------------------------------
+------------ Landscape Card ----------------
+------------------------------------------*/
+
+#landscape-block {
+    grid-column: 1/4;
+    grid-row: 4/6;
+}
+
+#landscape-block {
+    background-image: url(/imgs/landscape-default.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+
+
