@@ -5,8 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header id="city_name_header">
+        <h1>Weather Report for:
+        <span id="city_name">Munich</span>  
+        </h1> 
+    </header>
+    <section id="change_city">
+        <label for="user_input">City:</label>
+        <input type="text" id="user_input" name="user_input" placeholder="Munich" value=""></input>
+        <button id="reset">Reset</button>
+    </section>
+    <section id="widget_wrapper">
+        <section id="change_widgets">
+            <section id="change_temp">
+                <h4>Temp</h4>
+                <div id="temp_wrapper">
+                    <button id="raise_temp">raise temp</button>
+                    <button id="lower_temp">lower temp</button>
+                    <div id="temp_display">55 &#176;F</div>   
+                </div>
+            </section>
+            <section id="change_sky">
+                <p>Sky</p>
+                <select id="sky_dropdown">
+                    <option id="dropdown_sunny" value="sunny">Sunny</option>
+                    <option id="dropdown_cloudy" value="cloudy">Cloudy</option>
+                    <option id="dropdown_rainy" value="rainy">Rainy</option>
+                    <option id="dropdown_snowy" value="snowy">Snowy</option>
+                </select>
+            </section>
+        </section>
+        <section id="weather_body">
+            <div id="sky_emojis">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</div>
+            <div id="ground_emojis">🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲</div>
+        </section>
+    </section>
+    <script src="src/index.js" type="text/javascript"></script>
+    <footer>coded by Khandice Schuhmann &hearts;</footer>
 </body>
 </html>
