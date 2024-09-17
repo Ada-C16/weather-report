@@ -1,0 +1,171 @@
+
+
+
+body{
+  background-color: #ffe7e7;
+}
+h1{
+  font-family: Snell Roundhand, cursive;
+  font-size: 40px;
+}
+h1, h2 {
+  text-align: center;
+  font-weight: bold;
+  color: pink;
+  background: hsla(0, 27%, 94%, 0.308);;
+  backdrop-filter: blur(30px);
+  border: hidden;
+  border-radius: 10px;
+  width:300px;
+  padding: 10px;   
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.round {
+  border: hidden;
+  border-radius: 10px;
+  padding: 10px;   
+}
+
+/* 
+CITY 
+*/
+
+.frosted {
+  background: rgba(243, 234, 234, 0.308);;
+  backdrop-filter: blur(30px);
+}
+
+#city-container {
+  display: flex;
+  margin: 10px auto;
+  width: 30vw;
+}
+
+#city-name-container {
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#city-name {
+  text-align: center;
+  background: transparent;
+  color: black;
+  border: hidden;
+}
+
+#reset-city-button {
+  border: hidden;
+  border-radius: var(--curved-rad);
+  padding: var(--curved-padding);
+  
+}
+
+
+/*
+LANDSCAPE
+*/
+
+#playground {
+  display: flex;
+  padding: 10vh;
+  height: 350px;
+  position:relative;
+  
+}
+
+#sky-container {
+  flex: 20;
+  
+}
+
+#landscape {
+  flex: 80;  
+  display: flex;
+  justify-content: center;
+  border:2px solid white;
+}
+
+#landscape-text {
+  
+  font-size: 50px;
+  letter-spacing: 4px;
+  align-self: flex-end;
+}
+
+
+/* 
+SKY BOX
+*/
+
+#sky-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 10px;
+  
+} 
+
+.sky-color {
+  flex: 1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+   /* // hover behavior
+ */
+}
+
+.Fall-But-Make-It-Pink {
+  background-image: url(https://i.gifer.com/5onc.gif);
+  
+}
+
+.Winter {
+  background-image: url(https://i.gifer.com/NyDe.gif);
+  
+}
+
+.Summer {
+  
+  background-image: url(https://static.wixstatic.com/media/368ecd_2a086de90a93499bbfb6f495080b642c~mv2.gif);
+  
+}
+
+.Spring {
+  
+  background: rgb(255, 223, 228);
+  background-image: url(https://i.pinimg.com/originals/62/cb/bf/62cbbf3021778f2f6db1320a261fb88b.gif)
+}
+
+
+/* 
+WEATHER CONTROL
+*/
+#temp-container {
+  display: flex;
+  margin: 0 auto;
+  width: 30vw;
+  justify-content: space-evenly;
+}
+
+.temp-gauge {
+  background: transparent;
+}
+
+#incTemp, #decTemp {
+  background-color: white;
+  border:hidden;
+
+}
+
+#temperature {
+  color: pink;
+  background-color: white;
+  inline-size: 5vw;
+  text-align: center;
+  
+}
