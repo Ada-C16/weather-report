@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Report</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <link href="styles/index.css" rel="stylesheet">
+        <script src="src/index.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Daily Forecasting</title>
+    </head>
+    <body>
+        <header class="weatherHeader">
+            <h1>Weathering Heights</h1>
+        </header>
+        <em class="weatherTagline">It's always <section id="forecastDesc">description</section> in <section id="locationDesc">location</section></em>
+        <section class="city-name-section temperature-section">
+            <section class="item"><h2>Temperature</h2>
+                <section class="temperature_content">
+                    <section class="temperature_controls">
+                        <span id="incrementTempControl">⬆️ </span>
+                        <span id="decrementTempControl"> ⬇️ </span>
+                    </section>
+                    <span id="temperatureValue" class="red">0</span>
+                </section>
+            </section>
+            <section class="item">
+                <h2>Location</h2>
+                <section class="search_bar">
+                    <input type="text" name="search" value="search">
+                </section>
+            </section>
+            <section class="item"><h2>Forecast</h2>
+                <section class="dropdown">
+                    <button class="dropbtn">Sky</button>
+                    <section class="dropdown-content">
+                <a href="#" id= "Sunny">Sunny</a>
+                <a href="#" id="Rainy">Rainy</a>
+                <a href="#" id="Stormy">Stormy</a>
+                <a href="#"id="Snowy">Snowy</a>
+                </section>
+                </section>
+            </section>
+        </section>
+        <section class="image_area"><img id="weatherImage"
+                src="https://media1.giphy.com/media/3o6fISORwH1fcsQW0U/giphy.gif"/></section>
+    </body>
 </html>
